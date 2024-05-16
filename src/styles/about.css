@@ -38,6 +38,8 @@
 .about-left p{
     font-size: 1.7rem;
     width: 55%;
+    color: gray;
+    padding-left: 20px;
 }
 
 
@@ -71,6 +73,7 @@
 .hobbies-container .box{
     padding: 10px 20px;
     border: 1px solid white;
+    font-size: 2rem;
 }
 
 .divider{

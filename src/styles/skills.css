@@ -24,10 +24,11 @@
 }
 
 .skillspage-container .box{
-    height: 140px;
-    width: 100%;
-    background-color: aquamarine;
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 1px solid white;
+    color: white;
+    font-size: 2rem;
+    padding: 10px 20px;
 }
