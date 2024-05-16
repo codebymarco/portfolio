@@ -1,0 +1,22 @@
+nav {
+  background-color: black;
+  height: 10vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px;
+  color: white;
+}
+
+nav div {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+nav div a{
+    all: unset;
+    color: white;
+  }
+  

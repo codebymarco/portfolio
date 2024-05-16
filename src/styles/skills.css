@@ -1,0 +1,33 @@
+.skills {
+  background-color: black;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.skills-top {
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+.skills-top h1{
+    font-size: 3rem;
+  }
+
+.skillspage-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.skillspage-container .box{
+    height: 140px;
+    width: 100%;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,47 @@
+.contact {
+    background-color: black;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    align-items: center;
+  }
+  
+  .contact-top {
+    padding: 20px;
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+  }
+  
+  .contact-container{
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      width: 80%;
+  }
+  
+  .contact-container .box{
+      height: 140px;
+      width: 100%;
+      background-color: aquamarine;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 3rem;
+  }
+
+  .contact-container .box .label{
+    width: 200px;
+    background-color: green;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+  .contact-container .box .value{
+    flex-grow: 1;
+    padding: 20px;
+}
