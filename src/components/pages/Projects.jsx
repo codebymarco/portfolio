@@ -10,32 +10,32 @@ const Projects = () => {
       <div className="projects-container">
         <Link to={`/apps/app`} className="box">
           <h2>iportfolio</h2>
-          <span>1</span>
+          <span>01</span>
         </Link>
         <Link to={`/apps/app`} className="box">
           {" "}
           <h2>contact me</h2>
-          <span>2</span>
+          <span>02</span>
         </Link>
         <Link to={`/apps/app`} className="box">
           <h2>linkbio</h2>
-          <span>3</span>
+          <span>03</span>
         </Link>
         <Link to={`/apps/app`} className="box">
           <h2>indeed</h2>
-          <span>4</span>
+          <span>04</span>
         </Link>{" "}
         <Link to={`/apps/app`} className="box">
           <h2>notes</h2>
-          <span>4</span>
+          <span>05</span>
         </Link>{" "}
         <Link to={`/apps/app`} className="box">
           <h2>todo</h2>
-          <span>5</span>
+          <span>06</span>
         </Link>{" "}
         <Link to={`/apps/app`} className="box">
           <h2>webbly</h2>
-          <span>6</span>
+          <span>07</span>
         </Link>{" "}
       </div>
     </div>

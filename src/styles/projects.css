@@ -21,6 +21,10 @@
       gap: 20px;
       width: 80%;
   }
+
+  .projects-container a{
+    text-decoration: none;
+  }
   
   .projects-container .box{
       width: 100%;

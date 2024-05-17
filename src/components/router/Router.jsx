@@ -19,7 +19,9 @@ const Router = () => {
           <Route path="contact" element={<Contact />}></Route>
           <Route path="apps" element={<Projects />}></Route>
         </Route>
+
         <Route path="/apps/app" element={<App />}></Route>
+        
       </Routes>
     </BrowserRouter>
   );

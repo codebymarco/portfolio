@@ -32,13 +32,12 @@ const App = () => {
             <h2>technolgies used</h2>
             <div className="app-detials-box-technologies">
               <div className="box">html</div>
-              <div className="box">html</div>
-              <div className="box">html</div>
-              <div className="box">html</div>
-              <div className="box">html</div>
-              <div className="box">html</div>
-              <div className="box">html</div>
-              <div className="box">html</div>
+              <div className="box">css</div>
+              <div className="box">typescript</div>
+              <div className="box">node</div>
+              <div className="box">nosql</div>
+              <div className="box">mongodb</div>
+              <div className="box">rabbitmq</div>
             </div>
           </div>
           <div className="divider"></div>
