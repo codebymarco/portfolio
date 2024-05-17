@@ -15,6 +15,10 @@ const Contact = () => {
           <div className="label">cell</div>
           <div className="value">061 149 8474</div>
         </div>
+        <div className="box">
+          <div className="label">github</div>
+          <div className="value">https://github.com/codebymarco</div>
+        </div>
       </div>
     </div>
   );
