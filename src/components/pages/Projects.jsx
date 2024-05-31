@@ -9,7 +9,7 @@ const Projects = () => {
       </div>
       <div className="projects-container">
         <Link to={`/apps/app`} className="box">
-          <h2>iportfolio</h2>
+          <h2>portfoliohub</h2>
           <span>01</span>
         </Link>
         <Link to={`/apps/app`} className="box">
