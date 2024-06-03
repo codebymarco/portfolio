@@ -1,4 +1,5 @@
 import "../../styles/about.css";
+import img from "../../assets/image.png";
 
 const About = () => {
   return (
@@ -7,20 +8,53 @@ const About = () => {
         <h1>ABOUT</h1>
       </div>
       <div className="about-container">
-        <div className="about-left">
-          <h2>my story</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
-            veniam, enim sed optio aliquid soluta molestiae blanditiis itaque
-            voluptatum dicta fuga, eum eos magni distinctio aperiam. Iusto,
-            placeat. Exercitationem, ipsam consectetur. Fuga corrupti temporibus
-            optio numquam modi natus excepturi inventore!
-          </p>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt
-            fugit amet numquam id, explicabo quod exercitationem eos impedit
-          </p>
+        <div className="about-container-2">
+          <div className="about-left">
+            <h1>HI I'M MARCO &#128075;</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
+              &#127758; veniam, enim sed optio aliquid soluta molestiae
+              blanditiis itaque &#127891; voluptatum dicta fuga, eum eos magni
+              distinctio aperiam. Iusto, placeat. Exercitationem, ipsam
+              consectetur. Fuga corrupti &#128296; temporibus optio numquam modi
+              natus excepturi inventore!
+            </p>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt
+              fugit amet numquam id, explicabo quod exercitationem eos impedit
+              &#128187;
+            </p>
+          </div>
+          <img src={img} alt="image" />
         </div>
+
+        <div className="divider"></div>
+
+        <div className="about-details">
+          <h2>details</h2>
+          <div className="details-container">
+            <div className="box">height: 1.82</div>
+            <div className="box">weight: 65kg</div>
+            <div className="box">eye: brown</div>
+            <div className="box">nationlaity: south african</div>
+            <div className="box">race: indian</div>
+            <div className="box">left-hand: 5star</div>
+            <div className="box">right-hand: 5star</div>
+          </div>
+        </div>
+
+        <div className="divider"></div>
+
+        <div className="about-details">
+          <h2>facts about me</h2>
+          <div className="details-container">
+            <div className="box">had yellow jourdas, isloated before covid</div>
+            <div className="box">tried to learn spanish but blow it</div>
+            <div className="box">i can code with both hands</div>
+            <div className="box">i use chatgpt to write for loops</div>
+          </div>
+        </div>
+
         <div className="divider"></div>
         <div className="about-hobbies">
           <h2>hobbies</h2>
@@ -46,7 +80,7 @@ const About = () => {
         </div>
         <div className="divider"></div>
         <div className="about-hobbies">
-          <h2>likes</h2>
+          <h2>&#x1F44D; likes</h2>
           <div className="hobbies-container">
             <div className="box">watching football</div>
             <div className="box">coding</div>
@@ -74,7 +108,6 @@ const About = () => {
             <div className="box">the ocean</div>
           </div>
         </div>
-
       </div>
     </div>
   );

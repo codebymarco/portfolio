@@ -25,6 +25,18 @@
   padding: 20px;
 }
 
+.about-container-2{
+    width: 100%;
+    display: flex;
+}
+
+
+.about img{
+    height: 80vh;
+    width:auto;
+    border-radius: 50px;
+}
+
 .about-left{
     display: flex;
     flex-direction: column;
@@ -37,7 +49,7 @@
 
 .about-left p{
     font-size: 1.7rem;
-    width: 55%;
+    width: 80%;
     color: gray;
     padding-left: 20px;
 }
@@ -80,4 +92,11 @@
     height: 1px;
     width: 100%;
     background-color: white;
+}
+
+
+.about-details{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }

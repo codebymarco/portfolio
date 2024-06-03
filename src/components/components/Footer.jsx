@@ -3,7 +3,9 @@ import "../../styles/footer.css";
 const Footer = () => {
   return (
     <footer>
-      <p>marco ramcharan</p>
+      <span>github</span>
+      <span>miguelmarcormacharan@gmail.com</span>
+      <span>linkdn</span>
     </footer>
   );
 };

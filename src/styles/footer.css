@@ -1,9 +1,11 @@
 footer{
     background-color: black;
     display: flex;
-    justify-content: flex-end;
-    padding: 10px;
+    justify-content: space-between;
+    padding: 50px 20px;
     align-items: center;
     color: white;
-    font-size: 2rem;
 }
+
+
+

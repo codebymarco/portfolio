@@ -16,3 +16,9 @@
     font-size: 2rem;
     color: dodgerblue;
 }
+
+.banner img{
+    height: 90vh;
+    width: auto;
+    border-radius: 50px;
+}

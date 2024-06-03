@@ -1,12 +1,11 @@
-import '../../styles/banner.css'
+import "../../styles/banner.css";
+import image from "../../assets/image.png";
 const Banner = () => {
   return (
     <div className="banner">
-      <h1>MIGUELMARCO</h1>
-      <h1>RAMCHARAN</h1>
-      <p>software developer</p>
+      <img src={image} alt="" />
     </div>
-  )
-}
+  );
+};
 
-export default Banner
+export default Banner;
