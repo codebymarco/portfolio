@@ -1,8 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import "../../styles/fullpagenavbar.css";
 import { useEffect } from "react";
-import { IoIosCloseCircleOutline } from "react-icons/io";
 import { IoClose } from "react-icons/io5";
+import { motion } from "framer-motion";
 
 const FullPageNavbar = ({ close }) => {
   const navigate = useNavigate();
@@ -24,15 +24,38 @@ const FullPageNavbar = ({ close }) => {
     };
   }, []);
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+    exit: { opacity: 0 },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+  };
+
   return (
-    <div className="fullpagenavbar">
+    <motion.div
+      className="fullpagenavbar"
+      initial="hidden"
+      animate="visible"
+      exit="hidden"
+      variants={containerVariants}
+      transition={{ duration: 0.5 }}
+    >
       <IoClose className="close-icon" onClick={close} />
-      <div onClick={() => route(`/`)}>home</div>
-      <div onClick={() => route(`/about`)}>about</div>
-      <div onClick={() => route(`/contact`)}>contact</div>
-      <div onClick={() => route(`/skills`)}>skills</div>
-      <div onClick={() => route(`/apps`)}>projects</div>
-    </div>
+      <motion.div variants={itemVariants} onClick={() => route(`/`)}>home</motion.div>
+      <motion.div variants={itemVariants} onClick={() => route(`/about`)}>about</motion.div>
+      <motion.div variants={itemVariants} onClick={() => route(`/contact`)}>contact</motion.div>
+      <motion.div variants={itemVariants} onClick={() => route(`/skills`)}>skills</motion.div>
+      <motion.div variants={itemVariants} onClick={() => route(`/apps`)}>projects</motion.div>
+    </motion.div>
   );
 };
 

@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import "../../../styles/app.css";
+
 const PortfolioHub = () => {
   return (
     <div className="app">
@@ -7,10 +9,12 @@ const PortfolioHub = () => {
         <Link to="/apps">apps/portfoliohub</Link>
       </div>
       <div className="app-top">
-        <h1>PORTFOLIOHUB</h1>
+        <motion.h1 initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
+          PORTFOLIOHUB
+        </motion.h1>
       </div>
       <div className="app-container">
-        <div className="app-photo"></div>
+        <motion.div className="app-photo" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5, duration: 0.5 }}></motion.div>
         <div className="app-detials">
           <div className="app-details-box description">
             <h2>description</h2>
@@ -29,7 +33,7 @@ const PortfolioHub = () => {
           <div className="divider"></div>
 
           <div className="app-details-box">
-            <h2>technolgies used</h2>
+            <h2>technologies used</h2>
             <div className="app-detials-box-technologies">
               <div className="box">html</div>
               <div className="box">css</div>

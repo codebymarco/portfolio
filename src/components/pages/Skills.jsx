@@ -1,90 +1,40 @@
 import "../../styles/skills.css";
+import { motion } from "framer-motion";
 
 const Skills = () => {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  };
+
   return (
     <div className="skills">
       <div className="skills-top">
         <h1>SKILLS</h1>
       </div>
-      <div className="skillspage-container">
-        <div className="box">
-          <span>html</span>
-          <span>01</span>
-        </div>
-        <div className="box">
-          <span>css</span>
-          <span>02</span>
-        </div>
-        <div className="box">
-          <span>typescript</span>
-          <span>03</span>
-        </div>
-
-        <div className="box">
-          <span>react</span>
-          <span>04</span>
-        </div>
-
-        <div className="box">
-          <span>node</span>
-          <span>05</span>
-        </div>
-
-        <div className="box">
-          <span>golang</span>
-          <span>06</span>
-        </div>
-
-        <div className="box">
-          <span>python</span>
-          <span>07</span>
-        </div>
-
-        <div className="box">
-          <span>rabbitmq</span>
-          <span>08</span>
-        </div>
-
-        <div className="box">
-          <span>jenkins</span>
-          <span>09</span>
-        </div>
-
-        <div className="box">
-          <span>kubernetes</span>
-          <span>10</span>
-        </div>
-
-        <div className="box">
-          <span>docker</span>
-          <span>11</span>
-        </div>
-
-        <div className="box">
-          <span>sql</span>
-          <span>12</span>
-        </div>
-
-        <div className="box">
-          <span>nosql</span>
-          <span>13</span>
-        </div>
-
-        <div className="box">
-          <span>aws s3</span>
-          <span>14</span>
-        </div>
-
-        <div className="box">
-          <span>aws cloudfront</span>
-          <span>15</span>
-        </div>
-
-        <div className="box">
-          <span>google cloud platform</span>
-          <span>16</span>
-        </div>
-      </div>
+      <motion.div
+        className="skillspage-container"
+        initial="hidden"
+        animate="visible"
+        variants={containerVariants}
+      >
+        {["html", "css", "typescript", "react", "node", "golang", "python", "rabbitmq", "jenkins", "kubernetes", "docker", "sql", "nosql", "aws s3", "aws cloudfront", "google cloud platform"].map((skill, index) => (
+          <motion.div className="box" variants={itemVariants} key={skill}>
+            <span>{skill}</span>
+            <span>{String(index + 1).padStart(2, '0')}</span>
+          </motion.div>
+        ))}
+      </motion.div>
     </div>
   );
 };
