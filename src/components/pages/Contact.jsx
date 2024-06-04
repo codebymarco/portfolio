@@ -8,17 +8,39 @@ const Contact = () => {
       </div>
       <div className="contact-container">
         <div className="box">
-          <div className="label">email</div>
-          <div className="value">miguelmarcoramcharan@gmail.com</div>
+          <div>
+            <span>miguelmarcoramcharan@gmail.com</span>
+          </div>
+          <span>01</span>
         </div>
         <div className="box">
-          <div className="label">cell</div>
-          <div className="value">061 149 8474</div>
+          <div>
+            <span>061 149 8474</span>
+          </div>
+          <span>02</span>
         </div>
         <div className="box">
-          <div className="label">github</div>
-          <div className="value">https://github.com/codebymarco</div>
+          <div>
+            <p>github</p>
+          </div>
+          <span>03</span>
         </div>
+
+
+        <div className="box">
+          <div>
+            <p>linkden</p>
+          </div>
+          <span>04</span>
+        </div>
+
+        <div className="box">
+          <div>
+            <p>onlyfans</p>
+          </div>
+          <span>05</span>
+        </div>
+
       </div>
     </div>
   );

@@ -20,3 +20,7 @@ nav div a{
     color: white;
   }
   
+  nav .menu-icon{
+    font-size: 3rem;
+    cursor: pointer;
+  }

@@ -6,6 +6,7 @@ import Skills from "../pages/Skills";
 import Contact from "../pages/Contact";
 import Projects from "../pages/Projects";
 import App from "../pages/apps/App";
+import PortfolioHub from "../pages/apps/PortfolioHub";
 
 const Router = () => {
   return (
@@ -21,6 +22,7 @@ const Router = () => {
         </Route>
 
         <Route path="/apps/app" element={<App />}></Route>
+        <Route path="/apps/portfoliohub" element={<PortfolioHub />}></Route>
         
       </Routes>
     </BrowserRouter>

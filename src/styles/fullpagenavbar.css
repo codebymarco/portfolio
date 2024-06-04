@@ -1,0 +1,56 @@
+.fullpagenavbar {
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 500;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 20px;
+}
+
+.fullpagenavbar .close-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 20px;
+  cursor: pointer;
+  font-size: 3rem;
+}
+
+.fullpagenavbar div {
+  font-size: 6rem;
+  border-bottom: 1px solid black;
+  width: 100%;
+  line-height: 5rem;
+  letter-spacing: 1rem;
+  cursor: pointer;
+}
+
+.anime-page-one {
+  height: 100vh;
+  width: 100%;
+  background-color: azure;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 500;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: black;
+}
+
+.anime-page-one h1 {
+  font-size: 7rem;
+}
+
+.anime-page-one h2 {
+  font-size: 5rem;
+}

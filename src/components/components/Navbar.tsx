@@ -1,19 +1,23 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import '../../styles/navbar.css'
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import "../../styles/navbar.css";
+import FullPageNavbar from "./FullPageNavbar";
+import { CiMenuKebab } from "react-icons/ci";
 
 const Navbar = () => {
+  const [show, setShow] = useState(false);
+
+  const close = () => {
+    setShow(false);
+  };
+
   return (
     <nav>
+      {show ? <FullPageNavbar close={close} /> : null}
       <h1>codebymarco</h1>
-    <div>
-      <Link to="/">home</Link>
-      <Link to="/about">about</Link>
-      <Link to="/skills">skills</Link>
-      <Link to="/contact">contact</Link>
-      <Link to="/apps">apps</Link>
-    </div>
-  </nav>  )
-}
+      <CiMenuKebab className="menu-icon" onClick={() => setShow(true)} />
+    </nav>
+  );
+};
 
-export default Navbar
+export default Navbar;

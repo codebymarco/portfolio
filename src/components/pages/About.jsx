@@ -28,7 +28,7 @@ const About = () => {
           <img src={img} alt="image" />
         </div>
 
-        <div className="divider"></div>
+        {/*         <div className="divider"></div>
 
         <div className="about-details">
           <h2>details</h2>
@@ -42,8 +42,8 @@ const About = () => {
             <div className="box">right-hand: 5star</div>
           </div>
         </div>
-
-        <div className="divider"></div>
+ */}
+        {/*         <div className="divider"></div>
 
         <div className="about-details">
           <h2>facts about me</h2>
@@ -53,7 +53,7 @@ const About = () => {
             <div className="box">i can code with both hands</div>
             <div className="box">i use chatgpt to write for loops</div>
           </div>
-        </div>
+        </div> */}
 
         <div className="divider"></div>
         <div className="about-hobbies">
@@ -97,7 +97,7 @@ const About = () => {
 
         <div className="divider"></div>
         <div className="about-hobbies">
-          <h2>dislikes</h2>
+          <h2> &#9995; dislikes</h2>
           <div className="hobbies-container">
             <div className="box">manchester united</div>
             <div className="box">the red devils</div>
