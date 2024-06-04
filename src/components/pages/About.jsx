@@ -97,7 +97,7 @@ const About = () => {
 
         <div className="divider"></div>
         <div className="about-hobbies">
-          <h2> &#9995; dislikes</h2>
+          <h2> &#128078; dislikes</h2>
           <div className="hobbies-container">
             <div className="box">manchester united</div>
             <div className="box">the red devils</div>
