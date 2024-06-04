@@ -1,24 +1,30 @@
 import "../../styles/fullpagenavbar.css";
-import { useEffect } from "react";
+import { motion } from "framer-motion";
 
 const AnimationPageOne = () => {
-  useEffect(() => {
-    // Set the body height and overflow when the component mounts
-    document.body.style.height = "100vh";
-    document.body.style.overflow = "hidden";
-
-    // Cleanup function to reset the body overflow when the component unmounts
-    return () => {
-      document.body.style.height = "";
-      document.body.style.overflow = "";
-    };
-  }, []);
-
   return (
-    <div className="anime-page-one">
-      <h1>MARCO RAMCHARAN</h1>
-      <h2>DEVELOPER</h2>
-    </div>
+    <motion.div
+      className="anime-page-one"
+      initial={{ opacity: 0, backgroundColor: '#fff' }}
+      animate={{ opacity: 1, backgroundColor: '#fff' }}
+      exit={{ opacity: 0, backgroundColor: '#000' }}
+      transition={{ duration: 1.5 }}
+    >
+      <motion.h1
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1, duration: 1 }}
+      >
+        MARCO RAMCHARAN
+      </motion.h1>
+      <motion.h2
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 2, duration: 1 }}
+      >
+        DEVELOPER
+      </motion.h2>
+    </motion.div>
   );
 };
 

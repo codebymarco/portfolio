@@ -1,19 +1,16 @@
 import { useEffect, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import Router from "./components/router/Router";
 import AnimationPageOne from "./components/components/AnimationPageOne";
 
 const App = () => {
   const [show, setShow] = useState(true);
 
-  const hide = () => {
-    setShow(false);
-  };
-
   useEffect(() => {
-    // Show the value for 2 seconds
+    // Hide the AnimationPageOne component after 5 seconds
     const timeout = setTimeout(() => {
       setShow(false);
-    }, 3000);
+    }, 5000); // 3 seconds for AnimationPageOne + 2 seconds visible
 
     // Clean up the timeout when the component unmounts
     return () => clearTimeout(timeout);
@@ -21,8 +18,15 @@ const App = () => {
 
   return (
     <div>
-      {show ? <AnimationPageOne /> : null}
-      <Router />
+      <AnimatePresence>
+        {show ? (
+          <AnimationPageOne key="animation-page-one" />
+        ) : (
+          <motion.div key="router" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+            <Router />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };
