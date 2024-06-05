@@ -1,6 +1,10 @@
 import "../../styles/contact.css";
 
 const Contact = () => {
+
+  // https://github.com/codebymarco
+  //
+
   return (
     <div className="contact">
       <div className="contact-top">
