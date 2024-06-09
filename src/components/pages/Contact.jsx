@@ -6,7 +6,11 @@ import { CiLinkedin } from "react-icons/ci";
 
 const Contact = () => {
   // https://github.com/codebymarco
-  //
+  // https://www.linkedin.com/in/miguelmarco-ramcharan-34b04a277
+
+  const handleDivClick = (path) => {
+    window.open(path, "_blank");
+  };
 
   return (
     <div className="contact">
@@ -28,7 +32,13 @@ const Contact = () => {
           </div>
           <span>02</span>
         </div>
-        <div className="box">
+        <div 
+                  onClick={() =>
+                    handleDivClick(
+                      `https://github.com/codebymarco`
+                    )
+                  }
+        className="box">
           <div>
             <FaGithub color="white" />
 
@@ -37,7 +47,14 @@ const Contact = () => {
           <span>03</span>
         </div>
 
-        <div className="box">
+        <div
+          onClick={() =>
+            handleDivClick(
+              `https://www.linkedin.com/in/miguelmarco-ramcharan-34b04a277`
+            )
+          }
+          className="box"
+        >
           <div>
             <CiLinkedin color="dodgerblue" />
 
@@ -48,7 +65,7 @@ const Contact = () => {
 
         <div className="box">
           <div>
-          <SiOnlyfans color="skyblue"/>
+            <SiOnlyfans color="skyblue" />
 
             <p>onlyfans</p>
           </div>
