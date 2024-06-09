@@ -1,12 +1,24 @@
 import "../../styles/about.css";
 import img from "../../assets/image.png";
-import { TbBrandNetflix } from "react-icons/tb";
-import { FaHeart, FaLaptopCode, FaYoutube } from "react-icons/fa";
-import { GiCharm, GiForkKnifeSpoon, GiSoccerKick } from "react-icons/gi";
+import { TbBrandNetflix, TbMoodLookRight } from "react-icons/tb";
+import {
+  FaHeart,
+  FaLaptopCode,
+  FaPepperHot,
+  FaRegLaughBeam,
+  FaYoutube,
+} from "react-icons/fa";
+import {
+  GiCharm,
+  GiForkKnifeSpoon,
+  GiSleepingBag,
+  GiSoccerKick,
+} from "react-icons/gi";
 import { MdCardTravel, MdOutlineWatchLater } from "react-icons/md";
 import { BiCool } from "react-icons/bi";
 import { LuEar } from "react-icons/lu";
 import { FcGlobe } from "react-icons/fc";
+import { IoFootballOutline } from "react-icons/io5";
 
 const About = () => {
   return (
@@ -28,15 +40,16 @@ const About = () => {
             </p>
             <p>
               Armed with nothing but curiosity and an internet connection, I
-              embarked on a mission to teach myself software development.
-             After countless late-night coding sessions later became a
-              full-fledged developer
+              embarked on a mission to teach myself software development. After
+              countless late-night coding sessions later became a full-fledged
+              developer
             </p>
             <p>
               I call the sunny shores of Durban, South Africa, my home, but I
               have a serious case of wanderlust. If a place catches my fancy,
               I'm more than willing to pack my bags and relocate anywhere in the
-              world. Adventure is my middle name, and I'm always up for trying and learning new things.
+              world. Adventure is my middle name, and I'm always up for trying
+              and learning new things.
             </p>
             <p>
               From carpentry to coding, my journey has been anything but
@@ -52,11 +65,9 @@ const About = () => {
           <h2>hobbies</h2>
           <div className="hobbies-container">
             <div className="box">
-              {" "}
               <TbBrandNetflix color="red" /> netflix
             </div>
             <div className="box">
-              {" "}
               <FaYoutube color="red" /> youtube
             </div>
             <div className="box">
@@ -103,17 +114,32 @@ const About = () => {
         <div className="about-hobbies">
           <h2>&#x1F44D; likes</h2>
           <div className="hobbies-container">
-            <div className="box">watching football</div>
-            <div className="box">coding</div>
-            <div className="box">sleeping</div>
-            <div className="box">relaxing</div>
             <div className="box">
-              <FcGlobe/>
-              travelling</div>
-            <div className="box">conspiracies</div>
-            <div className="box">scrolling</div>
-            <div className="box">watches</div>
-            <div className="box">spicy food</div>
+              <IoFootballOutline />
+              watching football
+            </div>
+            <div className="box">
+              <FaLaptopCode color="white" />
+              coding
+            </div>
+            <div className="box">
+              <GiSleepingBag />
+              sleeping
+            </div>
+            <div className="box">
+              <FcGlobe />
+              travelling
+            </div>
+            <div className="box">
+              <TbMoodLookRight />
+              conspiracies
+            </div>
+            <div className="box">
+              <FaRegLaughBeam />
+              memes
+            </div>
+            <div className="box"><FaPepperHot />
+            spicy food</div>
             <div className="box">liverpool</div>
           </div>
         </div>
