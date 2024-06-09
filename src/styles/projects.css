@@ -1,38 +1,41 @@
 .projects {
-    background-color: black;
-    min-height: 90vh;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 20px;
-    align-items: center;
-  }
-  
-  .projects-top {
-    padding: 20px;
-    text-align: center;
-    color: white;
-    font-size: 3rem;
-  }
-  
-  .projects-container{
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 20px;
-      width: 80%;
-  }
+  background-color: black;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  align-items: center;
+}
 
-  .projects-container a{
-    text-decoration: none;
-  }
-  
-  .projects-container .box{
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 3rem;
-      color: white;
-      padding: 20px 5px;
-      border-bottom: 1px solid dodgerblue;
-  }
+.projects-top {
+  padding: 20px;
+  text-align: center;
+  color: white;
+  font-size: 3rem;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  width: 80%;
+}
+
+.projects-container a {
+  text-decoration: none;
+}
+
+.projects-container .box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 3rem;
+  color: white;
+  padding: 20px 5px;
+  border-bottom: 1px solid dodgerblue;
+}
+.projects-container .box:hover {
+  color: gray;
+}

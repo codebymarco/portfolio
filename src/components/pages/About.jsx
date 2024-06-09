@@ -6,6 +6,7 @@ import { GiCharm, GiForkKnifeSpoon, GiSoccerKick } from "react-icons/gi";
 import { MdCardTravel, MdOutlineWatchLater } from "react-icons/md";
 import { BiCool } from "react-icons/bi";
 import { LuEar } from "react-icons/lu";
+import { FcGlobe } from "react-icons/fc";
 
 const About = () => {
   return (
@@ -109,7 +110,7 @@ const About = () => {
             <div className="box">sleeping</div>
             <div className="box">relaxing</div>
             <div className="box">
-              <MdCardTravel color="purple"/>
+              <FcGlobe/>
               travelling</div>
             <div className="box">conspiracies</div>
             <div className="box">scrolling</div>
