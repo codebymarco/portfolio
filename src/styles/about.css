@@ -85,7 +85,11 @@
 .hobbies-container .box{
     padding: 10px 20px;
     border: 1px solid dodgerblue;
+    border-radius: 20px;
     font-size: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .divider{

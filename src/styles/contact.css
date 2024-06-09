@@ -33,6 +33,13 @@
   cursor: pointer;
 }
 
+.contact-container .box div{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
 .contact-container .box:hover {
   color: grey;
 }

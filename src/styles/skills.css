@@ -24,14 +24,21 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid transparent;
-  border-bottom: 1px solid dodgerblue;
+  border: 1px solid dodgerblue;
+  border-radius: 20px;
   color: white;
   font-size: 2rem;
   padding: 10px 20px;
+  cursor: pointer;
+}
+
+.skillspage-container .box span {
+  display: flex;
+  align-items: center;
 }
 
 .skillspage-container .box:hover {
-  border: 1px solid dodgerblue;
+  border: 1px solid aquamarine;
+  background-color: aquamarine;
+  border-radius: 20px;
 }
-

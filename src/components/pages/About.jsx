@@ -1,5 +1,11 @@
 import "../../styles/about.css";
 import img from "../../assets/image.png";
+import { TbBrandNetflix } from "react-icons/tb";
+import { FaHeart, FaLaptopCode, FaYoutube } from "react-icons/fa";
+import { GiCharm, GiForkKnifeSpoon, GiSoccerKick } from "react-icons/gi";
+import { MdCardTravel, MdOutlineWatchLater } from "react-icons/md";
+import { BiCool } from "react-icons/bi";
+import { LuEar } from "react-icons/lu";
 
 const About = () => {
   return (
@@ -46,23 +52,52 @@ const About = () => {
         <div className="about-hobbies">
           <h2>hobbies</h2>
           <div className="hobbies-container">
-            <div className="box">netflix</div>
-            <div className="box">youtube</div>
-            <div className="box">football</div>
-            <div className="box">coding</div>
-            <div className="box">procastinating</div>
+            <div className="box">
+              {" "}
+              <TbBrandNetflix color="red" /> netflix
+            </div>
+            <div className="box">
+              {" "}
+              <FaYoutube color="red" /> youtube
+            </div>
+            <div className="box">
+              <GiSoccerKick color="yellow" />
+              football
+            </div>
+            <div className="box">
+              <FaLaptopCode color="white" />
+              coding
+            </div>
+            <div className="box">
+              <MdOutlineWatchLater color="dodgerblue" />
+              procastinating
+            </div>
           </div>
         </div>
         <div className="divider"></div>
         <div className="about-skills">
           <h2>soft skills</h2>
           <div className="hobbies-container">
-            <div className="box">soft eater</div>
-            <div className="box">chill</div>
-            <div className="box">charismatic</div>
-            <div className="box">good listener</div>
-            <div className="box">compasionate</div>
-            <div className="box">gangsta</div>
+            <div className="box">
+              <GiForkKnifeSpoon color="white" />
+              soft eater
+            </div>
+            <div className="box">
+              <BiCool color="yellow" />
+              chill
+            </div>
+            <div className="box">
+              <GiCharm color="pink" />
+              charismatic
+            </div>
+            <div className="box">
+              <LuEar color="brown" />
+              good listener
+            </div>
+            <div className="box">
+              <FaHeart color="red" />
+              compasionate
+            </div>
           </div>
         </div>
         <div className="divider"></div>
@@ -73,7 +108,9 @@ const About = () => {
             <div className="box">coding</div>
             <div className="box">sleeping</div>
             <div className="box">relaxing</div>
-            <div className="box">travelling</div>
+            <div className="box">
+              <MdCardTravel color="purple"/>
+              travelling</div>
             <div className="box">conspiracies</div>
             <div className="box">scrolling</div>
             <div className="box">watches</div>
