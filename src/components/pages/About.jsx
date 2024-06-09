@@ -12,49 +12,36 @@ const About = () => {
           <div className="about-left">
             <h1>HI I'M MARCO &#128075;</h1>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
-              &#127758; veniam, enim sed optio aliquid soluta molestiae
-              blanditiis itaque &#127891; voluptatum dicta fuga, eum eos magni
-              distinctio aperiam. Iusto, placeat. Exercitationem, ipsam
-              consectetur. Fuga corrupti &#128296; temporibus optio numquam modi
-              natus excepturi inventore!
+              Hey there! I'm Marco, a self-taught software developer with a
+              rather unconventional journey. After finishing school, I found
+              myself knee-deep in sawdust and carpentry glue, working with my
+              dad in his carpentry company. While I mastered the art of
+              hammering nails and making fine wooden furniture, I realized that
+              my true passion lay in creating digital masterpieces.
             </p>
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt
-              fugit amet numquam id, explicabo quod exercitationem eos impedit
-              &#128187;
+              Armed with nothing but curiosity and an internet connection, I
+              embarked on a mission to teach myself software development.
+              Countless late-night coding sessions later, I emerged as a
+              full-fledged developer, ready to take on the world one line of
+              code at a time.
+            </p>
+            <p>
+              I call the sunny shores of Durban, South Africa, my home, but I
+              have a serious case of wanderlust. If a place catches my fancy,
+              I'm more than willing to pack my bags and relocate anywhere in the
+              world. Adventure is my middle name (okay, not really, but you get
+              the point), and I'm always up for trying and learning new things.
+            </p>
+            <p>
+              From carpentry to coding, my journey has been anything but
+              ordinary. If you’re looking for someone who can build both a
+              sturdy table and a sleek website, look no further. Let's create
+              something amazing together!
             </p>
           </div>
           <img src={img} alt="image" />
         </div>
-
-        {/*         <div className="divider"></div>
-
-        <div className="about-details">
-          <h2>details</h2>
-          <div className="details-container">
-            <div className="box">height: 1.82</div>
-            <div className="box">weight: 65kg</div>
-            <div className="box">eye: brown</div>
-            <div className="box">nationlaity: south african</div>
-            <div className="box">race: indian</div>
-            <div className="box">left-hand: 5star</div>
-            <div className="box">right-hand: 5star</div>
-          </div>
-        </div>
- */}
-        {/*         <div className="divider"></div>
-
-        <div className="about-details">
-          <h2>facts about me</h2>
-          <div className="details-container">
-            <div className="box">had yellow jourdas, isloated before covid</div>
-            <div className="box">tried to learn spanish but blow it</div>
-            <div className="box">i can code with both hands</div>
-            <div className="box">i use chatgpt to write for loops</div>
-          </div>
-        </div> */}
-
         <div className="divider"></div>
         <div className="about-hobbies">
           <h2>hobbies</h2>
