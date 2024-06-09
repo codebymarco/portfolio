@@ -35,6 +35,8 @@
     height: 80vh;
     width:auto;
     border-radius: 50px;
+    position: sticky;
+    top: 30px;
 }
 
 .about-left{
