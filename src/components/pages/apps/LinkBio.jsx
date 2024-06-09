@@ -2,11 +2,11 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import "../../../styles/app.css";
 
-const PortfolioHub = () => {
+const LinkBio = () => {
   return (
     <div className="app">
       <div className="app-nav">
-        <Link to="/apps">apps/portfoliohub</Link>
+        <Link to="/apps">apps/linkbio</Link>
       </div>
       <div className="app-top">
         <motion.h1
@@ -14,7 +14,7 @@ const PortfolioHub = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
         >
-          PORTFOLIOHUB
+          LINKBIO
         </motion.h1>
       </div>
       <div className="app-links">
@@ -32,11 +32,19 @@ const PortfolioHub = () => {
           <div className="app-details-box description">
             <h2>description</h2>
             <p>
-              PortfolioHub is a versatile web application designed to empower
-              users to create and manage their personal web portfolios
-              effortlessly. Whether you're a designer, developer, artist, or any
-              other professional, PortfolioHub provides the tools you need to
-              showcase your work and track your portfolio's performance.
+              LinkBio is an innovative app designed to streamline your online
+              presence by consolidating all your links onto a single,
+              customizable page. Whether you're an influencer, a business, or an
+              individual looking to share multiple links efficiently, LinkBio
+              offers a user-friendly platform to manage and showcase your
+              digital footprint.
+            </p>
+            <p>
+              With LinkBio, you can create a personalized page that includes
+              links to your social media profiles, websites, blogs, online
+              stores, and any other online resources you want to share. The app
+              provides various templates and customization options, allowing you
+              to design a page that reflects your unique style and branding.
             </p>
           </div>
           <div className="divider"></div>
@@ -76,4 +84,4 @@ const PortfolioHub = () => {
   );
 };
 
-export default PortfolioHub;
+export default LinkBio;
