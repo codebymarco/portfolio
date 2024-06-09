@@ -29,16 +29,14 @@ const About = () => {
             <p>
               Armed with nothing but curiosity and an internet connection, I
               embarked on a mission to teach myself software development.
-              Countless late-night coding sessions later, I emerged as a
-              full-fledged developer, ready to take on the world one line of
-              code at a time.
+             After countless late-night coding sessions later became a
+              full-fledged developer
             </p>
             <p>
               I call the sunny shores of Durban, South Africa, my home, but I
               have a serious case of wanderlust. If a place catches my fancy,
               I'm more than willing to pack my bags and relocate anywhere in the
-              world. Adventure is my middle name (okay, not really, but you get
-              the point), and I'm always up for trying and learning new things.
+              world. Adventure is my middle name, and I'm always up for trying and learning new things.
             </p>
             <p>
               From carpentry to coding, my journey has been anything but
