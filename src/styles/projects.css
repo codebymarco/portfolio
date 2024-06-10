@@ -36,6 +36,11 @@
   padding: 20px 5px;
   border-bottom: 1px solid dodgerblue;
 }
+
+.projects-container .box:last-child {
+  border-bottom: none;
+}
+
 .projects-container .box:hover {
   color: gray;
 }

@@ -24,7 +24,6 @@ const Router = () => {
 
         <Route path="/apps/app" element={<App />}></Route>
         <Route path="/apps/portfoliohub" element={<PortfolioHub />}></Route>
-        <Route path="/apps/linkbio" element={<LinkBio />}></Route>
       </Routes>
     </BrowserRouter>
   );

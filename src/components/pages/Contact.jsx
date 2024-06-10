@@ -12,13 +12,24 @@ const Contact = () => {
     window.open(path, "_blank");
   };
 
+  const handleClick2 = () => {
+    const email = "miguelmarcoramcharan@gmail.com";
+    const subject = "Subject Here"; // You can customize the subject if needed
+    const body = "Body of the email goes here"; // You can customize the body if needed
+    window.open(
+      `mailto:${email}?subject=${encodeURIComponent(
+        subject
+      )}&body=${encodeURIComponent(body)}`
+    );
+  };
+
   return (
     <div className="contact">
       <div className="contact-top">
         <h1>Contact me</h1>
       </div>
       <div className="contact-container">
-        <div className="box">
+        <div onClick={handleClick2} className="box">
           <div>
             <SiGmail color="red" />
             <span>miguelmarcoramcharan@gmail.com</span>
@@ -32,13 +43,10 @@ const Contact = () => {
           </div>
           <span>02</span>
         </div>
-        <div 
-                  onClick={() =>
-                    handleDivClick(
-                      `https://github.com/codebymarco`
-                    )
-                  }
-        className="box">
+        <div
+          onClick={() => handleDivClick(`https://github.com/codebymarco`)}
+          className="box"
+        >
           <div>
             <FaGithub color="white" />
 

@@ -12,31 +12,6 @@ const Projects = () => {
           <h2>Portfoliohub</h2>
           <span>01</span>
         </Link>
-        <Link to={`/apps/linkbio`} className="box">
-          {" "}
-          <h2>LinkBio</h2>
-          <span>02</span>
-        </Link>
-        <Link to={`/apps/app`} className="box">
-          <h2>sayhi</h2>
-          <span>03</span>
-        </Link>
-        <Link to={`/apps/app`} className="box">
-          <h2>indeed</h2>
-          <span>04</span>
-        </Link>{" "}
-        <Link to={`/apps/app`} className="box">
-          <h2>notes</h2>
-          <span>05</span>
-        </Link>{" "}
-        <Link to={`/apps/app`} className="box">
-          <h2>todo</h2>
-          <span>06</span>
-        </Link>{" "}
-        <Link to={`/apps/app`} className="box">
-          <h2>webbly</h2>
-          <span>07</span>
-        </Link>{" "}
       </div>
     </div>
   );

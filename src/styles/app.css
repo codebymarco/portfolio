@@ -35,12 +35,16 @@
   align-items: center;
   gap: 20px;
 }
+
 .app-links a {
   color: white;
   border: 1px solid dodgerblue;
   border-radius: 20px;
   padding: 10px 20px;
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .app-links a:hover {
@@ -73,6 +77,10 @@
   border: 1px solid dodgerblue;
   padding: 10px 20px;
   font-size: 2rem;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .app-details-box {
@@ -85,4 +93,8 @@
 .description p {
   font-size: 2rem;
   width: 60%;
+}
+
+.hover{
+  cursor: pointer;
 }

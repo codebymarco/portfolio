@@ -23,6 +23,11 @@
   font-size: 3rem;
 }
 
+.fullpagenavbar .close-icon:hover{
+  font-size: 3.5rem;
+  transition: all 0.5s;
+}
+
 .fullpagenavbar div {
   font-size: 6rem;
   border-bottom: 1px solid black;
@@ -30,6 +35,12 @@
   line-height: 5rem;
   letter-spacing: 1rem;
   cursor: pointer;
+  color: dodgerblue;
+}
+
+.fullpagenavbar div:hover {
+  letter-spacing: 1.5rem;
+  transition: all 0.5s;
 }
 
 .anime-page-one {

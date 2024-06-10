@@ -1,6 +1,10 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import "../../../styles/app.css";
+import { FaCss3Alt, FaHtml5, FaNodeJs } from "react-icons/fa";
+import { SiMongodb, SiRabbitmq, SiRender, SiTypescript } from "react-icons/si";
+import { IoLogoVercel } from "react-icons/io5";
+import { FiGithub } from "react-icons/fi";
 
 const PortfolioHub = () => {
   return (
@@ -19,7 +23,11 @@ const PortfolioHub = () => {
       </div>
       <div className="app-links">
         <Link to="/">view site</Link>
-        <Link to="/">repo</Link>
+        <Link to="/">
+          {" "}
+          <FiGithub color="white" />
+          repo
+        </Link>
       </div>
       <div className="app-container">
         <motion.div
@@ -32,7 +40,7 @@ const PortfolioHub = () => {
           <div className="app-details-box description">
             <h2>description</h2>
             <p>
-              PortfolioHub is a versatile web application designed to empower
+              <span style={{color:'dodgerblue'}}>PortfolioHub</span> is a versatile web application designed to empower
               users to create and manage their personal web portfolios
               effortlessly. Whether you're a designer, developer, artist, or any
               other professional, PortfolioHub provides the tools you need to
@@ -44,30 +52,65 @@ const PortfolioHub = () => {
           <div className="app-details-box">
             <h2>technologies used</h2>
             <div className="app-detials-box-technologies">
-              <div className="box">html</div>
-              <div className="box">css</div>
-              <div className="box">typescript</div>
-              <div className="box">node</div>
-              <div className="box">nosql</div>
-              <div className="box">mongodb</div>
-              <div className="box">rabbitmq</div>
+              <div className="box">
+                <FaHtml5 color="E34F26" />
+                html
+              </div>
+              <div className="box">
+                {" "}
+                <FaCss3Alt color="1572B6" />
+                css
+              </div>
+              <div className="box">
+                {" "}
+                <SiTypescript color="007ACC" /> typescript
+              </div>
+              <div className="box">
+                <FaNodeJs color="#339933" />
+                node
+              </div>
+              <div className="box">
+                <SiMongodb color="#47A248" />
+                nosql
+              </div>
+              <div className="box">
+                <SiMongodb color="#47A248" />
+                mongodb
+              </div>
+              <div className="box">
+                <SiRabbitmq color="#FF6600" />
+                rabbitmq
+              </div>
             </div>
           </div>
           <div className="divider"></div>
           <div className="app-details-box">
             <h2>hosting</h2>
             <div className="app-detials-box-technologies">
-              <div className="box">vercel</div>
-              <div className="box">render</div>
-              <div className="box">mongoatls</div>
+              <div className="box">
+                {" "}
+                <IoLogoVercel color="white" />
+                vercel
+              </div>
+              <div className="box">
+                <SiRender color="yellow" />
+                render
+              </div>
+              <div className="box">
+                <SiMongodb color="#47A248" />
+                mongo atlas
+              </div>
             </div>
           </div>
           <div className="divider"></div>
           <div className="app-details-box">
             <h2>links</h2>
             <div className="app-detials-box-technologies">
-              <div className="box">live app</div>
-              <div className="box">git repo</div>
+              <div className="box hover">live app</div>
+              <div className="box hover">
+                <FiGithub color="white" />
+                git repo
+              </div>
             </div>
           </div>
         </div>
