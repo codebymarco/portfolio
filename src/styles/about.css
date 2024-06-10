@@ -23,6 +23,7 @@
   flex-direction: column;
   gap: 30px;
   padding: 20px;
+  padding-right: 50px;
 }
 
 .about-container-2{
@@ -36,7 +37,7 @@
     width:auto;
     border-radius: 50px;
     position: sticky;
-    top: 30px;
+    top: 10vh;
 }
 
 .about-left{
