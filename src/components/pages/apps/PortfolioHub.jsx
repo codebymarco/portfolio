@@ -22,7 +22,7 @@ const PortfolioHub = () => {
         </motion.h1>
       </div>
       <div className="app-links">
-        <Link to="/">view site</Link>
+        <a href="https://iportfolio-console.vercel.app/" target="_blank">view site</a>
         <Link to="/">
           {" "}
           <FiGithub color="white" />
