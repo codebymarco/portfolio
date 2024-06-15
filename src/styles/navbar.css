@@ -34,4 +34,7 @@ nav div a{
       font-size: 3rem;
       cursor: pointer;
     }
+    nav h1{
+      font-size: 2rem;
+    }
   }
