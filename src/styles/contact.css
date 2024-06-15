@@ -12,13 +12,13 @@
   padding: 20px;
   text-align: center;
   color: white;
-  font-size: 3rem;
+  font-size: 1rem;
 }
 
 .contact-container {
   display: grid;
   grid-template-columns: 1fr;
-  width: 80%;
+  width: 90%;
   gap: 13px;
 }
 
@@ -27,7 +27,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 3rem;
+  font-size: 0.8rem;
   padding: 20px 10px;
   border: 1px solid dodgerblue;
   border-radius: 20px;
@@ -43,4 +43,54 @@
 
 .contact-container .box:hover {
   color: grey;
+}
+
+
+@media (min-width: 700px) {
+  .contact {
+    background-color: black;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    align-items: center;
+  }
+  
+  .contact-top {
+    padding: 20px;
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+  }
+  
+  .contact-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 80%;
+    gap: 13px;
+  }
+  
+  .contact-container .box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 3rem;
+    padding: 20px 10px;
+    border: 1px solid dodgerblue;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .contact-container .box div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .contact-container .box:hover {
+    color: grey;
+  }
 }
