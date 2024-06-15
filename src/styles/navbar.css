@@ -21,6 +21,17 @@ nav div a{
   }
   
   nav .menu-icon{
-    font-size: 3rem;
+    font-size: 2rem;
     cursor: pointer;
+  }
+
+  nav h1{
+    font-size: 1rem;
+  }
+
+  @media (min-width: 700px) {
+    nav .menu-icon{
+      font-size: 3rem;
+      cursor: pointer;
+    }
   }

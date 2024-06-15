@@ -1,6 +1,7 @@
 footer{
     background-color: black;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     padding: 50px 20px;
     align-items: center;
@@ -15,3 +16,15 @@ footer a{
 footer span{
     cursor: pointer;
 }
+
+@media (min-width: 700px) {
+    footer{
+        background-color: black;
+        display: flex;
+        justify-content: space-between;
+        padding: 50px 20px;
+        align-items: center;
+        color: white;
+    }
+    
+  }

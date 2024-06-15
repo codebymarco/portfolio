@@ -1,5 +1,5 @@
 .banner{
-    height: 90vh;
+    height: calc(90vh - 10vh); /* Adjust 100px according to your header/footer height */
     background-color: black;
     color: white;
     display: flex;
@@ -20,7 +20,36 @@
 }
 
 .banner img{
-    height: 100%;
+    height: 80%;
     width: auto;
     border-radius: 50px;
 }
+
+@media (min-width: 700px) {
+    .banner{
+        height: 90vh;
+        background-color: black;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    
+    }
+    
+    .banner h1{
+        font-size: 6rem;
+    }
+    
+    .banner p{
+        font-size: 2rem;
+        color: dodgerblue;
+    }
+    
+    .banner img{
+        height: 100%;
+        width: auto;
+        border-radius: 50px;
+    }
+  }
