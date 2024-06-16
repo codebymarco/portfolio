@@ -5,7 +5,7 @@ import { FaCss3Alt, FaHtml5, FaNodeJs } from "react-icons/fa";
 import { SiMongodb, SiRabbitmq, SiRender, SiTypescript } from "react-icons/si";
 import { IoLogoVercel } from "react-icons/io5";
 import { FiGithub } from "react-icons/fi";
-import img from '../../../assets/img.png'
+import img from "../../../assets/img.png";
 
 const PortfolioHub = () => {
   return (
@@ -23,12 +23,16 @@ const PortfolioHub = () => {
         </motion.h1>
       </div>
       <div className="app-links">
-        <a href="https://iportfolio-console.vercel.app/" target="_blank">view site</a>
-        <Link to="/">
-          {" "}
+        <a href="https://iportfolio-console.vercel.app/" target="_blank">
+          view site
+        </a>
+        <a
+          href="https://github.com/codebymarco/iportfolio_backend"
+          target="_blank"
+        >
           <FiGithub color="white" />
           repo
-        </Link>
+        </a>
       </div>
       <div className="app-container">
         <motion.div
@@ -43,11 +47,12 @@ const PortfolioHub = () => {
           <div className="app-details-box description">
             <h2>description</h2>
             <p>
-              <span style={{color:'dodgerblue'}}>PortfolioHub</span> is a versatile web application designed to empower
-              users to create and manage their personal web portfolios
-              effortlessly. Whether you're a designer, developer, artist, or any
-              other professional, PortfolioHub provides the tools you need to
-              showcase your work and track your portfolio's performance.
+              <span style={{ color: "dodgerblue" }}>PortfolioHub</span> is a
+              versatile web application designed to empower users to create and
+              manage their personal web portfolios effortlessly. Whether you're
+              a designer, developer, artist, or any other professional,
+              PortfolioHub provides the tools you need to showcase your work and
+              track your portfolio's performance.
             </p>
           </div>
           <div className="divider"></div>

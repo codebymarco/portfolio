@@ -30,32 +30,52 @@ const About = () => {
         <div className="about-container-2">
           <div className="about-left">
             <h1>HI I'M MARCO &#128075;</h1>
-            <p style={{color:'green'}}>
-              A self-taught software developer with a
-              unconventional journey. After finishing school, I was
-              knee-deep in sawdust working with my dad in his carpentry company.
-              While I mastered the art of hammering &#x1F528; nails &#x1F6E0; and screwing stuff, I
-              realized that my true passion was creating digital
-              masterpieces.
+            <p style={{ color: "green" }}>
+              A self-taught software developer with a unconventional journey.
+              After finishing school, I was knee-deep in sawdust working with my
+              dad in his carpentry company. While I mastered the art of
+              hammering &#x1F528; nails &#x1F6E0; and screwing stuff, I realized
+              that my true passion was creating digital masterpieces.
             </p>
-            <p style={{color:'dodgerblue'}}>
+            <p style={{ color: "dodgerblue" }}>
               Armed with nothing but curiosity and an internet connection, I was
               on a mission to teach myself coding. After countless late-night
               coding sessions I am now a full-fledged developer
             </p>
-            <p style={{color:'red'}}>
+            <p style={{ color: "red" }}>
               I call the sunny shores of Durban my home, but I have a serious
               case of wanderlust. If a place catches my fancy, I'm more than
               willing to pack my bags and relocate anywhere in the world.
               Adventure is my middle name, and I'm always up for trying and
               learning new things.
             </p>
-            <p style={{color:'white'}}>
-              From carpentry to coding &#x1F310;, my journey has been a blast. If you’re
-              looking for someone who can build both a sturdy table and a secure web app, look no further. Hit your boy up
+            <p style={{ color: "white" }}>
+              From carpentry to coding &#x1F310;, my journey has been a blast.
+              If you’re looking for someone who can build both a sturdy table
+              and a secure web app, look no further. Hit your boy up
             </p>
           </div>
           <img src={img} alt="image" />
+        </div>
+        <div className="divider"></div>
+        <div className="about-we">
+          <h2>work experience</h2>
+          <div className="we-container">
+            <div className="box">
+              <div className="box-top">
+                <div>
+                  <h1>Fullstack Developer</h1>
+                  <h2>Decidio GMBH</h2>
+                </div>
+                <h3>2023 - present</h3>
+              </div>
+              <p>
+                I started off working on support for the TRENDO product, but
+                then got promoted to developer, working on the backend and
+                frontend of TRUENDO.
+              </p>
+            </div>
+          </div>
         </div>
         <div className="divider"></div>
         <div className="about-hobbies">
