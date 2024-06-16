@@ -5,6 +5,7 @@ import { FaCss3Alt, FaHtml5, FaNodeJs } from "react-icons/fa";
 import { SiMongodb, SiRabbitmq, SiRender, SiTypescript } from "react-icons/si";
 import { IoLogoVercel } from "react-icons/io5";
 import { FiGithub } from "react-icons/fi";
+import img from '../../../assets/img.png'
 
 const PortfolioHub = () => {
   return (
@@ -35,7 +36,9 @@ const PortfolioHub = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 0.5 }}
-        ></motion.div>
+        >
+          <img src={img} alt="akfjhfl" />
+        </motion.div>
         <div className="app-detials">
           <div className="app-details-box description">
             <h2>description</h2>
