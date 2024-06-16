@@ -23,7 +23,7 @@
 .app-top {
   padding: 20px;
   color: white;
-  font-size: 3rem;
+  font-size: 1rem;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -54,7 +54,7 @@
 
 .app-photo {
   width: 100%;
-  height: 60vh;
+  height: 20vh;
   background-color: aquamarine;
 }
 
@@ -68,15 +68,15 @@
 
 .app-detials-box-technologies {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 10px;
   width: fit-content;
 }
 
 .app-detials-box-technologies .box {
   border: 1px solid dodgerblue;
-  padding: 10px 20px;
-  font-size: 2rem;
+  padding: 5px 10px;
+  font-size: 0.8rem;
   border-radius: 20px;
   display: flex;
   align-items: center;
@@ -91,10 +91,115 @@
 }
 
 .description p {
-  font-size: 2rem;
-  width: 60%;
+  font-size: 0.8rem;
+  width: 90%;
 }
 
 .hover{
   cursor: pointer;
+}
+
+
+@media (min-width: 700px) {
+  .app {
+    background-color: black;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    align-items: center;
+    color: white;
+  }
+  
+  .app-nav {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+  }
+  
+  .app-nav a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .app-top {
+    padding: 20px;
+    color: white;
+    font-size: 3rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  .app-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .app-links a {
+    color: white;
+    border: 1px solid dodgerblue;
+    border-radius: 20px;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .app-links a:hover {
+    border: 1px solid aquamarine;
+    background-color: aquamarine;
+  }
+  
+  .app-photo {
+    width: 100%;
+    height: 60vh;
+    background-color: aquamarine;
+  }
+  
+  .app-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+    width: 100%;
+  }
+  
+  .app-detials-box-technologies {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    width: fit-content;
+  }
+  
+  .app-detials-box-technologies .box {
+    border: 1px solid dodgerblue;
+    padding: 10px 20px;
+    font-size: 2rem;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .app-details-box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px 0px;
+  }
+  
+  .description p {
+    font-size: 2rem;
+    width: 60%;
+  }
+  
+  .hover{
+    cursor: pointer;
+  }
+  
 }
