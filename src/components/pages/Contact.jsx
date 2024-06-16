@@ -1,12 +1,16 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { SiGmail, SiOnlyfans } from "react-icons/si";
 import { IoPhonePortraitOutline } from "react-icons/io5";
 import { FaGithub } from "react-icons/fa";
 import { CiLinkedin } from "react-icons/ci";
 import "../../styles/contact.css";
+import OnlyFans from "../components/OnlyFans";
 
 const Contact = () => {
+
+  const [show, setShow] = useState(false)
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -41,8 +45,19 @@ const Contact = () => {
     // Optionally, add initial animations or effects here
   }, []);
 
+  const showComp = () => {
+    setShow(true);
+  
+    // Set timeout to set state to false after 2 seconds
+    setTimeout(() => {
+      setShow(false);
+    }, 2000); // 2000 milliseconds = 2 seconds
+  };
   return (
     <div className="contact">
+      {
+        show ? <OnlyFans/>: null
+      }
       <div className="contact-top">
         <h1>Contact me</h1>
       </div>
@@ -92,7 +107,7 @@ const Contact = () => {
           <span>04</span>
         </motion.div>
 
-        <motion.div variants={itemVariants} className="box">
+        <motion.div onClick={() => showComp()} variants={itemVariants} className="box">
           <div>
             <SiOnlyfans color="skyblue" />
             <p>onlyfans</p>

@@ -1,0 +1,36 @@
+.onlyfans {
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 500;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 20px;
+    font-size: 2rem;
+  }
+
+  @media (min-width: 700px) {
+    .onlyfans {
+        height: 100vh;
+        width: 100%;
+        background-color: black;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 500;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        padding: 20px;
+        font-size: 4rem;
+      }
+    
+  }
