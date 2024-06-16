@@ -21,6 +21,7 @@ footer span{
     footer{
         background-color: black;
         display: flex;
+        flex-direction: row;
         justify-content: space-between;
         padding: 50px 20px;
         align-items: center;

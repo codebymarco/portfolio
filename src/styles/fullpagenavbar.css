@@ -35,7 +35,7 @@
   line-height: 5rem;
   letter-spacing: 1rem;
   cursor: pointer;
-  color: dodgerblue;
+  color: white;
 }
 
 .fullpagenavbar div:hover {
@@ -104,7 +104,7 @@
     line-height: 5rem;
     letter-spacing: 1rem;
     cursor: pointer;
-    color: dodgerblue;
+    color: white;
   }
   
   .fullpagenavbar div:hover {
