@@ -132,7 +132,7 @@ const About = () => {
           <h2>&#x1F44D; likes</h2>
           <div className="hobbies-container">
             <div className="box">
-              <IoFootballOutline />
+              <IoFootballOutline color="yellow" />
               watching football
             </div>
             <div className="box">
@@ -140,7 +140,7 @@ const About = () => {
               coding
             </div>
             <div className="box">
-              <GiSleepingBag />
+              <GiSleepingBag color="grey" />
               sleeping
             </div>
             <div className="box">
@@ -152,11 +152,11 @@ const About = () => {
               conspiracies
             </div>
             <div className="box">
-              <FaRegLaughBeam />
+              <FaRegLaughBeam color="orange" />
               memes
             </div>
             <div className="box">
-              <FaPepperHot />
+              <FaPepperHot color="red" />
               spicy food
             </div>
             <div className="box">liverpool</div>
@@ -167,6 +167,7 @@ const About = () => {
         <div className="about-hobbies">
           <h2> &#128078; dislikes</h2>
           <div className="hobbies-container">
+            <div className="box">veggies</div>
             <div className="box">manchester united</div>
             <div className="box">the red devils</div>
             <div className="box">old trafford</div>
