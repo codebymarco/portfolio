@@ -17,6 +17,10 @@ footer span{
     cursor: pointer;
 }
 
+footer *:hover{
+    color:dodgerblue
+}
+
 @media (min-width: 700px) {
     footer{
         background-color: black;
