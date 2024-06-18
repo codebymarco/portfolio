@@ -7,7 +7,7 @@ import Contact from "../pages/Contact";
 import Projects from "../pages/Projects";
 import App from "../pages/apps/App";
 import PortfolioHub from "../pages/apps/PortfolioHub";
-import LinkBio from "../pages/apps/LinkBio";
+import Career from "../pages/Career";
 
 const Router = () => {
   return (
@@ -20,6 +20,7 @@ const Router = () => {
           <Route path="skills" element={<Skills />}></Route>
           <Route path="contact" element={<Contact />}></Route>
           <Route path="apps" element={<Projects />}></Route>
+          <Route path="career" element={<Career />}></Route>
         </Route>
 
         <Route path="/apps/app" element={<App />}></Route>

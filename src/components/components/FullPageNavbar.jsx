@@ -55,6 +55,7 @@ const FullPageNavbar = ({ close }) => {
       <motion.div variants={itemVariants} onClick={() => route(`/contact`)}>contact</motion.div>
       <motion.div variants={itemVariants} onClick={() => route(`/skills`)}>skills</motion.div>
       <motion.div variants={itemVariants} onClick={() => route(`/apps`)}>projects</motion.div>
+      <motion.div variants={itemVariants} onClick={() => route(`/apps`)}>career</motion.div>
     </motion.div>
   );
 };

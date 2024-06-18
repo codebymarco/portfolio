@@ -64,6 +64,21 @@ const About = () => {
             <div className="box">
               <div className="box-top">
                 <div>
+                  <h1>Carpenter</h1>
+                  <h2>El-Shaddai Interiors</h2>
+                </div>
+                <h3>2017 - 2023</h3>
+              </div>
+              <p>
+                I started working for my dada straight after high school. My job
+                was to learn everything my dad knew so I could lessen the burden
+                on him. Left after I found a new career path, Just to put it out
+                there, my brother took over from me.
+              </p>
+            </div>
+            <div className="box">
+              <div className="box-top">
+                <div>
                   <h1>Fullstack Developer</h1>
                   <h2>Decidio GMBH</h2>
                 </div>
