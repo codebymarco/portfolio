@@ -1,5 +1,9 @@
 import React from "react";
 import "../../styles/career.css";
+import { IoLocationOutline } from "react-icons/io5";
+import { BsCalendarDate } from "react-icons/bs";
+import { LiaTasksSolid } from "react-icons/lia";
+import { GrInfo } from "react-icons/gr";
 
 const Career = () => {
   return (
@@ -23,14 +27,23 @@ const Career = () => {
             <div>
               <h1>postion</h1>
               <h2>company</h2>
-              <h2>location</h2>
+              <h2>
+                {" "}
+                <IoLocationOutline color="yellow" /> location
+              </h2>{" "}
             </div>
 
-            <h3>mar 20101 - presetmt</h3>
+            <h3>
+              <BsCalendarDate />
+              mar 20101 - presetmt
+            </h3>
           </div>
 
           <div className="job-desc">
-            <h3>Description:</h3>
+            <h3>
+              <GrInfo />
+              Description:
+            </h3>
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi sed
               quo eveniet veritatis neque! Enim quisquam nihil veritatis
@@ -40,7 +53,10 @@ const Career = () => {
           </div>
 
           <div className="job-response">
-            <h3>Resposniblities:</h3>
+            <h3>
+              <LiaTasksSolid />
+              Resposniblities:
+            </h3>
             <div className="job-response-box">
               <span>responsibilty</span>
               <span>1</span>
@@ -111,14 +127,23 @@ const Career = () => {
             <div>
               <h1>postion</h1>
               <h2>company</h2>
-              <h2>location</h2>
+              <h2>
+                {" "}
+                <IoLocationOutline color="yellow" /> location
+              </h2>
             </div>
 
-            <h3>mar 20101 - presetmt</h3>
+            <h3>
+              <BsCalendarDate />
+              mar 20101 - presetmt
+            </h3>
           </div>
 
           <div className="job-desc">
-            <h3>Description:</h3>
+            <h3>
+              <GrInfo />
+              Description:
+            </h3>
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi sed
               quo eveniet veritatis neque! Enim quisquam nihil veritatis
@@ -128,7 +153,10 @@ const Career = () => {
           </div>
 
           <div className="job-response">
-            <h3>Resposniblities:</h3>
+            <h3>
+              <LiaTasksSolid />
+              Resposniblities:
+            </h3>
             <div className="job-response-box">
               <span>responsibilty</span>
               <span>1</span>
