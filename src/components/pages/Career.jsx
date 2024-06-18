@@ -13,29 +13,27 @@ const Career = () => {
       </div>
       <div className="career-about">
         <p>
-          With more than 10 years of expertise in creating and building software
-          appspancations for the manufacturing, blockchain, and financial
-          industries. Proficient in programming languages such as Java, Python,
-          and C++. Skilled in database management, software architecture, and
-          cloud computing. Proven track record of despanvering high-quaspanty
-          software products on time and within budget.
+          With more than 10 years of expertise in the shoppfitting and
+          technology industry I am no longer a newbie. Proficient in programming
+          languages such as Golang, Python, and Typescript. Skilled in database
+          management, software architecture, and cloud computing. I have a track
+          record of finishing every task I am assigned
         </p>
       </div>
       <div className="career-container">
         <div className="career-box">
           <div className="career-box-top">
             <div>
-              <h1>postion</h1>
-              <h2>company</h2>
+              <h1>Fitter</h1>
+              <h2>El-Shaddai Interiors</h2>
               <h2>
-                {" "}
-                <IoLocationOutline color="yellow" /> location
-              </h2>{" "}
+                <IoLocationOutline color="yellow" /> Durban
+              </h2>
             </div>
 
             <h3>
               <BsCalendarDate />
-              mar 20101 - presetmt
+              jan 2016 - dec 2022
             </h3>
           </div>
 
@@ -45,10 +43,10 @@ const Career = () => {
               Description:
             </h3>
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi sed
-              quo eveniet veritatis neque! Enim quisquam nihil veritatis
-              molestiae ad voluptatibus quia cum provident. Quam eaque quidem
-              eius error libero.
+              I started working for my dad straight after high school. My job
+              was to learn everything my dad knew so I could lessen the burden
+              on him. Left after I found a new career path, Just to put it out
+              there, my brother took over from me.
             </p>
           </div>
 
@@ -58,84 +56,48 @@ const Career = () => {
               Resposniblities:
             </h3>
             <div className="job-response-box">
-              <span>responsibilty</span>
+              <span>accept order from supplier</span>
               <span>1</span>
             </div>
             <div className="job-response-box">
-              <span>responsibilty</span>
-              <span>1</span>
-            </div>
-
-            <div className="job-response-box">
-              <span>responsibilty</span>
-              <span>1</span>
+              <span>check if order is correct</span>
+              <span>2</span>
             </div>
 
             <div className="job-response-box">
-              <span>responsibilty</span>
-              <span>1</span>
+              <span>categorize peieces based on the units</span>
+              <span>3</span>
             </div>
 
             <div className="job-response-box">
-              <span>responsibilty</span>
-              <span>1</span>
+              <span>assemble the units</span>
+              <span>4</span>
             </div>
 
             <div className="job-response-box">
-              <span>responsibilty</span>
-              <span>1</span>
+              <span>fit and finish units</span>
+              <span>5</span>
             </div>
 
             <div className="job-response-box">
-              <span>responsibilty</span>
-              <span>1</span>
-            </div>
-
-            <div className="job-response-box">
-              <span>responsibilty</span>
-              <span>1</span>
-            </div>
-
-            <div className="job-response-box">
-              <span>responsibilty</span>
-              <span>1</span>
-            </div>
-
-            <div className="job-response-box">
-              <span>responsibilty</span>
-              <span>1</span>
-            </div>
-
-            <div className="job-response-box">
-              <span>responsibilty</span>
-              <span>1</span>
-            </div>
-
-            <div className="job-response-box">
-              <span>responsibilty</span>
-              <span>1</span>
-            </div>
-
-            <div className="job-response-box">
-              <span>responsibilty</span>
-              <span>1</span>
+              <span>allocate tasks to my team</span>
+              <span>6</span>
             </div>
           </div>
         </div>
         <div className="career-box">
           <div className="career-box-top">
             <div>
-              <h1>postion</h1>
-              <h2>company</h2>
+              <h1>Fullstack Developer</h1>
+              <h2>Decidio GMBH</h2>
               <h2>
-                {" "}
-                <IoLocationOutline color="yellow" /> location
+                <IoLocationOutline color="yellow" /> Durban
               </h2>
             </div>
 
             <h3>
               <BsCalendarDate />
-              mar 20101 - presetmt
+              jan 2023 - present
             </h3>
           </div>
 
@@ -145,10 +107,11 @@ const Career = () => {
               Description:
             </h3>
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi sed
-              quo eveniet veritatis neque! Enim quisquam nihil veritatis
-              molestiae ad voluptatibus quia cum provident. Quam eaque quidem
-              eius error libero.
+              I initialy joined Decdio to work as a support agent on the TRUENDO
+              product, I was then promoted to a developer role, more specificlay
+              working on the backend and operations as well as some frontend
+              tasks from time to time.I had to learn new technologies as i got
+              deeper into the product.
             </p>
           </div>
 
@@ -158,67 +121,27 @@ const Career = () => {
               Resposniblities:
             </h3>
             <div className="job-response-box">
-              <span>responsibilty</span>
+              <span>find bugs and fix them</span>
               <span>1</span>
             </div>
             <div className="job-response-box">
-              <span>responsibilty</span>
-              <span>1</span>
-            </div>
-
-            <div className="job-response-box">
-              <span>responsibilty</span>
-              <span>1</span>
+              <span>optimization of data</span>
+              <span>2</span>
             </div>
 
             <div className="job-response-box">
-              <span>responsibilty</span>
-              <span>1</span>
+              <span>implement new features</span>
+              <span>3</span>
             </div>
 
             <div className="job-response-box">
-              <span>responsibilty</span>
-              <span>1</span>
+              <span>quick fixes</span>
+              <span>4</span>
             </div>
 
             <div className="job-response-box">
-              <span>responsibilty</span>
-              <span>1</span>
-            </div>
-
-            <div className="job-response-box">
-              <span>responsibilty</span>
-              <span>1</span>
-            </div>
-
-            <div className="job-response-box">
-              <span>responsibilty</span>
-              <span>1</span>
-            </div>
-
-            <div className="job-response-box">
-              <span>responsibilty</span>
-              <span>1</span>
-            </div>
-
-            <div className="job-response-box">
-              <span>responsibilty</span>
-              <span>1</span>
-            </div>
-
-            <div className="job-response-box">
-              <span>responsibilty</span>
-              <span>1</span>
-            </div>
-
-            <div className="job-response-box">
-              <span>responsibilty</span>
-              <span>1</span>
-            </div>
-
-            <div className="job-response-box">
-              <span>responsibilty</span>
-              <span>1</span>
+              <span>fix client issues</span>
+              <span>5</span>
             </div>
           </div>
         </div>

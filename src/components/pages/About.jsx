@@ -70,7 +70,7 @@ const About = () => {
                 <h3>2017 - 2023</h3>
               </div>
               <p>
-                I started working for my dada straight after high school. My job
+                I started working for my dad straight after high school. My job
                 was to learn everything my dad knew so I could lessen the burden
                 on him. Left after I found a new career path, Just to put it out
                 there, my brother took over from me.
