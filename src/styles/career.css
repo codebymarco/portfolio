@@ -1,0 +1,72 @@
+.career {
+  min-height: calc(90vh - 10vh);
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  gap: 40px;
+}
+
+.career-top {
+  text-align: center;
+}
+
+.career-about {
+  text-align: center;
+  width: 60%;
+}
+
+.career-container {
+  display: flex;
+  width: 70%;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.career-box {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 20px;
+  border: 1px solid dodgerblue;
+}
+
+.job-response {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.career-box-top {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid dodgerblue;
+  align-items: flex-end;
+  padding-bottom: 20px;
+}
+
+.job-desc {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.job-desc p {
+  width: 40%;
+}
+
+.job-response-box {
+  border: 1px solid dodgerblue;
+  border-radius: 20px;
+  width: 20%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
