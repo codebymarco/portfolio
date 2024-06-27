@@ -8,6 +8,7 @@ import Projects from "../pages/Projects";
 import App from "../pages/apps/App";
 import PortfolioHub from "../pages/apps/PortfolioHub";
 import Career from "../pages/Career";
+import LinkBio from "../pages/apps/LinkBio";
 
 const Router = () => {
   return (
@@ -25,6 +26,7 @@ const Router = () => {
 
         <Route path="/apps/app" element={<App />}></Route>
         <Route path="/apps/portfoliohub" element={<PortfolioHub />}></Route>
+        <Route path="/apps/linkbio" element={<LinkBio />}></Route>
       </Routes>
     </BrowserRouter>
   );

@@ -16,6 +16,10 @@ const Projects = () => {
           <h2>Linkbio</h2>
           <span>02</span>
         </Link>
+        <Link to={`/apps/portfoliohub`} className="box">
+          <h2>formio</h2>
+          <span>03</span>
+        </Link>
       </div>
     </div>
   );
