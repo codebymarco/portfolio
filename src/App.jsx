@@ -4,12 +4,12 @@ import Router from "./components/router/Router";
 import AnimationPageOne from "./components/components/AnimationPageOne";
 
 const App = () => {
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(true);
 
   useEffect(() => {
     // Hide the AnimationPageOne component after 5 seconds
     const timeout = setTimeout(() => {
-      setShow(false);
+      setShow(true);
     }, 5000); // 3 seconds for AnimationPageOne + 2 seconds visible
 
     // Clean up the timeout when the component unmounts
