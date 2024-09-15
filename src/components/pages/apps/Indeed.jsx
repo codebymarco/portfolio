@@ -23,11 +23,11 @@ const Indeed = () => {
         </motion.h1>
       </div>
       <div className="app-links">
-        <a href="https://iportfolio-console.vercel.app/" target="_blank">
+        <a href="https://indeed-console.vercel.app/" target="_blank">
           view site
         </a>
         <a
-          href="https://github.com/codebymarco/iportfolio_backend"
+          href="https://github.com/codebymarco/indeed_backend"
           target="_blank"
         >
           <FiGithub color="white" />
