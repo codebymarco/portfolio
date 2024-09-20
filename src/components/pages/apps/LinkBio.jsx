@@ -29,7 +29,7 @@ const LinkBio = () => {
         </motion.h1>
       </div>
       <div className="app-links">
-        <a href="https://indeed-console.vercel.app/" target="_blank">
+        <a href="https://linkbio-console.vercel.app/" target="_blank">
           view site
         </a>
         <a href="https://github.com/codebymarco/indeed_backend" target="_blank">

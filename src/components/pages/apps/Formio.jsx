@@ -23,7 +23,7 @@ const Formio = () => {
         </motion.h1>
       </div>
       <div className="app-links">
-        <a href="https://indeed-console.vercel.app/" target="_blank">
+        <a href="https://formio-console.vercel.app/" target="_blank">
           view site
         </a>
         <a
