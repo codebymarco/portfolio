@@ -2,7 +2,13 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import "../../../styles/app.css";
 import { FaCss3Alt, FaHtml5, FaNodeJs } from "react-icons/fa";
-import { SiMongodb, SiOpenstreetmap, SiRabbitmq, SiRender, SiTypescript } from "react-icons/si";
+import {
+  SiMongodb,
+  SiOpenstreetmap,
+  SiRabbitmq,
+  SiRender,
+  SiTypescript,
+} from "react-icons/si";
 import { IoLogoVercel } from "react-icons/io5";
 import { FiGithub } from "react-icons/fi";
 import img from "../../../assets/indeed.png";
@@ -26,10 +32,7 @@ const Indeed = () => {
         <a href="https://indeed-console.vercel.app/" target="_blank">
           view site
         </a>
-        <a
-          href="https://github.com/codebymarco/indeed_backend"
-          target="_blank"
-        >
+        <a href="https://github.com/codebymarco/indeed_backend" target="_blank">
           <FiGithub color="white" />
           repo
         </a>
@@ -92,10 +95,9 @@ const Indeed = () => {
                 rabbitmq
               </div>
               <div className="box">
-              <SiOpenstreetmap color="#47A248"/>
+                <SiOpenstreetmap color="#47A248" />
                 open street map
               </div>
-
             </div>
           </div>
           <div className="divider"></div>
@@ -121,11 +123,21 @@ const Indeed = () => {
           <div className="app-details-box">
             <h2>links</h2>
             <div className="app-detials-box-technologies">
-              <div className="box hover">live app</div>
-              <div className="box hover">
+              <a
+                href="https://indeed-console.vercel.app/"
+                target="_blank"
+                className="box hover"
+              >
+                live app
+              </a>
+              <a
+                href="https://github.com/codebymarco/indeed_backend"
+                target="_blank"
+                className="box hover"
+              >
                 <FiGithub color="white" />
                 git repo
-              </div>
+              </a>
             </div>
           </div>
         </div>

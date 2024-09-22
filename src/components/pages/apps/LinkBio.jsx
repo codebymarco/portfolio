@@ -32,7 +32,10 @@ const LinkBio = () => {
         <a href="https://linkbio-console.vercel.app/" target="_blank">
           view site
         </a>
-        <a href="https://github.com/codebymarco/indeed_backend" target="_blank">
+        <a
+          href="https://github.com/codebymarco/linkbio_backend"
+          target="_blank"
+        >
           <FiGithub color="white" />
           repo
         </a>
@@ -124,11 +127,21 @@ const LinkBio = () => {
           <div className="app-details-box">
             <h2>links</h2>
             <div className="app-detials-box-technologies">
-              <div className="box hover">live app</div>
-              <div className="box hover">
+              <a
+                href="https://linkbio-console.vercel.app/"
+                target="_blank"
+                className="box hover"
+              >
+                live app
+              </a>
+              <a
+                href="https://github.com/codebymarco/linkbio_backend"
+                target="_blank"
+                className="box hover"
+              >
                 <FiGithub color="white" />
                 git repo
-              </div>
+              </a>
             </div>
           </div>
         </div>
