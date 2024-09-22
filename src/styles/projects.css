@@ -37,6 +37,10 @@
   border-bottom: 1px solid dodgerblue;
 }
 
+.projects-container .box span{
+  color: gray;
+}
+
 .projects-container .box:last-child {
   border-bottom: none;
 }
@@ -90,6 +94,9 @@
   }
   
   .projects-container .box:hover {
+    color: gray;
+  }
+  .projects-container .box span{
     color: gray;
   }
 }

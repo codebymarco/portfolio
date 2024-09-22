@@ -74,7 +74,7 @@ const Skills = () => {
                 <IconComponent color={skillIcons[skill].color} size="0.8em" />
                 {skill}
               </span>
-              <span>{String(index + 1).padStart(2, "0")}</span>
+              <span style={{color:"gray"}}>{String(index + 1).padStart(2, "0")}</span>
             </motion.div>
           );
         })}

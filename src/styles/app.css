@@ -18,6 +18,9 @@
 .app-nav a {
   color: white;
   text-decoration: none;
+  background-color: #0d0d0d;
+  padding: 10px;
+  border-radius: 20px;
 }
 
 .app-top {
@@ -45,6 +48,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  background-color: #0d0d0d;
 }
 
 .app-links a:hover {
@@ -61,7 +65,7 @@
   align-items: center;
 }
 
-.app-photo img{
+.app-photo img {
   width: 100%;
   height: 100%;
 }
@@ -89,6 +93,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  background-color: #0d0d0d;
 }
 
 .app-details-box {
@@ -101,12 +106,12 @@
 .description p {
   font-size: 0.8rem;
   width: 90%;
+  color: gray;
 }
 
-.hover{
+.hover {
   cursor: pointer;
 }
-
 
 @media (min-width: 700px) {
   .app {
@@ -119,18 +124,21 @@
     align-items: center;
     color: white;
   }
-  
+
   .app-nav {
     display: flex;
     width: 100%;
     justify-content: flex-start;
   }
-  
+
   .app-nav a {
     color: white;
     text-decoration: none;
+    background-color: #0d0d0d;
+    padding: 10px;
+    border-radius: 20px;
   }
-  
+
   .app-top {
     padding: 20px;
     color: white;
@@ -139,14 +147,14 @@
     justify-content: flex-start;
     align-items: center;
   }
-  
+
   .app-links {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
   }
-  
+
   .app-links a {
     color: white;
     border: 1px solid dodgerblue;
@@ -156,13 +164,14 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    background-color: #0d0d0d;
   }
-  
+
   .app-links a:hover {
     border: 1px solid aquamarine;
     background-color: aquamarine;
   }
-  
+
   .app-photo {
     width: 100%;
     height: 60vh;
@@ -172,11 +181,11 @@
     align-items: center;
   }
 
-  .app-photo img{
+  .app-photo img {
     width: 100%;
     height: 100%;
   }
-  
+
   .app-container {
     display: flex;
     flex-direction: column;
@@ -184,14 +193,14 @@
     gap: 20px;
     width: 100%;
   }
-  
+
   .app-detials-box-technologies {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;
     width: fit-content;
   }
-  
+
   .app-detials-box-technologies .box {
     border: 1px solid dodgerblue;
     padding: 10px 20px;
@@ -201,21 +210,20 @@
     align-items: center;
     gap: 10px;
   }
-  
+
   .app-details-box {
     display: flex;
     flex-direction: column;
     gap: 10px;
     padding: 20px 0px;
   }
-  
+
   .description p {
     font-size: 2rem;
     width: 60%;
   }
-  
-  .hover{
+
+  .hover {
     cursor: pointer;
   }
-  
 }

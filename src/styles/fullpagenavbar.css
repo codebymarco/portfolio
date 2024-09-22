@@ -1,7 +1,7 @@
 .fullpagenavbar {
   height: 100vh;
   width: 100%;
-  background-color: black;
+  background-color: #0d0d0d;
   position: fixed;
   top: 0;
   left: 0;
@@ -23,14 +23,14 @@
   font-size: 2rem;
 }
 
-.fullpagenavbar .close-icon:hover{
+.fullpagenavbar .close-icon:hover {
   font-size: 3.5rem;
   transition: all 0.5s;
 }
 
 .fullpagenavbar div {
   font-size: 2rem;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #0d0d0d;
   width: 100%;
   line-height: 5rem;
   letter-spacing: 1rem;
@@ -70,7 +70,7 @@
   .fullpagenavbar {
     height: 100vh;
     width: 100%;
-    background-color: black;
+    background-color: #0d0d0d;
     position: fixed;
     top: 0;
     left: 0;
@@ -82,7 +82,7 @@
     color: white;
     padding: 20px;
   }
-  
+
   .fullpagenavbar .close-icon {
     position: absolute;
     top: 0;
@@ -91,27 +91,28 @@
     cursor: pointer;
     font-size: 3rem;
   }
-  
-  .fullpagenavbar .close-icon:hover{
+
+  .fullpagenavbar .close-icon:hover {
     font-size: 3.5rem;
     transition: all 0.5s;
   }
-  
+
   .fullpagenavbar div {
-    font-size: 6rem;
-    border-bottom: 1px solid black;
+    font-size: 5rem;
+    border-bottom: 1px solid #0d0d0d;
     width: 100%;
-    line-height: 5rem;
+    line-height: 4.5rem;
     letter-spacing: 1rem;
     cursor: pointer;
     color: white;
   }
-  
+
   .fullpagenavbar div:hover {
-    letter-spacing: 1.5rem;
+    letter-spacing: 1.1rem;
     transition: all 0.5s;
+    color: dodgerblue;
   }
-  
+
   .anime-page-one {
     height: 100vh;
     width: 100%;
@@ -126,11 +127,11 @@
     justify-content: center;
     color: black;
   }
-  
+
   .anime-page-one h1 {
     font-size: 7rem;
   }
-  
+
   .anime-page-one h2 {
     font-size: 5rem;
   }
