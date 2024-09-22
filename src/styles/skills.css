@@ -30,6 +30,8 @@
   font-size: 0.8rem;
   padding: 10px 20px;
   cursor: pointer;
+  background-color: #0d0d0d;
+
 }
 
 .skillspage-container .box span {
@@ -70,6 +72,8 @@
     font-size: 2rem;
     padding: 10px 20px;
     cursor: pointer;
+    background-color: #0d0d0d;
+
   }
   
   .skillspage-container .box span {
@@ -81,9 +85,8 @@
     border: 1px solid aquamarine;
     background-color: aquamarine;
     border-radius: 20px;
-    font-size: 2.2rem;
     letter-spacing: 0.2rem;
-    padding: 20px 40px;
+    padding: 0px 20px;
     transition: all 0.5s;
   }
 }

@@ -30,29 +30,30 @@ const About = () => {
         <div className="about-container-2">
           <div className="about-left">
             <h1>HI I'M MARCO &#128075;</h1>
-            <p style={{ color: "green" }}>
+            <p style={{ color: "gray" }}>
               A self-taught software developer with a unconventional journey.
-              After finishing school, I was knee-deep in sawdust working with my
-              dad in his carpentry company. While I mastered the art of
+              After finishing school I found myself knee-deep in sawdust working
+              with my dad in his carpentry company. While I mastered the art of
               hammering &#x1F528; nails &#x1F6E0; and screwing stuff, I realized
-              that my true passion was creating digital masterpieces.
+              that my true passion was on the web.
             </p>
-            <p style={{ color: "dodgerblue" }}>
+            <p style={{ color: "gray" }}>
               Armed with nothing but curiosity and an internet connection, I was
               on a mission to teach myself coding. After countless late-night
               coding sessions I am now a full-fledged developer
             </p>
-            <p style={{ color: "red" }}>
-              I call the sunny shores of Durban my home, but I have a serious
+            {/*             <p style={{ color: "red" }}>
+              , but I have a serious
               case of wanderlust. If a place catches my fancy, I'm more than
               willing to pack my bags and relocate anywhere in the world.
               Adventure is my middle name, and I'm always up for trying and
               learning new things.
-            </p>
-            <p style={{ color: "white" }}>
-              From carpentry to coding &#x1F310;, my journey has been a blast.
-              If you’re looking for someone who can build both a sturdy table
-              and a secure web app, look no further. Hit your boy up
+            </p> */}
+            <p style={{ color: "gray" }}>
+            I call the sunny shores of Durban my home. From carpentry to
+              coding &#x1F310;, my journey has been a blast. If you’re looking
+              for someone who can build both a sturdy table and a secure web
+              app, look no further. Hit your boy up
             </p>
           </div>
           <img src={img} alt="image" />

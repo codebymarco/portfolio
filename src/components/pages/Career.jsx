@@ -11,15 +11,6 @@ const Career = () => {
       <div className="career-top">
         <h1>Career History</h1>
       </div>
-      <div className="career-about">
-        <p>
-          With more than 10 years of expertise in the shoppfitting and
-          technology industry I am no longer a newbie. Proficient in programming
-          languages such as Golang, Python, and Typescript. Skilled in database
-          management, software architecture, and cloud computing. I have a track
-          record of finishing every task I am assigned
-        </p>
-      </div>
       <div className="career-container">
         <div className="career-box">
           <div className="career-box-top">
@@ -38,9 +29,9 @@ const Career = () => {
           </div>
 
           <div className="job-desc">
-            <h3>
-              <GrInfo />
-              Description:
+          <h3 className="job-response-heading">
+          <GrInfo />
+              Description :
             </h3>
             <p>
               I started working for my dad straight after high school. My job
@@ -51,7 +42,7 @@ const Career = () => {
           </div>
 
           <div className="job-response">
-            <h3>
+            <h3 className="job-response-heading">
               <LiaTasksSolid />
               Resposniblities:
             </h3>
@@ -102,9 +93,9 @@ const Career = () => {
           </div>
 
           <div className="job-desc">
-            <h3>
-              <GrInfo />
-              Description:
+          <h3 className="job-response-heading">
+          <GrInfo />
+              Description :
             </h3>
             <p>
               I initialy joined Decdio to work as a support agent on the TRUENDO
@@ -116,9 +107,9 @@ const Career = () => {
           </div>
 
           <div className="job-response">
-            <h3>
+            <h3 className="job-response-heading">
               <LiaTasksSolid />
-              Resposniblities:
+              Resposniblities :
             </h3>
             <div className="job-response-box">
               <span>find bugs and fix them</span>
@@ -142,6 +133,10 @@ const Career = () => {
             <div className="job-response-box">
               <span>fix client issues</span>
               <span>5</span>
+            </div>
+            <div className="job-response-box">
+              <span>devops assistance</span>
+              <span>6</span>
             </div>
           </div>
         </div>
