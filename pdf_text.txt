@@ -1,0 +1,53 @@
+About
+I'm a 25 year old self-taught developer, which means I don’t have a formal degree and I am getting old. After finishing high school, I started working for my dad—I had worked for him before, but that was more like child labor.
+In 2021, I began watching coding tutorials on YouTube. Before I knew it, I went from creating UIs using HTML and CSS to building APIs and getting hired. Now, I’m approaching two years in the tech industry, and I can’t wait to see what the future holds for me.
+
+Carpenter/Fitter/Cabinet Maker
+2017 – 2022
+I started working for my dad after finishing high school, where we specialized in making custom cabinets and kitchen cupboards.
+Responsibilities:
+Checked the quality of materials before use.
+Performed daily inventory checks.
+Assembled cabinets using high-quality materials.
+Applied finishing touches to cabinets before presenting them to clients.
+Created cutting lists needed for each cabinet.
+
+Decidio
+Software Developer
+2023 – Present
+This was my first tech job.
+
+Responsibilities:
+Initially provided support for the Truendo product.
+Identified and fixed bugs.
+Implemented new features.
+Assisted in developer operations.
+Created standard operating procedures.
+Key Achievements:
+Developed consent record upload functionality, transferring data from a PostgreSQL database to Amazon S3.
+Implemented a geo feature to serve different scripts and configurations based on activated geographic regions.
+Created various general-purpose APIs.
+
+Skills:
+HTML5
+CSS
+JavaScript
+TypeScript
+React
+Node.js
+ExpressJS
+Golang
+SQL / NoSQL
+PostgreSQL
+Jenkins
+RabbitMQ
+Kubernetes
+Docker
+AWS / GCP
+
+Hobbies:
+Football
+Watching Netflix
+Coding
+Watching history documentaries
+Learning about space
