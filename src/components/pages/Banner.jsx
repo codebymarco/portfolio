@@ -11,7 +11,7 @@ const Banner = () => {
         alt=""
         initial={{ opacity: 0, scale: 1 }}
         animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1 }}
+        transition={{ duration: 5 }}
       />
     </div>
   );
