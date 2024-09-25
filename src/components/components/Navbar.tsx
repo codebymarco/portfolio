@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "../../styles/navbar.css";
 import FullPageNavbar from "./FullPageNavbar";
-import { CiMenuKebab } from "react-icons/ci";
+import { CiMenuFries, CiMenuKebab } from "react-icons/ci";
 import { AnimatePresence, motion } from "framer-motion";
 
 const Navbar = () => {
@@ -28,7 +28,7 @@ const Navbar = () => {
           <Link to="/apps">apps</Link>
           <Link to="/career">career</Link>
         </div>
-        <CiMenuKebab
+        <CiMenuFries
           id="mobile-links"
           className="menu-icon"
           onClick={() => setShow(true)}
