@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../../styles/navbar.css";
 import FullPageNavbar from "./FullPageNavbar";
 import { CiMenuKebab } from "react-icons/ci";
@@ -12,13 +12,28 @@ const Navbar = () => {
     setShow(false);
   };
 
+  const navigate  = useNavigate();
+
   return (
     <nav>
       <AnimatePresence>
         {show && <FullPageNavbar key="full-page-navbar" close={close} />}
       </AnimatePresence>
-      <h1>codebymarco</h1>
-      <CiMenuKebab className="menu-icon" onClick={() => setShow(true)} />
+      <h1 onClick={() => navigate("/")}>codebymarco</h1>
+      <div>
+        <div className="desktop-links" id="desktop-links">
+          <Link to="/about">about</Link>
+          <Link to="/skills">skills</Link>
+          <Link to="/contact">contact</Link>
+          <Link to="/apps">apps</Link>
+          <Link to="/career">career</Link>
+        </div>
+        <CiMenuKebab
+          id="mobile-links"
+          className="menu-icon"
+          onClick={() => setShow(true)}
+        />
+      </div>
     </nav>
   );
 };

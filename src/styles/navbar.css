@@ -6,6 +6,8 @@ nav {
   align-items: center;
   padding: 10px;
   color: white;
+  position: sticky;
+  top: 0;
 }
 
 nav div {
@@ -27,6 +29,24 @@ nav .menu-icon {
 
 nav h1 {
   font-size: 1rem;
+  cursor: pointer;
+}
+
+#desktop-links {
+  display: none;
+}
+
+#desktop-links a{
+  cursor: pointer;
+}
+
+#desktop-links a:hover{
+  color: gray;
+}
+
+
+#mobile-links {
+  display: block;
 }
 
 @media (min-width: 700px) {
@@ -36,5 +56,12 @@ nav h1 {
   }
   nav h1 {
     font-size: 2rem;
+  }
+  #mobile-links {
+    display: none;
+  }
+  #desktop-links {
+    display: flex;
+    gap: 10px;
   }
 }
