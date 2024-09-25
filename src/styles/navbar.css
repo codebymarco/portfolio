@@ -8,6 +8,7 @@ nav {
   color: white;
   position: sticky;
   top: 0;
+  z-index: 500;
 }
 
 nav div {
@@ -36,14 +37,20 @@ nav h1 {
   display: none;
 }
 
-#desktop-links a{
+#desktop-links a {
   cursor: pointer;
+  border-right: 1px solid white;
+  border-left: 1px solid transparent;
+  padding:0px 10px;
 }
 
-#desktop-links a:hover{
+#desktop-links a:last-child {
+  border-right: none; /* Remove border-right from the last child */
+}
+
+#desktop-links a:hover {
   color: gray;
 }
-
 
 #mobile-links {
   display: block;
@@ -62,6 +69,5 @@ nav h1 {
   }
   #desktop-links {
     display: flex;
-    gap: 10px;
   }
 }
