@@ -6,8 +6,17 @@ import { FaFilePdf, FaGithub, FaWhatsapp } from "react-icons/fa";
 import { CiLinkedin } from "react-icons/ci";
 import "../../styles/contact.css";
 import OnlyFans from "../components/OnlyFans";
+import resumePDF from "../../../public/resumePDF"
 
 const Contact = () => {
+
+  const handleDownloadResume = () => {
+    const downloadLink = document.createElement('a');
+    downloadLink.href = resumePDF;
+    downloadLink.download = 'resume.pdf';
+    downloadLink.click();
+  };
+
   const [show, setShow] = useState(false);
 
   const containerVariants = {
@@ -117,7 +126,6 @@ const Contact = () => {
         </motion.div>
 
         <motion.div
-          onClick={() => showComp()}
           variants={itemVariants}
           className="box"
         >
@@ -129,7 +137,7 @@ const Contact = () => {
         </motion.div>
 
         <motion.div
-          onClick={() => showComp()}
+          onClick={handleDownloadResume}
           variants={itemVariants}
           className="box"
         >
