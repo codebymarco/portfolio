@@ -4,7 +4,7 @@ import Router from "./components/router/Router";
 import AnimationPageOne from "./components/components/AnimationPageOne";
 
 const App = () => {
-  const [show, setShow] = useState(true);
+  const [show, setShow] = useState(false);
 
   useEffect(() => {
     // Hide the AnimationPageOne component after 5 seconds
@@ -22,7 +22,11 @@ const App = () => {
         {show ? (
           <AnimationPageOne key="animation-page-one" />
         ) : (
-          <motion.div key="router" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+          <motion.div
+            key="router"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+          >
             <Router />
           </motion.div>
         )}

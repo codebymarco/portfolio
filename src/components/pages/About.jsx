@@ -19,6 +19,7 @@ import { BiCool } from "react-icons/bi";
 import { LuEar } from "react-icons/lu";
 import { FcGlobe } from "react-icons/fc";
 import { IoFootballOutline } from "react-icons/io5";
+import Timeline from "../components/Timeline";
 
 const About = () => {
   return (
@@ -50,7 +51,7 @@ const About = () => {
               learning new things.
             </p> */}
             <p style={{ color: "gray" }}>
-            I call the sunny shores of Durban my home. From carpentry to
+              I call the sunny shores of Durban my home. From carpentry to
               coding &#x1F310;, my journey has been a blast. If you’re looking
               for someone who can build both a sturdy table and a secure web
               app, look no further. Hit your boy up
@@ -58,6 +59,7 @@ const About = () => {
           </div>
           <img src={img} alt="image" />
         </div>
+        <Timeline />
         <div className="divider"></div>
         <div className="about-we">
           <h2>work experience</h2>

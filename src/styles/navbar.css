@@ -39,9 +39,7 @@ nav h1 {
 
 #desktop-links a {
   cursor: pointer;
-  border-right: 1px solid white;
-  border-left: 1px solid transparent;
-  padding:0px 10px;
+  padding: 0px 10px;
 }
 
 #desktop-links a:last-child {
@@ -54,6 +52,13 @@ nav h1 {
 
 #mobile-links {
   display: block;
+}
+
+#desktop-links .line {
+  height: 20px;
+  width: 1px;
+  background-color: white;
+  border-radius: 20px;
 }
 
 @media (min-width: 700px) {

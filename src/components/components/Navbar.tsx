@@ -12,7 +12,7 @@ const Navbar = () => {
     setShow(false);
   };
 
-  const navigate  = useNavigate();
+  const navigate = useNavigate();
 
   return (
     <nav>
@@ -23,9 +23,13 @@ const Navbar = () => {
       <div>
         <div className="desktop-links" id="desktop-links">
           <Link to="/about">about</Link>
+          <div className="line"></div>
           <Link to="/skills">skills</Link>
+          <div className="line"></div>
           <Link to="/contact">contact</Link>
+          <div className="line"></div>
           <Link to="/apps">apps</Link>
+          <div className="line"></div>
           <Link to="/career">career</Link>
         </div>
         <CiMenuFries
