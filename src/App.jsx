@@ -4,7 +4,7 @@ import Router from "./components/router/Router";
 import AnimationPageOne from "./components/components/AnimationPageOne";
 
 const App = () => {
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(true);
 
   useEffect(() => {
     // Hide the AnimationPageOne component after 5 seconds
