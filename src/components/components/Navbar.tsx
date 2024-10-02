@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import "../../styles/navbar.css";
 import FullPageNavbar from "./FullPageNavbar";
 import { CiMenuFries, CiMenuKebab } from "react-icons/ci";
@@ -7,6 +7,11 @@ import { AnimatePresence, motion } from "framer-motion";
 
 const Navbar = () => {
   const [show, setShow] = useState(false);
+
+  const location = useLocation();
+
+  // Example condition: return true if the current path is '/home'
+  const isHomePage = location.pathname === "/";
 
   const close = () => {
     setShow(false);
@@ -22,15 +27,25 @@ const Navbar = () => {
       <h1 onClick={() => navigate("/")}>codebymarco</h1>
       <div>
         <div className="desktop-links" id="desktop-links">
-          <Link to="/about">about</Link>
+          {isHomePage ? (
+            <Link to="/about" className="clickme" id="clickme">
+              about
+            </Link>
+          ) : (
+            <>
+              <Link id="clickme2" to="/about" className="desktop-links-link">
+                about
+              </Link>
+              <div className="line"></div>
+            </>
+          )}
+          <Link className="desktop-links-link" to="/skills">skills</Link>
           <div className="line"></div>
-          <Link to="/skills">skills</Link>
+          <Link className="desktop-links-link" to="/contact">contact</Link>
           <div className="line"></div>
-          <Link to="/contact">contact</Link>
+          <Link className="desktop-links-link" to="/apps">apps</Link>
           <div className="line"></div>
-          <Link to="/apps">apps</Link>
-          <div className="line"></div>
-          <Link to="/career">career</Link>
+          <Link className="desktop-links-link" to="/career">career</Link>
         </div>
         <CiMenuFries
           id="mobile-links"

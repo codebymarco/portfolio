@@ -18,7 +18,7 @@ nav div {
   justify-content: center;
 }
 
-nav div a {
+nav div .desktop-links-link {
   all: unset;
   color: white;
 }
@@ -37,16 +37,16 @@ nav h1 {
   display: none;
 }
 
-#desktop-links a {
+#desktop-links .desktop-links-link {
   cursor: pointer;
   padding: 0px 10px;
 }
 
-#desktop-links a:last-child {
+#desktop-links .desktop-links-link:last-child {
   border-right: none; /* Remove border-right from the last child */
 }
 
-#desktop-links a:hover {
+#desktop-links .desktop-links-link:hover {
   color: gray;
 }
 
@@ -74,5 +74,28 @@ nav h1 {
   }
   #desktop-links {
     display: flex;
+  }
+}
+
+.clickme {
+  background-color: dodgerblue;
+  color: white;
+  animation: pulse 2s infinite; /* Adds pulse animation */
+  text-decoration: none;
+  padding: 5px;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1); /* Slightly enlarges the element */
+    opacity: 0.7; /* Lowers opacity to give a fade effect */
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
   }
 }

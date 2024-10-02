@@ -19,7 +19,6 @@ import { BiCool } from "react-icons/bi";
 import { LuEar } from "react-icons/lu";
 import { FcGlobe } from "react-icons/fc";
 import { IoFootballOutline } from "react-icons/io5";
-import Timeline from "../components/Timeline";
 
 const About = () => {
   return (
@@ -33,10 +32,9 @@ const About = () => {
             <h1>HI I'M MARCO &#128075;</h1>
             <p style={{ color: "gray" }}>
               A self-taught software developer with a unconventional journey.
-              After finishing school I found myself knee-deep in sawdust working
-              with my dad in his carpentry company. While I mastered the art of
-              hammering &#x1F528; nails &#x1F6E0; and screwing stuff, I realized
-              that my true passion was on the web.
+              After finishing school I found myself working in my dads carpentry
+              company. While I mastered the art of woodwork, I realized that my
+              true passion was on the web.
             </p>
             <p style={{ color: "gray" }}>
               Armed with nothing but curiosity and an internet connection, I was
@@ -59,7 +57,8 @@ const About = () => {
           </div>
           <img src={img} alt="image" />
         </div>
-        <Timeline />
+        {/*         <Timeline />
+         */}{" "}
         <div className="divider"></div>
         <div className="about-we">
           <h2>work experience</h2>
@@ -180,7 +179,6 @@ const About = () => {
             <div className="box">liverpool</div>
           </div>
         </div>
-
         <div className="divider"></div>
         <div className="about-hobbies">
           <h2> &#128078; dislikes</h2>

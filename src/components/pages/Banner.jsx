@@ -13,6 +13,7 @@ const Banner = () => {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 5 }}
       />
+      <button id="banner-about">about</button>
     </div>
   );
 };
