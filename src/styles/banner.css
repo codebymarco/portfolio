@@ -1,7 +1,5 @@
 .banner {
-  height: calc(
-    90vh - 10vh
-  ); /* Adjust 100px according to your header/footer height */
+  height: 90svh;/* Adjust 100px according to your header/footer height */
   background-color: black;
   color: white;
   display: flex;
