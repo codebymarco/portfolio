@@ -4,6 +4,7 @@ import "../../styles/navbar.css";
 import FullPageNavbar from "./FullPageNavbar";
 import { CiMenuFries, CiMenuKebab } from "react-icons/ci";
 import { AnimatePresence, motion } from "framer-motion";
+import { LiaArrowAltCircleRightSolid } from "react-icons/lia";
 
 const Navbar = () => {
   const [show, setShow] = useState(false);
@@ -28,24 +29,40 @@ const Navbar = () => {
       <div>
         <div className="desktop-links" id="desktop-links">
           {isHomePage ? (
-            <Link to="/about" className="clickme" id="clickme">
-              about
-            </Link>
+            <>
+              <Link
+                to="/about"
+                className="desktop-links-link"
+                style={{ gap: "5px" }}
+                id="clickme"
+              >
+                about
+                <LiaArrowAltCircleRightSolid />
+              </Link>
+            </>
           ) : (
             <>
-              <Link id="clickme2" to="/about" className="desktop-links-link">
+              <Link className="desktop-links-link" to="/about">
                 about
               </Link>
               <div className="line"></div>
+              <Link className="desktop-links-link" to="/skills">
+                skills
+              </Link>
+              <div className="line"></div>
+              <Link className="desktop-links-link" to="/contact">
+                contact
+              </Link>
+              <div className="line"></div>
+              <Link className="desktop-links-link" to="/apps">
+                apps
+              </Link>
+              <div className="line"></div>
+              <Link className="desktop-links-link" to="/career">
+                career
+              </Link>
             </>
           )}
-          <Link className="desktop-links-link" to="/skills">skills</Link>
-          <div className="line"></div>
-          <Link className="desktop-links-link" to="/contact">contact</Link>
-          <div className="line"></div>
-          <Link className="desktop-links-link" to="/apps">apps</Link>
-          <div className="line"></div>
-          <Link className="desktop-links-link" to="/career">career</Link>
         </div>
         <CiMenuFries
           id="mobile-links"

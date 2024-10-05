@@ -40,6 +40,8 @@ nav h1 {
 #desktop-links .desktop-links-link {
   cursor: pointer;
   padding: 0px 10px;
+  display: flex;
+  align-items: center;
 }
 
 #desktop-links .desktop-links-link:last-child {
