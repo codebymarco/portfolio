@@ -1,6 +1,6 @@
 .banner {
   height: calc(
-    100vh - 10vh - 5vh
+    90vh - 10vh
   ); /* Adjust 100px according to your header/footer height */
   background-color: black;
   color: white;
