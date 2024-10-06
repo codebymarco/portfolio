@@ -37,7 +37,7 @@ const Navbar = () => {
                 id="clickme"
               >
                 about
-                <LiaArrowAltCircleRightSolid />
+                <LiaArrowAltCircleRightSolid className="blink"/>
               </Link>
             </>
           ) : (

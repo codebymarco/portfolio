@@ -21,7 +21,7 @@ const Banner = () => {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 5 }}
       />
-      <button onClick={() => showAbout()} id="banner-about">about</button>
+      <button className="blink" onClick={() => showAbout()} id="banner-about">about</button>
     </div>
   );
 };
