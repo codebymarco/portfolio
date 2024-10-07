@@ -5,6 +5,7 @@ import FullPageNavbar from "./FullPageNavbar";
 import { CiMenuFries, CiMenuKebab } from "react-icons/ci";
 import { AnimatePresence, motion } from "framer-motion";
 import { LiaArrowAltCircleRightSolid } from "react-icons/lia";
+import img from "../../assets/1.png"
 
 const Navbar = () => {
   const [show, setShow] = useState(false);
@@ -25,7 +26,7 @@ const Navbar = () => {
       <AnimatePresence>
         {show && <FullPageNavbar key="full-page-navbar" close={close} />}
       </AnimatePresence>
-      <h1 onClick={() => navigate("/")}>codebymarco</h1>
+      <img src={img} onClick={() => navigate("/")}/>
       <div>
         <div className="desktop-links" id="desktop-links">
           {isHomePage ? (

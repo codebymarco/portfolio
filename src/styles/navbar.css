@@ -11,6 +11,12 @@ nav {
   z-index: 500;
 }
 
+nav img{
+  height: 60px;
+  width: 100px;
+  padding: 10px;
+}
+
 nav div {
   display: flex;
   gap: 10px;
@@ -57,8 +63,8 @@ nav h1 {
 }
 
 #desktop-links .line {
-  height: 20px;
-  width: 1px;
+  height: 8px;
+  width: 8px;
   background-color: white;
   border-radius: 20px;
 }
