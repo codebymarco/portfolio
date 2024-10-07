@@ -104,7 +104,9 @@
   }
 
   .career-top {
-    text-align: center;
+    text-align: left;
+    width: 100%;
+    font-size: 1.5rem;
   }
 
   .career-about {

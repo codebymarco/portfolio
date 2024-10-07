@@ -65,7 +65,7 @@ const Contact = () => {
     <div className="contact">
       {show ? <OnlyFans /> : null}
       <div className="contact-top">
-        <h1>Contact me</h1>
+        <h1>Contact</h1>
       </div>
       <motion.div
         className="contact-container"

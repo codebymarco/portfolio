@@ -31,7 +31,6 @@
   padding: 10px 20px;
   cursor: pointer;
   background-color: #0d0d0d;
-
 }
 
 .skillspage-container .box span {
@@ -48,20 +47,21 @@
     gap: 20px;
     padding: 20px;
   }
-  
+
   .skills-top {
     padding: 20px;
-    text-align: center;
+    text-align: left;
     color: white;
-    font-size: 3rem;
+    font-size: 2rem;
   }
-  
+
   .skillspage-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
+    padding: 20px;
   }
-  
+
   .skillspage-container .box {
     display: flex;
     justify-content: space-between;
@@ -73,14 +73,13 @@
     padding: 10px 20px;
     cursor: pointer;
     background-color: #0d0d0d;
-
   }
-  
+
   .skillspage-container .box span {
     display: flex;
     align-items: center;
   }
-  
+
   .skillspage-container .box:hover {
     border: 1px solid aquamarine;
     background-color: aquamarine;

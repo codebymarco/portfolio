@@ -61,9 +61,10 @@
   
   .contact-top {
     padding: 20px;
-    text-align: center;
+    text-align: left;
     color: white;
-    font-size: 3rem;
+    font-size: 2rem;
+    width: 100%;
   }
   
   .contact-container {
