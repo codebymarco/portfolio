@@ -27,3 +27,51 @@ body {
     opacity: 0;
   }
 }
+
+.blog-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+}
+.blog-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+.blog-section {
+  margin-bottom: 40px;
+}
+.blog-section h2 {
+  font-size: 1.75rem;
+  color: #333;
+}
+.blog-section pre {
+  background-color: #1a1a1a;
+  padding: 10px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+.blog-section pre code {
+  color: white;
+  font-size: 0.95rem;
+}
+.blog-image {
+  width: 100%;
+  height: auto;
+  margin: 20px 0;
+}
+.blog-section ul {
+  padding-left: 20px;
+}
+.blog-section ul li {
+  margin-bottom: 10px;
+}
+.blog-section a {
+  color: #007bff;
+  text-decoration: none;
+}
+.blog-section a:hover {
+  text-decoration: underline;
+}

@@ -62,6 +62,10 @@ const Navbar = () => {
               <Link className="desktop-links-link" to="/career">
                 career
               </Link>
+              <div className="line"></div>
+              <Link className="desktop-links-link" to="/blog">
+                blog
+              </Link>
             </>
           )}
         </div>
