@@ -35,8 +35,6 @@
   height: 200px;
   width: 130px;
   border-radius: 50px;
-  position: sticky;
-  top: 10vh;
 }
 
 .about-left {
@@ -150,13 +148,6 @@
     display: flex;
   }
 
-  .about img {
-    height: 80vh;
-    width: auto;
-    border-radius: 50px;
-    position: sticky;
-    top: 10vh;
-  }
 
   .about-left {
     display: flex;
@@ -169,7 +160,7 @@
   }
 
   .about-left p {
-    font-size: 1.7rem;
+    font-size: 3rem;
     width: 80%;
     color: gray;
     padding-left: 20px;

@@ -27,6 +27,7 @@ const About = () => {
         <h1>ABOUT</h1>
       </div>
       <div className="about-container">
+      <img src={img} alt="image" />
         <div className="about-container-2">
           <div className="about-left">
             <h1>HI I'M MARCO &#128075;</h1>
@@ -55,7 +56,6 @@ const About = () => {
               app, look no further. Hit your boy up
             </p>
           </div>
-          <img src={img} alt="image" />
         </div>
         {/*         <Timeline />
          */}{" "}
