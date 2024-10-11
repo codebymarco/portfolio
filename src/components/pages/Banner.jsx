@@ -2,7 +2,9 @@ import React from "react";
 import { motion } from "framer-motion";
 import "../../styles/banner.css";
 import image from "../../assets/image5.jpg";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { SiOnlyfans } from "react-icons/si";
+import { FaFilePdf, FaGithub } from "react-icons/fa";
 
 const Banner = () => {
   const navigate = useNavigate();
@@ -20,9 +22,17 @@ const Banner = () => {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 5 }}
       />
-      <button className="blink" onClick={() => showAbout()} id="banner-about">
-        about
-      </button>
+      <div className="banner-links">
+        <Link to="/about">
+          <SiOnlyfans />
+        </Link>
+        <Link to="/apps">
+          <FaGithub />
+        </Link>
+        <Link to="/contact">
+          <FaFilePdf />
+        </Link>
+      </div>
       <p>
         Yeah, I’m shy. Hey, I’m Marco, a full-stack developer from and based in
         Durban, South Africa. I love creating full-stack web apps because I
@@ -32,6 +42,13 @@ const Banner = () => {
         you’re looking for someone who can build both a secure website and a
         sturdy table, let’s have a chat!
       </p>
+      <div className="banner-links">
+        <Link to="/about">about</Link>
+        <Link to="/apps">my work</Link>
+        <Link to="/contact">contact</Link>
+        <Link to="/contact">resume</Link>
+        <Link to="/blog">blog</Link>
+      </div>
     </div>
   );
 };

@@ -61,6 +61,7 @@
     color: gray;
     text-transform: uppercase;
     padding: 50px;
+    width: 80%;
   }
 
   .banner img {
@@ -71,4 +72,10 @@
   #banner-about {
     display: none;
   }
+}
+
+.banner-links{
+  display: flex;
+  gap: 10px;
+  font-size: 2rem;
 }

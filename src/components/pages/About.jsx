@@ -32,6 +32,7 @@ const About = () => {
         <h1>ABOUT</h1>
       </div>
       <div className="about-container">
+        <div className="about-images">
         <div class="image-container">
           <img src={img} alt="image" />
         </div>
@@ -50,10 +51,15 @@ const About = () => {
         <div class="image-container">
           <img src={img6} alt="image6" />
         </div>
+        </div>
+
         <div className="about-container-2">
           <div className="about-left">
             <h1>HI I'M MARCO &#128075;</h1>
             <p style={{ color: "gray" }}>
+            <div class="image-container">
+          <img src={img} alt="image" />
+        </div>
               A self-taught software developer with a unconventional journey.
               After finishing school I found myself working in my dads carpentry
               company. While I mastered the art of woodwork, I realized that my
@@ -81,41 +87,6 @@ const About = () => {
         </div>
         {/*         <Timeline />
          */}{" "}
-        <div className="divider"></div>
-        <div className="about-we">
-          <h2>work experience</h2>
-          <div className="we-container">
-            <div className="box">
-              <div className="box-top">
-                <div>
-                  <h1>Carpenter</h1>
-                  <h2>El-Shaddai Interiors</h2>
-                </div>
-                <h3>2017 - 2023</h3>
-              </div>
-              <p>
-                I started working for my dad straight after high school. My job
-                was to learn everything my dad knew so I could lessen the burden
-                on him. Left after I found a new career path, Just to put it out
-                there, my brother took over from me.
-              </p>
-            </div>
-            <div className="box">
-              <div className="box-top">
-                <div>
-                  <h1>Fullstack Developer</h1>
-                  <h2>Decidio GMBH</h2>
-                </div>
-                <h3>2023 - present</h3>
-              </div>
-              <p>
-                I started off working on support for the TRENDO product, but
-                then got promoted to developer, working on the backend and
-                frontend of TRUENDO.
-              </p>
-            </div>
-          </div>
-        </div>
         <div className="divider"></div>
         <div className="about-hobbies">
           <h2>skills</h2>
@@ -207,6 +178,41 @@ const About = () => {
             <div className="box">
               <MdOutlineWatchLater color="dodgerblue" />
               gcp
+            </div>
+          </div>
+        </div>
+        <div className="divider"></div>
+        <div className="about-we">
+          <h2>work experience</h2>
+          <div className="we-container">
+            <div className="box">
+              <div className="box-top">
+                <div>
+                  <h1>Carpenter</h1>
+                  <h2>El-Shaddai Interiors</h2>
+                </div>
+                <h3>2017 - 2023</h3>
+              </div>
+              <p>
+                I started working for my dad straight after high school. My job
+                was to learn everything my dad knew so I could lessen the burden
+                on him. Left after I found a new career path, Just to put it out
+                there, my brother took over from me.
+              </p>
+            </div>
+            <div className="box">
+              <div className="box-top">
+                <div>
+                  <h1>Fullstack Developer</h1>
+                  <h2>Decidio GMBH</h2>
+                </div>
+                <h3>2023 - present</h3>
+              </div>
+              <p>
+                I started off working on support for the TRENDO product, but
+                then got promoted to developer, working on the backend and
+                frontend of TRUENDO.
+              </p>
             </div>
           </div>
         </div>
