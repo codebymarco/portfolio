@@ -62,9 +62,9 @@
   }
 
   .banner img {
-    height: 100vh;
+    height: 50vh;
     width: auto;
-    border-radius: 50px;
+    border-radius: 50%;
   }
   #banner-about {
     display: none;

@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "../../styles/banner.css";
-import image from "../../assets/image.png";
+import image from "../../assets/image5.jpg";
 import { useNavigate } from "react-router-dom";
 
 const Banner = () => {
@@ -24,6 +24,7 @@ const Banner = () => {
         about
       </button>
       <p>
+        yeah im shy
         Hey im marco i am a fullstack developer from and based in durban south
         africa.i love createing fullstack web apps because i love touching all, aspects of a project.
         i do kinda get bored eacsily so hoftig fcus to soething new helps.
