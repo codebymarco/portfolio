@@ -36,19 +36,19 @@ const About = () => {
           <img src={img} alt="image" />
         </div>
         <div class="image-container">
-        <img src={img2} alt="image2" />
+          <img src={img2} alt="image2" />
         </div>
         <div class="image-container">
-        <img src={img3} alt="image3" />
+          <img src={img3} alt="image3" />
         </div>
         <div class="image-container">
-        <img src={img4} alt="image4" />
+          <img src={img4} alt="image4" />
         </div>
         <div class="image-container">
-        <img src={img5} alt="image5" />
+          <img src={img5} alt="image5" />
         </div>
         <div class="image-container">
-        <img src={img6} alt="image6" />
+          <img src={img6} alt="image6" />
         </div>
         <div className="about-container-2">
           <div className="about-left">
@@ -113,6 +113,100 @@ const About = () => {
                 then got promoted to developer, working on the backend and
                 frontend of TRUENDO.
               </p>
+            </div>
+          </div>
+        </div>
+        <div className="divider"></div>
+        <div className="about-hobbies">
+          <h2>skills</h2>
+          <div className="hobbies-container">
+            <div className="box">
+              <TbBrandNetflix color="red" /> create and update apis
+            </div>
+            <div className="box">
+              <FaYoutube color="red" /> fullstack featrues
+            </div>
+            <div className="box">
+              <GiSoccerKick color="yellow" />
+              deploymet to cloud
+            </div>
+            <div className="box">
+              <FaLaptopCode color="white" />
+              bug fixing
+            </div>
+            <div className="box">
+              <MdOutlineWatchLater color="dodgerblue" />
+              code improvemnts
+            </div>
+          </div>
+        </div>
+        <div className="divider"></div>
+        <div className="about-hobbies">
+          <h2>technologies and tools</h2>
+          <div className="hobbies-container">
+            <div className="box">
+              <TbBrandNetflix color="red" /> html
+            </div>
+            <div className="box">
+              <FaYoutube color="red" /> css
+            </div>
+            <div className="box">
+              <GiSoccerKick color="yellow" />
+              typescript
+            </div>
+            <div className="box">
+              <FaLaptopCode color="white" />
+              react
+            </div>
+            <div className="box">
+              <MdOutlineWatchLater color="dodgerblue" />
+              node
+            </div>
+            <div className="box">
+              <MdOutlineWatchLater color="dodgerblue" />
+              golang
+            </div>
+            <div className="box">
+              <MdOutlineWatchLater color="dodgerblue" />
+              python
+            </div>
+            <div className="box">
+              <MdOutlineWatchLater color="dodgerblue" />
+              rabbitmq
+            </div>
+
+            <div className="box">
+              <MdOutlineWatchLater color="dodgerblue" />
+              jenkins
+            </div>
+            <div className="box">
+              <MdOutlineWatchLater color="dodgerblue" />
+              kubernetes
+            </div>
+
+            <div className="box">
+              <MdOutlineWatchLater color="dodgerblue" />
+              docker
+            </div>
+
+            <div className="box">
+              <MdOutlineWatchLater color="dodgerblue" />
+              sql
+            </div>
+
+            <div className="box">
+              <MdOutlineWatchLater color="dodgerblue" />
+              nosql
+            </div>
+
+            <div className="box">
+              <MdOutlineWatchLater color="dodgerblue" />
+              aws
+            </div>
+
+            <div className="box">
+              <MdOutlineWatchLater color="dodgerblue" />
+              gcp
             </div>
           </div>
         </div>
