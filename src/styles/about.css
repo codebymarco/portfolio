@@ -304,3 +304,27 @@
   justify-content: space-between;
   align-items: flex-end;
 }
+
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.image-container img {
+  height: 200px;
+  width: 130px;
+  display: block;
+}
+
+.image-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  z-index: 1;
+  pointer-events: none; /* Prevents overlay from blocking interactions */
+}

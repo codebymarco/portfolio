@@ -1,5 +1,10 @@
 import "../../styles/about.css";
 import img from "../../assets/image.png";
+import img2 from "../../assets/image2.jpg";
+import img3 from "../../assets/image3.jpeg";
+import img4 from "../../assets/image4.jpg";
+import img5 from "../../assets/image5.jpg";
+import img6 from "../../assets/image6.jpg";
 import { TbBrandNetflix, TbMoodLookRight } from "react-icons/tb";
 import {
   FaHeart,
@@ -27,7 +32,24 @@ const About = () => {
         <h1>ABOUT</h1>
       </div>
       <div className="about-container">
-      <img src={img} alt="image" />
+        <div class="image-container">
+          <img src={img} alt="image" />
+        </div>
+        <div class="image-container">
+        <img src={img2} alt="image2" />
+        </div>
+        <div class="image-container">
+        <img src={img3} alt="image3" />
+        </div>
+        <div class="image-container">
+        <img src={img4} alt="image4" />
+        </div>
+        <div class="image-container">
+        <img src={img5} alt="image5" />
+        </div>
+        <div class="image-container">
+        <img src={img6} alt="image6" />
+        </div>
         <div className="about-container-2">
           <div className="about-left">
             <h1>HI I'M MARCO &#128075;</h1>
