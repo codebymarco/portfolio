@@ -15,7 +15,7 @@
 }
 
 .banner p {
-  font-size: 2rem;
+  font-size: 4rem;
   color: dodgerblue;
 }
 
@@ -57,14 +57,16 @@
   }
 
   .banner p {
-    font-size: 2rem;
-    color: dodgerblue;
+    font-size: 3.5rem;
+    color: gray;
+    text-transform: uppercase;
+    padding: 50px;
   }
 
   .banner img {
     height: 50vh;
     width: auto;
-    border-radius: 50%;
+    border-radius: 50px;
   }
   #banner-about {
     display: none;

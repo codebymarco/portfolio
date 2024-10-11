@@ -24,13 +24,13 @@ const Banner = () => {
         about
       </button>
       <p>
-        yeah im shy
-        Hey im marco i am a fullstack developer from and based in durban south
-        africa.i love createing fullstack web apps because i love touching all, aspects of a project.
-        i do kinda get bored eacsily so hoftig fcus to soething new helps.
-        i have 2 years experience as a software devloper.
-        ps, i used to be a carpneter 
-        if u lookign for someone who can uild a secire table and website, ets have a chat
+        Yeah, I’m shy. Hey, I’m Marco, a full-stack developer from and based in
+        Durban, South Africa. I love creating full-stack web apps because I
+        enjoy working on all aspects of a project. I do kind of get bored
+        easily, so shifting focus to something new helps. I have 2 years of
+        experience as a software developer. P.S. I used to be a carpenter, so if
+        you’re looking for someone who can build both a secure website and a
+        sturdy table, let’s have a chat!
       </p>
     </div>
   );
