@@ -235,32 +235,6 @@ const About = () => {
           </div>
         </div>
         <div className="divider"></div>
-        <div className="about-skills">
-          <h2>soft skills</h2>
-          <div className="hobbies-container">
-            <div className="box">
-              <GiForkKnifeSpoon color="white" />
-              soft eater
-            </div>
-            <div className="box">
-              <BiCool color="yellow" />
-              chill
-            </div>
-            <div className="box">
-              <GiCharm color="pink" />
-              charismatic
-            </div>
-            <div className="box">
-              <LuEar color="brown" />
-              good listener
-            </div>
-            <div className="box">
-              <FaHeart color="red" />
-              compasionate
-            </div>
-          </div>
-        </div>
-        <div className="divider"></div>
         <div className="about-hobbies">
           <h2>&#x1F44D; likes</h2>
           <div className="hobbies-container">
