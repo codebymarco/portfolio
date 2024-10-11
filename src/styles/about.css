@@ -160,7 +160,8 @@
   }
 
   .about-left p {
-    font-size: 3rem;
+    text-transform: uppercase;
+font-size: 3.5rem;
     width: 80%;
     color: gray;
     padding-left: 20px;
@@ -180,12 +181,14 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    padding: 40px;
   }
 
   .about-skills {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    padding: 40px;
   }
 
   .hobbies-container {
@@ -200,7 +203,7 @@
     padding: 10px 20px;
     border: 1px solid dodgerblue;
     border-radius: 20px;
-    font-size: 2rem;
+    font-size: 1rem;
     display: flex;
     align-items: center;
     gap: 10px;

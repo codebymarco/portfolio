@@ -5,7 +5,7 @@ import FullPageNavbar from "./FullPageNavbar";
 import { CiMenuFries, CiMenuKebab } from "react-icons/ci";
 import { AnimatePresence, motion } from "framer-motion";
 import { LiaArrowAltCircleRightSolid } from "react-icons/lia";
-import img from "../../assets/1.png"
+import img from "../../assets/1.png";
 
 const Navbar = () => {
   const [show, setShow] = useState(false);
@@ -26,7 +26,7 @@ const Navbar = () => {
       <AnimatePresence>
         {show && <FullPageNavbar key="full-page-navbar" close={close} />}
       </AnimatePresence>
-      <img src={img} onClick={() => navigate("/")}/>
+      <img src={img} onClick={() => navigate("/")} />
       <div>
         <div className="desktop-links" id="desktop-links">
           {isHomePage ? (
@@ -38,7 +38,7 @@ const Navbar = () => {
                 id="clickme"
               >
                 about
-                <LiaArrowAltCircleRightSolid className="blink"/>
+                <LiaArrowAltCircleRightSolid className="blink" />
               </Link>
             </>
           ) : (
@@ -47,20 +47,12 @@ const Navbar = () => {
                 about
               </Link>
               <div className="line"></div>
-              <Link className="desktop-links-link" to="/skills">
-                skills
-              </Link>
-              <div className="line"></div>
               <Link className="desktop-links-link" to="/contact">
                 contact
               </Link>
               <div className="line"></div>
               <Link className="desktop-links-link" to="/apps">
                 apps
-              </Link>
-              <div className="line"></div>
-              <Link className="desktop-links-link" to="/career">
-                career
               </Link>
               <div className="line"></div>
               <Link className="desktop-links-link" to="/blog">
