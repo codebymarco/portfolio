@@ -307,8 +307,8 @@ font-size: 3.5rem;
 }
 
 .image-container img {
-  height: 200px;
-  width: 130px;
+  height: 90px;
+  width: auto;
   display: block;
 }
 

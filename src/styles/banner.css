@@ -76,6 +76,11 @@
 
 .banner-links{
   display: flex;
-  gap: 10px;
+  gap: 20px;
   font-size: 2rem;
+  margin-top: 20px;
+}
+
+.banner-links *{
+  color: white;
 }
