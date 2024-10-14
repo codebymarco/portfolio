@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "../../styles/banner.css";
-import image from "../../assets/image5.jpg";
+import image from "../../assets/main.jpg";
 import { Link, useNavigate } from "react-router-dom";
 import { SiOnlyfans } from "react-icons/si";
 import { FaFilePdf, FaGithub } from "react-icons/fa";
@@ -33,14 +33,15 @@ const Banner = () => {
           <FaFilePdf />
         </Link>
       </div>
+      <p>Yeah, I’m shy</p>
       <p>
-        Yeah, I’m shy. Hey, I’m Marco, a full-stack developer from and based in
-        Durban, South Africa. I love creating full-stack web apps because I
-        enjoy working on all aspects of a project. I do kind of get bored
-        easily, so shifting focus to something new helps. I have 2 years of
-        experience as a software developer. P.S. I used to be a carpenter, so if
-        you’re looking for someone who can build both a secure website and a
-        sturdy table, let’s have a chat!
+        Hey, I’m Marco, a full-stack developer based South Africa. I love
+        creating full-stack web apps and working on all aspects of a project. I
+        have 2 years of experience as a software developer.
+      </p>
+      <p>
+        P.S. I used to be a carpenter, so if you’re looking for someone who can
+        build both a secure website and a sturdy table, let’s have a chat!
       </p>
       <div className="banner-links">
         <Link to="/about">about</Link>
