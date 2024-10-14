@@ -33,7 +33,7 @@ const Banner = () => {
           <FaFilePdf />
         </Link>
       </div>
-      <p>Yeah, I’m shy</p>
+      <p>Yeah, I’m shy.</p>
       <p>
         Hey, I’m Marco, a full-stack developer based South Africa. I love
         creating full-stack web apps and working on all aspects of a project. I
