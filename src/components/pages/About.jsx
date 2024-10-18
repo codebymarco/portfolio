@@ -286,6 +286,20 @@ const About = () => {
             <div className="box">karens</div>
           </div>
         </div>
+        <div className="about-hobbies">
+          <h2> certs</h2>
+          <div className="hobbies-container">
+            <div className="box">AWS Certified Cloud Practitioner</div>
+            <div className="box">AWS Certified Solutions Architect – Associate</div>
+            <div className="box">AWS Certified Developer – Associate</div>
+            <div className="box">Microsoft Certified: Azure Fundamentals</div>
+            <div className="box">Microsoft Certified: Azure Administrator Associate</div>
+            <div className="box">Microsoft Certified: Azure Developer Associate</div>
+            <div className="box">Google Cloud Digital Leader</div>
+            <div className="box">Google Associate Cloud Engineer</div>
+            <div className="box">Google Professional Data Engineer</div>
+          </div>
+        </div>
       </div>
     </div>
   );
