@@ -269,31 +269,23 @@ const About = () => {
           <div className="hobbies-container">
             <div className="box">
               <IoFootballOutline color="yellow" />
-              watching football
+              Football
             </div>
             <div className="box">
               <FaLaptopCode color="white" />
-              coding
+              Coding
             </div>
             <div className="box">
               <GiSleepingBag color="grey" />
-              sleeping
+              Sleeping
             </div>
             <div className="box">
               <FcGlobe />
-              travelling
-            </div>
-            <div className="box">
-              <TbMoodLookRight />
-              conspiracies
-            </div>
-            <div className="box">
-              <FaRegLaughBeam color="orange" />
-              memes
+              Travelling
             </div>
             <div className="box">
               <FaPepperHot color="red" />
-              spicy food
+              Spicy Food
             </div>
             <div className="box">liverpool</div>
           </div>
