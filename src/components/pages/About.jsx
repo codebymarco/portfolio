@@ -186,7 +186,7 @@ const About = () => {
               <div className="box-top">
                 <div>
                   <h1>Fullstack Developer</h1>
-                  <h2>Decidio GMBH</h2>
+                  <a href="https://www.decidio.cc">Decidio GMBH</a>
                 </div>
                 <h3>2023 - present</h3>
               </div>

@@ -28,13 +28,9 @@
   justify-content: space-between;
   align-items: center;
   font-size: 0.8rem;
-  padding: 20px 10px;
-  border: 1px solid dodgerblue;
   border-radius: 20px;
   color: white;
   cursor: pointer;
-  background-color: #0d0d0d;
-
 }
 
 .contact-container .box div {
@@ -63,7 +59,7 @@
     padding: 20px;
     text-align: left;
     color: white;
-    font-size: 2rem;
+    font-size: 1rem;
     width: 100%;
   }
   
@@ -80,8 +76,6 @@
     justify-content: space-between;
     align-items: center;
     font-size: 25px;
-    padding: 20px 10px;
-    border: 1px solid dodgerblue;
     border-radius: 20px;
     color: white;
     cursor: pointer;
