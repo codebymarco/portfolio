@@ -36,12 +36,11 @@ const About = () => {
           <div className="about-left">
             <h1>HI I'M MARCO &#128075;</h1>
             <p style={{ color: "gray" }}>
-            <div class="image-container">
-        </div>
-              A self-taught software developer with a unconventional journey.
-              After finishing school I found myself working in my dads carpentry
-              company. While I mastered the art of woodwork, I realized that my
-              true passion was on the web.
+              <div class="image-container"></div>A self-taught software
+              developer with a unconventional journey. After finishing school I
+              found myself working in my dads carpentry company. While I
+              mastered the art of woodwork, I realized that my true passion was
+              on the web.
             </p>
             <p style={{ color: "gray" }}>
               Armed with nothing but curiosity and an internet connection, I was
@@ -64,49 +63,34 @@ const About = () => {
           </div>
         </div>
         <div className="about-images">
-        <div class="image-container">
-          <img src={img} alt="image" />
+          <div class="image-container">
+            <img src={img} alt="image" />
+          </div>
+          <div class="image-container">
+            <img src={img2} alt="image2" />
+          </div>
+          <div class="image-container">
+            <img src={img3} alt="image3" />
+          </div>
+          <div class="image-container">
+            <img src={img4} alt="image4" />
+          </div>
+          <div class="image-container">
+            <img src={img5} alt="image5" />
+          </div>
+          <div class="image-container">
+            <img src={img6} alt="image6" />
+          </div>
         </div>
-        <div class="image-container">
-          <img src={img2} alt="image2" />
-        </div>
-        <div class="image-container">
-          <img src={img3} alt="image3" />
-        </div>
-        <div class="image-container">
-          <img src={img4} alt="image4" />
-        </div>
-        <div class="image-container">
-          <img src={img5} alt="image5" />
-        </div>
-        <div class="image-container">
-          <img src={img6} alt="image6" />
-        </div>
-        </div>
-        {/*         <Timeline />
-         */}{" "}
         <div className="divider"></div>
         <div className="about-hobbies">
           <h2>skills</h2>
           <div className="hobbies-container">
-            <div className="box">
-              <TbBrandNetflix color="red" /> create and update apis
-            </div>
-            <div className="box">
-              <FaYoutube color="red" /> fullstack featrues
-            </div>
-            <div className="box">
-              <GiSoccerKick color="yellow" />
-              deploymet to cloud
-            </div>
-            <div className="box">
-              <FaLaptopCode color="white" />
-              bug fixing
-            </div>
-            <div className="box">
-              <MdOutlineWatchLater color="dodgerblue" />
-              code improvemnts
-            </div>
+            <div className="box">create and update apis</div>
+            <div className="box">fullstack featrues</div>
+            <div className="box">deploymet to cloud</div>
+            <div className="box">bug fixing</div>
+            <div className="box">code improvemnts</div>
           </div>
         </div>
         <div className="divider"></div>
@@ -287,14 +271,20 @@ const About = () => {
           </div>
         </div>
         <div className="about-hobbies">
-          <h2> certs</h2>
+          <h2>CERTIFICATIONS</h2>
           <div className="hobbies-container">
             <div className="box">AWS Certified Cloud Practitioner</div>
-            <div className="box">AWS Certified Solutions Architect – Associate</div>
+            <div className="box">
+              AWS Certified Solutions Architect – Associate
+            </div>
             <div className="box">AWS Certified Developer – Associate</div>
             <div className="box">Microsoft Certified: Azure Fundamentals</div>
-            <div className="box">Microsoft Certified: Azure Administrator Associate</div>
-            <div className="box">Microsoft Certified: Azure Developer Associate</div>
+            <div className="box">
+              Microsoft Certified: Azure Administrator Associate
+            </div>
+            <div className="box">
+              Microsoft Certified: Azure Developer Associate
+            </div>
             <div className="box">Google Cloud Digital Leader</div>
             <div className="box">Google Associate Cloud Engineer</div>
             <div className="box">Google Professional Data Engineer</div>

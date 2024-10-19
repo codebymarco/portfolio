@@ -83,7 +83,6 @@
 
 .hobbies-container .box {
   padding: 10px 20px;
-  border: 1px solid dodgerblue;
   border-radius: 20px;
   font-size: 0.8rem;
   display: flex;
@@ -176,6 +175,11 @@ font-size: 3.5rem;
     padding: 40px;
   }
 
+  .about-hobbies h1{
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
   .about-skills {
     display: flex;
     flex-direction: column;
@@ -193,9 +197,8 @@ font-size: 3.5rem;
 
   .hobbies-container .box {
     padding: 10px 20px;
-    border: 1px solid dodgerblue;
     border-radius: 20px;
-    font-size: 1rem;
+    font-size: 2rem;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -235,7 +238,6 @@ font-size: 3.5rem;
   
   .we-container .box {
     padding: 10px 20px;
-    border: 1px solid dodgerblue;
     border-radius: 20px;
     font-size: 1rem;
     display: flex;
@@ -282,7 +284,6 @@ font-size: 3.5rem;
 
 .we-container .box {
   padding: 10px 20px;
-  border: 1px solid dodgerblue;
   border-radius: 20px;
   font-size: 0.8rem;
   display: flex;
