@@ -36,9 +36,8 @@ const About = () => {
       <div className="about-container">
         <div className="about-container-2">
           <div className="about-left">
-            <h1>HI I'M MARCO &#128075;</h1>
             <p style={{ color: "gray" }}>
-              <div class="image-container"></div>A self-taught software
+              <div class="image-container"></div>Hey Im MARCO and im a software
               developer with a unconventional journey. After finishing school I
               found myself working in my dads carpentry company. While I
               mastered the art of woodwork, I realized that my true passion was

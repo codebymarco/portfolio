@@ -6,10 +6,6 @@
   gap: 20px;
   padding: 40px;
   align-items: center;
-  font-family: "Poppins", sans-serif;
-  font-weight: 900;
-  font-style: normal;
-  font-style: normal;
 }
 
 .projects-top {
@@ -88,7 +84,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 2rem;
+    font-size: 2.5rem;
+    font-weight: 500;
     color: white;
   }
 
