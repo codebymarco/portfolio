@@ -340,3 +340,17 @@ font-size: 4rem;
   display: flex;
   gap: 20px;
 }
+
+.cert-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.cert-container .box {
+  border-radius: 20px;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width:100%;
+}

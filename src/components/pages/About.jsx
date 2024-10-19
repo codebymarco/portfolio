@@ -7,6 +7,7 @@ import img5 from "../../assets/image5.jpg";
 import img6 from "../../assets/image6.jpg";
 import { TbBrandNetflix, TbMoodLookRight } from "react-icons/tb";
 import {
+  FaAws,
   FaHeart,
   FaLaptopCode,
   FaPepperHot,
@@ -24,6 +25,7 @@ import { BiCool } from "react-icons/bi";
 import { LuEar } from "react-icons/lu";
 import { FcGlobe } from "react-icons/fc";
 import { IoFootballOutline } from "react-icons/io5";
+import { SiGooglecloud, SiMicrosoftazure } from "react-icons/si";
 
 const About = () => {
   return (
@@ -164,6 +166,45 @@ const About = () => {
           </div>
         </div>
         <div className="divider"></div>
+        <div className="about-hobbies">
+          <h2>CERTIFICATIONS</h2>
+          <div className="cert-container">
+            <div className="box">
+              <FaAws />
+              AWS Certified Cloud Practitioner
+            </div>
+            <div className="box">
+              <FaAws />
+              AWS Certified Solutions Architect – Associate
+            </div>
+            <div className="box">
+              <FaAws />
+              AWS Certified Developer – Associate
+            </div>
+            <div className="box">
+              <SiMicrosoftazure />
+              Microsoft Certified: Azure Fundamentals
+            </div>
+            <div className="box">
+              <SiMicrosoftazure />
+              Microsoft Certified: Azure Administrator Associate
+            </div>
+            <div className="box">
+              <SiMicrosoftazure />
+              Microsoft Certified: Azure Developer Associate
+            </div>
+            <div className="box">
+              <SiGooglecloud /> Google Cloud Digital Leader
+            </div>
+            <div className="box">
+              <SiGooglecloud /> Google Associate Cloud Engineer
+            </div>
+            <div className="box">
+              <SiGooglecloud /> Google Professional Data Engineer
+            </div>
+          </div>
+        </div>
+        <div className="divider"></div>
         <div className="about-we">
           <h2>work experience</h2>
           <div className="we-container">
@@ -257,43 +298,9 @@ const About = () => {
             <div className="box">liverpool</div>
           </div>
         </div>
-        <div className="divider"></div>
-        <div className="about-hobbies">
-          <h2> &#128078; dislikes</h2>
-          <div className="hobbies-container">
-            <div className="box">veggies</div>
-            <div className="box">manchester united</div>
-            <div className="box">the red devils</div>
-            <div className="box">old trafford</div>
-            <div className="box">gary neville</div>
-            <div className="box">class of 92</div>
-            <div className="box">karens</div>
-          </div>
-        </div>
-        <div className="about-hobbies">
-          <h2>CERTIFICATIONS</h2>
-          <div className="hobbies-container">
-            <div className="box">AWS Certified Cloud Practitioner</div>
-            <div className="box">
-              AWS Certified Solutions Architect – Associate
-            </div>
-            <div className="box">AWS Certified Developer – Associate</div>
-            <div className="box">Microsoft Certified: Azure Fundamentals</div>
-            <div className="box">
-              Microsoft Certified: Azure Administrator Associate
-            </div>
-            <div className="box">
-              Microsoft Certified: Azure Developer Associate
-            </div>
-            <div className="box">Google Cloud Digital Leader</div>
-            <div className="box">Google Associate Cloud Engineer</div>
-            <div className="box">Google Professional Data Engineer</div>
-          </div>
-        </div>
       </div>
     </div>
   );
 };
 
 export default About;
-4;
