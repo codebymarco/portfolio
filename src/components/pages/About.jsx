@@ -86,17 +86,6 @@ const About = () => {
         </div>
         <div className="divider"></div>
         <div className="about-hobbies">
-          <h2>skills</h2>
-          <div className="hobbies-container">
-            <div className="box">create and update apis</div>
-            <div className="box">fullstack featrues</div>
-            <div className="box">deploymet to cloud</div>
-            <div className="box">bug fixing</div>
-            <div className="box">code improvemnts</div>
-          </div>
-        </div>
-        <div className="divider"></div>
-        <div className="about-hobbies">
           <h2>technologies and tools</h2>
           <div className="hobbies-container">
             <div className="box">
@@ -163,6 +152,17 @@ const About = () => {
               <MdOutlineWatchLater color="dodgerblue" />
               gcp
             </div>
+          </div>
+        </div>
+        <div className="divider"></div>
+        <div className="about-hobbies">
+          <h2>skills</h2>
+          <div className="cert-container">
+            <div className="box">create and update apis</div>
+            <div className="box">fullstack featrues</div>
+            <div className="box">deploymet to cloud</div>
+            <div className="box">bug fixing</div>
+            <div className="box">code improvemnts</div>
           </div>
         </div>
         <div className="divider"></div>
@@ -234,7 +234,7 @@ const About = () => {
               <p>
                 I started off working on support for the TRENDO product, but
                 then got promoted to developer, working on the backend and
-                frontend of TRUENDO.
+                frontend of <a href="https://www.truendo.com">TRENDO</a>.
               </p>
             </div>
           </div>
