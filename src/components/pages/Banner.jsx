@@ -22,7 +22,7 @@ const Banner = () => {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 5 }}
       />
-      <div className="banner-links">
+      {/*       <div className="banner-links">
         <Link to="/about">
           <SiOnlyfans />
         </Link>
@@ -32,7 +32,7 @@ const Banner = () => {
         <Link to="/contact">
           <FaFilePdf />
         </Link>
-      </div>
+      </div> */}
       <p>hey im a software developer</p>
       <span>
         Hey, I’m Marco, a full-stack developer based South Africa. I love
