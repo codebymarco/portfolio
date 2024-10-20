@@ -5,7 +5,7 @@ import FullPageNavbar from "./FullPageNavbar";
 import { CiMenuFries, CiMenuKebab } from "react-icons/ci";
 import { AnimatePresence, motion } from "framer-motion";
 import { LiaArrowAltCircleRightSolid } from "react-icons/lia";
-import img from "../../assets/1.png";
+import img from "../../assets/main.jpg";
 
 const Navbar = () => {
   const [show, setShow] = useState(false);
