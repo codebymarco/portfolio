@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../../styles/blogs.css";
 
 const Blogs = () => {
@@ -8,7 +8,7 @@ const Blogs = () => {
   return (
     <div className="blogs">
       <div className="blogs-top">
-        <h1>codebymarco Blog Posts</h1>
+        <h1><Link to="/">codebymarco</Link> Blog Posts</h1>
         <span>Blog posts related about coding.</span>
       </div>
       <div className="blogs-container">

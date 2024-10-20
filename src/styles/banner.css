@@ -84,3 +84,9 @@
 .banner-links *{
   color: white;
 }
+
+.banner span{
+  font-size: 2rem;
+  width: 50%;
+  text-align: center;
+}
