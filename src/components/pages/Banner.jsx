@@ -33,7 +33,7 @@ const Banner = () => {
           <FaFilePdf />
         </Link>
       </div> */}
-      <p>hey im a software developer</p>
+      <p>Software Developer</p>
       <span>
         Hey, I’m Marco, a full-stack developer based South Africa. I love
         creating full-stack web apps.
