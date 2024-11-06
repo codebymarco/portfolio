@@ -40,7 +40,7 @@ const Banner = () => {
       </span>
       <div className="banner-links">
         <Link to="/about">about</Link>
-        <Link to="/apps">my work</Link>
+        <Link to="/prof">profesional</Link>
         <Link to="/contact">contact</Link>
         <Link to="/contact">resume</Link>
         <Link to="/blog">blog</Link>

@@ -23,7 +23,7 @@
 .banner img {
   height: 90%;
   width: 95%;
-  border-radius: 50px;
+  border-radius: 20px;
 }
 
 .banner button {
@@ -68,7 +68,6 @@
   .banner img {
     height: 60vh;
     width: auto;
-    border-radius: 50%;
   }
   #banner-about {
     display: none;

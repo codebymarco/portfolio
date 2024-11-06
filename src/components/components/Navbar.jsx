@@ -6,6 +6,7 @@ import { CiMenuFries, CiMenuKebab } from "react-icons/ci";
 import { AnimatePresence, motion } from "framer-motion";
 import { LiaArrowAltCircleRightSolid } from "react-icons/lia";
 import img from "../../assets/main.jpg";
+import { TiTick } from "react-icons/ti";
 
 const Navbar = () => {
   const [show, setShow] = useState(false);
@@ -31,7 +32,7 @@ const Navbar = () => {
         <div className="desktop-links" id="desktop-links">
           {isHomePage ? (
             <>
-              <Link
+{/*               <Link
                 to="/about"
                 className="desktop-links-link"
                 style={{ gap: "5px" }}
@@ -39,7 +40,9 @@ const Navbar = () => {
               >
                 about
                 <LiaArrowAltCircleRightSolid className="blink" />
-              </Link>
+              </Link> */}
+              <span>verified</span>
+              <TiTick color="dodgerblue" />
             </>
           ) : (
             <>
@@ -47,12 +50,12 @@ const Navbar = () => {
                 about
               </Link>
               <div className="line"></div>
-              <Link className="desktop-links-link" to="/contact">
-                contact
+              <Link className="desktop-links-link" to="/prof">
+                career
               </Link>
               <div className="line"></div>
-              <Link className="desktop-links-link" to="/apps">
-                apps
+              <Link className="desktop-links-link" to="/contact">
+                contact
               </Link>
               <div className="line"></div>
               <Link className="desktop-links-link" to="/blog">

@@ -22,6 +22,7 @@ import Six from "../pages/blogs/six";
 import Seven from "../pages/blogs/seven";
 import Eight from "../pages/blogs/eight";
 import Nine from "../pages/blogs/nine";
+import Prof from "../pages/Prof";
 
 const Router = () => {
   return (
@@ -35,6 +36,7 @@ const Router = () => {
           <Route path="contact" element={<Contact />}></Route>
           <Route path="apps" element={<Projects />}></Route>
           <Route path="career" element={<Career />}></Route>
+          <Route path="prof" element={<Prof />}></Route>
         </Route>
 
         <Route path="/apps/app" element={<App />}></Route>
