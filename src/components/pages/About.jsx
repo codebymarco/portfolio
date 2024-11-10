@@ -8,6 +8,7 @@ import img6 from "../../assets/image6.jpg";
 import { TbBrandNetflix, TbMoodLookRight } from "react-icons/tb";
 import {
   FaAws,
+  FaFilePdf,
   FaHeart,
   FaLaptopCode,
   FaPepperHot,
@@ -26,8 +27,17 @@ import { LuEar } from "react-icons/lu";
 import { FcGlobe } from "react-icons/fc";
 import { IoFootballOutline } from "react-icons/io5";
 import { SiGooglecloud, SiMicrosoftazure } from "react-icons/si";
+import resumePDF from "../../../public/resume.pdf";
 
 const About = () => {
+
+  const handleDownloadResume = () => {
+    const downloadLink = document.createElement("a");
+    downloadLink.href = resumePDF;
+    downloadLink.download = "resume.pdf";
+    downloadLink.click();
+  };
+
   return (
     <div className="about">
       <div className="about-top">
@@ -132,6 +142,16 @@ const About = () => {
               Spicy Food
             </div>
             <div className="box">liverpool</div>
+          </div>
+        </div>
+        <div className="divider"></div>
+        <div
+          onClick={handleDownloadResume}
+          className="box"
+        >
+          <div>
+            <FaFilePdf color="gray" />
+            <p>resume</p>
           </div>
         </div>
       </div>

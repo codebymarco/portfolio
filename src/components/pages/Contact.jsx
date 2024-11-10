@@ -9,6 +9,7 @@ import OnlyFans from "../components/OnlyFans";
 import resumePDF from "../../../public/resume.pdf";
 
 const Contact = () => {
+
   const handleDownloadResume = () => {
     const downloadLink = document.createElement("a");
     downloadLink.href = resumePDF;
@@ -108,18 +109,6 @@ const Contact = () => {
             <p>linkedin</p>
           </div>
         </motion.div>
-
-        <motion.div
-          onClick={() => showComp()}
-          variants={itemVariants}
-          className="box"
-        >
-          <div>
-            <SiOnlyfans color="skyblue" />
-            <p>onlyfans</p>
-          </div>
-        </motion.div>
-
         <motion.div variants={itemVariants} className="box">
           <div>
             <FaWhatsapp color="green" />
@@ -127,16 +116,6 @@ const Contact = () => {
           </div>
         </motion.div>
 
-        <motion.div
-          onClick={handleDownloadResume}
-          variants={itemVariants}
-          className="box"
-        >
-          <div>
-            <FaFilePdf color="gray" />
-            <p>resume</p>
-          </div>
-        </motion.div>
       </motion.div>
     </div>
   );
