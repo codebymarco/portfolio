@@ -15,12 +15,7 @@ import {
   FaRegLaughBeam,
   FaYoutube,
 } from "react-icons/fa";
-import {
-  GiCharm,
-  GiForkKnifeSpoon,
-  GiSleepingBag,
-  GiSoccerKick,
-} from "react-icons/gi";
+import { GiCharm, GiForkKnifeSpoon, GiSoccerKick } from "react-icons/gi";
 import { MdCardTravel, MdOutlineWatchLater } from "react-icons/md";
 import { BiCool } from "react-icons/bi";
 import { LuEar } from "react-icons/lu";
@@ -30,7 +25,6 @@ import { SiGooglecloud, SiMicrosoftazure } from "react-icons/si";
 import resumePDF from "../../../public/resume.pdf";
 
 const About = () => {
-
   const handleDownloadResume = () => {
     const downloadLink = document.createElement("a");
     downloadLink.href = resumePDF;
@@ -111,9 +105,10 @@ const About = () => {
               <FaLaptopCode color="white" />
               coding
             </div>
+
             <div className="box">
-              <MdOutlineWatchLater color="dodgerblue" />
-              procastinating
+              <FaLaptopCode color="white" />
+              learning new things
             </div>
           </div>
         </div>
@@ -130,10 +125,6 @@ const About = () => {
               Coding
             </div>
             <div className="box">
-              <GiSleepingBag color="grey" />
-              Sleeping
-            </div>
-            <div className="box">
               <FcGlobe />
               Travelling
             </div>
@@ -145,13 +136,10 @@ const About = () => {
           </div>
         </div>
         <div className="divider"></div>
-        <div
-          onClick={handleDownloadResume}
-          className="box"
-        >
+        <div onClick={handleDownloadResume} className="box">
           <div>
             <FaFilePdf color="gray" />
-            <p>resume</p>
+            <p>check out my resume</p>
           </div>
         </div>
       </div>

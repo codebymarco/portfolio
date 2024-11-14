@@ -192,6 +192,7 @@ const Prof = () => {
         <div className="divider">
         </div>
         <div className="projects-container">
+          <h1>my apps</h1>
         <Link to={`/apps/portfoliohub`} className="box">
           <h2>Portfoliohub</h2>
         </Link>
