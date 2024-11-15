@@ -206,6 +206,15 @@ const Prof = () => {
           <h2>Indeed</h2>
         </Link>
       </div>
+      <div className="divider"></div>
+      <div className="about-hobbies">
+          <h2>timeline</h2>
+          <div className="cert-container">
+            <div className="box">carpeter</div>
+            <div className="box">sftware deblope junior</div>
+            <div className="box">promoetd to developer 2024 november</div>
+          </div>
+        </div>
       </div>
     </div>
   );

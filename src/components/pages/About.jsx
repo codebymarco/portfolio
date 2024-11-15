@@ -142,6 +142,27 @@ const About = () => {
             <p>check out my resume</p>
           </div>
         </div>
+        <div className="divider"></div>
+        <div className="about-hobbies">
+          <h2>timeline</h2>
+          <div className="cert-container">
+            <div className="box">big bang 1998</div>
+            <div className="box">a start was born 1999</div>
+            <div className="box">started school</div>
+            <div className="box">taught my teacher some stuff</div>
+            <div className="box">useless matricultion</div>
+            <div className="box">started college</div>
+            <div className="box">dropout college</div>
+            <div className="box">join dad carpenter</div>
+            <div className="box">learnt coding</div>
+            <div className="box">looting in south africa</div>
+            <div className="box">started work at decidio</div>
+            <div className="box">rest is history</div>
+            <div className="box">
+              tomorrow is a mystery but when tomorrow passes it will be history
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
