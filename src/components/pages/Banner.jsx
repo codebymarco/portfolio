@@ -35,8 +35,8 @@ const Banner = () => {
       </div> */}
       <p>Software Developer</p>
       <span>
-        Hey, I’m Marco, a full-stack developer based South Africa. I love
-        creating full-stack web apps.
+        Hey, I’m Marco, a full-stack developer based South Africa.
+        I have over 2 years years of experience in this field
       </span>
       <div className="banner-links">
         <Link to="/about">about</Link>
