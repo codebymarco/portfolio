@@ -163,6 +163,21 @@ const About = () => {
             </div>
           </div>
         </div>
+        <div className="divider"></div>
+        <div className="about-hobbies">
+          <h2>fun facts about me</h2>
+          <div className="cert-container">
+            <div className="box">i was born in mahamta ghandi hspital</div>
+            <div className="box">
+              i wanted to be an arhitect when i was YOunger
+            </div>
+            <div className="box">i like white girls</div>
+            <div className="box">i learnt hindi via chatgpt</div>
+            <div className="box">
+              i can speak english, hindi, afrikaans, zulu and german
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
