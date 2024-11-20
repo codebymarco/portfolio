@@ -41,13 +41,6 @@ const About = () => {
               on a mission to teach myself coding. After countless late-night
               coding sessions I am now a full-fledged developer
             </p>
-            {/*             <p style={{ color: "red" }}>
-              , but I have a serious
-              case of wanderlust. If a place catches my fancy, I'm more than
-              willing to pack my bags and relocate anywhere in the world.
-              Adventure is my middle name, and I'm always up for trying and
-              learning new things.
-            </p> */}
             <p style={{ color: "gray" }}>
               I call the sunny shores of Durban my home. From carpentry to
               coding &#x1F310;, my journey has been a blast. If you’re looking
