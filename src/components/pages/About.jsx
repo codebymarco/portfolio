@@ -200,3 +200,13 @@ const About = () => {
 };
 
 export default About;
+
+{
+  /* 
+  
+  doont forget to add a timeline of my about
+  liek the big bang
+  i was born
+  
+  */
+}
