@@ -105,10 +105,6 @@ const About = () => {
               <FaLaptopCode color="white" />
               coding
             </div>
-            <div className="box">
-              <MdOutlineWatchLater color="dodgerblue" />
-              procastinating
-            </div>
           </div>
         </div>
         <div className="divider"></div>
@@ -136,14 +132,12 @@ const About = () => {
               conspiracies
             </div>
             <div className="box">
-              <FaRegLaughBeam color="orange" />
-              memes
-            </div>
-            <div className="box">
               <FaPepperHot color="red" />
               spicy food
             </div>
             <div className="box">liverpool</div>
+            <div className="box">history</div>
+            <div className="box">to learn a new language</div>
           </div>
         </div>
         <div className="divider"></div>
@@ -152,10 +146,6 @@ const About = () => {
           <div className="hobbies-container">
             <div className="box">veggies</div>
             <div className="box">manchester united</div>
-            <div className="box">the red devils</div>
-            <div className="box">old trafford</div>
-            <div className="box">gary neville</div>
-            <div className="box">class of 92</div>
             <div className="box">karens</div>
           </div>
         </div>
