@@ -192,6 +192,15 @@ const About = () => {
             <div className="box">karens</div>
           </div>
         </div>
+        <div className="divider"></div>
+        <div className="about-hobbies">
+          <h2>certifications</h2>
+          <div className="hobbies-container">
+            <div className="box">aws</div>
+            <div className="box">gcp</div>
+            <div className="box">azure</div>
+          </div>
+        </div>
       </div>
     </div>
   );
