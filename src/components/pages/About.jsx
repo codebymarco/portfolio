@@ -189,9 +189,9 @@ const About = () => {
         <div className="about-hobbies">
           <h2>certifications</h2>
           <div className="hobbies-container">
-            <div className="box">aws</div>
-            <div className="box">gcp</div>
-            <div className="box">azure</div>
+            <div className="box">aws cloud practioner</div>
+            <div className="box">gcp didgital leader</div>
+            <div className="box">azure fundementals</div>
           </div>
         </div>
       </div>
@@ -200,4 +200,3 @@ const About = () => {
 };
 
 export default About;
-4;
