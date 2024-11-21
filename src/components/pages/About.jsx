@@ -34,18 +34,13 @@ const About = () => {
               A self-taught software developer with a unconventional journey.
               After finishing school I found myself working in my dads carpentry
               company. While I mastered the art of woodwork, I realized that my
-              true passion was on the web.
-            </p>
-            <p style={{ color: "gray" }}>
-              Armed with nothing but curiosity and an internet connection, I was
-              on a mission to teach myself coding. After countless late-night
-              coding sessions I am now a full-fledged developer
-            </p>
-            <p style={{ color: "gray" }}>
-              I call the sunny shores of Durban my home. From carpentry to
-              coding &#x1F310;, my journey has been a blast. If you’re looking
-              for someone who can build both a sturdy table and a secure web
-              app, look no further. Hit your boy up
+              true passion was on the web. Armed with nothing but curiosity and
+              an internet connection, I was on a mission to teach myself coding.
+              After countless late-night coding sessions I am now a full-fledged
+              developer I call the sunny shores of Durban my home. From
+              carpentry to coding &#x1F310;, my journey has been a blast. If
+              you're looking for someone who can build both a sturdy table and a
+              secure web app, look no further. Hit your boy up
             </p>
           </div>
           <img src={img} alt="image" />
@@ -106,7 +101,6 @@ const About = () => {
             <div className="box">veggies</div>
             <div className="box">manchester united</div>
             <div className="box">karens</div>
-            
           </div>
         </div>
       </div>

@@ -37,23 +37,15 @@ const Pro = () => {
               My professiobal career started after droping out of college. I
               found myself working in my dads carpentry company. While I
               mastered the art of woodwork, I realized that my true passion was
-              on the web.
-            </p>
-            <p style={{ color: "gray" }}>
-              Armed with nothing but curiosity and an internet connection, I was
-              on a mission to teach myself coding. After countless late-night
-              coding sessions I joined a company called decidio and started work
-              on the truendo product
-            </p>
-            <p style={{ color: "gray" }}>
-              i went from being a support agent to a fullstack devloper in no
-              time. i am currently still working for decidio where i work on
-              fullstacj developer abd devops engineer.
-            </p>
-            <p style={{ color: "gray" }}>
-              i am currently wokign on my cloud cerfitictaiosn, i have a few but
-              i want mroe to make up for my lak of a degree, cliu certs will
-              make cv look alot better
+              on the web. Armed with nothing but curiosity and an internet
+              connection, I was on a mission to teach myself coding. After
+              countless late-night coding sessions I joined a company called
+              decidio and started work on the truendo product i went from being
+              a support agent to a fullstack devloper in no time. i am currently
+              still working for decidio where i work on fullstacj developer abd
+              devops engineer. i am currently wokign on my cloud cerfitictaiosn,
+              i have a few but i want mroe to make up for my lak of a degree,
+              cliu certs will make cv look alot better
             </p>
           </div>
           {/* add in a picture of me with a laptop working */}
@@ -63,7 +55,7 @@ const Pro = () => {
          */}
         <div className="about-hobbies">
           <h2>what I can do</h2>
-          <div className="hobbies-container">
+          <div className="hobbies-container2">
             <div className="box">create and manage apis</div>
             <div className="box">deploy applications on the cloud</div>
             <div className="box">dev operations</div>
@@ -95,7 +87,7 @@ const Pro = () => {
         </div>
         <div className="about-hobbies">
           <h2>certifications</h2>
-          <div className="hobbies-container">
+          <div className="hobbies-container2">
             <div className="box">aws cloud practioner</div>
             <div className="box">gcp didgital leader</div>
             <div className="box">azure fundementals</div>
@@ -103,12 +95,19 @@ const Pro = () => {
         </div>
         <div className="about-hobbies">
           <h2>my work</h2>
-          <div className="hobbies-container">
+          <div className="hobbies-container2">
             <div className="box">portfoliohub</div>
             <div className="box">linkbio</div>
             <div onClick={() => navigate("/apps")} className="box">
               more
             </div>
+          </div>
+        </div>
+        <div className="about-hobbies">
+          <h2>my documents</h2>
+          <div className="hobbies-container2">
+            <div className="box">resume</div>
+            <div className="box">my certifications</div>
           </div>
         </div>
       </div>
