@@ -28,6 +28,10 @@ const Projects = () => {
           <h2>Truendo</h2>
           <span>05</span>
         </Link>
+        <Link to={`/`} className="box">
+          <h2>Car Dealership Web App</h2>
+          <span>06</span>
+        </Link>
       </div>
     </div>
   );

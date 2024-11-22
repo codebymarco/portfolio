@@ -29,8 +29,8 @@ const Career = () => {
           </div>
 
           <div className="job-desc">
-          <h3 className="job-response-heading">
-          <GrInfo />
+            <h3 className="job-response-heading">
+              <GrInfo />
               Description :
             </h3>
             <p>
@@ -93,8 +93,8 @@ const Career = () => {
           </div>
 
           <div className="job-desc">
-          <h3 className="job-response-heading">
-          <GrInfo />
+            <h3 className="job-response-heading">
+              <GrInfo />
               Description :
             </h3>
             <p>
@@ -139,6 +139,8 @@ const Career = () => {
               <span>6</span>
             </div>
           </div>
+
+          <Link to="/">check out my learning center</Link>
         </div>
       </div>
     </div>
