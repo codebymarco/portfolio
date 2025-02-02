@@ -29,33 +29,17 @@ const Navbar = () => {
       <img src={img} onClick={() => navigate("/")} />
       <div>
         <div className="desktop-links" id="desktop-links">
-          {isHomePage ? (
-            <>
-              <Link
-                to="/about"
-                className="desktop-links-link"
-                style={{ gap: "5px" }}
-                id="clickme"
-              >
-                about
-                <LiaArrowAltCircleRightSolid className="blink" />
-              </Link>
-            </>
-          ) : (
-            <>
-              <Link className="desktop-links-link" to="/about">
-                about
-              </Link>
-              <div className="line"></div>
-              <Link className="desktop-links-link" to="/contact">
-                contact
-              </Link>
-              <div className="line"></div>
-              <Link className="desktop-links-link" to="/pro">
-                career
-              </Link>
-            </>
-          )}
+          <Link className="desktop-links-link" to="/about">
+            about
+          </Link>
+          <div className="line"></div>
+          <Link className="desktop-links-link" to="/contact">
+            contact
+          </Link>
+          <div className="line"></div>
+          <Link className="desktop-links-link" to="/pro">
+            career
+          </Link>
         </div>
         <CiMenuFries
           id="mobile-links"
