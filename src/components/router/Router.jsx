@@ -12,13 +12,14 @@ import LinkBio from "../pages/apps/LinkBio";
 import Formio from "../pages/apps/Formio";
 import Indeed from "../pages/apps/Indeed";
 import Pro from "../pages/Pro";
+import Home from "../pages/Home";
 
 const Router = () => {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<MainLayout />}>
-          <Route index element={<Banner />}></Route>
+          <Route index element={<Home />}></Route>
 
           <Route path="about" element={<About />}></Route>
           <Route path="skills" element={<Skills />}></Route>
