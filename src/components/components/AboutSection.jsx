@@ -1,6 +1,8 @@
+import '../../styles/aboutSection.css'
+
 const AboutSection = () => {
   return (
-    <div>
+    <div className="aboutSection">
       <p>
         hey im marco im a south african indian basesd in durban. ina nutshell, i
         fin shed highs chool then became a caropeynetr tbne became a software

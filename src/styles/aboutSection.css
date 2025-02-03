@@ -1,0 +1,18 @@
+.aboutSection{
+    background-color: black;
+    color: white;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.aboutSection p{
+    text-align: center;
+    font-size: 2rem;
+}
+
+.aboutSection a{
+    display: block;
+}
