@@ -57,43 +57,6 @@ const About = () => {
           </div>
           <img src={img} alt="image" />
         </div>
-        {/*         <Timeline />
-         */}{" "}
-        <div className="divider"></div>
-        <div className="about-we">
-          <h2>work experience</h2>
-          <div className="we-container">
-            <div className="box">
-              <div className="box-top">
-                <div>
-                  <h1>Carpenter</h1>
-                  <h2>El-Shaddai Interiors</h2>
-                </div>
-                <h3>2017 - 2023</h3>
-              </div>
-              <p>
-                I started working for my dad straight after high school. My job
-                was to learn everything my dad knew so I could lessen the burden
-                on him. Left after I found a new career path, Just to put it out
-                there, my brother took over from me.
-              </p>
-            </div>
-            <div className="box">
-              <div className="box-top">
-                <div>
-                  <h1>Fullstack Developer</h1>
-                  <h2>Decidio GMBH</h2>
-                </div>
-                <h3>2023 - present</h3>
-              </div>
-              <p>
-                I started off working on support for the TRENDO product, but
-                then got promoted to developer, working on the backend and
-                frontend of TRUENDO.
-              </p>
-            </div>
-          </div>
-        </div>
         <div className="divider"></div>
         <div className="about-hobbies">
           <h2>hobbies</h2>
