@@ -20,9 +20,10 @@ const BannerTwo = () => {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 5 }}
       />
-      <p>hey im marco</p>
-      <p>im a software developer based in durban south africa</p>
       <div>
+      <p>MARCO</p>
+      <p>RAMCHARAN</p>
+      <p>software developer</p>
         <button>contact me</button>
         <button>more about</button>
       </div>
