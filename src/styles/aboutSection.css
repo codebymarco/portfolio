@@ -11,6 +11,7 @@
 .aboutSection p{
     text-align: center;
     font-size: 2rem;
+    width: 65%;
 }
 
 .aboutSection a{

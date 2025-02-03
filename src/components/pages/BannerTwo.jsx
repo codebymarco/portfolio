@@ -24,7 +24,7 @@ const BannerTwo = () => {
         <h3>
           MARCO<br></br>RAMCHARAN
         </h3>
-        <p>SOFTWARE DEVELOPER</p>
+        <p style={{color:"grey"}}>SOFTWARE DEVELOPER</p>
         <div>
           <Link to="/">contact me</Link>
           <Link to="/">more</Link>
