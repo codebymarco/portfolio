@@ -34,13 +34,25 @@ const About = () => {
               A self-taught software developer with a unconventional journey.
               After finishing school I found myself working in my dads carpentry
               company. While I mastered the art of woodwork, I realized that my
-              true passion was on the web. Armed with nothing but curiosity and
-              an internet connection, I was on a mission to teach myself coding.
-              After countless late-night coding sessions I am now a full-fledged
-              developer I call the sunny shores of Durban my home. From
-              carpentry to coding &#x1F310;, my journey has been a blast. If
-              you're looking for someone who can build both a sturdy table and a
-              secure web app, look no further. Hit your boy up
+              true passion was on the web.
+            </p>
+            <p style={{ color: "gray" }}>
+              Armed with nothing but curiosity and an internet connection, I was
+              on a mission to teach myself coding. After countless late-night
+              coding sessions I am now a full-fledged developer
+            </p>
+            {/*             <p style={{ color: "red" }}>
+              , but I have a serious
+              case of wanderlust. If a place catches my fancy, I'm more than
+              willing to pack my bags and relocate anywhere in the world.
+              Adventure is my middle name, and I'm always up for trying and
+              learning new things.
+            </p> */}
+            <p style={{ color: "gray" }}>
+              I call the sunny shores of Durban my home. From carpentry to
+              coding &#x1F310;, my journey has been a blast. If you’re looking
+              for someone who can build both a sturdy table and a secure web
+              app, look no further. Hit your boy up
             </p>
           </div>
           <img src={img} alt="image" />
@@ -48,8 +60,43 @@ const About = () => {
         {/*         <Timeline />
          */}{" "}
         <div className="divider"></div>
+        <div className="about-we">
+          <h2>work experience</h2>
+          <div className="we-container">
+            <div className="box">
+              <div className="box-top">
+                <div>
+                  <h1>Carpenter</h1>
+                  <h2>El-Shaddai Interiors</h2>
+                </div>
+                <h3>2017 - 2023</h3>
+              </div>
+              <p>
+                I started working for my dad straight after high school. My job
+                was to learn everything my dad knew so I could lessen the burden
+                on him. Left after I found a new career path, Just to put it out
+                there, my brother took over from me.
+              </p>
+            </div>
+            <div className="box">
+              <div className="box-top">
+                <div>
+                  <h1>Fullstack Developer</h1>
+                  <h2>Decidio GMBH</h2>
+                </div>
+                <h3>2023 - present</h3>
+              </div>
+              <p>
+                I started off working on support for the TRENDO product, but
+                then got promoted to developer, working on the backend and
+                frontend of TRUENDO.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="divider"></div>
         <div className="about-hobbies">
-          <h2>hobbies and likes</h2>
+          <h2>hobbies</h2>
           <div className="hobbies-container">
             <div className="box">
               <TbBrandNetflix color="red" /> netflix
@@ -65,6 +112,42 @@ const About = () => {
               <FaLaptopCode color="white" />
               coding
             </div>
+            <div className="box">
+              <MdOutlineWatchLater color="dodgerblue" />
+              procastinating
+            </div>
+          </div>
+        </div>
+        <div className="divider"></div>
+        <div className="about-skills">
+          <h2>soft skills</h2>
+          <div className="hobbies-container">
+            <div className="box">
+              <GiForkKnifeSpoon color="white" />
+              soft eater
+            </div>
+            <div className="box">
+              <BiCool color="yellow" />
+              chill
+            </div>
+            <div className="box">
+              <GiCharm color="pink" />
+              charismatic
+            </div>
+            <div className="box">
+              <LuEar color="brown" />
+              good listener
+            </div>
+            <div className="box">
+              <FaHeart color="red" />
+              compasionate
+            </div>
+          </div>
+        </div>
+        <div className="divider"></div>
+        <div className="about-hobbies">
+          <h2>&#x1F44D; likes</h2>
+          <div className="hobbies-container">
             <div className="box">
               <IoFootballOutline color="yellow" />
               watching football
@@ -86,12 +169,14 @@ const About = () => {
               conspiracies
             </div>
             <div className="box">
+              <FaRegLaughBeam color="orange" />
+              memes
+            </div>
+            <div className="box">
               <FaPepperHot color="red" />
               spicy food
             </div>
             <div className="box">liverpool</div>
-            <div className="box">history</div>
-            <div className="box">to learn a new language</div>
           </div>
         </div>
         <div className="divider"></div>
@@ -100,6 +185,10 @@ const About = () => {
           <div className="hobbies-container">
             <div className="box">veggies</div>
             <div className="box">manchester united</div>
+            <div className="box">the red devils</div>
+            <div className="box">old trafford</div>
+            <div className="box">gary neville</div>
+            <div className="box">class of 92</div>
             <div className="box">karens</div>
           </div>
         </div>
@@ -109,13 +198,4 @@ const About = () => {
 };
 
 export default About;
-
-{
-  /* 
-  
-  doont forget to add a timeline of my about
-  liek the big bang
-  i was born
-  
-  */
-}
+4;

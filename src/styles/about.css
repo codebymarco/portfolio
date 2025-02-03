@@ -90,26 +90,7 @@
   width: fit-content;
 }
 
-.hobbies-container2 {
-  display: grid;
-  grid-template-columns: 1fr;
-  padding-left: 20px;
-  gap: 10px;
-  width: fit-content;
-}
-
 .hobbies-container .box {
-  padding: 10px 20px;
-  border: 1px solid dodgerblue;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  background-color: #0d0d0d;
-}
-
-.hobbies-container2 .box {
   padding: 10px 20px;
   border: 1px solid dodgerblue;
   border-radius: 20px;
@@ -225,17 +206,6 @@
   }
 
   .hobbies-container .box {
-    padding: 10px 20px;
-    border: 1px solid dodgerblue;
-    border-radius: 20px;
-    font-size: 2rem;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    background-color: #0d0d0d;
-  }
-
-  .hobbies-container2 .box {
     padding: 10px 20px;
     border: 1px solid dodgerblue;
     border-radius: 20px;
