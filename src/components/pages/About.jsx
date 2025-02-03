@@ -25,6 +25,7 @@ const About = () => {
     <div className="about">
       <div className="about-top">
         <h1>ABOUT</h1>
+        <p>this also serves as my dating profile</p>
       </div>
       <div className="about-container">
         <div className="about-container-2">
