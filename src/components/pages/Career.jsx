@@ -4,6 +4,8 @@ import { IoLocationOutline } from "react-icons/io5";
 import { BsCalendarDate } from "react-icons/bs";
 import { LiaTasksSolid } from "react-icons/lia";
 import { GrInfo } from "react-icons/gr";
+import Skills from "./Skills";
+import Projects from "./Projects";
 
 const Career = () => {
   return (
@@ -11,6 +13,8 @@ const Career = () => {
       <div className="career-top">
         <h1>Career History</h1>
       </div>
+      <Skills />
+      <Projects />
       <div className="career-container">
         <div className="career-box">
           <div className="career-box-top">
@@ -29,8 +33,8 @@ const Career = () => {
           </div>
 
           <div className="job-desc">
-          <h3 className="job-response-heading">
-          <GrInfo />
+            <h3 className="job-response-heading">
+              <GrInfo />
               Description :
             </h3>
             <p>
@@ -93,8 +97,8 @@ const Career = () => {
           </div>
 
           <div className="job-desc">
-          <h3 className="job-response-heading">
-          <GrInfo />
+            <h3 className="job-response-heading">
+              <GrInfo />
               Description :
             </h3>
             <p>
