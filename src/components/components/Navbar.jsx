@@ -1,34 +1,29 @@
 import React, { useState } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "../../styles/navbar.css";
 import FullPageNavbar from "./FullPageNavbar";
-import { CiMenuFries, CiMenuKebab } from "react-icons/ci";
-import { AnimatePresence, motion } from "framer-motion";
-import { LiaArrowAltCircleRightSolid } from "react-icons/lia";
-import img from "../../assets/1.png";
+import { CiMenuFries } from "react-icons/ci";
+import { AnimatePresence } from "framer-motion";
 
 const Navbar = () => {
   const [show, setShow] = useState(false);
 
-  const location = useLocation();
-
-  // Example condition: return true if the current path is '/home'
-  const isHomePage = location.pathname === "/";
-
   const close = () => {
     setShow(false);
   };
-
-  const navigate = useNavigate();
 
   return (
     <nav>
       <AnimatePresence>
         {show && <FullPageNavbar key="full-page-navbar" close={close} />}
       </AnimatePresence>
-      <img src={img} onClick={() => navigate("/")} />
+      <div></div>
       <div>
         <div className="desktop-links" id="desktop-links">
+        <Link className="desktop-links-link" to="/">
+            home
+          </Link>
+          <div className="line"></div>
           <Link className="desktop-links-link" to="/about">
             about
           </Link>
