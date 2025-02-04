@@ -27,7 +27,7 @@ const BannerTwo = () => {
         <p style={{color:"grey"}}>SOFTWARE DEVELOPER</p>
         <div>
           <Link to="/">contact me</Link>
-          <Link to="/">more</Link>
+          <Link to="/about">about</Link>
         </div>
       </div>
     </div>
