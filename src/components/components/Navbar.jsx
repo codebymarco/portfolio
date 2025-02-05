@@ -28,16 +28,8 @@ const Navbar = () => {
             about
           </Link>
           <div className="line"></div>
-          <Link className="desktop-links-link" to="/skills">
-            skills
-          </Link>
-          <div className="line"></div>
           <Link className="desktop-links-link" to="/contact">
             contact
-          </Link>
-          <div className="line"></div>
-          <Link className="desktop-links-link" to="/apps">
-            apps
           </Link>
           <div className="line"></div>
           <Link className="desktop-links-link" to="/career">
