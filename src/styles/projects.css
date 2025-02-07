@@ -67,7 +67,7 @@
     padding: 20px;
     text-align: left;
     color: white;
-    font-size: 2rem;
+    font-size: 1rem;
     width: 100%;
   }
 
@@ -87,7 +87,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 3rem;
+    font-size: 1rem;
     color: white;
     padding: 20px 5px;
     border-bottom: 1px solid dodgerblue;

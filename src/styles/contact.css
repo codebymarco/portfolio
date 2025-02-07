@@ -20,6 +20,7 @@
   grid-template-columns: 1fr;
   width: 90%;
   gap: 13px;
+  padding: 50px;
 }
 
 .contact-container .box {
@@ -63,7 +64,7 @@
     padding: 20px;
     text-align: left;
     color: white;
-    font-size: 2rem;
+    font-size: 1rem;;
     width: 100%;
   }
   
