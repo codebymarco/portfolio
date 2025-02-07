@@ -9,7 +9,7 @@ const App = () => {
   useEffect(() => {
     // Hide the AnimationPageOne component after 5 seconds
     const timeout = setTimeout(() => {
-      setShow(false);
+      setShow(true);
     }, 3600); // 3 seconds for AnimationPageOne + 2 seconds visible
 
     // Clean up the timeout when the component unmounts
