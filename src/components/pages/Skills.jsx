@@ -1,5 +1,23 @@
-import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaPython, FaDocker, FaAws, FaGoogle } from "react-icons/fa";
-import { SiTypescript, SiGoland, SiRabbitmq, SiJenkins, SiKubernetes, SiMongodb, SiPostgresql } from "react-icons/si";
+import {
+  FaHtml5,
+  FaCss3Alt,
+  FaJs,
+  FaReact,
+  FaNodeJs,
+  FaPython,
+  FaDocker,
+  FaAws,
+  FaGoogle,
+} from "react-icons/fa";
+import {
+  SiTypescript,
+  SiGoland,
+  SiRabbitmq,
+  SiJenkins,
+  SiKubernetes,
+  SiMongodb,
+  SiPostgresql,
+} from "react-icons/si";
 import "../../styles/skills.css";
 import { motion } from "framer-motion";
 
@@ -70,11 +88,11 @@ const Skills = () => {
           const IconComponent = skillIcons[skill].icon;
           return (
             <motion.div className="box" variants={itemVariants} key={skill}>
-              <span style={{display: 'flex', gap:'10px', alignItems: 'center'}}>
+              <span
+                style={{ display: "flex", gap: "10px", alignItems: "center" }}
+              >
                 <IconComponent color={skillIcons[skill].color} size="0.8em" />
-                {skill}
               </span>
-              <span style={{color:"gray"}}>{String(index + 1).padStart(2, "0")}</span>
             </motion.div>
           );
         })}

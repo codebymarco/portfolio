@@ -3,7 +3,6 @@ import MainLayout from "../layouts/MainLayout";
 import About from "../pages/About";
 import Skills from "../pages/Skills";
 import Contact from "../pages/Contact";
-import Projects from "../pages/Projects";
 import App from "../pages/apps/App";
 import PortfolioHub from "../pages/apps/PortfolioHub";
 import Career from "../pages/Career";
@@ -11,6 +10,7 @@ import LinkBio from "../pages/apps/LinkBio";
 import Formio from "../pages/apps/Formio";
 import Indeed from "../pages/apps/Indeed";
 import Home from "../pages/Home";
+import Projects from "../pages/Projects";
 
 const Router = () => {
   return (
