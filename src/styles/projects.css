@@ -6,6 +6,7 @@
   gap: 20px;
   padding: 40px;
   align-items: center;
+  width: 100%;
 }
 
 .projects-top {
@@ -50,57 +51,4 @@
 
 .projects-container .box:hover {
   color: gray;
-}
-
-@media (min-width: 700px) {
-  .projects {
-    background-color: black;
-    min-height: 90vh;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 20px;
-    align-items: center;
-  }
-
-  .projects-top {
-    padding: 20px;
-    text-align: left;
-    color: white;
-    font-size: 1rem;
-    width: 100%;
-  }
-
-  .projects-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-    width: 80%;
-  }
-
-  .projects-container a {
-    text-decoration: none;
-  }
-
-  .projects-container .box {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 1rem;
-    color: white;
-    padding: 20px 5px;
-    border-bottom: 1px solid dodgerblue;
-  }
-
-  .projects-container .box:last-child {
-    border-bottom: none;
-  }
-
-  .projects-container .box:hover {
-    color: gray;
-  }
-  .projects-container .box span {
-    color: gray;
-  }
 }
