@@ -1,8 +1,13 @@
+import "../../styles/about.css"
+
 const About = () => {
   return (
-    <div>
+    <div className="about">
+      <div className="fixed-menu">
+        bottom menu
+      </div>
       {/* top */}
-      <div>
+      <div className="top">
         <span>tinder logo</span>
         <div>
           <span>notifications</span>
@@ -11,7 +16,7 @@ const About = () => {
         </div>
       </div>
       {/* photo div */}
-      <div>
+      <div className="about-photo">
         <div>
           <div></div>
           <div></div>
