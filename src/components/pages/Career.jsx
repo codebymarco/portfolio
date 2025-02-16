@@ -25,7 +25,7 @@ const Career = () => {
       </Helmet>
       <div className="career">
         <div className="career-top">
-          <h1>Career History</h1>
+          <h1>My Pro Career</h1>
         </div>
         <Skills />
         <Projects />
