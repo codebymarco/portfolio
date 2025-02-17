@@ -69,3 +69,11 @@
   height: 70vh;
   width: 100%;
 }
+
+.about-stats {
+  background-color: purple;
+}
+
+.space{
+  height: 40px;
+}
