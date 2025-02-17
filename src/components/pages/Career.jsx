@@ -7,6 +7,7 @@ import { GrInfo } from "react-icons/gr";
 import Skills from "./Skills";
 import Projects from "./Projects";
 import { Helmet } from "react-helmet";
+import Certs from "./Certs";
 
 const Career = () => {
   return (
@@ -28,6 +29,7 @@ const Career = () => {
           <h1>My Pro Career</h1>
         </div>
         <Skills />
+        <Certs />
         <Projects />
         <div className="career-container">
           <div className="career-box">

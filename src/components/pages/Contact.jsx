@@ -145,18 +145,6 @@ const Contact = () => {
             </div>
             <span>06</span>
           </motion.div>
-
-          <motion.div
-            onClick={handleDownloadResume}
-            variants={itemVariants}
-            className="box"
-          >
-            <div>
-              <FaFilePdf color="gray" />
-              <p>resume</p>
-            </div>
-            <span>06</span>
-          </motion.div>
         </motion.div>
       </div>
     </div>
