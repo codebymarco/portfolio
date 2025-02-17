@@ -1,11 +1,9 @@
-import "../../styles/about.css"
+import "../../styles/about.css";
 
 const About = () => {
   return (
     <div className="about">
-      <div className="fixed-menu">
-        bottom menu
-      </div>
+      <div className="fixed-menu">bottom menu</div>
       {/* top */}
       <div className="top">
         <span>tinder logo</span>
@@ -17,7 +15,7 @@ const About = () => {
       </div>
       {/* photo div */}
       <div className="about-photo">
-        <div>
+        <div className="tab-buttons">
           <div></div>
           <div></div>
           <div></div>
@@ -26,12 +24,15 @@ const About = () => {
         </div>
       </div>
       {/* looking for div */}
-      <div>
+      <div className="about-about">
         <div>
           <span>sreach icon</span>
           <span>lokking for</span>
         </div>
-        <span>what i am looking for</span>
+        <span>
+          I'm looking to work with people that will help me grow as a persona and
+          a programmer, as well as learn stuff about new cultures.
+        </span>
       </div>
       {/* about me div */}
       <div>

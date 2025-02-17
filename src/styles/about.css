@@ -2,6 +2,10 @@
   background-color: yellow;
   color: white;
   position: relative;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .fixed-menu {
@@ -29,4 +33,21 @@
 .top div {
   display: flex;
   gap: 10px;
+}
+
+.tab-buttons {
+  background-color: red;
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+}
+
+.tab-buttons div {
+  height: 10px;
+  width: 100%;
+  background-color: gray;
+}
+
+.about-about {
+  background-color: dodgerblue;
 }
