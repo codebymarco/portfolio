@@ -1,5 +1,5 @@
 .about {
-  background-color: yellow;
+  background-color: black;
   color: white;
   position: relative;
   padding: 20px;
@@ -15,6 +15,7 @@
   width: 100%;
   padding: 20px;
   background-color: green;
+  z-index: 500;
 }
 
 .about-photo {
@@ -27,7 +28,7 @@
 .top {
   display: flex;
   justify-content: space-between;
-  background-color: green;
+  background-color: #0d0d0d;
   padding: 20px;
 }
 
@@ -37,7 +38,7 @@
 }
 
 .tab-buttons {
-  background-color: red;
+  background-color: grey;
   display: flex;
   gap: 10px;
   padding: 10px;
@@ -46,19 +47,10 @@
 .tab-buttons div {
   height: 10px;
   width: 100%;
-  background-color: gray;
-}
-
-.about-about {
-  background-color: dodgerblue;
-}
-
-.about-main {
-  background-color: purple;
+  background-color: #0d0d0d;
 }
 
 .photo-section {
-  background-color: pink;
   flex-grow: 1;
   display: flex;
   justify-content: center;
@@ -71,9 +63,20 @@
 }
 
 .about-stats {
-  background-color: purple;
+  background-color: #0d0d0d;
+  padding: 20px;
 }
 
-.space{
+.about-about {
+  background-color: #0d0d0d;
+  padding: 20px;
+}
+
+.about-main {
+  background-color: #0d0d0d;
+  padding: 20px;
+}
+
+.space {
   height: 40px;
 }

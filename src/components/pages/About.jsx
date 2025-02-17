@@ -41,6 +41,8 @@ const About = () => {
           <div></div>
           <div></div>
           <div></div>
+          <div></div>
+          <div></div>
         </div>
         <div className="photo-section" style={{ position: "relative" }}>
           <img
