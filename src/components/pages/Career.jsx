@@ -26,11 +26,12 @@ const Career = () => {
       </Helmet>
       <div className="career">
         <div className="career-top">
-          <h1>My Pro Career</h1>
+          <h1>MY PRO CAREER</h1>
         </div>
         <Skills />
         <Certs />
         <Projects />
+        <h1>CAREER HISTORY</h1>
         <div className="career-container">
           <div className="career-box">
             <div className="career-box-top">
