@@ -19,8 +19,9 @@
 
 .about-photo {
   background-color: purple;
-  height: 70vh;
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .top {
@@ -50,4 +51,21 @@
 
 .about-about {
   background-color: dodgerblue;
+}
+
+.about-main {
+  background-color: purple;
+}
+
+.photo-section {
+  background-color: pink;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.photo-section img {
+  height: 70vh;
+  width: 100%;
 }
