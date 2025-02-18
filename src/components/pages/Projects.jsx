@@ -20,6 +20,7 @@ import {
 } from "react-icons/si";
 import "../../styles/skills.css";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const skillIcons = {
   html: { icon: FaHtml5, color: "#E34F26" },
@@ -41,6 +42,8 @@ const skillIcons = {
 };
 
 const Projects = () => {
+  const navigate = useNavigate();
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -69,7 +72,12 @@ const Projects = () => {
       >
         {["portfoliobio", "indeed", "linkbio", "formio"].map((skill, index) => {
           return (
-            <motion.div className="box" variants={itemVariants} key={skill}>
+            <motion.div
+              onClick={() => navigate(`/apps/${skill}`)}
+              className="box"
+              variants={itemVariants}
+              key={skill}
+            >
               <span
                 style={{ display: "flex", gap: "10px", alignItems: "center" }}
               >

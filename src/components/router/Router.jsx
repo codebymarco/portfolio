@@ -27,10 +27,10 @@ const Router = () => {
         </Route>
 
         <Route path="/apps/app" element={<App />}></Route>
-        <Route path="/apps/portfoliohub" element={<PortfolioHub />}></Route>
+        <Route path="/apps/portfoliobio" element={<PortfolioHub />}></Route>
         <Route path="/apps/linkbio" element={<LinkBio />}></Route>
-        <Route path="/apps/formio" element={< Formio/>}></Route>
-        <Route path="/apps/indeed" element={< Indeed/>}></Route>
+        <Route path="/apps/formio" element={<Formio />}></Route>
+        <Route path="/apps/indeed" element={<Indeed />}></Route>
       </Routes>
     </BrowserRouter>
   );
