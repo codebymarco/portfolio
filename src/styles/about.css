@@ -80,3 +80,8 @@
 .space {
   height: 40px;
 }
+
+.about-stats-container{
+  display: flex;
+  flex-direction: column;
+}

@@ -5,6 +5,7 @@ import BannerTwo from "./BannerTwo";
 import Skills from "./Skills";
 import Projects from "./Projects";
 import Contact from "./Contact";
+import Certs from "./Certs";
 
 const Home = () => {
   return (
@@ -24,6 +25,7 @@ const Home = () => {
       <BannerTwo />
       <AboutSection />
       <Skills />
+      <Certs />
       <Projects />
       <Contact />
     </div>

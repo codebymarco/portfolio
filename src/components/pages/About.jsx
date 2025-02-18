@@ -134,29 +134,65 @@ const About = () => {
           eligendi nulla.
         </span>
       </div>
+
       <div className="about-stats">
         <div>
-          <span>statistics</span>
+          <span>essentials</span>
         </div>
-        <span>all my stats here</span>
+        <div className="about-stats-container">
+          <div>location_icon: 6km away</div>
+          <div>height_icon: 1cm shorter than 6 feet</div>
+          <div>city_icon: Durban</div>
+          <div>looking_for_icon: Women</div>
+          <div>languages_icon: Women</div>
+        </div>
       </div>
+
       <div className="about-stats">
         <div>
           <span>hobbies</span>
         </div>
-        <span>all my stats here</span>
+        <div className="about-stats-container">
+          <div>hobby</div>
+          <div>hobby</div>
+          <div>hobby</div>
+          <div>hobby</div>
+          <div>hobby</div>
+        </div>{" "}
       </div>
       <div className="about-stats">
         <div>
           <span>likes</span>
         </div>
-        <span>all my stats here</span>
+        <div className="about-stats-container">
+          <div>like</div>
+          <div>like</div>
+          <div>like</div>
+          <div>like</div>
+          <div>like</div>
+        </div>
       </div>
       <div className="about-stats">
         <div>
-          <span>favorite music</span>
+          <span>intererst</span>
         </div>
-        <span>all my stats here</span>
+        <div className="about-stats-container">
+          <div>football</div>
+          <div>horror movies</div>
+          <div>coding</div>
+          <div>working out</div>
+        </div>
+      </div>
+      <div className="about-stats">
+        <div>
+          <span>anthems</span>
+        </div>
+        <div className="about-stats-container">
+          <div>waiting for a star to fall</div>
+          <div>piano man</div>
+          <div>vienna</div>
+          <div>trun back the clock</div>
+        </div>{" "}
       </div>
       <div className="space"></div>
     </div>
