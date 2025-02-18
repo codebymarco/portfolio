@@ -24,7 +24,13 @@ const About = () => {
 
   return (
     <div className="about">
-      <div className="fixed-menu">bottom menu</div>
+      <div className="fixed-menu">
+        <span>reset</span>
+        <span>cancel</span>
+        <span>star</span>
+        <span>heart</span>
+        <span>send</span>
+      </div>
       {/* Top */}
       <div className="top">
         <span>tinder logo</span>

@@ -16,6 +16,10 @@
   padding: 20px;
   background-color: green;
   z-index: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
 }
 
 .about-photo {
