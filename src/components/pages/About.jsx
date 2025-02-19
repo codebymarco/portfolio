@@ -1,5 +1,10 @@
 import { useState } from "react";
 import "../../styles/about.css";
+import { IoIosNotifications, IoIosSend } from "react-icons/io";
+import { FaFilter, FaHeart } from "react-icons/fa";
+import { ImStarFull } from "react-icons/im";
+import { MdCancel } from "react-icons/md";
+import { GrPowerReset } from "react-icons/gr";
 
 const About = () => {
   // Array of images (using the same image URL for demonstration)
@@ -25,19 +30,18 @@ const About = () => {
   return (
     <div className="about">
       <div className="fixed-menu">
-        <span>reset</span>
-        <span>cancel</span>
-        <span>star</span>
-        <span>heart</span>
-        <span>send</span>
+        <GrPowerReset />
+        <MdCancel />
+        <ImStarFull />
+        <FaHeart />
+        <IoIosSend />
       </div>
       {/* Top */}
       <div className="top">
         <span>tinder logo</span>
         <div>
-          <span>notifications</span>
-          <span>filter</span>
-          <span>super like</span>
+          <IoIosNotifications /> <FaFilter />
+          <ImStarFull />
         </div>
       </div>
       {/* Photo section with carousel */}
@@ -147,10 +151,12 @@ const About = () => {
         </div>
         <div className="about-stats-container">
           <div>location_icon: 6km away</div>
+          <div>race: indian</div>
           <div>height_icon: 1cm shorter than 6 feet</div>
           <div>city_icon: Durban</div>
           <div>looking_for_icon: Women</div>
           <div>languages_icon: Women</div>
+          <div>tattoos: yes</div>
         </div>
       </div>
 
@@ -197,7 +203,7 @@ const About = () => {
           <div>waiting for a star to fall</div>
           <div>piano man</div>
           <div>vienna</div>
-          <div>trun back the clock</div>
+          <div>kingston twon</div>
         </div>{" "}
       </div>
       <div className="space"></div>

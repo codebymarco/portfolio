@@ -20,7 +20,7 @@ const Navbar = () => {
       <div></div>
       <div>
         <div className="desktop-links" id="desktop-links">
-        <Link className="desktop-links-link" to="/">
+          <Link className="desktop-links-link" to="/">
             home
           </Link>
           <div className="line"></div>
@@ -34,6 +34,10 @@ const Navbar = () => {
           <div className="line"></div>
           <Link className="desktop-links-link" to="/career">
             career
+          </Link>
+          <div className="line"></div>
+          <Link className="desktop-links-link" to="/career">
+            blog
           </Link>
         </div>
         <CiMenuFries

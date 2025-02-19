@@ -6,6 +6,7 @@ import Skills from "./Skills";
 import Projects from "./Projects";
 import Contact from "./Contact";
 import Certs from "./Certs";
+import BlogsSection from "./BlogsSection";
 
 const Home = () => {
   return (
@@ -27,6 +28,7 @@ const Home = () => {
       <Skills />
       <Certs />
       <Projects />
+      <BlogsSection />
       <Contact />
     </div>
   );
