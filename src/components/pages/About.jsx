@@ -1,11 +1,15 @@
 import { useState } from "react";
 import "../../styles/about.css";
 import { IoIosNotifications, IoIosSend } from "react-icons/io";
-import { FaFilter, FaHeart, FaMusic } from "react-icons/fa";
+import { FaFilter, FaHeart, FaLanguage, FaMusic } from "react-icons/fa";
 import { ImStarFull } from "react-icons/im";
 import { MdCancel } from "react-icons/md";
 import { GrPowerReset } from "react-icons/gr";
 import pic from "../../assets/bjpm.jpg";
+import { FaLocationPin } from "react-icons/fa6";
+import { CiRuler } from "react-icons/ci";
+import { PiEyesBold } from "react-icons/pi";
+import { GiWorld } from "react-icons/gi";
 
 const About = () => {
   // Array of images (using the same image URL for demonstration)
@@ -151,13 +155,26 @@ const About = () => {
           <span>essentials</span>
         </div>
         <div className="about-stats-container">
-          <div>location_icon: 6km away</div>
-          <div>race: indian</div>
-          <div>height_icon: 1cm shorter than 6 feet</div>
-          <div>city_icon: Durban</div>
-          <div>looking_for_icon: Women</div>
-          <div>languages_icon: Women</div>
-          <div>tattoos: yes</div>
+          <div>
+            <FaLocationPin />
+            <span>20 light years away</span>
+          </div>
+          <div>
+            <CiRuler />
+            <span>1cm shorter than 6 feet</span>
+          </div>
+          <div>
+            <GiWorld />
+            <span>Durban</span>
+          </div>
+          <div>
+            <PiEyesBold />
+            <span>Women</span>{" "}
+          </div>
+          <div>
+            <FaLanguage />
+            <span>English, Portuguese</span>
+          </div>
         </div>
       </div>
 
