@@ -1,10 +1,11 @@
 import { useState } from "react";
 import "../../styles/about.css";
 import { IoIosNotifications, IoIosSend } from "react-icons/io";
-import { FaFilter, FaHeart } from "react-icons/fa";
+import { FaFilter, FaHeart, FaMusic } from "react-icons/fa";
 import { ImStarFull } from "react-icons/im";
 import { MdCancel } from "react-icons/md";
 import { GrPowerReset } from "react-icons/gr";
+import pic from "../../assets/bjpm.jpg";
 
 const About = () => {
   // Array of images (using the same image URL for demonstration)
@@ -196,15 +197,54 @@ const About = () => {
         </div>
       </div>
       <div className="about-stats">
-        <div>
+        <div className="about-stats-top">
+          <FaMusic />
           <span>anthems</span>
         </div>
-        <div className="about-stats-container">
-          <div>waiting for a star to fall</div>
-          <div>piano man</div>
-          <div>vienna</div>
-          <div>kingston twon</div>
-        </div>{" "}
+        <div className="about-stats-container-anthem">
+          <div className="about-anthems-box">
+            <img src={pic} alt="" />
+            <div>
+              <span>waiting for a star to fall</span>
+              <span>boy meets girl</span>
+            </div>
+          </div>
+          <div className="about-anthems-box">
+            <img src={pic} alt="" />
+            <div>
+              <span>vienna</span>
+              <span>billy joel</span>
+            </div>
+          </div>
+          <div className="about-anthems-box">
+            <img src={pic} alt="" />
+            <div>
+              <span>piano man</span>
+              <span>billy joel</span>
+            </div>
+          </div>
+          <div className="about-anthems-box">
+            <img src={pic} alt="" />
+            <div>
+              <span>kingston town</span>
+              <span>ub40</span>
+            </div>
+          </div>
+          <div className="about-anthems-box">
+            <img src={pic} alt="" />
+            <div>
+              <span>kingston town</span>
+              <span>ub40</span>
+            </div>
+          </div>
+          <div className="about-anthems-box">
+            <img src={pic} alt="" />
+            <div>
+              <span>kingston town</span>
+              <span>ub40</span>
+            </div>
+          </div>
+        </div>
       </div>
       <div className="space"></div>
     </div>

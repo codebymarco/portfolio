@@ -77,6 +77,9 @@
 .about-stats {
   background-color: #0d0d0d;
   padding: 20px;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .about-about {
@@ -96,4 +99,35 @@
 .about-stats-container {
   display: flex;
   flex-direction: column;
+  gap: 10px;
+}
+
+.about-stats-container-anthem {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.about-anthems-box {
+  display: flex;
+  gap: 20px;
+  background-color: black;
+}
+
+.about-anthems-box img {
+  height: 130px;
+  width: 130px;
+}
+
+.about-anthems-box div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.about-stats-top {
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
