@@ -42,7 +42,7 @@ const skillIcons = {
   "google cloud platform": { icon: FaGoogle, color: "#4285F4" },
 };
 
-const BlogsSection = () => {
+const Blogs = () => {
   const navigate = useNavigate();
 
   const containerVariants = {
@@ -64,7 +64,6 @@ const BlogsSection = () => {
     <div className="skills">
       <div className="skills-top">
         <h1>BLOGS</h1>
-        <Link to="/">more</Link>
       </div>
       <motion.div
         className="skillspage-container3"
@@ -72,7 +71,28 @@ const BlogsSection = () => {
         animate="visible"
         variants={containerVariants}
       >
-        {["kubernetes", "docker", "linux"].map((skill, index) => {
+        {[
+          "Introduction to Full-Stack Development",
+          "Modern Frontend Frameworks: React vs. Angular vs. Vue",
+          "Mastering HTML5 & CSS3: Responsive Design Essentials",
+          "Exploring JavaScript ES6+: New Features and Best Practices",
+          "Building Robust Backends with Node.js and Express",
+          "Web Development with Python: A Look at Flask and Django",
+          "Understanding Databases: SQL, NoSQL, and Beyond",
+          "Designing and Consuming RESTful APIs",
+          "GraphQL in Action: When and How to Use It",
+          "Microservices Architecture: Benefits and Challenges",
+          "State Management in Modern Web Applications",
+          "Real-Time Web Apps: Implementing WebSockets",
+          "Continuous Integration and Continuous Deployment (CI/CD) Explained",
+          "Serverless Architecture: Concepts and Practical Use Cases",
+          "Version Control with Git: Essential Workflows for Teams",
+          "Security Best Practices for Full-Stack Applications",
+          "Optimizing Performance: Frontend and Backend Strategies",
+          "Integrating Third-Party APIs for Enhanced Functionality",
+          "DevOps Fundamentals: Bridging Development and Operations",
+          "Future Trends in Full-Stack Development and Deployment",
+        ].map((skill, index) => {
           return (
             <motion.div
               onClick={() => navigate(`/apps/${skill}`)}
@@ -93,4 +113,4 @@ const BlogsSection = () => {
   );
 };
 
-export default BlogsSection;
+export default Blogs;
