@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "../../styles/about.css";
 import { IoIosNotifications, IoIosSend } from "react-icons/io";
 import { FaFilter, FaHeart, FaLanguage } from "react-icons/fa";
@@ -35,20 +35,24 @@ const About = () => {
     );
   };
 
+  useEffect(() => {
+    // Scroll to the top of the page on component mount
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []); // Empty dependency array ensures this runs once on mount
+
   return (
     <div className="about">
       <div className="fixed-menu">
-        <GrPowerReset style={{color:"gray"}}/>
-        <RxCross2
-        style={{color:"red"}}/>
-        <ImStarFull style={{color:"dodgerblue"}}/>
-        <FaHeart style={{color:"orange"}}/>
-        <IoIosSend style={{color:"dodgerblue"}}/>
+        <GrPowerReset style={{ color: "gray" }} />
+        <RxCross2 style={{ color: "red" }} />
+        <ImStarFull style={{ color: "dodgerblue" }} />
+        <FaHeart style={{ color: "orange" }} />
+        <IoIosSend style={{ color: "dodgerblue" }} />
       </div>
       {/* Top */}
       <div className="top">
         <div className="top-logo">
-          <PiFireSimpleFill style={{color:"red"}}/>
+          <PiFireSimpleFill style={{ color: "red" }} />
           <span>Tinder</span>
         </div>
         <div className="top-icons">

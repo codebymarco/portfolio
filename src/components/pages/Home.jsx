@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import AboutSection from "../components/AboutSection";
 import BannerTwo from "./BannerTwo";
@@ -9,6 +9,11 @@ import Certs from "./Certs";
 import BlogsSection from "./BlogsSection";
 
 const Home = () => {
+  useEffect(() => {
+    // Scroll to the top of the page on component mount
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []); // Empty dependency array ensures this runs once on mount
+
   return (
     <div>
       <Helmet>

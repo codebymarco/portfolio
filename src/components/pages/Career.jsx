@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../../styles/career.css";
 import { IoLocationOutline } from "react-icons/io5";
 import { BsCalendarDate } from "react-icons/bs";
@@ -10,6 +10,12 @@ import { Helmet } from "react-helmet";
 import Certs from "./Certs";
 
 const Career = () => {
+
+    useEffect(() => {
+      // Scroll to the top of the page on component mount
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, []); // Empty dependency array ensures this runs once on mount
+
   return (
     <div>
       <Helmet>

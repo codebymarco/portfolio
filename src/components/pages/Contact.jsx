@@ -10,6 +10,12 @@ import resumePDF from "../../../public/resume.pdf";
 import { Helmet } from "react-helmet";
 
 const Contact = () => {
+
+  useEffect(() => {
+    // Scroll to the top of the page on component mount
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []); // Empty dependency array ensures this runs once on mount
+
   const handleDownloadResume = () => {
     const downloadLink = document.createElement("a");
     downloadLink.href = resumePDF;
