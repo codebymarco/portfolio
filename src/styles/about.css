@@ -6,8 +6,8 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding-left: 150px;
-  padding-right: 150px;
+  padding-left: 200px;
+  padding-right: 200px;
 }
 
 .fixed-menu {
@@ -28,6 +28,7 @@
   background-color: #0d0d0d;
   padding: 5px 10px;
   font-size: 4rem;
+  cursor: pointer;
 }
 
 .about-photo {
@@ -93,7 +94,7 @@
 }
 
 .space {
-  height: 40px;
+  height: 70px;
 }
 
 .about-stats-container {
@@ -136,10 +137,39 @@
   background-color: grey;
   padding: 10px;
   border-radius: 13px;
+  align-items: center;
+  display: flex;
+}
+
+.box2 span{
+  margin-left: 20px;
 }
 
 .about-stats-container-flex-row {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 10px;
+}
+
+.about-section-top{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.top-icons{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.top-logo{
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.top-icons *{
+  font-size: 30px;
+  cursor: pointer;
 }

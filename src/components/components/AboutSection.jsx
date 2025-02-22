@@ -1,13 +1,14 @@
-import '../../styles/aboutSection.css'
+import "../../styles/aboutSection.css";
 
 const AboutSection = () => {
   return (
     <div className="aboutSection">
       <p>
-        hey im marco im a south african indian basesd in durban. ina nutshell, i
-        fin shed highs chool then became a caropeynetr tbne became a software
-        develoepr where i work for decido and onthe truendo product.linik to
-        this.i can buld a sturdy table and a website
+        Hello, I'm Marco—a South African Indian based in Durban. I completed
+        high school and began my career as a carpenter. Being self-taught, I
+        later transitioned into software development. I currently work for
+        Decido on the Truendo product (link provided). My diverse skill set
+        spans from building sturdy tables to developing functional websites.
       </p>
     </div>
   );

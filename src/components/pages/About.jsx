@@ -1,15 +1,18 @@
 import { useState } from "react";
 import "../../styles/about.css";
 import { IoIosNotifications, IoIosSend } from "react-icons/io";
-import { FaFilter, FaHeart, FaLanguage, FaMusic } from "react-icons/fa";
+import { FaFilter, FaHeart, FaLanguage } from "react-icons/fa";
 import { ImStarFull } from "react-icons/im";
 import { MdCancel } from "react-icons/md";
 import { GrPowerReset } from "react-icons/gr";
 import { FaLocationPin } from "react-icons/fa6";
-import { CiRuler } from "react-icons/ci";
-import { PiEyesBold } from "react-icons/pi";
+import { CiRuler, CiSearch } from "react-icons/ci";
+import { PiEyesBold, PiFireSimpleFill } from "react-icons/pi";
 import { GiWorld } from "react-icons/gi";
 import Anthems from "../components/Anthems";
+import { AiFillThunderbolt } from "react-icons/ai";
+import { HiAdjustmentsHorizontal } from "react-icons/hi2";
+import { RxCross2 } from "react-icons/rx";
 
 const About = () => {
   // Array of images (using the same image URL for demonstration)
@@ -35,18 +38,24 @@ const About = () => {
   return (
     <div className="about">
       <div className="fixed-menu">
-        <GrPowerReset />
-        <MdCancel />
-        <ImStarFull />
-        <FaHeart />
-        <IoIosSend />
+        <GrPowerReset style={{color:"gray"}}/>
+        <RxCross2
+        style={{color:"red"}}/>
+        <ImStarFull style={{color:"dodgerblue"}}/>
+        <FaHeart style={{color:"orange"}}/>
+        <IoIosSend style={{color:"dodgerblue"}}/>
       </div>
       {/* Top */}
       <div className="top">
-        <span>tinder logo</span>
-        <div>
-          <IoIosNotifications /> <FaFilter />
-          <ImStarFull />
+        <div className="top-logo">
+          <PiFireSimpleFill style={{color:"red"}}/>
+          <span>Tinder</span>
+        </div>
+        <div className="top-icons">
+          <IoIosNotifications style={{ color: "gray" }} />
+          <HiAdjustmentsHorizontal style={{ color: "gray" }} />
+
+          <AiFillThunderbolt style={{ color: "dodgerblue" }} />
         </div>
       </div>
       {/* Photo section with carousel */}
@@ -129,49 +138,53 @@ const About = () => {
       </div>
       {/* Looking for section */}
       <div className="about-about">
-        <div>
-          <span>sreach icon</span>
-          <span>lokking for</span>
+        <div className="about-section-top">
+          <CiSearch />
+          <span>Searching for :</span>
         </div>
-        <span>
-          I'm looking to work with people that will help me grow as a persona
-          and a programmer, as well as learn stuff about new cultures.
-        </span>
+        <div>
+          <div>Meaning of life.</div>
+          <div>The perfect lady.</div>
+          <div>More mula.</div>
+          <div></div>
+        </div>
       </div>
       {/* About me section */}
       <div className="about-main">
-        <div>
-          <span>about me</span>
+        <div className="about-section-top">
+          <span>About me :</span>
         </div>
         <span>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea,
-          recusandae quisquam voluptas iusto repellat accusamus iure vero odit
-          eligendi nulla.
+          Hello, I'm Marco—a South African Indian based in Durban. I completed
+          high school and began my career as a carpenter. Being self-taught, I
+          later transitioned into software development. I currently work for
+          Decido on the Truendo product (link provided). My diverse skill set
+          spans from building sturdy tables to developing functional websites.
         </span>
       </div>
 
       <div className="about-stats">
         <div>
-          <span>Essentials</span>
+          <span>Essentials :</span>
         </div>
         <div className="about-stats-container">
-          <div>
+          <div className="box2">
             <FaLocationPin />
             <span>20 light years away</span>
           </div>
-          <div>
+          <div className="box2">
             <CiRuler />
             <span>1cm shorter than 6 feet</span>
           </div>
-          <div>
+          <div className="box2">
             <GiWorld />
             <span>Durban</span>
           </div>
-          <div>
+          <div className="box2">
             <PiEyesBold />
             <span>Women</span>{" "}
           </div>
-          <div>
+          <div className="box2">
             <FaLanguage />
             <span>English, Portuguese</span>
           </div>
