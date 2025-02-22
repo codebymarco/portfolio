@@ -79,7 +79,7 @@ const Projects = () => {
               key={skill}
             >
               <span
-                style={{ display: "flex", gap: "10px", alignItems: "center" }}
+                style={{ display: "flex", gap: "10px", alignItems: "center", fontSize:"2rem" }}
               >
                 {skill}
               </span>

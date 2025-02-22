@@ -111,12 +111,12 @@
 .about-anthems-box {
   display: flex;
   gap: 20px;
-  background-color: black;
 }
 
 .about-anthems-box img {
   height: 130px;
   width: 130px;
+  border-radius: 10px;
 }
 
 .about-anthems-box div {
@@ -130,4 +130,16 @@
   display: flex;
   gap: 10px;
   align-items: center;
+}
+
+.box2 {
+  background-color: grey;
+  padding: 10px;
+  border-radius: 13px;
+}
+
+.about-stats-container-flex-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
 }

@@ -5,11 +5,11 @@ import { FaFilter, FaHeart, FaLanguage, FaMusic } from "react-icons/fa";
 import { ImStarFull } from "react-icons/im";
 import { MdCancel } from "react-icons/md";
 import { GrPowerReset } from "react-icons/gr";
-import pic from "../../assets/bjpm.jpg";
 import { FaLocationPin } from "react-icons/fa6";
 import { CiRuler } from "react-icons/ci";
 import { PiEyesBold } from "react-icons/pi";
 import { GiWorld } from "react-icons/gi";
+import Anthems from "../components/Anthems";
 
 const About = () => {
   // Array of images (using the same image URL for demonstration)
@@ -152,7 +152,7 @@ const About = () => {
 
       <div className="about-stats">
         <div>
-          <span>essentials</span>
+          <span>Essentials</span>
         </div>
         <div className="about-stats-container">
           <div>
@@ -180,89 +180,21 @@ const About = () => {
 
       <div className="about-stats">
         <div>
-          <span>hobbies</span>
+          <span>Hobbies, Likes and Interests</span>
         </div>
-        <div className="about-stats-container">
-          <div>hobby</div>
-          <div>hobby</div>
-          <div>hobby</div>
-          <div>hobby</div>
-          <div>hobby</div>
-        </div>{" "}
-      </div>
-      <div className="about-stats">
-        <div>
-          <span>likes</span>
-        </div>
-        <div className="about-stats-container">
-          <div>like</div>
-          <div>like</div>
-          <div>like</div>
-          <div>like</div>
-          <div>like</div>
+        <div className="about-stats-container-flex-row">
+          <div className="box2">football</div>
+          <div className="box2">youtube</div>
+          <div className="box2">old tv shows and movie</div>
+          <div className="box2">music</div>
+          <div className="box2">football</div>
+          <div className="box2">horror movies</div>
+          <div className="box2">coding</div>
+          <div className="box2">working out</div>
         </div>
       </div>
-      <div className="about-stats">
-        <div>
-          <span>intererst</span>
-        </div>
-        <div className="about-stats-container">
-          <div>football</div>
-          <div>horror movies</div>
-          <div>coding</div>
-          <div>working out</div>
-        </div>
-      </div>
-      <div className="about-stats">
-        <div className="about-stats-top">
-          <FaMusic />
-          <span>anthems</span>
-        </div>
-        <div className="about-stats-container-anthem">
-          <div className="about-anthems-box">
-            <img src={pic} alt="" />
-            <div>
-              <span>waiting for a star to fall</span>
-              <span>boy meets girl</span>
-            </div>
-          </div>
-          <div className="about-anthems-box">
-            <img src={pic} alt="" />
-            <div>
-              <span>vienna</span>
-              <span>billy joel</span>
-            </div>
-          </div>
-          <div className="about-anthems-box">
-            <img src={pic} alt="" />
-            <div>
-              <span>piano man</span>
-              <span>billy joel</span>
-            </div>
-          </div>
-          <div className="about-anthems-box">
-            <img src={pic} alt="" />
-            <div>
-              <span>kingston town</span>
-              <span>ub40</span>
-            </div>
-          </div>
-          <div className="about-anthems-box">
-            <img src={pic} alt="" />
-            <div>
-              <span>kingston town</span>
-              <span>ub40</span>
-            </div>
-          </div>
-          <div className="about-anthems-box">
-            <img src={pic} alt="" />
-            <div>
-              <span>kingston town</span>
-              <span>ub40</span>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Anthems />
+
       <div className="space"></div>
     </div>
   );

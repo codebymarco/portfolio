@@ -71,7 +71,12 @@ const Certs = () => {
           return (
             <motion.div className="box" variants={itemVariants} key={skill}>
               <span
-                style={{ display: "flex", gap: "10px", alignItems: "center" }}
+                style={{
+                  display: "flex",
+                  gap: "10px",
+                  alignItems: "center",
+                  fontSize: "2rem",
+                }}
               >
                 {skill}
               </span>
