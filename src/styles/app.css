@@ -86,7 +86,6 @@
 }
 
 .app-detials-box-technologies .box {
-  border: 1px solid dodgerblue;
   padding: 5px 10px;
   font-size: 0.8rem;
   border-radius: 20px;
@@ -202,7 +201,6 @@
   }
 
   .app-detials-box-technologies .box {
-    border: 1px solid dodgerblue;
     padding: 10px 20px;
     font-size: 2rem;
     border-radius: 20px;

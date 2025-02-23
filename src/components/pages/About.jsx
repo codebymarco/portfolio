@@ -1,13 +1,18 @@
 import { useEffect, useState } from "react";
 import "../../styles/about.css";
 import { IoIosNotifications, IoIosSend } from "react-icons/io";
-import { FaFilter, FaHeart, FaLanguage } from "react-icons/fa";
+import {
+  FaArrowAltCircleUp,
+  FaFilter,
+  FaHeart,
+  FaLanguage,
+} from "react-icons/fa";
 import { ImStarFull } from "react-icons/im";
-import { MdCancel } from "react-icons/md";
+import { MdCancel, MdVerified } from "react-icons/md";
 import { GrPowerReset } from "react-icons/gr";
 import { FaLocationPin } from "react-icons/fa6";
 import { CiRuler, CiSearch } from "react-icons/ci";
-import { PiEyesBold, PiFireSimpleFill } from "react-icons/pi";
+import { PiEyesBold, PiFireSimpleFill, PiHouseLineBold } from "react-icons/pi";
 import { GiWorld } from "react-icons/gi";
 import Anthems from "../components/Anthems";
 import { AiFillThunderbolt } from "react-icons/ai";
@@ -66,7 +71,28 @@ const About = () => {
       </div>
       {/* Photo section with carousel */}
       <div className="about-photo">
-      <div
+        <div className="about-photo-absolute">
+          <div className="left-div">
+            <div>
+              <FaLocationPin />
+              <span>Nearby</span>
+            </div>
+            <div>
+              <h4>Marco 22</h4>
+              <MdVerified style={{color:"dodgerblue"}} />
+            </div>
+            <div>
+              <PiHouseLineBold />
+              <span>Lives in Durban</span>
+            </div>
+            <div>
+              <FaLocationPin />
+              <span>20 light years away</span>
+            </div>
+          </div>
+          <FaArrowAltCircleUp style={{color:"white"}}/>
+        </div>
+        <div
           className="tab-buttons"
           style={{
             display: "flex",
@@ -82,7 +108,8 @@ const About = () => {
               style={{
                 height: "10px",
                 width: "10px",
-                backgroundColor: currentIndex === index ? "black" : "dodgerblue",
+                backgroundColor:
+                  currentIndex === index ? "black" : "dodgerblue",
                 borderRadius: "50%",
                 cursor: "pointer",
               }}

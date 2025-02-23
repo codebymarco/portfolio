@@ -35,6 +35,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .top {
@@ -172,3 +173,29 @@
   font-size: 30px;
   cursor: pointer;
 }
+
+.about-photo-absolute{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  z-index: 499;
+}
+
+.left-div{
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.left-div div{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
