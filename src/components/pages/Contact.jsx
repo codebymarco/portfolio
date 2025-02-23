@@ -113,24 +113,9 @@ const Contact = () => {
               <FaGithub color="white" />
               <p>github</p>
             </div>
-            <span>03</span>
+            <span>02</span>
           </motion.div>
 
-          <motion.div
-            variants={itemVariants}
-            className="box"
-            onClick={() =>
-              handleDivClick(
-                `https://www.linkedin.com/in/miguelmarco-ramcharan-34b04a277`
-              )
-            }
-          >
-            <div>
-              <CiLinkedin color="dodgerblue" />
-              <p>linkedin</p>
-            </div>
-            <span>04</span>
-          </motion.div>
 
           <motion.div
             onClick={() => showComp()}
@@ -141,16 +126,9 @@ const Contact = () => {
               <SiOnlyfans color="skyblue" />
               <p>onlyfans</p>
             </div>
-            <span>05</span>
+            <span>03</span>
           </motion.div>
 
-          <motion.div variants={itemVariants} className="box">
-            <div>
-              <FaWhatsapp color="green" />
-              <p>061 149 8474</p>
-            </div>
-            <span>06</span>
-          </motion.div>
         </motion.div>
       </div>
     </div>
