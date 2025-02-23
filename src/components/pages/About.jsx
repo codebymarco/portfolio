@@ -13,14 +13,16 @@ import Anthems from "../components/Anthems";
 import { AiFillThunderbolt } from "react-icons/ai";
 import { HiAdjustmentsHorizontal } from "react-icons/hi2";
 import { RxCross2 } from "react-icons/rx";
+import pic from "../../assets/upgrade.svg";
 
 const About = () => {
   // Array of images (using the same image URL for demonstration)
   const images = [
-    "https://th.bing.com/th/id/R.6e5c581e51eb9ee2d5b4f079066ba884?rik=bdcSOJNU1VnqfA&riu=http%3a%2f%2fcdn.designbump.com%2fwp-content%2fuploads%2f2015%2f05%2fenhanced-buzz-wide-29647-1394478394-12.jpg&ehk=JPk1fLlgcqoRCZJeVV9N46o5que23SXtaTB3BIzCQWM%3d&risl=&pid=ImgRaw&r=0",
+    "https://images4.alphacoders.com/262/thumb-1920-262196.jpg",
     "https://www.allprodad.com/wp-content/uploads/2021/03/05-12-21-happy-people.jpg",
+    "https://www.shutterstock.com/shutterstock/photos/352110644/display_1500/stock-photo-new-york-city-boy-wearing-newsboy-cap-light-yellow-shirt-patterned-vest-asian-american-college-352110644.jpg",
     "https://th.bing.com/th/id/R.6e5c581e51eb9ee2d5b4f079066ba884?rik=bdcSOJNU1VnqfA&riu=http%3a%2f%2fcdn.designbump.com%2fwp-content%2fuploads%2f2015%2f05%2fenhanced-buzz-wide-29647-1394478394-12.jpg&ehk=JPk1fLlgcqoRCZJeVV9N46o5que23SXtaTB3BIzCQWM%3d&risl=&pid=ImgRaw&r=0",
-    "https://th.bing.com/th/id/R.6e5c581e51eb9ee2d5b4f079066ba884?rik=bdcSOJNU1VnqfA&riu=http%3a%2f%2fcdn.designbump.com%2fwp-content%2fuploads%2f2015%2f05%2fenhanced-buzz-wide-29647-1394478394-12.jpg&ehk=JPk1fLlgcqoRCZJeVV9N46o5que23SXtaTB3BIzCQWM%3d&risl=&pid=ImgRaw&r=0",
+    pic,
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -178,7 +180,7 @@ const About = () => {
           </div>
           <div className="box2">
             <CiRuler />
-            <span>1cm shorter than 6 feet</span>
+            <span>6 feet</span>
           </div>
           <div className="box2">
             <GiWorld />
