@@ -1,5 +1,8 @@
 import { FaMusic } from "react-icons/fa";
 import pic from "../../assets/bjpm.jpg";
+import pic2 from "../../assets/wfstf.jpg";
+import pic3 from "../../assets/bjv.jpg";
+import pic4 from "../../assets/ub40kt.jpg";
 import "../../styles/about.css";
 
 const anthemsData = [
@@ -7,13 +10,13 @@ const anthemsData = [
     id: 1,
     title: "waiting for a star to fall",
     artist: "boy meets girl",
-    image: pic,
+    image: pic2,
   },
   {
     id: 2,
     title: "vienna",
     artist: "billy joel",
-    image: pic,
+    image: pic3,
   },
   {
     id: 3,
@@ -25,19 +28,7 @@ const anthemsData = [
     id: 4,
     title: "kingston town",
     artist: "ub40",
-    image: pic,
-  },
-  {
-    id: 5,
-    title: "another anthem",
-    artist: "artist name",
-    image: pic,
-  },
-  {
-    id: 6,
-    title: "yet another anthem",
-    artist: "another artist",
-    image: pic,
+    image: pic4,
   },
 ];
 
