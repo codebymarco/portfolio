@@ -66,13 +66,28 @@ const About = () => {
       </div>
       {/* Photo section with carousel */}
       <div className="about-photo">
-        <div className="tab-buttons">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
+      <div
+          className="tab-buttons"
+          style={{
+            display: "flex",
+            gap: "10px",
+            justifyContent: "center",
+            marginTop: "10px",
+          }}
+        >
+          {images.map((_, index) => (
+            <div
+              key={index}
+              onClick={() => setCurrentIndex(index)}
+              style={{
+                height: "10px",
+                width: "10px",
+                backgroundColor: currentIndex === index ? "black" : "dodgerblue",
+                borderRadius: "50%",
+                cursor: "pointer",
+              }}
+            ></div>
+          ))}
         </div>
         <div className="photo-section" style={{ position: "relative" }}>
           <img
@@ -116,30 +131,6 @@ const About = () => {
           >
             →
           </button>
-        </div>
-        {/* Tab buttons */}
-        <div
-          className="tab-buttons"
-          style={{
-            display: "flex",
-            gap: "10px",
-            justifyContent: "center",
-            marginTop: "10px",
-          }}
-        >
-          {images.map((_, index) => (
-            <div
-              key={index}
-              onClick={() => setCurrentIndex(index)}
-              style={{
-                height: "10px",
-                width: "10px",
-                backgroundColor: currentIndex === index ? "black" : "gray",
-                borderRadius: "50%",
-                cursor: "pointer",
-              }}
-            ></div>
-          ))}
         </div>
       </div>
       {/* Looking for section */}
