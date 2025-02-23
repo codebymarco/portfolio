@@ -12,6 +12,7 @@ import Indeed from "../pages/apps/Indeed";
 import Home from "../pages/Home";
 import Projects from "../pages/Projects";
 import Blogs from "../pages/Blogs";
+import Blog from "../pages/Blog";
 
 const Router = () => {
   return (
@@ -26,6 +27,7 @@ const Router = () => {
           <Route path="apps" element={<Projects />}></Route>
           <Route path="career" element={<Career />}></Route>
           <Route path="blog" element={<Blogs />}></Route>
+          <Route path="blog/:id" element={<Blog />}></Route>
         </Route>
 
         <Route path="/apps/app" element={<App />}></Route>

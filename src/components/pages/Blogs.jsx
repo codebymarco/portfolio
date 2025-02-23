@@ -95,7 +95,7 @@ const Blogs = () => {
         ].map((skill, index) => {
           return (
             <motion.div
-              onClick={() => navigate(`/apps/${skill}`)}
+              onClick={() => navigate(`/blog/data`)}
               className="box"
               variants={itemVariants}
               key={skill}
