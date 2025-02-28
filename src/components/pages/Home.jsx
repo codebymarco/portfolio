@@ -7,6 +7,7 @@ import Projects from "./Projects";
 import Contact from "./Contact";
 import Certs from "./Certs";
 import BlogsSection from "./BlogsSection";
+import ContactForm from "../components/ContactForm";
 
 const Home = () => {
   useEffect(() => {
@@ -35,6 +36,7 @@ const Home = () => {
       <Projects />
       <BlogsSection />
       <Contact />
+      <ContactForm />
     </div>
   );
 };

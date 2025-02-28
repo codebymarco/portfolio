@@ -10,16 +10,17 @@ import { Helmet } from "react-helmet";
 import Certs from "./Certs";
 
 const Career = () => {
-
-    useEffect(() => {
-      // Scroll to the top of the page on component mount
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }, []); // Empty dependency array ensures this runs once on mount
+  useEffect(() => {
+    // Scroll to the top of the page on component mount
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []); // Empty dependency array ensures this runs once on mount
 
   return (
     <div>
       <Helmet>
-        <title>Software Developer Portfolio | Miguelmarco Ramcharan</title>
+        <title>
+          Career Software Developer Portfolio | Miguelmarco Ramcharan
+        </title>
         <meta
           name="description"
           content="Welcome to the portfolio of Miguelmarco Ramcharan. Explore projects, skills, and more by CodeByMarco."

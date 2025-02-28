@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 import "../../styles/about.css";
 import { IoIosNotifications, IoIosSend } from "react-icons/io";
 import {
@@ -48,7 +49,20 @@ const About = () => {
   }, []); // Empty dependency array ensures this runs once on mount
 
   return (
-    <div className="about">
+    <div>
+      <Helmet>
+        <title>About Software Developer Portfolio | Miguelmarco Ramcharan</title>
+        <meta
+          name="description"
+          content="Welcome to the portfolio of Miguelmarco Ramcharan. Explore projects, skills, and more by CodeByMarco."
+        />
+        <meta name="author" content="Miguelmarco Ramcharan" />
+        <meta
+          name="keywords"
+          content="marco ramcharan, codebymarco, software developer portfolio"
+        />
+      </Helmet>
+      <div className="about">
       <div className="fixed-menu">
         <GrPowerReset style={{ color: "gray" }} />
         <RxCross2 style={{ color: "red" }} />
@@ -234,6 +248,8 @@ const About = () => {
 
       <div className="space"></div>
     </div>
+    </div>
+
   );
 };
 
