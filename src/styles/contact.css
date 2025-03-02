@@ -34,15 +34,105 @@
   color: white;
   cursor: pointer;
   background-color: #0d0d0d;
-
+  transition: all 0.3s ease;
 }
 
 .contact-container .box div {
   display: flex;
   align-items: center;
   gap: 10px;
+  max-width: 85%;
+  overflow: hidden;
+}
+
+.contact-container .box span,
+.contact-container .box p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .contact-container .box:hover {
   color: grey;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive styles */
+@media screen and (max-width: 1200px) {
+  .contact-container {
+    width: 90%;
+    padding: 30px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .contact-container {
+    width: 95%;
+    padding: 25px;
+  }
+  
+  .contact-container .box {
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contact-container {
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .contact-container .box {
+    font-size: 1.5rem;
+    padding: 15px 10px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .contact-top h1 {
+    font-size: 2rem;
+  }
+  
+  .contact-container {
+    padding: 15px;
+  }
+  
+  .contact-container .box {
+    font-size: 1.2rem;
+    padding: 12px 8px;
+  }
+  
+  .contact-container .box div {
+    gap: 5px;
+    max-width: 75%;
+  }
+  
+  .contact-container .box div svg {
+    transform: scale(0.9);
+    flex-shrink: 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .contact-container {
+    padding: 10px;
+  }
+  
+  .contact-container .box {
+    font-size: 1rem;
+    padding: 10px 5px;
+  }
+  
+  .contact-container .box div {
+    max-width: 70%;
+  }
+  
+  .contact-container .box div svg {
+    transform: scale(0.8);
+  }
+  
+  .contact-container .box span:last-child {
+    font-size: 0.9rem;
+  }
 }

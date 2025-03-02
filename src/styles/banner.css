@@ -1,27 +1,34 @@
 .banner {
-  height: 90svh;/* Adjust 100px according to your header/footer height */
+  height: 90svh;
   background-color: black;
   color: white;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 20px;
-  gap: 10px;
+  gap: 20px;
+  overflow: hidden;
 }
 
 .banner h1 {
-  font-size: 6rem;
+  font-size: 4rem;
+  text-align: center;
+  margin: 0;
 }
 
 .banner p {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: dodgerblue;
+  text-align: center;
+  margin: 0;
 }
 
 .banner img {
-  height: 90%;
+  max-height: 50vh;
   width: 95%;
-  border-radius: 50px;
+  border-radius: 25px;
+  object-fit: cover;
 }
 
 .banner button {
@@ -30,69 +37,198 @@
   border: 1px solid dodgerblue;
   border-radius: 20px;
   width: 100%;
-  flex-grow: 1;
+  padding: 10px 15px;
   text-align: center;
   cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.banner button:hover {
+  background-color: dodgerblue;
+  color: white;
 }
 
 #banner-about {
   display: block;
 }
 
+.banner-right {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  align-items: center;
+}
+
+.banner-right h3 {
+  font-size: 2.5rem;
+  line-height: 2.8rem;
+  text-align: center;
+  margin: 0;
+}
+
+.banner-right p {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.banner-right div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  width: 100%;
+}
+
+.banner-right div a {
+  background-color: white;
+  padding: 10px 20px;
+  color: black;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+  min-width: 120px;
+  transition: all 0.3s ease;
+}
+
+.banner-right div a:hover {
+  background-color: dodgerblue;
+  color: white;
+}
+
+/* Small phones */
+@media (max-width: 380px) {
+  .banner h1 {
+    font-size: 2.8rem;
+  }
+  
+  .banner-right h3 {
+    font-size: 2rem;
+    line-height: 2.2rem;
+  }
+  
+  .banner-right p {
+    font-size: 1.2rem;
+  }
+  
+  .banner-right div a {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Medium phones */
+@media (min-width: 381px) and (max-width: 576px) {
+  .banner h1 {
+    font-size: 3.2rem;
+  }
+  
+  .banner-right h3 {
+    font-size: 2.2rem;
+    line-height: 2.5rem;
+  }
+}
+
+/* Tablets */
+@media (min-width: 577px) and (max-width: 699px) {
+  .banner {
+    padding: 30px;
+  }
+  
+  .banner h1 {
+    font-size: 3.5rem;
+  }
+  
+  .banner-right h3 {
+    font-size: 2.8rem;
+    line-height: 3rem;
+  }
+  
+  .banner-right p {
+    font-size: 1.8rem;
+  }
+  
+  .banner img {
+    max-height: 55vh;
+    width: 90%;
+  }
+}
+
+/* Desktop */
 @media (min-width: 700px) {
   .banner {
     height: 90vh;
-    background-color: black;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
+    flex-direction: row;
+    padding: 30px;
+    gap: 30px;
   }
 
   .banner h1 {
-    font-size: 6rem;
+    font-size: 5rem;
+    text-align: left;
   }
 
   .banner p {
     font-size: 2rem;
-    color: dodgerblue;
+    text-align: left;
   }
 
   .banner img {
     height: 80%;
     width: auto;
+    max-height: 80vh;
+    max-width: 45%;
     border-radius: 50px;
   }
+  
   #banner-about {
     display: none;
   }
+  
+  .banner-right {
+    align-items: flex-start;
+    margin: 30px;
+    max-width: 50%;
+  }
+  
+  .banner-right h3 {
+    font-size: 4rem;
+    line-height: 4.2rem;
+    text-align: left;
+  }
+  
+  .banner-right p {
+    font-size: 2.5rem;
+    text-align: left;
+  }
+  
+  .banner-right div {
+    justify-content: flex-start;
+  }
 }
 
-.banner-right{
-  display: flex;
-  flex-direction: column;
-  margin: 30px;
-}
-
-.banner-right h3{
-  font-size: 4.5rem;
-  line-height: 4rem;
-}
-
-
-.banner-right p{
-  font-size: 3rem;
-}
-
-.banner-right div{
-  display: flex;
-  gap: 10px;
-}
-
-.banner-right div a{
-  background-color: white;
-  padding: 10px 20px;
-  color: black;
-  text-decoration: none;
+/* Large Desktop */
+@media (min-width: 1200px) {
+  .banner {
+    padding: 40px;
+  }
+  
+  .banner h1 {
+    font-size: 6rem;
+  }
+  
+  .banner-right h3 {
+    font-size: 4.5rem;
+    line-height: 4.8rem;
+  }
+  
+  .banner-right p {
+    font-size: 3rem;
+  }
+  
+  .banner img {
+    max-width: 45%;
+  }
 }

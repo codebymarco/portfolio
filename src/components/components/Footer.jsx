@@ -146,7 +146,7 @@ const Footer = () => {
         .links ul li a {
           color: #aaa;
           text-decoration: none;
-          transition: color 0.3s;
+          transition: color 0.3s, padding-left 0.3s;
         }
 
         .links ul li a:hover {
@@ -159,6 +159,7 @@ const Footer = () => {
           align-items: center;
           margin-bottom: 15px;
           color: #aaa;
+          word-break: break-word;
         }
 
         .contact-icon {
@@ -169,6 +170,7 @@ const Footer = () => {
           background-position: center;
           background-repeat: no-repeat;
           background-size: contain;
+          flex-shrink: 0;
         }
 
         .email {
@@ -188,14 +190,41 @@ const Footer = () => {
           font-size: 0.9rem;
         }
 
+        /* Improved responsive styles */
+        @media screen and (max-width: 992px) {
+          .footer-content {
+            justify-content: flex-start;
+            gap: 40px;
+          }
+          
+          .footer-section {
+            flex-basis: calc(50% - 40px);
+            min-width: 200px;
+          }
+        }
+
         @media screen and (max-width: 768px) {
           .footer-content {
             flex-direction: column;
+            padding: 0 30px;
           }
 
           .footer-section {
-            margin-bottom: 30px;
+            width: 100%;
+            margin-bottom: 40px;
             padding-right: 0;
+          }
+          
+          .footer-section:last-child {
+            margin-bottom: 20px;
+          }
+          
+          .social-links {
+            gap: 20px;
+          }
+          
+          .footer-section h3 {
+            font-size: 1.3rem;
           }
         }
 
@@ -203,18 +232,27 @@ const Footer = () => {
           .footer {
             padding: 30px 0 15px;
           }
+          
+          .footer-content {
+            padding: 0 20px;
+          }
 
           .footer-section h3 {
             font-size: 1.1rem;
           }
-
-          .social-links {
-            justify-content: center;
+          
+          .about p, .contact p, .links ul li a {
+            font-size: 0.95rem;
+          }
+          
+          .contact span {
+            word-break: break-all;
           }
 
           .footer-bottom {
             margin-top: 15px;
             padding-top: 15px;
+            font-size: 0.8rem;
           }
         }
       `}</style>
