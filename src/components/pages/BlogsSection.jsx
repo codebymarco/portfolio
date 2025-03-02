@@ -18,7 +18,7 @@ import {
   SiMongodb,
   SiPostgresql,
 } from "react-icons/si";
-import "../../styles/skills.css";
+import "../../styles/blogsSection.css";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
@@ -61,13 +61,13 @@ const BlogsSection = () => {
   };
 
   return (
-    <div className="skills">
-      <div className="skills-top">
+    <div className="blogsSection">
+      <div className="blogsSectionTop">
         <h1>BLOGS</h1>
         <Link to="/">more</Link>
       </div>
       <motion.div
-        className="skillspage-container3"
+        className="blogsSectionContainer"
         initial="hidden"
         animate="visible"
         variants={containerVariants}

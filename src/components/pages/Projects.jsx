@@ -18,7 +18,7 @@ import {
   SiMongodb,
   SiPostgresql,
 } from "react-icons/si";
-import "../../styles/skills.css";
+import "../../styles/certs.css";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
@@ -60,12 +60,12 @@ const Projects = () => {
   };
 
   return (
-    <div className="skills">
-      <div className="skills-top">
+    <div className="certs">
+      <div className="certs-top">
         <h1>PROJECTS</h1>
       </div>
       <motion.div
-        className="skillspage-container2"
+        className="certs-container"
         initial="hidden"
         animate="visible"
         variants={containerVariants}
@@ -79,7 +79,12 @@ const Projects = () => {
               key={skill}
             >
               <span
-                style={{ display: "flex", gap: "10px", alignItems: "center", fontSize:"2rem" }}
+                style={{
+                  display: "flex",
+                  gap: "10px",
+                  alignItems: "center",
+                  fontSize: "2rem",
+                }}
               >
                 {skill}
               </span>
