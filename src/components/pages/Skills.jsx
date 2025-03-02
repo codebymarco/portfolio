@@ -18,7 +18,7 @@ import {
   SiMongodb,
   SiPostgresql,
 } from "react-icons/si";
-import "../../styles/skills.css";
+import "../../styles/skillsPage.css";
 import { motion } from "framer-motion";
 
 const skillIcons = {
@@ -57,12 +57,12 @@ const Skills = () => {
   };
 
   return (
-    <div className="skills">
-      <div className="skills-top">
+    <div className="skillsPageNew">
+      <div className="skillsPageNewTop">
         <h1>SKILLS</h1>
       </div>
       <motion.div
-        className="skillspage-container"
+        className="skillsPageNewcontainer"
         initial="hidden"
         animate="visible"
         variants={containerVariants}

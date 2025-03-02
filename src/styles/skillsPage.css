@@ -1,0 +1,91 @@
+.skillsPageNew {
+  background-color: black;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.skillsPageNewTop {
+  padding: 20px;
+  text-align: center;
+  color: white;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+}
+
+.skillsPageNewTop a {
+  position: absolute;
+  right: 100px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.skillsPageNewcontainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 50px;
+  width: fit-content;
+}
+
+.skillsPageNewcontainer .box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  color: white;
+  font-size: 7rem;
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #0d0d0d;
+}
+
+.skillsPageNewcontainer .box span {
+  display: flex;
+  align-items: center;
+}
+
+/* Mobile Styles Only - No changes to desktop/laptop view */
+@media screen and (max-width: 768px) {
+  .skillsPageNewcontainer {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    width: 90%;
+  }
+
+  .skillsPageNewcontainer .box {
+    font-size: 5rem;
+  }
+
+  .skillsPageNewTop a {
+    right: 20px;
+  }
+}
+
+/* Small Mobile */
+@media screen and (max-width: 480px) {
+  .skillsPageNewcontainer {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
+
+  .skillsPageNewcontainer .box {
+    font-size: 4rem;
+  }
+
+  .skillsPageNewTop a {
+    position: static;
+    margin-top: 10px;
+    transform: none;
+  }
+
+  .skillsPageNewTop {
+    flex-direction: column;
+  }
+}
