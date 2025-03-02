@@ -166,6 +166,18 @@ const Career = () => {
                 <span>devops assistance</span>
                 <span>6</span>
               </div>
+              <div className="job-response-box">
+                <span>db migration</span>
+                <span>7</span>
+              </div>
+              <div className="job-response-box">
+                <span>docker migration</span>
+                <span>8</span>
+              </div>
+              <div className="job-response-box">
+                <span>consent record migration</span>
+                <span>9</span>
+              </div>
             </div>
           </div>
         </div>

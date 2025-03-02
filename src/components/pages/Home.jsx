@@ -36,7 +36,6 @@ const Home = () => {
       <Projects />
       <BlogsSection />
       <Contact />
-      <ContactForm />
     </div>
   );
 };

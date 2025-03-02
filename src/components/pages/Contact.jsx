@@ -8,6 +8,7 @@ import "../../styles/contact.css";
 import OnlyFans from "../components/OnlyFans";
 import resumePDF from "../../../public/resume.pdf";
 import { Helmet } from "react-helmet";
+import ContactForm from "../components/ContactForm";
 
 const Contact = () => {
 
@@ -131,6 +132,7 @@ const Contact = () => {
 
         </motion.div>
       </div>
+      <ContactForm/>
     </div>
   );
 };

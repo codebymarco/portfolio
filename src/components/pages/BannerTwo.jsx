@@ -17,7 +17,7 @@ const BannerTwo = () => {
         src={image}
         alt=""
         initial={{ opacity: 0, scale: 1 }}
-        animate={{ opacity: 1, scale: 1 }}
+      animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 5 }}
       />
       <div className="banner-right">
@@ -26,7 +26,7 @@ const BannerTwo = () => {
         </h3>
         <p style={{color:"grey"}}>SOFTWARE DEVELOPER</p>
         <div>
-          <Link to="/">contact me</Link>
+          <Link to="/contact">contact me</Link>
           <Link to="/about">about</Link>
         </div>
       </div>
