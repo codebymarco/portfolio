@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaArrowLeft, FaShare, FaBookmark } from "react-icons/fa";
-import img from "../../../assets/blog/bunny.jpg"
+import img from "../../../assets/blog/bunny.jpg";
 
 const BunnyCDNBlog = () => {
   const navigate = useNavigate();
@@ -12,21 +12,29 @@ const BunnyCDNBlog = () => {
       id: 1,
       title: "How to Dockerize a React.js Application",
       tags: ["docker", "react", "devops"],
-      image: "https://th.bing.com/th/id/R.796523382777357d18ba619048335003?rik=hi%2f%2bPd07IRqj%2fA&pid=ImgRaw&r=0"
+      image:
+        "https://th.bing.com/th/id/R.796523382777357d18ba619048335003?rik=hi%2f%2bPd07IRqj%2fA&pid=ImgRaw&r=0",
     },
     {
       id: 2,
       title: "AWS S3 Bucket Configuration Best Practices",
       tags: ["aws", "s3", "cloud"],
-      image: "https://th.bing.com/th/id/R.796523382777357d18ba619048335003?rik=hi%2f%2bPd07IRqj%2fA&pid=ImgRaw&r=0"
+      image:
+        "https://th.bing.com/th/id/R.796523382777357d18ba619048335003?rik=hi%2f%2bPd07IRqj%2fA&pid=ImgRaw&r=0",
     },
     {
       id: 3,
       title: "Speed Up Your Website with Content Delivery Networks",
       tags: ["cdn", "performance", "web"],
-      image: "https://th.bing.com/th/id/R.796523382777357d18ba619048335003?rik=hi%2f%2bPd07IRqj%2fA&pid=ImgRaw&r=0"
-    }
+      image:
+        "https://th.bing.com/th/id/R.796523382777357d18ba619048335003?rik=hi%2f%2bPd07IRqj%2fA&pid=ImgRaw&r=0",
+    },
   ];
+
+  useEffect(() => {
+    // Scroll to the top of the page on component mount
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []); // Empty dependency array ensures this runs once on mount
 
   return (
     <div className="blog-container">
@@ -38,9 +46,13 @@ const BunnyCDNBlog = () => {
         </nav>
 
         <header className="blog-header">
-          <h1 className="blog-title">Setting Up BunnyCDN with S3 and Edge Rules</h1>
+          <h1 className="blog-title">
+            Setting Up BunnyCDN with S3 and Edge Rules
+          </h1>
           <p className="blog-description">
-            A comprehensive guide to configuring BunnyCDN Pull Zones with S3 buckets and leveraging Edge Rules for enhanced performance and control
+            A comprehensive guide to configuring BunnyCDN Pull Zones with S3
+            buckets and leveraging Edge Rules for enhanced performance and
+            control
           </p>
           <div className="blog-meta">
             <span className="blog-timestamp">March 3, 2025</span>
@@ -59,136 +71,185 @@ const BunnyCDNBlog = () => {
 
         <div className="blog-content">
           <p>
-            BunnyCDN has established itself as a cost-effective and high-performance content delivery network that can 
-            significantly improve your website's loading speeds. One of its most powerful features is the ability to pull 
-            content directly from storage solutions like Amazon S3. In this guide, we'll walk through the complete process 
-            of setting up a BunnyCDN Pull Zone connected to an S3 bucket and implementing Edge Rules for advanced content delivery control.
+            BunnyCDN has established itself as a cost-effective and
+            high-performance content delivery network that can significantly
+            improve your website's loading speeds. One of its most powerful
+            features is the ability to pull content directly from storage
+            solutions like Amazon S3. In this guide, we'll walk through the
+            complete process of setting up a BunnyCDN Pull Zone connected to an
+            S3 bucket and implementing Edge Rules for advanced content delivery
+            control.
           </p>
 
           <h2>Prerequisites</h2>
-          
-          <p>
-            Before we begin, make sure you have the following:
-          </p>
-          
+
+          <p>Before we begin, make sure you have the following:</p>
+
           <ul>
-            <li>A BunnyCDN account (you can sign up at <a href="https://bunnycdn.com">bunnycdn.com</a>)</li>
+            <li>
+              A BunnyCDN account (you can sign up at{" "}
+              <a href="https://bunnycdn.com">bunnycdn.com</a>)
+            </li>
             <li>An AWS account with an S3 bucket containing your content</li>
-            <li>Your S3 bucket configured for public access (or with appropriate permissions)</li>
-            <li>Domain name (optional but recommended for production environments)</li>
+            <li>
+              Your S3 bucket configured for public access (or with appropriate
+              permissions)
+            </li>
+            <li>
+              Domain name (optional but recommended for production environments)
+            </li>
           </ul>
-          
+
           <h2>Step 1: Creating a Pull Zone in BunnyCDN</h2>
-          
+
           <p>
-            A Pull Zone is essentially an endpoint that pulls content from your origin server (in this case, an S3 bucket) 
-            and caches it across BunnyCDN's global network.
+            A Pull Zone is essentially an endpoint that pulls content from your
+            origin server (in this case, an S3 bucket) and caches it across
+            BunnyCDN's global network.
           </p>
-          
+
           <div className="code-block">
-            <pre><code>{`# Pull Zone Configuration Parameters
+            <pre>
+              <code>{`# Pull Zone Configuration Parameters
 Origin URL: https://your-bucket-name.s3.amazonaws.com
 Name: your-pull-zone-name
 Type: Standard Pull Zone
-`}</code></pre>
+`}</code>
+            </pre>
           </div>
-          
-          <p>
-            Here's how to set up your Pull Zone:
-          </p>
-          
+
+          <p>Here's how to set up your Pull Zone:</p>
+
           <ol>
-            <li>Log in to your BunnyCDN account and navigate to the "Pull Zones" section</li>
+            <li>
+              Log in to your BunnyCDN account and navigate to the "Pull Zones"
+              section
+            </li>
             <li>Click on "Add Pull Zone"</li>
-            <li>Enter a name for your Pull Zone (this will be used in the URL)</li>
-            <li>Enter your S3 bucket URL as the Origin URL (https://your-bucket-name.s3.amazonaws.com)</li>
+            <li>
+              Enter a name for your Pull Zone (this will be used in the URL)
+            </li>
+            <li>
+              Enter your S3 bucket URL as the Origin URL
+              (https://your-bucket-name.s3.amazonaws.com)
+            </li>
             <li>Select the pricing tier that fits your needs</li>
-            <li>Configure additional options if needed (we'll cover some important ones below)</li>
+            <li>
+              Configure additional options if needed (we'll cover some important
+              ones below)
+            </li>
             <li>Click "Add Pull Zone" to create it</li>
           </ol>
-          
+
           <blockquote>
-            Ensure your S3 bucket permissions allow BunnyCDN to access the files. For testing, you can make objects public, 
-            but for production, consider using a more restrictive policy that only allows BunnyCDN's IPs.
+            Ensure your S3 bucket permissions allow BunnyCDN to access the
+            files. For testing, you can make objects public, but for production,
+            consider using a more restrictive policy that only allows BunnyCDN's
+            IPs.
           </blockquote>
-          
+
           <h2>Step 2: Advanced Pull Zone Configuration</h2>
-          
+
           <p>
             Once your basic Pull Zone is created, let's optimize some settings:
           </p>
-          
+
           <div className="code-block">
-            <pre><code>{`# Recommended Pull Zone Settings
+            <pre>
+              <code>{`# Recommended Pull Zone Settings
 Cache Error Responses: On (with appropriate TTL)
 Origin Cache-Control: On
 Query String Forwarding: Based on your application needs
 Enable Logging: On
-`}</code></pre>
+`}</code>
+            </pre>
           </div>
-          
+
           <p>
-            Navigate to your newly created Pull Zone and consider configuring these important settings:
+            Navigate to your newly created Pull Zone and consider configuring
+            these important settings:
           </p>
-          
+
           <ul>
-            <li><strong>Cache Settings</strong>: Define how long BunnyCDN should cache your content. You can respect the Cache-Control headers from your S3 bucket or override them.</li>
-            <li><strong>Error Handling</strong>: Configure if and how BunnyCDN should cache error responses.</li>
-            <li><strong>Query String</strong>: Decide whether query parameters should affect caching (important for dynamic content).</li>
-            <li><strong>CORS Headers</strong>: Set up Cross-Origin Resource Sharing if your content will be accessed from different domains.</li>
+            <li>
+              <strong>Cache Settings</strong>: Define how long BunnyCDN should
+              cache your content. You can respect the Cache-Control headers from
+              your S3 bucket or override them.
+            </li>
+            <li>
+              <strong>Error Handling</strong>: Configure if and how BunnyCDN
+              should cache error responses.
+            </li>
+            <li>
+              <strong>Query String</strong>: Decide whether query parameters
+              should affect caching (important for dynamic content).
+            </li>
+            <li>
+              <strong>CORS Headers</strong>: Set up Cross-Origin Resource
+              Sharing if your content will be accessed from different domains.
+            </li>
           </ul>
-          
+
           <h2>Step 3: Connecting a Custom Domain</h2>
-          
+
           <p>
-            For production use, you'll want to use your own domain rather than BunnyCDN's provided hostname:
+            For production use, you'll want to use your own domain rather than
+            BunnyCDN's provided hostname:
           </p>
-          
+
           <div className="code-block">
-            <pre><code>{`# DNS Configuration
+            <pre>
+              <code>{`# DNS Configuration
 Type: CNAME
 Hostname: cdn.yourdomain.com
 Points to: your-pull-zone-name.b-cdn.net
-`}</code></pre>
+`}</code>
+            </pre>
           </div>
-          
-          <p>
-            To add a custom domain:
-          </p>
-          
+
+          <p>To add a custom domain:</p>
+
           <ol>
             <li>In your Pull Zone settings, go to the "Hostnames" tab</li>
             <li>Click "Add Hostname"</li>
             <li>Enter your custom domain (e.g., cdn.yourdomain.com)</li>
             <li>Add the hostname to your Pull Zone</li>
-            <li>Create a CNAME record in your DNS settings pointing to your BunnyCDN Pull Zone URL (your-pull-zone-name.b-cdn.net)</li>
-            <li>Optionally, enable SSL by clicking the "Add SSL Certificate" button next to your hostname</li>
+            <li>
+              Create a CNAME record in your DNS settings pointing to your
+              BunnyCDN Pull Zone URL (your-pull-zone-name.b-cdn.net)
+            </li>
+            <li>
+              Optionally, enable SSL by clicking the "Add SSL Certificate"
+              button next to your hostname
+            </li>
           </ol>
-          
+
           <p>
-            BunnyCDN provides free Let's Encrypt SSL certificates for all custom hostnames, which will automatically renew.
+            BunnyCDN provides free Let's Encrypt SSL certificates for all custom
+            hostnames, which will automatically renew.
           </p>
-          
+
           <h2>Step 4: Configuring Edge Rules for Advanced Control</h2>
-          
+
           <p>
-            Edge Rules are one of BunnyCDN's most powerful features, allowing you to manipulate requests and responses at the edge. 
-            Let's explore some common use cases:
+            Edge Rules are one of BunnyCDN's most powerful features, allowing
+            you to manipulate requests and responses at the edge. Let's explore
+            some common use cases:
           </p>
-          
+
           <div className="code-block">
-            <pre><code>{`# Sample Edge Rule - Browser Caching Headers
+            <pre>
+              <code>{`# Sample Edge Rule - Browser Caching Headers
 Action: Set Response Header
 Trigger: URL matches any
 Header Name: Cache-Control
 Header Value: public, max-age=86400
-`}</code></pre>
+`}</code>
+            </pre>
           </div>
-          
-          <p>
-            To create Edge Rules:
-          </p>
-          
+
+          <p>To create Edge Rules:</p>
+
           <ol>
             <li>In your Pull Zone, navigate to the "Edge Rules" tab</li>
             <li>Click "Add Edge Rule"</li>
@@ -196,77 +257,87 @@ Header Value: public, max-age=86400
             <li>Set up the actions that should be taken</li>
             <li>Arrange rules in the desired priority order</li>
           </ol>
-          
+
           <h3>Example Edge Rules for Common Scenarios</h3>
-          
-          <p>
-            Let's look at some practical Edge Rules examples:
-          </p>
-          
+
+          <p>Let's look at some practical Edge Rules examples:</p>
+
           <h4>1. Browser Caching for Static Assets</h4>
-          
+
           <div className="code-block">
-            <pre><code>{`Trigger: URL matches RegEx \\.(jpg|jpeg|png|gif|css|js)$
+            <pre>
+              <code>{`Trigger: URL matches RegEx \\.(jpg|jpeg|png|gif|css|js)$
 Action: Set Response Header
 Header Name: Cache-Control
 Header Value: public, max-age=604800, stale-while-revalidate=86400
-`}</code></pre>
+`}</code>
+            </pre>
           </div>
-          
+
           <p>
-            This rule adds aggressive caching headers for static assets, telling browsers to cache these files for one week 
-            and allowing an additional day of stale content while revalidating.
+            This rule adds aggressive caching headers for static assets, telling
+            browsers to cache these files for one week and allowing an
+            additional day of stale content while revalidating.
           </p>
-          
+
           <h4>2. GeoIP Blocking</h4>
-          
+
           <div className="code-block">
-            <pre><code>{`Trigger: Country matches any: CN, RU
+            <pre>
+              <code>{`Trigger: Country matches any: CN, RU
 Action: Return Fixed Response
 Status Code: 403
 Response Body: <html><body><h1>Access Denied</h1><p>Access is not permitted from your region.</p></body></html>
-`}</code></pre>
+`}</code>
+            </pre>
           </div>
-          
+
           <p>
-            This rule blocks access from specific countries, which can be useful for compliance with regional restrictions or 
-            protection against attacks from certain regions.
+            This rule blocks access from specific countries, which can be useful
+            for compliance with regional restrictions or protection against
+            attacks from certain regions.
           </p>
-          
+
           <h4>3. URL Rewrites for Clean URLs</h4>
-          
+
           <div className="code-block">
-            <pre><code>{`Trigger: URL matches RegEx ^/blog/([\\w-]+)$
+            <pre>
+              <code>{`Trigger: URL matches RegEx ^/blog/([\\w-]+)$
 Action: Rewrite Request
 Target URL: /blog.php?slug=$1
-`}</code></pre>
+`}</code>
+            </pre>
           </div>
-          
+
           <p>
-            This rule allows you to have clean, SEO-friendly URLs like /blog/my-article that get internally rewritten to 
-            /blog.php?slug=my-article without requiring server-side configuration.
+            This rule allows you to have clean, SEO-friendly URLs like
+            /blog/my-article that get internally rewritten to
+            /blog.php?slug=my-article without requiring server-side
+            configuration.
           </p>
-          
+
           <h4>4. Content Compression</h4>
-          
+
           <div className="code-block">
-            <pre><code>{`Trigger: URL matches any
+            <pre>
+              <code>{`Trigger: URL matches any
 Action: Enable Gzip Compression
-`}</code></pre>
+`}</code>
+            </pre>
           </div>
-          
+
           <p>
-            This rule ensures all content is compressed before being sent to the user, reducing bandwidth usage and improving load times.
+            This rule ensures all content is compressed before being sent to the
+            user, reducing bandwidth usage and improving load times.
           </p>
-          
+
           <h2>Step 5: Optimizing S3 for BunnyCDN</h2>
-          
-          <p>
-            To ensure optimal performance between S3 and BunnyCDN:
-          </p>
-          
+
+          <p>To ensure optimal performance between S3 and BunnyCDN:</p>
+
           <div className="code-block">
-            <pre><code>{`# S3 Bucket CORS Configuration
+            <pre>
+              <code>{`# S3 Bucket CORS Configuration
 <?xml version="1.0" encoding="UTF-8"?>
 <CORSConfiguration xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
   <CORSRule>
@@ -276,38 +347,54 @@ Action: Enable Gzip Compression
     <MaxAgeSeconds>3000</MaxAgeSeconds>
   </CORSRule>
 </CORSConfiguration>
-`}</code></pre>
+`}</code>
+            </pre>
           </div>
-          
+
           <ol>
-            <li>Set appropriate Cache-Control headers on your S3 objects to instruct BunnyCDN how long to cache</li>
+            <li>
+              Set appropriate Cache-Control headers on your S3 objects to
+              instruct BunnyCDN how long to cache
+            </li>
             <li>Configure CORS settings if needed</li>
-            <li>Consider using AWS CloudFront in front of S3 if you need origin redundancy</li>
-            <li>Use S3 bucket policies to restrict access to only BunnyCDN's IP ranges</li>
+            <li>
+              Consider using AWS CloudFront in front of S3 if you need origin
+              redundancy
+            </li>
+            <li>
+              Use S3 bucket policies to restrict access to only BunnyCDN's IP
+              ranges
+            </li>
           </ol>
-          
+
           <h2>Step 6: Monitoring and Optimization</h2>
-          
+
           <p>
-            BunnyCDN provides detailed analytics to help you optimize your setup:
+            BunnyCDN provides detailed analytics to help you optimize your
+            setup:
           </p>
-          
+
           <ul>
             <li>Monitor your cache hit ratio and try to keep it above 90%</li>
             <li>Track bandwidth usage and adjust your plan if needed</li>
-            <li>Review logs regularly to identify potential issues or optimization opportunities</li>
+            <li>
+              Review logs regularly to identify potential issues or optimization
+              opportunities
+            </li>
             <li>Set up cost alerts to avoid unexpected bills</li>
           </ul>
-          
+
           <h2>Advanced: Using BunnyCDN Storage Instead of S3</h2>
-          
+
           <p>
-            While this guide focuses on using S3 as your origin, BunnyCDN also offers its own storage solution that 
-            integrates seamlessly with Pull Zones and can be more cost-effective:
+            While this guide focuses on using S3 as your origin, BunnyCDN also
+            offers its own storage solution that integrates seamlessly with Pull
+            Zones and can be more cost-effective:
           </p>
-          
+
           <div className="code-block">
-            <pre><code>{`# BunnyCDN Storage vs S3 Integration
+            <pre>
+              <code>{`# BunnyCDN Storage vs S3 Integration
 BunnyCDN Storage:
 - Tighter integration with Pull Zones
 - Often lower cost than S3 + transfer
@@ -317,26 +404,31 @@ S3 Advantages:
 - Existing workflows may already use S3
 - More storage features and redundancy options
 - Integration with other AWS services
-`}</code></pre>
+`}</code>
+            </pre>
           </div>
-          
+
           <p>
-            Consider your specific needs when choosing between S3 and BunnyCDN's storage solution.
+            Consider your specific needs when choosing between S3 and BunnyCDN's
+            storage solution.
           </p>
-          
+
           <h2>Conclusion</h2>
-          
+
           <p>
-            By connecting BunnyCDN to your S3 bucket and implementing Edge Rules, you've created a powerful, 
-            globally distributed content delivery system that will significantly improve your website's performance 
-            and reduce load on your origin servers.
+            By connecting BunnyCDN to your S3 bucket and implementing Edge
+            Rules, you've created a powerful, globally distributed content
+            delivery system that will significantly improve your website's
+            performance and reduce load on your origin servers.
           </p>
-          
+
           <p>
-            The combination of S3's reliable storage and BunnyCDN's affordable, high-performance network gives you 
-            the best of both worlds: reliable content storage with lightning-fast global delivery. The Edge Rules 
-            provide granular control over how your content is served, allowing you to optimize for specific use cases 
-            without modifying your origin server configuration.
+            The combination of S3's reliable storage and BunnyCDN's affordable,
+            high-performance network gives you the best of both worlds: reliable
+            content storage with lightning-fast global delivery. The Edge Rules
+            provide granular control over how your content is served, allowing
+            you to optimize for specific use cases without modifying your origin
+            server configuration.
           </p>
         </div>
 
@@ -373,20 +465,26 @@ S3 Advantages:
       <section className="similar-blogs-section">
         <h2 className="similar-blogs-title">Similar Articles</h2>
         <div className="similar-blogs-container">
-          {similarBlogs.map(blog => (
-            <div 
-              key={blog.id} 
+          {similarBlogs.map((blog) => (
+            <div
+              key={blog.id}
               className="similar-blog-card"
               onClick={() => navigate(`/blog/${blog.id}`)}
             >
               <div className="similar-blog-image-container">
-                <img src={blog.image} alt={blog.title} className="similar-blog-image" />
+                <img
+                  src={blog.image}
+                  alt={blog.title}
+                  className="similar-blog-image"
+                />
               </div>
               <div className="similar-blog-content">
                 <h3 className="similar-blog-title">{blog.title}</h3>
                 <div className="similar-blog-tags">
-                  {blog.tags.slice(0, 2).map(tag => (
-                    <span key={tag} className="similar-blog-tag">{tag}</span>
+                  {blog.tags.slice(0, 2).map((tag) => (
+                    <span key={tag} className="similar-blog-tag">
+                      {tag}
+                    </span>
                   ))}
                 </div>
               </div>
@@ -399,7 +497,7 @@ S3 Advantages:
         .blog-container {
           background-color: #000;
           color: #e0e0e0;
-          font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+          font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
           padding: 0;
           min-height: 100vh;
         }
@@ -465,7 +563,8 @@ S3 Advantages:
           flex-wrap: wrap;
         }
 
-        .blog-category, .blog-reading-time {
+        .blog-category,
+        .blog-reading-time {
           background-color: #222;
           padding: 4px 12px;
           border-radius: 20px;
@@ -519,11 +618,12 @@ S3 Advantages:
           color: #ffffff;
         }
 
-        .blog-content ul, .blog-content ol {
+        .blog-content ul,
+        .blog-content ol {
           margin-bottom: 24px;
           padding-left: 20px;
         }
-        
+
         .blog-content li {
           margin-bottom: 8px;
         }
@@ -560,7 +660,7 @@ S3 Advantages:
         }
 
         .code-block code {
-          font-family: 'Fira Code', monospace;
+          font-family: "Fira Code", monospace;
           font-size: 0.9rem;
           color: #cccccc;
         }

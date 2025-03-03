@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaArrowLeft, FaShare, FaBookmark } from "react-icons/fa";
 
@@ -11,21 +11,29 @@ const Blog = () => {
       id: 1,
       title: "Microservices Architecture: Benefits and Challenges",
       tags: ["microservices", "architecture", "devops"],
-      image: "https://th.bing.com/th/id/R.796523382777357d18ba619048335003?rik=hi%2f%2bPd07IRqj%2fA&pid=ImgRaw&r=0"
+      image:
+        "https://th.bing.com/th/id/R.796523382777357d18ba619048335003?rik=hi%2f%2bPd07IRqj%2fA&pid=ImgRaw&r=0",
     },
     {
       id: 2,
       title: "DevOps Fundamentals: Bridging Development and Operations",
       tags: ["devops", "ci-cd", "automation"],
-      image: "https://th.bing.com/th/id/R.796523382777357d18ba619048335003?rik=hi%2f%2bPd07IRqj%2fA&pid=ImgRaw&r=0"
+      image:
+        "https://th.bing.com/th/id/R.796523382777357d18ba619048335003?rik=hi%2f%2bPd07IRqj%2fA&pid=ImgRaw&r=0",
     },
     {
       id: 3,
       title: "Building Robust Backends with Node.js and Express",
       tags: ["node", "express", "backend"],
-      image: "https://th.bing.com/th/id/R.796523382777357d18ba619048335003?rik=hi%2f%2bPd07IRqj%2fA&pid=ImgRaw&r=0"
-    }
+      image:
+        "https://th.bing.com/th/id/R.796523382777357d18ba619048335003?rik=hi%2f%2bPd07IRqj%2fA&pid=ImgRaw&r=0",
+    },
   ];
+
+  useEffect(() => {
+    // Scroll to the top of the page on component mount
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []); // Empty dependency array ensures this runs once on mount
 
   return (
     <div className="blog-container">
@@ -37,9 +45,12 @@ const Blog = () => {
         </nav>
 
         <header className="blog-header">
-          <h1 className="blog-title">How to Dockerize a React.js Application</h1>
+          <h1 className="blog-title">
+            How to Dockerize a React.js Application
+          </h1>
           <p className="blog-description">
-            A step-by-step guide to containerizing your React applications for consistent deployment across any environment
+            A step-by-step guide to containerizing your React applications for
+            consistent deployment across any environment
           </p>
           <div className="blog-meta">
             <span className="blog-timestamp">March 2, 2025</span>
@@ -58,31 +69,41 @@ const Blog = () => {
 
         <div className="blog-content">
           <p>
-            Containerizing React applications with Docker offers numerous benefits including consistent development environments, 
-            simplified deployment processes, and isolation from system dependencies. In this guide, we'll walk through the complete process 
-            of setting up Docker for a React application built with Create React App.
+            Containerizing React applications with Docker offers numerous
+            benefits including consistent development environments, simplified
+            deployment processes, and isolation from system dependencies. In
+            this guide, we'll walk through the complete process of setting up
+            Docker for a React application built with Create React App.
           </p>
 
           <h2>Prerequisites</h2>
-          
+
           <p>
-            Before we begin, make sure you have the following installed on your system:
+            Before we begin, make sure you have the following installed on your
+            system:
           </p>
-          
+
           <ul>
             <li>Node.js and npm (for local development)</li>
-            <li>Docker (Docker Desktop for Windows/Mac or Docker Engine for Linux)</li>
-            <li>A React application (we'll use Create React App in this tutorial)</li>
+            <li>
+              Docker (Docker Desktop for Windows/Mac or Docker Engine for Linux)
+            </li>
+            <li>
+              A React application (we'll use Create React App in this tutorial)
+            </li>
           </ul>
-          
+
           <h2>Step 1: Create a Dockerfile</h2>
-          
+
           <p>
-            First, we need to create a Dockerfile in the root of your React project. This file contains instructions for Docker on how to build your application container.
+            First, we need to create a Dockerfile in the root of your React
+            project. This file contains instructions for Docker on how to build
+            your application container.
           </p>
-          
+
           <div className="code-block">
-            <pre><code>{`# Use official Node.js image as base
+            <pre>
+              <code>{`# Use official Node.js image as base
 FROM node:16-alpine as build
 
 # Set working directory
@@ -109,27 +130,40 @@ EXPOSE 80
 
 # Start nginx
 CMD ["nginx", "-g", "daemon off;"]
-`}</code></pre>
+`}</code>
+            </pre>
           </div>
-          
+
           <p>
-            This Dockerfile uses a multi-stage build approach, which is a best practice for creating optimized Docker images:
+            This Dockerfile uses a multi-stage build approach, which is a best
+            practice for creating optimized Docker images:
           </p>
-          
+
           <ol>
-            <li>The first stage uses a Node.js image to build the React application</li>
-            <li>The second stage uses a lightweight Nginx image to serve the static files</li>
-            <li>Only the built files are copied to the final image, keeping it small and efficient</li>
+            <li>
+              The first stage uses a Node.js image to build the React
+              application
+            </li>
+            <li>
+              The second stage uses a lightweight Nginx image to serve the
+              static files
+            </li>
+            <li>
+              Only the built files are copied to the final image, keeping it
+              small and efficient
+            </li>
           </ol>
-          
+
           <h2>Step 2: Create .dockerignore File</h2>
-          
+
           <p>
-            Next, create a .dockerignore file to prevent unnecessary files from being copied into your Docker image:
+            Next, create a .dockerignore file to prevent unnecessary files from
+            being copied into your Docker image:
           </p>
-          
+
           <div className="code-block">
-            <pre><code>{`node_modules
+            <pre>
+              <code>{`node_modules
 npm-debug.log
 build
 .git
@@ -138,49 +172,66 @@ build
 README.md
 docker-compose.yml
 Dockerfile
-.dockerignore`}</code></pre>
+.dockerignore`}</code>
+            </pre>
           </div>
-          
+
           <blockquote>
-            Using a .dockerignore file helps keep your Docker images smaller and builds faster by excluding files that aren't needed in the container.
+            Using a .dockerignore file helps keep your Docker images smaller and
+            builds faster by excluding files that aren't needed in the
+            container.
           </blockquote>
-          
+
           <h2>Step 3: Build Your Docker Image</h2>
-          
+
           <p>
-            Now that we have our Dockerfile and .dockerignore set up, we can build the Docker image. Open a terminal in your project directory and run:
+            Now that we have our Dockerfile and .dockerignore set up, we can
+            build the Docker image. Open a terminal in your project directory
+            and run:
           </p>
-          
+
           <div className="code-block">
-            <pre><code>{`docker build -t react-app .`}</code></pre>
+            <pre>
+              <code>{`docker build -t react-app .`}</code>
+            </pre>
           </div>
-          
+
           <p>
-            This command builds a Docker image tagged as 'react-app' based on the instructions in your Dockerfile. The '.' at the end tells Docker to look for the Dockerfile in the current directory.
+            This command builds a Docker image tagged as 'react-app' based on
+            the instructions in your Dockerfile. The '.' at the end tells Docker
+            to look for the Dockerfile in the current directory.
           </p>
-          
+
           <h2>Step 4: Run Your Containerized React App</h2>
-          
+
           <p>
-            Once the build process is complete, you can run your containerized React application with:
+            Once the build process is complete, you can run your containerized
+            React application with:
           </p>
-          
+
           <div className="code-block">
-            <pre><code>{`docker run -p 3000:80 --name react-container react-app`}</code></pre>
+            <pre>
+              <code>{`docker run -p 3000:80 --name react-container react-app`}</code>
+            </pre>
           </div>
-          
+
           <p>
-            This command runs your Docker image as a container named 'react-container' and maps port 3000 on your host machine to port 80 in the container. You can now access your React application by navigating to http://localhost:3000 in your browser.
+            This command runs your Docker image as a container named
+            'react-container' and maps port 3000 on your host machine to port 80
+            in the container. You can now access your React application by
+            navigating to http://localhost:3000 in your browser.
           </p>
-          
+
           <h2>Step 5: Development Environment with Docker Compose</h2>
-          
+
           <p>
-            For a development environment with hot-reloading, create a docker-compose.yml file:
+            For a development environment with hot-reloading, create a
+            docker-compose.yml file:
           </p>
-          
+
           <div className="code-block">
-            <pre><code>{`version: '3'
+            <pre>
+              <code>{`version: '3'
 services:
   react-app:
     build:
@@ -191,55 +242,66 @@ services:
     volumes:
       - ./src:/app/src
     environment:
-      - CHOKIDAR_USEPOLLING=true`}</code></pre>
+      - CHOKIDAR_USEPOLLING=true`}</code>
+            </pre>
           </div>
-          
+
           <p>
             And create a development-specific Dockerfile named Dockerfile.dev:
           </p>
-          
+
           <div className="code-block">
-            <pre><code>{`FROM node:16-alpine
+            <pre>
+              <code>{`FROM node:16-alpine
 WORKDIR /app
 COPY package*.json ./
 RUN npm install
 COPY . .
 EXPOSE 3000
-CMD ["npm", "start"]`}</code></pre>
+CMD ["npm", "start"]`}</code>
+            </pre>
           </div>
-          
-          <p>
-            Start your development environment with:
-          </p>
-          
+
+          <p>Start your development environment with:</p>
+
           <div className="code-block">
-            <pre><code>{`docker-compose up`}</code></pre>
+            <pre>
+              <code>{`docker-compose up`}</code>
+            </pre>
           </div>
-          
+
           <h2>Advanced Configuration: Environment Variables</h2>
-          
+
           <p>
-            To use environment variables in your React application, you can create a .env file and pass it to your container:
+            To use environment variables in your React application, you can
+            create a .env file and pass it to your container:
           </p>
-          
+
           <div className="code-block">
-            <pre><code>{`docker run -p 3000:80 --env-file .env react-app`}</code></pre>
+            <pre>
+              <code>{`docker run -p 3000:80 --env-file .env react-app`}</code>
+            </pre>
           </div>
-          
+
           <p>
-            Remember that for Create React App, only variables prefixed with REACT_APP_ will be accessible in your application.
+            Remember that for Create React App, only variables prefixed with
+            REACT_APP_ will be accessible in your application.
           </p>
-          
+
           <h2>Conclusion</h2>
-          
+
           <p>
-            Dockerizing your React application provides consistency across development, testing, and production environments. 
-            It eliminates "it works on my machine" problems and simplifies deployment to any infrastructure that supports Docker.
+            Dockerizing your React application provides consistency across
+            development, testing, and production environments. It eliminates "it
+            works on my machine" problems and simplifies deployment to any
+            infrastructure that supports Docker.
           </p>
-          
+
           <p>
-            With the multi-stage build approach, you can keep your production images small while still having all the tools you need for development.
-            This containerization strategy works well with CI/CD pipelines and modern cloud deployment services.
+            With the multi-stage build approach, you can keep your production
+            images small while still having all the tools you need for
+            development. This containerization strategy works well with CI/CD
+            pipelines and modern cloud deployment services.
           </p>
         </div>
 
@@ -276,20 +338,26 @@ CMD ["npm", "start"]`}</code></pre>
       <section className="similar-blogs-section">
         <h2 className="similar-blogs-title">Similar Articles</h2>
         <div className="similar-blogs-container">
-          {similarBlogs.map(blog => (
-            <div 
-              key={blog.id} 
+          {similarBlogs.map((blog) => (
+            <div
+              key={blog.id}
               className="similar-blog-card"
               onClick={() => navigate(`/blog/${blog.id}`)}
             >
               <div className="similar-blog-image-container">
-                <img src={blog.image} alt={blog.title} className="similar-blog-image" />
+                <img
+                  src={blog.image}
+                  alt={blog.title}
+                  className="similar-blog-image"
+                />
               </div>
               <div className="similar-blog-content">
                 <h3 className="similar-blog-title">{blog.title}</h3>
                 <div className="similar-blog-tags">
-                  {blog.tags.slice(0, 2).map(tag => (
-                    <span key={tag} className="similar-blog-tag">{tag}</span>
+                  {blog.tags.slice(0, 2).map((tag) => (
+                    <span key={tag} className="similar-blog-tag">
+                      {tag}
+                    </span>
                   ))}
                 </div>
               </div>
@@ -302,7 +370,7 @@ CMD ["npm", "start"]`}</code></pre>
         .blog-container {
           background-color: #000;
           color: #e0e0e0;
-          font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+          font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
           padding: 0;
           min-height: 100vh;
         }
@@ -368,7 +436,8 @@ CMD ["npm", "start"]`}</code></pre>
           flex-wrap: wrap;
         }
 
-        .blog-category, .blog-reading-time {
+        .blog-category,
+        .blog-reading-time {
           background-color: #222;
           padding: 4px 12px;
           border-radius: 20px;
@@ -408,11 +477,12 @@ CMD ["npm", "start"]`}</code></pre>
           color: #ffffff;
         }
 
-        .blog-content ul, .blog-content ol {
+        .blog-content ul,
+        .blog-content ol {
           margin-bottom: 24px;
           padding-left: 20px;
         }
-        
+
         .blog-content li {
           margin-bottom: 8px;
         }
@@ -438,7 +508,7 @@ CMD ["npm", "start"]`}</code></pre>
         }
 
         .code-block code {
-          font-family: 'Fira Code', monospace;
+          font-family: "Fira Code", monospace;
           font-size: 0.9rem;
           color: #cccccc;
         }

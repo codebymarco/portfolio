@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaArrowLeft, FaShare, FaBookmark } from "react-icons/fa";
 
@@ -29,6 +29,11 @@ const KubernetesErrorsBlog = () => {
         "https://th.bing.com/th/id/R.796523382777357d18ba619048335003?rik=hi%2f%2bPd07IRqj%2fA&pid=ImgRaw&r=0",
     },
   ];
+
+  useEffect(() => {
+    // Scroll to the top of the page on component mount
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []); // Empty dependency array ensures this runs once on mount
 
   return (
     <div className="blog-container">
@@ -762,7 +767,7 @@ spec:
 
         .blog-navigation {
           margin-bottom: 30px;
-          z-index:399;
+          z-index: 399;
         }
 
         .blog-back-button {
