@@ -13,6 +13,8 @@ import Home from "../pages/Home";
 import Projects from "../pages/Projects";
 import Blogs from "../pages/Blogs";
 import Blog from "../pages/Blog";
+import BunnyCDNBlog from "../pages/blogs/BunnyCDNBlog";
+import KubernetesErrorsBlog from "../pages/blogs/KubernetesErrorsBlog";
 
 const Router = () => {
   return (
@@ -28,6 +30,8 @@ const Router = () => {
           <Route path="career" element={<Career />}></Route>
           <Route path="blog" element={<Blogs />}></Route>
           <Route path="blog/:id" element={<Blog />}></Route>
+          <Route path="blog/bunny" element={<BunnyCDNBlog />}></Route>
+          <Route path="blog/kates" element={<KubernetesErrorsBlog />}></Route>
         </Route>
 
         <Route path="/apps/app" element={<App />}></Route>
