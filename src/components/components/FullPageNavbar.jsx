@@ -60,9 +60,9 @@ const FullPageNavbar = ({ close }) => {
         contact
       </motion.div>
       <motion.div variants={itemVariants} onClick={() => route(`/skills`)}>
-        skills
+        blog
       </motion.div>
-      <motion.div variants={itemVariants} onClick={() => route(`/apps`)}>
+      <motion.div variants={itemVariants} onClick={() => route(`/blog`)}>
         projects
       </motion.div>
       <motion.div variants={itemVariants} onClick={() => route(`/career`)}>

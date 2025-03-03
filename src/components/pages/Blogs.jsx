@@ -13,168 +13,31 @@ import {
   FaCloud,
 } from "react-icons/fa";
 import { Helmet } from "react-helmet";
+import bunnyImage from "../../assets/blog/bunny.jpg";
 
 // Blog data with added tags and images
 const blogData = [
   {
     id: 1,
-    title: "Introduction to Full-Stack Development",
-    tags: ["html", "css", "javascript", "node"],
+    title: "Dockerize a react app",
+    tags: ["docker", "react", "javascript", "devops"],
     date: "2025-02-28",
     image:
       "https://th.bing.com/th/id/R.796523382777357d18ba619048335003?rik=hi%2f%2bPd07IRqj%2fA&pid=ImgRaw&r=0",
   },
   {
     id: 2,
-    title: "Modern Frontend Frameworks: React vs. Angular vs. Vue",
-    tags: ["react", "angular", "vue", "frontend"],
+    title: "BunnyCDN, Faster and cheaper than AWS Cloudfront",
+    tags: ["cdn", "devops", "cache", "backend"],
     date: "2025-02-20",
-    image:
-      "https://th.bing.com/th/id/R.796523382777357d18ba619048335003?rik=hi%2f%2bPd07IRqj%2fA&pid=ImgRaw&r=0",
+    image: bunnyImage,
   },
   {
     id: 3,
-    title: "Mastering HTML5 & CSS3: Responsive Design Essentials",
-    tags: ["html", "css", "responsive"],
+    title: "Kubernetes Errors",
+    tags: ["kubernetes", "docker", "debugging"],
     date: "2025-02-15",
-    image:
-      "https://th.bing.com/th/id/R.796523382777357d18ba619048335003?rik=hi%2f%2bPd07IRqj%2fA&pid=ImgRaw&r=0",
-  },
-  {
-    id: 4,
-    title: "Exploring JavaScript ES6+: New Features and Best Practices",
-    tags: ["javascript", "es6"],
-    date: "2025-02-10",
-    image:
-      "https://th.bing.com/th/id/R.796523382777357d18ba619048335003?rik=hi%2f%2bPd07IRqj%2fA&pid=ImgRaw&r=0",
-  },
-  {
-    id: 5,
-    title: "Building Robust Backends with Node.js and Express",
-    tags: ["node", "express", "backend"],
-    date: "2025-02-05",
-    image:
-      "https://th.bing.com/th/id/R.796523382777357d18ba619048335003?rik=hi%2f%2bPd07IRqj%2fA&pid=ImgRaw&r=0",
-  },
-  {
-    id: 6,
-    title: "Web Development with Python: A Look at Flask and Django",
-    tags: ["python", "flask", "django"],
-    date: "2025-01-28",
-    image:
-      "https://th.bing.com/th/id/R.796523382777357d18ba619048335003?rik=hi%2f%2bPd07IRqj%2fA&pid=ImgRaw&r=0",
-  },
-  {
-    id: 7,
-    title: "Understanding Databases: SQL, NoSQL, and Beyond",
-    tags: ["database", "sql", "nosql", "mongodb"],
-    date: "2025-01-20",
-    image:
-      "https://th.bing.com/th/id/R.796523382777357d18ba619048335003?rik=hi%2f%2bPd07IRqj%2fA&pid=ImgRaw&r=0",
-  },
-  {
-    id: 8,
-    title: "Designing and Consuming RESTful APIs",
-    tags: ["api", "rest", "backend"],
-    date: "2025-01-15",
-    image:
-      "https://th.bing.com/th/id/R.796523382777357d18ba619048335003?rik=hi%2f%2bPd07IRqj%2fA&pid=ImgRaw&r=0",
-  },
-  {
-    id: 9,
-    title: "GraphQL in Action: When and How to Use It",
-    tags: ["graphql", "api", "frontend", "backend"],
-    date: "2025-01-10",
-    image:
-      "https://th.bing.com/th/id/R.796523382777357d18ba619048335003?rik=hi%2f%2bPd07IRqj%2fA&pid=ImgRaw&r=0",
-  },
-  {
-    id: 10,
-    title: "Microservices Architecture: Benefits and Challenges",
-    tags: ["microservices", "architecture", "devops"],
-    date: "2025-01-05",
-    image:
-      "https://th.bing.com/th/id/R.796523382777357d18ba619048335003?rik=hi%2f%2bPd07IRqj%2fA&pid=ImgRaw&r=0",
-  },
-  {
-    id: 11,
-    title: "State Management in Modern Web Applications",
-    tags: ["react", "redux", "state-management"],
-    date: "2024-12-28",
-    image:
-      "https://th.bing.com/th/id/R.796523382777357d18ba619048335003?rik=hi%2f%2bPd07IRqj%2fA&pid=ImgRaw&r=0",
-  },
-  {
-    id: 12,
-    title: "Real-Time Web Apps: Implementing WebSockets",
-    tags: ["websockets", "real-time", "javascript"],
-    date: "2024-12-20",
-    image:
-      "https://th.bing.com/th/id/R.796523382777357d18ba619048335003?rik=hi%2f%2bPd07IRqj%2fA&pid=ImgRaw&r=0",
-  },
-  {
-    id: 13,
-    title: "Continuous Integration and Continuous Deployment (CI/CD) Explained",
-    tags: ["ci-cd", "devops", "automation"],
-    date: "2024-12-15",
-    image:
-      "https://th.bing.com/th/id/R.796523382777357d18ba619048335003?rik=hi%2f%2bPd07IRqj%2fA&pid=ImgRaw&r=0",
-  },
-  {
-    id: 14,
-    title: "Serverless Architecture: Concepts and Practical Use Cases",
-    tags: ["serverless", "cloud", "aws", "azure"],
-    date: "2024-12-10",
-    image:
-      "https://th.bing.com/th/id/R.796523382777357d18ba619048335003?rik=hi%2f%2bPd07IRqj%2fA&pid=ImgRaw&r=0",
-  },
-  {
-    id: 15,
-    title: "Version Control with Git: Essential Workflows for Teams",
-    tags: ["git", "version-control", "collaboration"],
-    date: "2024-12-05",
-    image:
-      "https://th.bing.com/th/id/R.796523382777357d18ba619048335003?rik=hi%2f%2bPd07IRqj%2fA&pid=ImgRaw&r=0",
-  },
-  {
-    id: 16,
-    title: "Security Best Practices for Full-Stack Applications",
-    tags: ["security", "authentication", "authorization"],
-    date: "2024-11-28",
-    image:
-      "https://th.bing.com/th/id/R.796523382777357d18ba619048335003?rik=hi%2f%2bPd07IRqj%2fA&pid=ImgRaw&r=0",
-  },
-  {
-    id: 17,
-    title: "Optimizing Performance: Frontend and Backend Strategies",
-    tags: ["performance", "optimization", "frontend", "backend"],
-    date: "2024-11-20",
-    image:
-      "https://th.bing.com/th/id/R.796523382777357d18ba619048335003?rik=hi%2f%2bPd07IRqj%2fA&pid=ImgRaw&r=0",
-  },
-  {
-    id: 18,
-    title: "Integrating Third-Party APIs for Enhanced Functionality",
-    tags: ["api", "integration", "third-party"],
-    date: "2024-11-15",
-    image:
-      "https://th.bing.com/th/id/R.796523382777357d18ba619048335003?rik=hi%2f%2bPd07IRqj%2fA&pid=ImgRaw&r=0",
-  },
-  {
-    id: 19,
-    title: "DevOps Fundamentals: Bridging Development and Operations",
-    tags: ["devops", "automation", "ci-cd"],
-    date: "2024-11-10",
-    image:
-      "https://th.bing.com/th/id/R.796523382777357d18ba619048335003?rik=hi%2f%2bPd07IRqj%2fA&pid=ImgRaw&r=0",
-  },
-  {
-    id: 20,
-    title: "How to Dockerize a React.js Application",
-    tags: ["docker", "react", "deployment"],
-    date: "2024-11-05",
-    image:
-      "https://th.bing.com/th/id/R.796523382777357d18ba619048335003?rik=hi%2f%2bPd07IRqj%2fA&pid=ImgRaw&r=0",
+    image: "https://cloud2data.com/wp-content/uploads/2023/05/Kubernetes.png",
   },
 ];
 
@@ -190,6 +53,11 @@ const popularTags = [
 ];
 
 const Blogs = () => {
+  useEffect(() => {
+    // Scroll to the top of the page on component mount
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []); // Empty dependency array ensures this runs once on mount
+
   const navigate = useNavigate();
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedTags, setSelectedTags] = useState([]);

@@ -64,7 +64,7 @@ const BlogsSection = () => {
     <div className="blogsSection">
       <div className="blogsSectionTop">
         <h1>BLOGS</h1>
-        <Link to="/">more</Link>
+        <Link to="/blog">more</Link>
       </div>
       <motion.div
         className="blogsSectionContainer"

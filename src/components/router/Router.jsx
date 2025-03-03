@@ -29,9 +29,9 @@ const Router = () => {
           <Route path="apps" element={<Projects />}></Route>
           <Route path="career" element={<Career />}></Route>
           <Route path="blog" element={<Blogs />}></Route>
-          <Route path="blog/:id" element={<Blog />}></Route>
-          <Route path="blog/bunny" element={<BunnyCDNBlog />}></Route>
-          <Route path="blog/kates" element={<KubernetesErrorsBlog />}></Route>
+          <Route path="blog/1" element={<Blog />}></Route>
+          <Route path="blog/2" element={<BunnyCDNBlog />}></Route>
+          <Route path="blog/3" element={<KubernetesErrorsBlog />}></Route>
         </Route>
 
         <Route path="/apps/app" element={<App />}></Route>
