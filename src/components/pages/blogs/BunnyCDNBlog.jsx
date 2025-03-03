@@ -510,6 +510,7 @@ S3 Advantages:
 
         .blog-navigation {
           margin-bottom: 30px;
+          z-index: 399;
         }
 
         .blog-back-button {
