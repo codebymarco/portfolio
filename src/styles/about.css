@@ -27,7 +27,7 @@
 .fixed-menu * {
   background-color: #0d0d0d;
   padding: 5px 10px;
-  font-size: 2.5rem;
+  font-size: 4rem;
   cursor: pointer;
 }
 
@@ -231,7 +231,6 @@
   }
   
   .fixed-menu * {
-    font-size: 2rem;
     padding: 5px 8px;
   }
   
@@ -274,7 +273,6 @@
   }
   
   .fixed-menu * {
-    font-size: 1.8rem;
     padding: 4px 6px;
   }
   
@@ -309,7 +307,6 @@
   }
   
   .fixed-menu * {
-    font-size: 4rem; /* Increased from 1.5rem */
     padding: 8px 12px; /* Increased from 3px 5px */
   }
   
@@ -367,7 +364,6 @@
   }
   
   .fixed-menu * {
-    font-size: 2.2rem; /* Increased from 1.2rem */
     padding: 10px 14px; /* Increased from 3px 4px */
   }
   
