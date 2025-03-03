@@ -1,6 +1,5 @@
 .contact {
   background-color: black;
-  min-height: 90vh;
   display: flex;
   flex-direction: column;
   gap: 20px;

@@ -2,12 +2,24 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import "../../../styles/app.css";
 import { FaCss3Alt, FaHtml5, FaNodeJs } from "react-icons/fa";
-import { SiMongodb, SiOpenstreetmap, SiRabbitmq, SiRender, SiTypescript } from "react-icons/si";
+import {
+  SiMongodb,
+  SiOpenstreetmap,
+  SiRabbitmq,
+  SiRender,
+  SiTypescript,
+} from "react-icons/si";
 import { IoLogoVercel } from "react-icons/io5";
 import { FiGithub } from "react-icons/fi";
 import img from "../../../assets/formio.png";
+import { useEffect } from "react";
 
 const Formio = () => {
+  useEffect(() => {
+    // Scroll to the top of the page on component mount
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []); // Empty dependency array ensures this runs once on mount
+
   return (
     <div className="app">
       <div className="app-nav">
@@ -26,10 +38,7 @@ const Formio = () => {
         <a href="https://formio-console.vercel.app/" target="_blank">
           view site
         </a>
-        <a
-          href="https://github.com/codebymarco/formio_backend"
-          target="_blank"
-        >
+        <a href="https://github.com/codebymarco/formio_backend" target="_blank">
           <FiGithub color="white" />
           repo
         </a>
@@ -47,9 +56,16 @@ const Formio = () => {
           <div className="app-details-box description">
             <h2>description</h2>
             <p>
-  <span style={{ color: "dodgerblue" }}>FORMIO</span> is a powerful app designed to help you create and embed a contact form on your website effortlessly. Whether you're a business looking to streamline communication with your customers or a professional wanting to provide an easy way for people to get in touch, LinkBio offers a straightforward platform to set up and integrate a custom contact form. With its intuitive design and flexible customization options, LinkBio makes it easy to enhance your website's engagement and gather important messages from your visitors.
-</p>
-
+              <span style={{ color: "dodgerblue" }}>FORMIO</span> is a powerful
+              app designed to help you create and embed a contact form on your
+              website effortlessly. Whether you're a business looking to
+              streamline communication with your customers or a professional
+              wanting to provide an easy way for people to get in touch, LinkBio
+              offers a straightforward platform to set up and integrate a custom
+              contact form. With its intuitive design and flexible customization
+              options, LinkBio makes it easy to enhance your website's
+              engagement and gather important messages from your visitors.
+            </p>
           </div>
           <div className="divider"></div>
 
@@ -86,10 +102,9 @@ const Formio = () => {
                 rabbitmq
               </div>
               <div className="box">
-              <SiOpenstreetmap color="#47A248"/>
+                <SiOpenstreetmap color="#47A248" />
                 open street map
               </div>
-
             </div>
           </div>
           <div className="divider"></div>

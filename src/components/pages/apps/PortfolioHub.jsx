@@ -6,8 +6,14 @@ import { SiMongodb, SiRabbitmq, SiRender, SiTypescript } from "react-icons/si";
 import { IoLogoVercel } from "react-icons/io5";
 import { FiGithub } from "react-icons/fi";
 import img from "../../../assets/img.png";
+import { useEffect } from "react";
 
 const PortfolioHub = () => {
+  useEffect(() => {
+    // Scroll to the top of the page on component mount
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []); // Empty dependency array ensures this runs once on mount
+
   return (
     <div className="app">
       <div className="app-nav">
