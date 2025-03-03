@@ -51,7 +51,7 @@ const About = () => {
   return (
     <div>
       <Helmet>
-        <title>About Software Developer Portfolio | Miguelmarco Ramcharan</title>
+        <title> About | Software Developer Portfolio | Miguelmarco Ramcharan</title>
         <meta
           name="description"
           content="Welcome to the portfolio of Miguelmarco Ramcharan. Explore projects, skills, and more by CodeByMarco."

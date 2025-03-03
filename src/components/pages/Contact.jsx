@@ -11,10 +11,9 @@ import { Helmet } from "react-helmet";
 import ContactForm from "../components/ContactForm";
 
 const Contact = () => {
-
   useEffect(() => {
     // Scroll to the top of the page on component mount
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }, []); // Empty dependency array ensures this runs once on mount
 
   const handleDownloadResume = () => {
@@ -71,7 +70,9 @@ const Contact = () => {
   return (
     <div>
       <Helmet>
-        <title>Software Developer Portfolio | Miguelmarco Ramcharan</title>
+        <title>
+          Contact | Software Developer Portfolio | Miguelmarco Ramcharan
+        </title>
         <meta
           name="description"
           content="Welcome to the portfolio of Miguelmarco Ramcharan. Explore projects, skills, and more by CodeByMarco."
@@ -117,7 +118,6 @@ const Contact = () => {
             <span>02</span>
           </motion.div>
 
-
           <motion.div
             onClick={() => showComp()}
             variants={itemVariants}
@@ -129,10 +129,9 @@ const Contact = () => {
             </div>
             <span>03</span>
           </motion.div>
-
         </motion.div>
       </div>
-      <ContactForm/>
+      <ContactForm />
     </div>
   );
 };

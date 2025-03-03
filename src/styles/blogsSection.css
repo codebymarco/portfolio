@@ -61,7 +61,7 @@
     grid-template-columns: 1fr 1fr;
     gap: 30px;
   }
-  
+
   .blogsSection a {
     right: 30px;
   }
@@ -73,16 +73,20 @@
     grid-template-columns: 1fr;
     gap: 25px;
   }
-  
+
   .blogsSectionContainer .box {
     width: 280px;
     height: 280px;
   }
-  
+
   .blogsSectionTop {
-    flex-direction: column;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
   }
-  
+
   .blogsSection a {
     position: static;
     margin-top: 10px;
@@ -97,9 +101,46 @@
     height: 240px;
     padding: 8px 15px;
   }
-  
+
   .blogsSection {
     padding: 15px 10px;
     gap: 15px;
+  }
+}
+
+/* Style for the "more" link only */
+.blogsSectionTop a {
+  color: #61dafb; /* React blue color */
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  padding: 6px 14px;
+  border: 1px solid #61dafb;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  background-color: rgba(97, 218, 251, 0.05);
+}
+
+.blogsSectionTop a:hover {
+  background-color: rgba(97, 218, 251, 0.2);
+  box-shadow: 0 0 10px rgba(97, 218, 251, 0.3);
+}
+
+/* Mobile adjustments for the "more" link */
+@media screen and (max-width: 768px) {
+  .blogsSectionTop a {
+    padding: 4px 10px;
+    font-size: 0.9rem;
+    width: fit-content;
+  }
+}
+
+/* Small Mobile adjustments */
+@media screen and (max-width: 400px) {
+  .blogsSectionTop a {
+    padding: 3px 8px;
+    font-size: 0.8rem;
+    border-width: 0.5px;
+    width: fit-content;
   }
 }

@@ -19,7 +19,7 @@ const Career = () => {
     <div>
       <Helmet>
         <title>
-          Career Software Developer Portfolio | Miguelmarco Ramcharan
+          Career | Software Developer Portfolio | Miguelmarco Ramcharan
         </title>
         <meta
           name="description"
@@ -38,13 +38,13 @@ const Career = () => {
         <Skills />
         <Certs />
         <Projects />
-        
+
         <div className="career-history-section">
           <h1 className="career-history-title">CAREER HISTORY</h1>
-          
+
           <div className="career-timeline">
             <div className="timeline-line"></div>
-            
+
             {/* Current Job */}
             <div className="timeline-item">
               <div className="timeline-marker current">
@@ -70,21 +70,22 @@ const Career = () => {
                       </div>
                     </div>
                   </div>
-                  
+
                   <div className="job-description">
                     <div className="section-heading">
                       <GrInfo />
                       <h3>Description</h3>
                     </div>
                     <p>
-                      I initially joined Decidio to work as a support agent on the
-                      TRUENDO product. I was then promoted to a developer role, more
-                      specifically working on the backend and operations as well as
-                      some frontend tasks from time to time. I had to learn new
-                      technologies as I got deeper into the product.
+                      I initially joined Decidio to work as a support agent on
+                      the TRUENDO product. I was then promoted to a developer
+                      role, more specifically working on the backend and
+                      operations as well as some frontend tasks from time to
+                      time. I had to learn new technologies as I got deeper into
+                      the product.
                     </p>
                   </div>
-                  
+
                   <div className="job-responsibilities">
                     <div className="section-heading">
                       <LiaTasksSolid />
@@ -93,15 +94,21 @@ const Career = () => {
                     <div className="responsibilities-grid">
                       <div className="responsibility-item">
                         <span className="responsibility-number">1</span>
-                        <span className="responsibility-text">Find bugs and fix them</span>
+                        <span className="responsibility-text">
+                          Find bugs and fix them
+                        </span>
                       </div>
                       <div className="responsibility-item">
                         <span className="responsibility-number">2</span>
-                        <span className="responsibility-text">Optimization of data</span>
+                        <span className="responsibility-text">
+                          Optimization of data
+                        </span>
                       </div>
                       <div className="responsibility-item">
                         <span className="responsibility-number">3</span>
-                        <span className="responsibility-text">Implement new features</span>
+                        <span className="responsibility-text">
+                          Implement new features
+                        </span>
                       </div>
                       <div className="responsibility-item">
                         <span className="responsibility-number">4</span>
@@ -109,30 +116,40 @@ const Career = () => {
                       </div>
                       <div className="responsibility-item">
                         <span className="responsibility-number">5</span>
-                        <span className="responsibility-text">Fix client issues</span>
+                        <span className="responsibility-text">
+                          Fix client issues
+                        </span>
                       </div>
                       <div className="responsibility-item">
                         <span className="responsibility-number">6</span>
-                        <span className="responsibility-text">DevOps assistance</span>
+                        <span className="responsibility-text">
+                          DevOps assistance
+                        </span>
                       </div>
                       <div className="responsibility-item">
                         <span className="responsibility-number">7</span>
-                        <span className="responsibility-text">DB migration</span>
+                        <span className="responsibility-text">
+                          DB migration
+                        </span>
                       </div>
                       <div className="responsibility-item">
                         <span className="responsibility-number">8</span>
-                        <span className="responsibility-text">Docker migration</span>
+                        <span className="responsibility-text">
+                          Docker migration
+                        </span>
                       </div>
                       <div className="responsibility-item">
                         <span className="responsibility-number">9</span>
-                        <span className="responsibility-text">Consent record migration</span>
+                        <span className="responsibility-text">
+                          Consent record migration
+                        </span>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            
+
             {/* Previous Job */}
             <div className="timeline-item">
               <div className="timeline-marker">
@@ -158,20 +175,21 @@ const Career = () => {
                       </div>
                     </div>
                   </div>
-                  
+
                   <div className="job-description">
                     <div className="section-heading">
                       <GrInfo />
                       <h3>Description</h3>
                     </div>
                     <p>
-                      I started working for my dad straight after high school. My job
-                      was to learn everything my dad knew so I could lessen the burden
-                      on him. Left after I found a new career path. Just to put it out
-                      there, my brother took over from me.
+                      I started working for my dad straight after high school.
+                      My job was to learn everything my dad knew so I could
+                      lessen the burden on him. Left after I found a new career
+                      path. Just to put it out there, my brother took over from
+                      me.
                     </p>
                   </div>
-                  
+
                   <div className="job-responsibilities">
                     <div className="section-heading">
                       <LiaTasksSolid />
@@ -180,27 +198,39 @@ const Career = () => {
                     <div className="responsibilities-grid">
                       <div className="responsibility-item">
                         <span className="responsibility-number">1</span>
-                        <span className="responsibility-text">Accept order from supplier</span>
+                        <span className="responsibility-text">
+                          Accept order from supplier
+                        </span>
                       </div>
                       <div className="responsibility-item">
                         <span className="responsibility-number">2</span>
-                        <span className="responsibility-text">Check if order is correct</span>
+                        <span className="responsibility-text">
+                          Check if order is correct
+                        </span>
                       </div>
                       <div className="responsibility-item">
                         <span className="responsibility-number">3</span>
-                        <span className="responsibility-text">Categorize pieces based on the units</span>
+                        <span className="responsibility-text">
+                          Categorize pieces based on the units
+                        </span>
                       </div>
                       <div className="responsibility-item">
                         <span className="responsibility-number">4</span>
-                        <span className="responsibility-text">Assemble the units</span>
+                        <span className="responsibility-text">
+                          Assemble the units
+                        </span>
                       </div>
                       <div className="responsibility-item">
                         <span className="responsibility-number">5</span>
-                        <span className="responsibility-text">Fit and finish units</span>
+                        <span className="responsibility-text">
+                          Fit and finish units
+                        </span>
                       </div>
                       <div className="responsibility-item">
                         <span className="responsibility-number">6</span>
-                        <span className="responsibility-text">Allocate tasks to my team</span>
+                        <span className="responsibility-text">
+                          Allocate tasks to my team
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -210,7 +240,7 @@ const Career = () => {
           </div>
         </div>
       </div>
-      
+
       <style jsx>{`
         /* General career page styling */
         .career {
@@ -219,22 +249,22 @@ const Career = () => {
           color: #fff;
           padding: 40px 20px 80px;
         }
-        
+
         .career-top {
           text-align: center;
           margin-bottom: 50px;
           padding: 20px 0;
         }
-        
+
         .career-top h1 {
           font-size: 2.5rem;
           letter-spacing: 2px;
           position: relative;
           display: inline-block;
         }
-        
+
         .career-top h1:after {
-          content: '';
+          content: "";
           position: absolute;
           bottom: -10px;
           left: 50%;
@@ -243,13 +273,13 @@ const Career = () => {
           height: 3px;
           background-color: #fff;
         }
-        
+
         /* Career history section */
         .career-history-section {
           max-width: 1000px;
           margin: 80px auto 0;
         }
-        
+
         .career-history-title {
           text-align: center;
           font-size: 2.2rem;
@@ -257,9 +287,9 @@ const Career = () => {
           letter-spacing: 2px;
           position: relative;
         }
-        
+
         .career-history-title:after {
-          content: '';
+          content: "";
           position: absolute;
           bottom: -10px;
           left: 50%;
@@ -268,13 +298,13 @@ const Career = () => {
           height: 3px;
           background-color: #fff;
         }
-        
+
         /* Timeline styling */
         .career-timeline {
           position: relative;
           padding: 30px 0;
         }
-        
+
         .timeline-line {
           position: absolute;
           top: 0;
@@ -283,17 +313,17 @@ const Career = () => {
           width: 3px;
           background-color: #333;
         }
-        
+
         .timeline-item {
           position: relative;
           padding-left: 70px;
           margin-bottom: 70px;
         }
-        
+
         .timeline-item:last-child {
           margin-bottom: 0;
         }
-        
+
         .timeline-marker {
           position: absolute;
           left: 16px;
@@ -309,12 +339,12 @@ const Career = () => {
           font-size: 1rem;
           z-index: 2;
         }
-        
+
         .timeline-marker.current {
           background-color: #1a1a1a;
           border-color: #666;
         }
-        
+
         /* Job card styling */
         .job-card {
           background-color: #111;
@@ -323,12 +353,12 @@ const Career = () => {
           box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
           transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        
+
         .job-card:hover {
           transform: translateY(-5px);
           box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
         }
-        
+
         .job-header {
           display: flex;
           justify-content: space-between;
@@ -337,37 +367,39 @@ const Career = () => {
           flex-wrap: wrap;
           gap: 15px;
         }
-        
+
         .job-title {
           font-size: 1.6rem;
           margin: 0 0 10px;
           color: #fff;
         }
-        
+
         .job-company {
           font-size: 1.2rem;
           color: #aaa;
         }
-        
+
         .job-meta {
           display: flex;
           flex-direction: column;
           align-items: flex-end;
           gap: 8px;
         }
-        
-        .job-location, .job-date {
+
+        .job-location,
+        .job-date {
           display: flex;
           align-items: center;
           gap: 6px;
           font-size: 0.9rem;
           color: #888;
         }
-        
-        .job-description, .job-responsibilities {
+
+        .job-description,
+        .job-responsibilities {
           margin-top: 25px;
         }
-        
+
         .section-heading {
           display: flex;
           align-items: center;
@@ -375,23 +407,23 @@ const Career = () => {
           margin-bottom: 15px;
           color: #ddd;
         }
-        
+
         .section-heading h3 {
           font-size: 1.1rem;
           font-weight: 600;
           margin: 0;
         }
-        
+
         .section-heading svg {
           color: #aaa;
         }
-        
+
         .job-description p {
           line-height: 1.6;
           color: #bbb;
           margin: 0;
         }
-        
+
         /* Responsibilities grid */
         .responsibilities-grid {
           display: grid;
@@ -399,7 +431,7 @@ const Career = () => {
           gap: 15px;
           margin-top: 15px;
         }
-        
+
         .responsibility-item {
           display: flex;
           align-items: center;
@@ -409,11 +441,11 @@ const Career = () => {
           border-radius: 6px;
           transition: background-color 0.2s ease;
         }
-        
+
         .responsibility-item:hover {
           background-color: #222;
         }
-        
+
         .responsibility-number {
           min-width: 25px;
           height: 25px;
@@ -426,45 +458,45 @@ const Career = () => {
           font-size: 0.8rem;
           font-weight: 600;
         }
-        
+
         .responsibility-text {
           font-size: 0.95rem;
           color: #ccc;
           line-height: 1.3;
         }
-        
+
         /* Responsive adjustments */
         @media (max-width: 768px) {
           .timeline-line {
             left: 20px;
           }
-          
+
           .timeline-marker {
             left: 6px;
           }
-          
+
           .timeline-item {
             padding-left: 50px;
           }
-          
+
           .job-header {
             flex-direction: column;
             align-items: flex-start;
           }
-          
+
           .job-meta {
             align-items: flex-start;
             margin-top: 10px;
           }
-          
+
           .responsibilities-grid {
             grid-template-columns: 1fr;
           }
-          
+
           .job-title {
             font-size: 1.4rem;
           }
-          
+
           .job-card {
             padding: 20px;
           }
