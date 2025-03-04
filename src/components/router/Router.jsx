@@ -15,6 +15,9 @@ import Blogs from "../pages/Blogs";
 import Blog from "../pages/Blog";
 import BunnyCDNBlog from "../pages/blogs/BunnyCDNBlog";
 import KubernetesErrorsBlog from "../pages/blogs/KubernetesErrorsBlog";
+import One from "../pages/blogs/One";
+import Two from "../pages/blogs/Two";
+import Three from "../pages/blogs/Three";
 
 const Router = () => {
   return (
@@ -32,6 +35,9 @@ const Router = () => {
           <Route path="blog/1" element={<Blog />}></Route>
           <Route path="blog/2" element={<BunnyCDNBlog />}></Route>
           <Route path="blog/3" element={<KubernetesErrorsBlog />}></Route>
+          <Route path="blog/4" element={<One />}></Route>
+          <Route path="blog/5" element={<Two />}></Route>
+          <Route path="blog/6" element={<Three />}></Route>
         </Route>
 
         <Route path="/apps/app" element={<App />}></Route>

@@ -39,6 +39,30 @@ const blogData = [
     date: "2025-02-15",
     image: "https://cloud2data.com/wp-content/uploads/2023/05/Kubernetes.png",
   },
+  {
+    id: 4,
+    title: "Docker Migration To Artifact Repo",
+    tags: ["kubernetes", "docker", "debugging"],
+    date: "2025-02-15",
+    image:
+      "https://3.bp.blogspot.com/-8PzSTH6N1Cs/V2f3rO3hsRI/AAAAAAAAid8/2QxOlHz9MnohU-baWnepmxG4ENz78IHpwCLcB/s1600/Capture.PNG",
+  },
+  {
+    id: 5,
+    title: "React Helmet",
+    tags: ["frontend", "seo", "react"],
+    date: "2025-02-15",
+    image:
+      "https://th.bing.com/th/id/OIP.t4Em-3T6FZqHzZxxUH22wgHaGa?rs=1&pid=ImgDetMain",
+  },
+  {
+    id: 6,
+    title: "Node vs Bun",
+    tags: ["backend", "server", "javascript"],
+    date: "2025-02-15",
+    image:
+      "https://miro.medium.com/v2/resize:fit:480/1*YxBJCMcyz2cOP6AqshyhRg.jpeg",
+  }
 ];
 
 // Popular tags for filter
