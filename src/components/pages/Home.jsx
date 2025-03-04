@@ -5,9 +5,7 @@ import BannerTwo from "./BannerTwo";
 import Skills from "./Skills";
 import Projects from "./Projects";
 import Contact from "./Contact";
-import Certs from "./Certs";
 import BlogsSection from "./BlogsSection";
-import ContactForm from "../components/ContactForm";
 
 const Home = () => {
   useEffect(() => {
@@ -32,8 +30,8 @@ const Home = () => {
       <BannerTwo />
       <AboutSection />
       <Skills />
-      <Certs />
-      <Projects />
+{/*       <Certs />
+ */}      <Projects />
       <BlogsSection />
       <Contact />
     </div>

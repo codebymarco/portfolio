@@ -7,7 +7,6 @@ import { HiOutlineBriefcase } from "react-icons/hi";
 import Skills from "./Skills";
 import Projects from "./Projects";
 import { Helmet } from "react-helmet";
-import Certs from "./Certs";
 
 const Career = () => {
   useEffect(() => {
@@ -38,7 +37,8 @@ const Career = () => {
         <div className="skills-wrapper">
           <Skills />
         </div>{" "}
-        <Certs />
+        {/*         <Certs />
+         */}{" "}
         <Projects />
         <div className="career-history-section">
           <h1 className="career-history-title">CAREER HISTORY</h1>
