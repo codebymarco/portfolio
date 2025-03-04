@@ -35,10 +35,11 @@ const Career = () => {
         <div className="career-top">
           <h1>MY PRO CAREER</h1>
         </div>
-        <Skills />
+        <div className="skills-wrapper">
+          <Skills />
+        </div>{" "}
         <Certs />
         <Projects />
-
         <div className="career-history-section">
           <h1 className="career-history-title">CAREER HISTORY</h1>
 
@@ -499,6 +500,23 @@ const Career = () => {
 
           .job-card {
             padding: 20px;
+          }
+        }
+
+        .skills-wrapper {
+          display: flex;
+          justify-content: center;
+          width: 100%;
+        }
+
+        .skills-wrapper .skillsPageNewcontainer {
+          margin: 0 auto;
+        }
+
+        @media screen and (max-width: 768px) {
+          .skills-wrapper .skillsPageNewcontainer {
+            width: fit-content; /* Force the width to match content */
+            margin: 0 auto; /* Center it horizontally */
           }
         }
       `}</style>
