@@ -16,7 +16,9 @@ const Home = () => {
   return (
     <div>
       <Helmet>
-        <title>Home | Software Developer Portfolio | Miguelmarco Ramcharan</title>
+        <title>
+          Home | Software Developer Portfolio | Miguelmarco Ramcharan
+        </title>
         <meta
           name="description"
           content="Welcome to the portfolio of Miguelmarco Ramcharan. Explore projects, skills, and more by CodeByMarco."
@@ -29,11 +31,21 @@ const Home = () => {
       </Helmet>
       <BannerTwo />
       <AboutSection />
-      <Skills />
-{/*       <Certs />
- */}      <Projects />
+      <div className="skills-wrapper">
+        <Skills />
+      </div>
+      {/*       <Certs />
+       */}{" "}
+      <Projects />
       <BlogsSection />
       <Contact />
+      <style>
+        {`      .skills-wrapper {
+        }
+
+
+        }`}
+      </style>
     </div>
   );
 };
