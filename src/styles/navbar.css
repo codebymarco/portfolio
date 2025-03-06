@@ -1,6 +1,6 @@
 nav {
-  background-color: black;
-  height: 10svh;
+  background-image: radial-gradient(circle at 50% 30%, #111111 0%, #000000 70%);
+  background-color: black;  height: 10svh;
   display: flex;
   justify-content: space-between;
   align-items: center;

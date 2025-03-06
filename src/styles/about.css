@@ -1,6 +1,6 @@
 .about {
-  background-color: black;
-  color: white;
+  background-image: radial-gradient(circle at 50% 30%, #111111 0%, #000000 70%);
+  background-color: black;  color: white;
   position: relative;
   padding: 20px;
   display: flex;
@@ -21,7 +21,6 @@
   justify-content: center;
   align-items: center;
   gap: 30px;
-  background-color: black;
 }
 
 .fixed-menu * {
@@ -51,10 +50,14 @@
 }
 
 .tab-buttons {
-  background-color: grey;
   display: flex;
   gap: 10px;
-  padding: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .tab-buttons div {
@@ -68,6 +71,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .photo-section img {

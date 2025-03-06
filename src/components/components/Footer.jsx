@@ -11,9 +11,9 @@ const Footer = () => {
         <div className="footer-top">
           {/* Logo/Brand */}
           <div className="footer-brand">
-            <h3 className="brand-name">Your Name</h3>
+            <h3 className="brand-name">Miguelmarco Ramcharan</h3>
             <p className="brand-desc">
-              Web Developer & Designer creating modern and responsive websites for businesses.
+              Fullstack Software Engineer
             </p>
           </div>
           
@@ -35,13 +35,13 @@ const Footer = () => {
           <div className="footer-contact">
             <h4 className="footer-heading">Contact</h4>
             <p className="contact-info">
-              email@example.com
+              miguelmarcoramcharan@example.com
             </p>
             <p className="contact-info">
-              +1 (555) 123-4567
+              061 149 8474
             </p>
             <p className="contact-info">
-              San Francisco, CA
+              Durban, South Africa
             </p>
           </div>
         </div>
@@ -90,8 +90,8 @@ const Footer = () => {
 
       <style jsx>{`
         .footer {
-          background-color: #000000;
-          color: #ffffff;
+  background-image: radial-gradient(circle at 50% 30%, #111111 0%, #000000 70%);
+  background-color: black;          color: #ffffff;
           padding: 2rem 1rem;
           width: 100%;
           box-sizing: border-box;

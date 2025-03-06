@@ -1,6 +1,7 @@
 .banner {
   height: 90svh;
-  background: linear-gradient(to bottom right, #000000, #121212);
+  background-image: radial-gradient(circle at 50% 30%, #111111 0%, #000000 70%);
+  background-color: black;
   color: white;
   display: flex;
   flex-direction: column;

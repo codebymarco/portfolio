@@ -104,6 +104,8 @@ const About = () => {
             </div>
             <FaArrowAltCircleUp style={{ color: "white" }} />
           </div>
+
+          <div className="photo-section" style={{ position: "relative" }}>
           <div
             className="tab-buttons"
             style={{
@@ -120,16 +122,17 @@ const About = () => {
                 style={{
                   height: "10px",
                   width: "30px",
-                  flexGrow:"1",
+                  flexGrow: "1",
                   backgroundColor:
-                    currentIndex === index ? "black" : "dodgerblue",
+                    currentIndex === index
+                      ? "#FFFFFF"
+                      : " rgba(255, 255, 255, 0.3)",
                   borderRadius: "10%",
                   cursor: "pointer",
                 }}
               ></div>
             ))}
           </div>
-          <div className="photo-section" style={{ position: "relative" }}>
             <img
               src={images[currentIndex]}
               alt={`Slide ${currentIndex + 1}`}

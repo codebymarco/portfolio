@@ -196,8 +196,8 @@ const ContactForm = () => {
           align-items: center;
           min-height: 100vh;
           padding: 60px 20px;
-          background-color: #000000;
-          background-image: linear-gradient(135deg, #050505 0%, #111111 100%);
+  background-image: radial-gradient(circle at 50% 30%, #111111 0%, #000000 70%);
+  background-color: black;
         }
         
         .contact-form-wrapper {

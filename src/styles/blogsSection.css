@@ -1,5 +1,5 @@
 .blogsSection {
-  background-color: black;
+  background-image: radial-gradient(circle at 50% 30%, #111111 0%, #000000 70%);
   min-height: 90vh;
   display: flex;
   flex-direction: column;
@@ -182,12 +182,12 @@
     padding: 15px 20px;
     gap: 15px;
   }
-  
+
   .blogsSectionContainer {
     padding: 0 10px;
     width: 90%;
   }
-  
+
   .blogsSection a {
     padding: 3px 8px;
     font-size: 0.8rem;
