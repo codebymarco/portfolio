@@ -101,21 +101,25 @@ const ContactForm = () => {
   return (
     <div className="contact-form-container">
       <div className="contact-form-wrapper">
-        <h2 className="contact-form-title">Get In Touch</h2>
-        <p className="contact-form-description">
-          Have a question or want to work together? Fill out the form below and
-          I'll get back to you as soon as possible.
-        </p>
+        <div className="form-header">
+          <h2 className="contact-form-title">Get In Touch</h2>
+          <p className="contact-form-description">
+            Have a question or want to work together? Fill out the form below and
+            I'll get back to you as soon as possible.
+          </p>
+        </div>
 
         <form className="contact-form" onSubmit={handleSubmit}>
           <div className="form-field">
+            <label htmlFor="name" className="form-label">Name</label>
             <input
               type="text"
+              id="name"
               name="name"
               value={formValues.name}
               onChange={handleInputChange}
-              className="form-input"
-              placeholder="Your Name"
+              className={`form-input ${formErrors.name ? 'error' : ''}`}
+              placeholder="Enter your name"
             />
             {formErrors.name && (
               <span className="error-message">{formErrors.name}</span>
@@ -123,13 +127,15 @@ const ContactForm = () => {
           </div>
 
           <div className="form-field">
+            <label htmlFor="email" className="form-label">Email</label>
             <input
               type="email"
+              id="email"
               name="email"
               value={formValues.email}
               onChange={handleInputChange}
-              className="form-input"
-              placeholder="Email Address"
+              className={`form-input ${formErrors.email ? 'error' : ''}`}
+              placeholder="Enter your email address"
             />
             {formErrors.email && (
               <span className="error-message">{formErrors.email}</span>
@@ -137,12 +143,14 @@ const ContactForm = () => {
           </div>
 
           <div className="form-field">
+            <label htmlFor="message" className="form-label">Message</label>
             <textarea
+              id="message"
               name="message"
               value={formValues.message}
               onChange={handleInputChange}
-              className="form-input"
-              placeholder="Your Message"
+              className={`form-input ${formErrors.message ? 'error' : ''}`}
+              placeholder="Enter your message"
               rows="5"
             />
             {formErrors.message && (
@@ -158,11 +166,10 @@ const ContactForm = () => {
             {isSubmitting ? (
               <span className="button-content">
                 <span className="spinner"></span>
-                Submitting...
+                Sending...
               </span>
             ) : (
               <span className="button-content">
-                <span className="button-icon">↗</span>
                 Send Message
               </span>
             )}
@@ -171,8 +178,13 @@ const ContactForm = () => {
 
         {snackbarOpen && (
           <div className={`snackbar ${snackbarSeverity}`}>
-            {snackbarMessage}
-            <button onClick={handleCloseSnackbar}>Close</button>
+            <div className="snackbar-content">
+              <span className="snackbar-icon">✓</span>
+              <span>{snackbarMessage}</span>
+            </div>
+            <button onClick={handleCloseSnackbar} className="snackbar-close">
+              ✕
+            </button>
           </div>
         )}
       </div>
@@ -185,51 +197,49 @@ const ContactForm = () => {
           min-height: 100vh;
           padding: 60px 20px;
           background-color: #000000;
-          background-image: radial-gradient(circle at 50% 50%, #111111 0%, #000000 100%);
+          background-image: linear-gradient(135deg, #050505 0%, #111111 100%);
         }
         
         .contact-form-wrapper {
-          background-color: #0a0a0a;
+          background-color: rgba(18, 18, 18, 0.8);
+          backdrop-filter: blur(10px);
           padding: 40px;
-          border-radius: 12px;
+          border-radius: 16px;
           max-width: 600px;
           width: 100%;
           position: relative;
           overflow: hidden;
-          box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.05);
-          border: 1px solid rgba(255, 255, 255, 0.05);
+          box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+          border: 1px solid rgba(255, 255, 255, 0.07);
         }
         
-        .contact-form-wrapper::before {
+        .form-header {
+          margin-bottom: 40px;
+          position: relative;
+        }
+        
+        .form-header::after {
           content: '';
           position: absolute;
-          top: -100px;
-          right: -100px;
-          width: 200px;
-          height: 200px;
-          border-radius: 50%;
-          background: rgba(43, 100, 255, 0.1);
-          filter: blur(60px);
-          pointer-events: none;
+          bottom: -20px;
+          left: 0;
+          width: 60px;
+          height: 4px;
+          background: linear-gradient(90deg, #61DAFB, #2D8CF0);
+          border-radius: 2px;
         }
         
         .contact-form-title {
           font-size: 2.5rem;
           font-weight: 700;
-          text-align: center;
           margin-bottom: 16px;
-          background: linear-gradient(90deg, #ffffff, #aaaaaa);
-          -webkit-background-clip: text;
-          background-clip: text;
-          color: transparent;
-          letter-spacing: -0.03em;
+          color: #ffffff;
+          letter-spacing: -0.02em;
         }
         
         .contact-form-description {
           font-size: 1.1rem;
-          text-align: center;
-          color: #a0a0a0;
-          margin-bottom: 40px;
+          color: #aaaaaa;
           line-height: 1.6;
         }
         
@@ -243,30 +253,39 @@ const ContactForm = () => {
           position: relative;
         }
         
-        .form-input {
-          width: 100%;
-          padding: 16px;
-          border-radius: 8px;
-          border: 1px solid #333333;
-          background-color: #111111;
-          color: #fff;
-          font-size: 1rem;
-          transition: all 0.3s ease;
+        .form-label {
+          display: block;
+          margin-bottom: 8px;
+          font-size: 0.95rem;
+          font-weight: 500;
+          color: #dddddd;
         }
         
-        .form-input:focus {
-          outline: none;
-          border-color: #2b64ff;
-          box-shadow: 0 0 0 3px rgba(43, 100, 255, 0.15);
+        .form-input {
+          width: 100%;
+          padding: 14px 16px;
+          border-radius: 8px;
+          border: 2px solid rgba(255, 255, 255, 0.1);
+          background-color: rgba(30, 30, 30, 0.7);
+          color: #fff;
+          font-size: 1rem;
+          transition: all 0.2s ease;
         }
         
         .form-input::placeholder {
           color: #666666;
-          transition: color 0.3s ease;
         }
         
-        .form-input:focus::placeholder {
-          color: #888888;
+        .form-input:focus {
+          outline: none;
+          border-color: #61DAFB;
+          box-shadow: 0 0 0 3px rgba(97, 218, 251, 0.15);
+          background-color: rgba(35, 35, 35, 0.9);
+        }
+        
+        .form-input.error {
+          border-color: #FF4757;
+          background-color: rgba(40, 20, 20, 0.7);
         }
         
         textarea.form-input {
@@ -276,9 +295,9 @@ const ContactForm = () => {
         }
         
         .error-message {
-          color: #ff4f56;
-          font-size: 0.875rem;
-          margin-top: 8px;
+          color: #FF4757;
+          font-size: 0.85rem;
+          margin-top: 6px;
           display: block;
           animation: fadeIn 0.3s ease;
         }
@@ -289,9 +308,9 @@ const ContactForm = () => {
         }
         
         .submit-button {
-          background: linear-gradient(to right, #2b64ff, #2b8aff);
+          background: linear-gradient(90deg, #61DAFB, #2D8CF0);
           border: none;
-          padding: 16px 28px;
+          padding: 14px;
           font-size: 1rem;
           font-weight: 600;
           border-radius: 8px;
@@ -299,14 +318,13 @@ const ContactForm = () => {
           cursor: pointer;
           transition: all 0.3s ease;
           position: relative;
-          letter-spacing: 0.03em;
           overflow: hidden;
-          margin-top: 10px;
-          box-shadow: 0 4px 10px rgba(43, 100, 255, 0.3);
+          margin-top: 12px;
+          box-shadow: 0 5px 15px rgba(97, 218, 251, 0.2);
         }
         
         .submit-button:disabled {
-          background: linear-gradient(to right, #1a1a1a, #222222);
+          background: #1E1E1E;
           color: #555555;
           cursor: not-allowed;
           box-shadow: none;
@@ -314,34 +332,26 @@ const ContactForm = () => {
         
         .submit-button:hover:not(:disabled) {
           transform: translateY(-2px);
-          box-shadow: 0 6px 15px rgba(43, 100, 255, 0.4);
+          box-shadow: 0 8px 25px rgba(97, 218, 251, 0.3);
         }
         
         .submit-button:active:not(:disabled) {
           transform: translateY(0);
-          box-shadow: 0 2px 8px rgba(43, 100, 255, 0.3);
         }
         
-        .submit-button::after {
+        .submit-button::before {
           content: '';
           position: absolute;
+          top: 0;
+          left: -100%;
           width: 100%;
           height: 100%;
-          top: 0;
-          left: 0;
-          pointer-events: none;
-          background-image: radial-gradient(circle, rgba(255, 255, 255, 0.3) 10%, transparent 10.01%);
-          background-repeat: no-repeat;
-          background-position: 50%;
-          transform: scale(10, 10);
-          opacity: 0;
-          transition: transform 0.5s, opacity 0.8s;
+          background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+          transition: all 0.5s ease;
         }
         
-        .submit-button:active::after {
-          transform: scale(0, 0);
-          opacity: 0.3;
-          transition: 0s;
+        .submit-button:hover::before {
+          left: 100%;
         }
         
         .button-content {
@@ -349,21 +359,14 @@ const ContactForm = () => {
           align-items: center;
           justify-content: center;
           gap: 8px;
-        }
-        
-        .button-icon {
-          font-size: 1.2rem;
-          transition: transform 0.3s ease;
-        }
-        
-        .submit-button:hover:not(:disabled) .button-icon {
-          transform: translateX(3px) translateY(-3px);
+          position: relative;
+          z-index: 1;
         }
         
         .spinner {
           display: inline-block;
-          width: 18px;
-          height: 18px;
+          width: 20px;
+          height: 20px;
           border: 2px solid rgba(255, 255, 255, 0.3);
           border-radius: 50%;
           border-top-color: #fff;
@@ -379,17 +382,52 @@ const ContactForm = () => {
           bottom: 30px;
           left: 50%;
           transform: translateX(-50%);
-          padding: 16px 24px;
+          padding: 0;
           border-radius: 8px;
           display: flex;
           justify-content: space-between;
           align-items: center;
-          gap: 16px;
-          box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
           z-index: 1000;
-          min-width: 300px;
+          min-width: 320px;
           animation: slideUp 0.3s ease;
-          backdrop-filter: blur(10px);
+          overflow: hidden;
+        }
+        
+        .snackbar-content {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          padding: 16px;
+          flex: 1;
+        }
+        
+        .snackbar-icon {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 24px;
+          height: 24px;
+          border-radius: 50%;
+          background: rgba(255, 255, 255, 0.2);
+          font-size: 14px;
+        }
+        
+        .snackbar-close {
+          background: transparent;
+          border: none;
+          color: #fff;
+          cursor: pointer;
+          font-size: 16px;
+          padding: 16px;
+          transition: all 0.2s ease;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        
+        .snackbar-close:hover {
+          background: rgba(255, 255, 255, 0.1);
         }
         
         @keyframes slideUp {
@@ -398,50 +436,62 @@ const ContactForm = () => {
         }
         
         .snackbar.success {
-          background-color: rgba(26, 71, 42, 0.9);
+          background-color: #0A2F41;
           color: #ffffff;
-          border-left: 4px solid #2ecc71;
+          border-left: 3px solid #61DAFB;
         }
         
         .snackbar.error {
-          background-color: rgba(74, 26, 26, 0.9);
+          background-color: #41131A;
           color: #ffffff;
-          border-left: 4px solid #e74c3c;
+          border-left: 3px solid #FF4757;
         }
         
-        .snackbar button {
-          background: rgba(255, 255, 255, 0.2);
-          border: none;
-          color: #fff;
-          cursor: pointer;
-          font-size: 0.9rem;
-          padding: 8px 12px;
-          border-radius: 6px;
-          transition: all 0.2s ease;
+        /* Subtle glow effect in dark mode */
+        .form-input:focus {
+          box-shadow: 0 0 15px rgba(97, 218, 251, 0.15);
         }
         
-        .snackbar button:hover {
-          background: rgba(255, 255, 255, 0.3);
-          transform: translateY(-1px);
+        /* Ambient background glow */
+        .contact-form-wrapper::before {
+          content: '';
+          position: absolute;
+          top: -150px;
+          right: -150px;
+          width: 300px;
+          height: 300px;
+          border-radius: 50%;
+          background: rgba(97, 218, 251, 0.03);
+          filter: blur(80px);
+          z-index: -1;
         }
         
-        .snackbar button:active {
-          background: rgba(255, 255, 255, 0.25);
-          transform: translateY(0);
+        .contact-form-wrapper::after {
+          content: '';
+          position: absolute;
+          bottom: -150px;
+          left: -150px;
+          width: 300px;
+          height: 300px;
+          border-radius: 50%;
+          background: rgba(45, 140, 240, 0.03);
+          filter: blur(80px);
+          z-index: -1;
         }
         
         @media (max-width: 600px) {
           .contact-form-wrapper {
             padding: 30px 20px;
+            border-radius: 12px;
           }
           
           .contact-form-title {
             font-size: 2rem;
           }
           
-          .submit-button {
-            padding: 15px;
-            width: 100%;
+          .form-header::after {
+            width: 50px;
+            height: 3px;
           }
           
           .snackbar {
