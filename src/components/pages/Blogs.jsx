@@ -192,7 +192,7 @@ const Blogs = () => {
           content="marco ramcharan, codebymarco, software developer portfolio about"
         />
       </Helmet>
-      <ScrollToTop/>
+      <ScrollToTop />
       <div className="blog-page">
         <div className="blog-header">
           <h1>BLOG</h1>

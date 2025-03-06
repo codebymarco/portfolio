@@ -1,50 +1,39 @@
-import {
-  FaHtml5,
-  FaCss3Alt,
-  FaJs,
-  FaReact,
-  FaNodeJs,
-  FaPython,
-  FaDocker,
-  FaAws,
-  FaGoogle,
-} from "react-icons/fa";
-import {
-  SiTypescript,
-  SiGoland,
-  SiRabbitmq,
-  SiJenkins,
-  SiKubernetes,
-  SiMongodb,
-  SiPostgresql,
-} from "react-icons/si";
-import "../../styles/blogsSection.css";
-import { motion } from "framer-motion";
+import React from "react";
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import "../../styles/blogsSection.css";
 
-const skillIcons = {
-  html: { icon: FaHtml5, color: "#E34F26" },
-  css: { icon: FaCss3Alt, color: "#1572B6" },
-  typescript: { icon: SiTypescript, color: "#007ACC" },
-  react: { icon: FaReact, color: "#61DAFB" },
-  node: { icon: FaNodeJs, color: "#339933" },
-  golang: { icon: SiGoland, color: "#00ADD8" },
-  python: { icon: FaPython, color: "#3776AB" },
-  rabbitmq: { icon: SiRabbitmq, color: "#FF6600" },
-  jenkins: { icon: SiJenkins, color: "#D24939" },
-  kubernetes: { icon: SiKubernetes, color: "#326CE5" },
-  docker: { icon: FaDocker, color: "#2496ED" },
-  sql: { icon: SiPostgresql, color: "#336791" }, // Using PostgreSQL icon for SQL
-  nosql: { icon: SiMongodb, color: "#47A248" },
-  "aws s3": { icon: FaAws, color: "#FF9900" },
-  "aws cloudfront": { icon: FaAws, color: "#FF9900" },
-  "google cloud platform": { icon: FaGoogle, color: "#4285F4" },
-};
+// Import sample blog data (top 3)
+const blogData = [
+  {
+    id: 1,
+    title: "Dockerize a react app",
+    tags: ["docker", "react", "javascript", "devops"],
+    date: "2025-02-28",
+    image:
+      "https://th.bing.com/th/id/R.796523382777357d18ba619048335003?rik=hi%2f%2bPd07IRqj%2fA&pid=ImgRaw&r=0",
+  },
+  {
+    id: 2,
+    title: "BunnyCDN, Faster and cheaper than AWS Cloudfront",
+    tags: ["cdn", "devops", "cache", "backend"],
+    date: "2025-02-20",
+    image: "https://cloud2data.com/wp-content/uploads/2023/05/Kubernetes.png", // You'll need to import this correctly
+  },
+  {
+    id: 3,
+    title: "Kubernetes Errors",
+    tags: ["kubernetes", "docker", "debugging"],
+    date: "2025-02-15",
+    image: "https://cloud2data.com/wp-content/uploads/2023/05/Kubernetes.png",
+  },
+];
 
 const BlogsSection = () => {
   const navigate = useNavigate();
 
+  // Animation variants
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -60,6 +49,12 @@ const BlogsSection = () => {
     visible: { opacity: 1, y: 0 },
   };
 
+  // Format date to be more readable
+  const formatDate = (dateString) => {
+    const options = { year: "numeric", month: "long", day: "numeric" };
+    return new Date(dateString).toLocaleDateString("en-US", options);
+  };
+
   return (
     <div className="blogsSection">
       <div className="blogsSectionTop">
@@ -72,22 +67,38 @@ const BlogsSection = () => {
         animate="visible"
         variants={containerVariants}
       >
-        {["kubernetes", "docker", "linux"].map((skill, index) => {
-          return (
-            <motion.div
-              onClick={() => navigate(`/apps/${skill}`)}
-              className="box"
-              variants={itemVariants}
-              key={skill}
-            >
-              <span
-                style={{ display: "flex", gap: "10px", alignItems: "center" }}
-              >
-                {skill}
-              </span>
-            </motion.div>
-          );
-        })}
+        {blogData.map((blog) => (
+          <motion.div
+            key={blog.id}
+            className="blog-card"
+            variants={itemVariants}
+            onClick={() => navigate(`/blog/${blog.id}`)}
+          >
+            <div className="blog-card-image-container">
+              <img
+                src={blog.image}
+                alt={blog.title}
+                className="blog-card-image"
+              />
+            </div>
+            <div className="blog-card-content">
+              <h3 className="blog-card-title">{blog.title}</h3>
+              <div className="blog-card-tags">
+                {blog.tags.slice(0, 3).map((tag) => (
+                  <span key={tag} className="blog-card-tag">
+                    {tag}
+                  </span>
+                ))}
+                {blog.tags.length > 3 && (
+                  <span className="blog-card-tag-more">
+                    +{blog.tags.length - 3}
+                  </span>
+                )}
+              </div>
+              <div className="blog-card-date">{formatDate(blog.date)}</div>
+            </div>
+          </motion.div>
+        ))}
       </motion.div>
     </div>
   );
