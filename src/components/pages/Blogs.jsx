@@ -14,6 +14,7 @@ import {
 } from "react-icons/fa";
 import { Helmet } from "react-helmet";
 import bunnyImage from "../../assets/blog/bunny.jpg";
+import ScrollToTop from "../components/ScrollToTop";
 
 // Blog data with added tags and images
 const blogData = [
@@ -191,6 +192,7 @@ const Blogs = () => {
           content="marco ramcharan, codebymarco, software developer portfolio about"
         />
       </Helmet>
+      <ScrollToTop/>
       <div className="blog-page">
         <div className="blog-header">
           <h1>BLOG</h1>
