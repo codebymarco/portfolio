@@ -396,12 +396,11 @@
 /* Mobile specific adjustments */
 @media (max-width: 699px) {
   .banner {
-    height: auto;
-    min-height: 100vh;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    height: 90vh; /* Change from 'auto' to 90vh to match your navbar setup */
+    min-height: 90vh; /* Change from 100vh to 90vh */
+    max-height: 90vh; /* Add this to enforce the height constraint */
+    overflow-y: auto; /* Allow scrolling within the banner if content overflows */
   }
-  
   .banner-img-container {
     width: 90%;
     max-width: 300px;
