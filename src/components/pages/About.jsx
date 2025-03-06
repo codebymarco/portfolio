@@ -119,10 +119,11 @@ const About = () => {
                 onClick={() => setCurrentIndex(index)}
                 style={{
                   height: "10px",
-                  width: "10px",
+                  width: "30px",
+                  flexGrow:"1",
                   backgroundColor:
                     currentIndex === index ? "black" : "dodgerblue",
-                  borderRadius: "50%",
+                  borderRadius: "10%",
                   cursor: "pointer",
                 }}
               ></div>
