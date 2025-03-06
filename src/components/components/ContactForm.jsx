@@ -155,7 +155,17 @@ const ContactForm = () => {
             className="submit-button"
             disabled={isSubmitting}
           >
-            {isSubmitting ? "Submitting..." : "Send Message"}
+            {isSubmitting ? (
+              <span className="button-content">
+                <span className="spinner"></span>
+                Submitting...
+              </span>
+            ) : (
+              <span className="button-content">
+                <span className="button-icon">↗</span>
+                Send Message
+              </span>
+            )}
           </button>
         </form>
 
@@ -168,8 +178,6 @@ const ContactForm = () => {
       </div>
       
       <style jsx>{`
-
-        
         .contact-form-container {
           display: flex;
           justify-content: center;
@@ -183,18 +191,33 @@ const ContactForm = () => {
         .contact-form-wrapper {
           background-color: #0a0a0a;
           padding: 40px;
-          border-radius: 16px;
+          border-radius: 12px;
           max-width: 600px;
           width: 100%;
           position: relative;
           overflow: hidden;
+          box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.05);
+          border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .contact-form-wrapper::before {
+          content: '';
+          position: absolute;
+          top: -100px;
+          right: -100px;
+          width: 200px;
+          height: 200px;
+          border-radius: 50%;
+          background: rgba(43, 100, 255, 0.1);
+          filter: blur(60px);
+          pointer-events: none;
         }
         
         .contact-form-title {
           font-size: 2.5rem;
           font-weight: 700;
           text-align: center;
-          margin-bottom: 20px;
+          margin-bottom: 16px;
           background: linear-gradient(90deg, #ffffff, #aaaaaa);
           -webkit-background-clip: text;
           background-clip: text;
@@ -222,8 +245,8 @@ const ContactForm = () => {
         
         .form-input {
           width: 100%;
-          padding: 14px 16px;
-          border-radius: 12px;
+          padding: 16px;
+          border-radius: 8px;
           border: 1px solid #333333;
           background-color: #111111;
           color: #fff;
@@ -233,8 +256,8 @@ const ContactForm = () => {
         
         .form-input:focus {
           outline: none;
-          border-color: #0072ff;
-          box-shadow: 0 0 0 2px rgba(0, 114, 255, 0.2);
+          border-color: #2b64ff;
+          box-shadow: 0 0 0 3px rgba(43, 100, 255, 0.15);
         }
         
         .form-input::placeholder {
@@ -247,7 +270,7 @@ const ContactForm = () => {
         }
         
         textarea.form-input {
-          min-height: 120px;
+          min-height: 140px;
           resize: vertical;
           line-height: 1.6;
         }
@@ -255,7 +278,7 @@ const ContactForm = () => {
         .error-message {
           color: #ff4f56;
           font-size: 0.875rem;
-          margin-top: 6px;
+          margin-top: 8px;
           display: block;
           animation: fadeIn 0.3s ease;
         }
@@ -266,10 +289,10 @@ const ContactForm = () => {
         }
         
         .submit-button {
-          background: #555555;
+          background: linear-gradient(to right, #2b64ff, #2b8aff);
           border: none;
-          padding: 10px 20px;
-          font-size: 0.95rem;
+          padding: 16px 28px;
+          font-size: 1rem;
           font-weight: 600;
           border-radius: 8px;
           color: #fff;
@@ -277,21 +300,78 @@ const ContactForm = () => {
           transition: all 0.3s ease;
           position: relative;
           letter-spacing: 0.03em;
-          text-transform: uppercase;
+          overflow: hidden;
+          margin-top: 10px;
+          box-shadow: 0 4px 10px rgba(43, 100, 255, 0.3);
         }
         
         .submit-button:disabled {
-          background: #222222;
-          color: #666666;
+          background: linear-gradient(to right, #1a1a1a, #222222);
+          color: #555555;
           cursor: not-allowed;
+          box-shadow: none;
         }
         
         .submit-button:hover:not(:disabled) {
-          background: #666666;
+          transform: translateY(-2px);
+          box-shadow: 0 6px 15px rgba(43, 100, 255, 0.4);
         }
         
         .submit-button:active:not(:disabled) {
-          background: #444444;
+          transform: translateY(0);
+          box-shadow: 0 2px 8px rgba(43, 100, 255, 0.3);
+        }
+        
+        .submit-button::after {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          pointer-events: none;
+          background-image: radial-gradient(circle, rgba(255, 255, 255, 0.3) 10%, transparent 10.01%);
+          background-repeat: no-repeat;
+          background-position: 50%;
+          transform: scale(10, 10);
+          opacity: 0;
+          transition: transform 0.5s, opacity 0.8s;
+        }
+        
+        .submit-button:active::after {
+          transform: scale(0, 0);
+          opacity: 0.3;
+          transition: 0s;
+        }
+        
+        .button-content {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 8px;
+        }
+        
+        .button-icon {
+          font-size: 1.2rem;
+          transition: transform 0.3s ease;
+        }
+        
+        .submit-button:hover:not(:disabled) .button-icon {
+          transform: translateX(3px) translateY(-3px);
+        }
+        
+        .spinner {
+          display: inline-block;
+          width: 18px;
+          height: 18px;
+          border: 2px solid rgba(255, 255, 255, 0.3);
+          border-radius: 50%;
+          border-top-color: #fff;
+          animation: spin 0.8s linear infinite;
+        }
+        
+        @keyframes spin {
+          to { transform: rotate(360deg); }
         }
         
         .snackbar {
@@ -300,15 +380,16 @@ const ContactForm = () => {
           left: 50%;
           transform: translateX(-50%);
           padding: 16px 24px;
-          border-radius: 12px;
+          border-radius: 8px;
           display: flex;
           justify-content: space-between;
           align-items: center;
           gap: 16px;
-          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
           z-index: 1000;
           min-width: 300px;
           animation: slideUp 0.3s ease;
+          backdrop-filter: blur(10px);
         }
         
         @keyframes slideUp {
@@ -317,30 +398,36 @@ const ContactForm = () => {
         }
         
         .snackbar.success {
-          background-color: #1a472a;
+          background-color: rgba(26, 71, 42, 0.9);
           color: #ffffff;
           border-left: 4px solid #2ecc71;
         }
         
         .snackbar.error {
-          background-color: #4a1a1a;
+          background-color: rgba(74, 26, 26, 0.9);
           color: #ffffff;
           border-left: 4px solid #e74c3c;
         }
         
         .snackbar button {
-          background: rgba(255, 255, 255, 0.15);
+          background: rgba(255, 255, 255, 0.2);
           border: none;
           color: #fff;
           cursor: pointer;
           font-size: 0.9rem;
-          padding: 6px 12px;
+          padding: 8px 12px;
           border-radius: 6px;
-          transition: background 0.2s ease;
+          transition: all 0.2s ease;
         }
         
         .snackbar button:hover {
+          background: rgba(255, 255, 255, 0.3);
+          transform: translateY(-1px);
+        }
+        
+        .snackbar button:active {
           background: rgba(255, 255, 255, 0.25);
+          transform: translateY(0);
         }
         
         @media (max-width: 600px) {
@@ -353,7 +440,8 @@ const ContactForm = () => {
           }
           
           .submit-button {
-            padding: 14px;
+            padding: 15px;
+            width: 100%;
           }
           
           .snackbar {
