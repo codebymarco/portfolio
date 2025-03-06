@@ -68,7 +68,6 @@ A Beginner’s Guide to Docker for Full-Stack Developers
 Discovering Hidden Gems in the Golang Standard Library
 Designing Multi-Tenant Applications with Advanced SQL
 Cloud Cost Optimization: How to Get the Most Bang for Your Buck
-Building Cross-Platform Mobile Apps with React Native
 Implementing CI/CD Pipelines for Golang Projects
 SQL Data Modeling: From Theory to Real-World Implementation
 Introduction to Serverless Databases and Their Use Cases
@@ -94,7 +93,5 @@ SQL Performance Tuning for High-Traffic Applications
 Implementing GraphQL Subscriptions in React Applications
 Exploring Cloud Automation with Terraform
 Comparing State Management Solutions: React Hooks vs. Redux
-Building Event-Driven Architectures with Golang
 Enhancing Developer Workflow with TypeScript and VS Code
 Leveraging Managed SQL Databases in the Cloud
-The Ultimate Guide to Full-Stack Cloud Development

@@ -18,6 +18,9 @@ import KubernetesErrorsBlog from "../pages/blogs/KubernetesErrorsBlog";
 import One from "../pages/blogs/One";
 import Two from "../pages/blogs/Two";
 import Three from "../pages/blogs/Three";
+import Four from "../pages/blogs/Four";
+import Five from "../pages/blogs/Five";
+import Six from "../pages/blogs/Six";
 
 const Router = () => {
   return (
@@ -38,6 +41,9 @@ const Router = () => {
           <Route path="blog/4" element={<One />}></Route>
           <Route path="blog/5" element={<Two />}></Route>
           <Route path="blog/6" element={<Three />}></Route>
+          <Route path="blog/7" element={<Four />}></Route>
+          <Route path="blog/8" element={<Five />}></Route>
+          <Route path="blog/9" element={<Six />}></Route>
         </Route>
 
         <Route path="/apps/app" element={<App />}></Route>

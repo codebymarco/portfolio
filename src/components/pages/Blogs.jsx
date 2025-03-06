@@ -62,7 +62,31 @@ const blogData = [
     date: "2025-02-15",
     image:
       "https://miro.medium.com/v2/resize:fit:480/1*YxBJCMcyz2cOP6AqshyhRg.jpeg",
-  }
+  },
+  {
+    id: 7,
+    title: "The Ultimate Guide to Full-Stack Cloud Development",
+    tags: ["backend", "server", "devops"],
+    date: "2025-02-15",
+    image:
+      "https://img.freepik.com/premium-photo/cloud-computing-technology_1083198-314.jpg",
+  },
+  {
+    id: 8,
+    title: "Building Event-Driven Architectures with Golang",
+    tags: ["backend", "golang"],
+    date: "2025-02-15",
+    image:
+      "https://iconlogovector.com/uploads/images/2024/04/md-6619d74e0c9e1-GO-Golang.webp",
+  },
+  {
+    id: 9,
+    title: "Building Cross-Platform Mobile Apps with React Native",
+    tags: ["react", "mobile", "ios", "android"],
+    date: "2025-02-15",
+    image:
+      "https://www.nectarpourtous.com/wp-content/uploads/2023/11/React-Native-1-1024x1024.jpg",
+  },
 ];
 
 // Popular tags for filter
