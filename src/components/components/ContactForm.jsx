@@ -102,7 +102,7 @@ const ContactForm = () => {
     <div className="contact-form-container">
       <div className="contact-form-wrapper">
         <div className="form-header">
-          <h2 className="contact-form-title">Get In Touch</h2>
+          <h2 className="contact-form-title">Send Me a Message</h2>
           <p className="contact-form-description">
             Have a question or want to work together? Fill out the form below and
             I'll get back to you as soon as possible.
@@ -194,23 +194,29 @@ const ContactForm = () => {
           display: flex;
           justify-content: center;
           align-items: center;
-          min-height: 100vh;
           padding: 60px 20px;
-  background-image: radial-gradient(circle at 50% 30%, #111111 0%, #000000 70%);
-  background-color: black;
+          background-image: radial-gradient(circle at 50% 30%, #111111 0%, #000000 70%);
+          background-color: black;
         }
         
         .contact-form-wrapper {
-          background-color: rgba(18, 18, 18, 0.8);
+          background-color: rgba(13, 13, 13, 0.9);
           backdrop-filter: blur(10px);
           padding: 40px;
-          border-radius: 16px;
+          border-radius: 15px;
           max-width: 600px;
           width: 100%;
           position: relative;
           overflow: hidden;
           box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
-          border: 1px solid rgba(255, 255, 255, 0.07);
+          border: 1px solid rgba(97, 218, 251, 0.1);
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .contact-form-wrapper:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.8), 0 0 20px rgba(97, 218, 251, 0.1);
+          border-color: rgba(97, 218, 251, 0.2);
         }
         
         .form-header {
@@ -224,17 +230,19 @@ const ContactForm = () => {
           bottom: -20px;
           left: 0;
           width: 60px;
-          height: 4px;
-          background: linear-gradient(90deg, #61DAFB, #2D8CF0);
+          height: 3px;
+          background: #61DAFB;
           border-radius: 2px;
+          box-shadow: 0 0 10px rgba(97, 218, 251, 0.5);
         }
         
         .contact-form-title {
-          font-size: 2.5rem;
+          font-size: 2.2rem;
           font-weight: 700;
           margin-bottom: 16px;
-          color: #ffffff;
+          color: #61DAFB;
           letter-spacing: -0.02em;
+          text-shadow: 0 0 10px rgba(97, 218, 251, 0.3);
         }
         
         .contact-form-description {
@@ -264,12 +272,12 @@ const ContactForm = () => {
         .form-input {
           width: 100%;
           padding: 14px 16px;
-          border-radius: 8px;
-          border: 2px solid rgba(255, 255, 255, 0.1);
-          background-color: rgba(30, 30, 30, 0.7);
+          border-radius: 10px;
+          border: 2px solid rgba(97, 218, 251, 0.1);
+          background-color: rgba(20, 20, 20, 0.7);
           color: #fff;
           font-size: 1rem;
-          transition: all 0.2s ease;
+          transition: all 0.3s ease;
         }
         
         .form-input::placeholder {
@@ -279,8 +287,8 @@ const ContactForm = () => {
         .form-input:focus {
           outline: none;
           border-color: #61DAFB;
-          box-shadow: 0 0 0 3px rgba(97, 218, 251, 0.15);
-          background-color: rgba(35, 35, 35, 0.9);
+          box-shadow: 0 0 15px rgba(97, 218, 251, 0.15);
+          background-color: rgba(25, 25, 25, 0.9);
         }
         
         .form-input.error {
@@ -308,12 +316,12 @@ const ContactForm = () => {
         }
         
         .submit-button {
-          background: linear-gradient(90deg, #61DAFB, #2D8CF0);
+          background: linear-gradient(90deg, rgba(97, 218, 251, 0.8), rgba(97, 218, 251, 0.6));
           border: none;
-          padding: 14px;
+          padding: 15px;
           font-size: 1rem;
           font-weight: 600;
-          border-radius: 8px;
+          border-radius: 10px;
           color: #fff;
           cursor: pointer;
           transition: all 0.3s ease;
@@ -321,6 +329,7 @@ const ContactForm = () => {
           overflow: hidden;
           margin-top: 12px;
           box-shadow: 0 5px 15px rgba(97, 218, 251, 0.2);
+          text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
         }
         
         .submit-button:disabled {
@@ -328,11 +337,13 @@ const ContactForm = () => {
           color: #555555;
           cursor: not-allowed;
           box-shadow: none;
+          text-shadow: none;
         }
         
         .submit-button:hover:not(:disabled) {
           transform: translateY(-2px);
           box-shadow: 0 8px 25px rgba(97, 218, 251, 0.3);
+          background: linear-gradient(90deg, rgba(97, 218, 251, 0.9), rgba(97, 218, 251, 0.7));
         }
         
         .submit-button:active:not(:disabled) {
@@ -383,7 +394,7 @@ const ContactForm = () => {
           left: 50%;
           transform: translateX(-50%);
           padding: 0;
-          border-radius: 8px;
+          border-radius: 10px;
           display: flex;
           justify-content: space-between;
           align-items: center;
@@ -436,20 +447,15 @@ const ContactForm = () => {
         }
         
         .snackbar.success {
-          background-color: #0A2F41;
+          background-color: rgba(13, 13, 13, 0.95);
           color: #ffffff;
           border-left: 3px solid #61DAFB;
         }
         
         .snackbar.error {
-          background-color: #41131A;
+          background-color: rgba(13, 13, 13, 0.95);
           color: #ffffff;
           border-left: 3px solid #FF4757;
-        }
-        
-        /* Subtle glow effect in dark mode */
-        .form-input:focus {
-          box-shadow: 0 0 15px rgba(97, 218, 251, 0.15);
         }
         
         /* Ambient background glow */
@@ -474,7 +480,7 @@ const ContactForm = () => {
           width: 300px;
           height: 300px;
           border-radius: 50%;
-          background: rgba(45, 140, 240, 0.03);
+          background: rgba(97, 218, 251, 0.03);
           filter: blur(80px);
           z-index: -1;
         }
@@ -486,7 +492,7 @@ const ContactForm = () => {
           }
           
           .contact-form-title {
-            font-size: 2rem;
+            font-size: 1.8rem;
           }
           
           .form-header::after {
