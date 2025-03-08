@@ -3,27 +3,43 @@ import { Link } from "react-router-dom";
 import "../../styles/navbar.css";
 import FullPageNavbar from "./FullPageNavbar";
 import { CiMenuFries } from "react-icons/ci";
-import { IoLanguage } from "react-icons/io5";
+import { HiOutlineGlobeAlt } from "react-icons/hi";
+import { IoIosArrowDown } from "react-icons/io";
 import { AnimatePresence, motion } from "framer-motion";
 
 const Navbar = () => {
   const [show, setShow] = useState(false);
   const [activeLink, setActiveLink] = useState("/"); // Track active link based on current path
   const [language, setLanguage] = useState("english"); // Default language state
+  const [showLanguageMenu, setShowLanguageMenu] = useState(false); // State for language menu visibility
 
   // Set active link based on current path when component mounts
   useEffect(() => {
     setActiveLink(window.location.pathname);
   }, []);
 
+  // Close language menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (showLanguageMenu && !event.target.closest('.language-selector')) {
+        setShowLanguageMenu(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [showLanguageMenu]);
+
   const close = () => {
     setShow(false);
   };
 
   // Handle language change
-  const handleLanguageChange = (e) => {
-    const selectedLanguage = e.target.value;
+  const handleLanguageChange = (selectedLanguage) => {
     setLanguage(selectedLanguage);
+    setShowLanguageMenu(false);
     console.log("Language changed to:", selectedLanguage);
   };
 
@@ -51,6 +67,37 @@ const Navbar = () => {
       }
     }
   };
+
+  // Animation variants for language menu
+  const languageMenuVariants = {
+    hidden: { opacity: 0, y: -5, scale: 0.95 },
+    visible: { 
+      opacity: 1, 
+      y: 0, 
+      scale: 1,
+      transition: {
+        duration: 0.2,
+        ease: "easeOut"
+      }
+    },
+    exit: {
+      opacity: 0,
+      y: -5,
+      scale: 0.95,
+      transition: {
+        duration: 0.2,
+        ease: "easeIn"
+      }
+    }
+  };
+
+  // Language options
+  const languages = [
+    { code: "english", label: "English" },
+    { code: "zulu", label: "Zulu" },
+    { code: "afrikaans", label: "Afrikaans" },
+    { code: "espanol", label: "Español" }
+  ];
 
   return (
     <motion.nav
@@ -116,15 +163,41 @@ const Navbar = () => {
           
           {/* Language selector */}
           <motion.div variants={itemVariants} className="nav-item language-selector">
-            <div className="lang-select-wrapper">
-              <IoLanguage className="language-icon" />
-              <select value={language} onChange={handleLanguageChange} className="language-dropdown">
-                <option value="english">English</option>
-                <option value="zulu">Zulu</option>
-                <option value="afrikaans">Afrikaans</option>
-                <option value="espanol">Español</option>
-              </select>
+            <div 
+              className="lang-select-wrapper"
+              onClick={() => setShowLanguageMenu(!showLanguageMenu)}
+            >
+              <HiOutlineGlobeAlt className="language-icon" />
+              <span className="current-language">
+                {language === "english" ? "EN" : 
+                 language === "zulu" ? "ZU" : 
+                 language === "afrikaans" ? "AF" : 
+                 language === "espanol" ? "ES" : "EN"}
+              </span>
+              <IoIosArrowDown className={`arrow-icon ${showLanguageMenu ? 'rotated' : ''}`} />
             </div>
+            
+            <AnimatePresence>
+              {showLanguageMenu && (
+                <motion.div 
+                  className="language-menu"
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
+                  variants={languageMenuVariants}
+                >
+                  {languages.map((lang) => (
+                    <div 
+                      key={lang.code}
+                      className={`language-option ${language === lang.code ? 'active' : ''}`}
+                      onClick={() => handleLanguageChange(lang.code)}
+                    >
+                      {lang.label}
+                    </div>
+                  ))}
+                </motion.div>
+              )}
+            </AnimatePresence>
           </motion.div>
         </motion.div>
         
@@ -170,6 +243,7 @@ const Navbar = () => {
           color: #61DAFB;
         }
         
+        /* Language selector styles */
         .language-selector {
           margin-left: 12px;
         }
@@ -183,6 +257,8 @@ const Navbar = () => {
           border: 1px solid rgba(97, 218, 251, 0.3);
           transition: all 0.3s ease;
           position: relative;
+          cursor: pointer;
+          user-select: none;
         }
         
         .lang-select-wrapper:hover {
@@ -196,32 +272,56 @@ const Navbar = () => {
           margin-right: 5px;
         }
         
-        .language-selector select {
-          background-color: transparent;
+        .current-language {
           color: #f8f8f8;
-          border: none;
           font-size: 0.9rem;
           font-weight: 500;
-          cursor: pointer;
-          outline: none;
-          -webkit-appearance: none;
-          -moz-appearance: none;
-          appearance: none;
-          padding-right: 12px;
+          margin-right: 4px;
         }
         
-        .language-selector select option {
-          background-color: #282c34;
-          color: #f8f8f8;
+        .arrow-icon {
+          font-size: 0.8rem;
+          transition: transform 0.2s ease;
+        }
+        
+        .arrow-icon.rotated {
+          transform: rotate(180deg);
+        }
+        
+        .language-menu {
+          position: absolute;
+          top: calc(100% + 10px);
+          right: 0;
+          background-color: #1a1e23;
+          border-radius: 6px;
+          overflow: hidden;
+          min-width: 140px;
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+          z-index: 100;
+          border: 1px solid rgba(97, 218, 251, 0.2);
+        }
+        
+        .language-option {
+          padding: 10px 16px;
+          cursor: pointer;
+          transition: all 0.2s ease;
+          font-size: 0.95rem;
+        }
+        
+        .language-option:hover {
+          background-color: rgba(97, 218, 251, 0.1);
+          color: #61DAFB;
+        }
+        
+        .language-option.active {
+          background-color: rgba(97, 218, 251, 0.15);
+          color: #61DAFB;
+          font-weight: 500;
         }
         
         @media (max-width: 768px) {
           .desktop-links {
             display: none;
-          }
-          
-          .language-selector {
-            margin-left: 10px;
           }
         }
       `}</style>
