@@ -3,11 +3,13 @@ import { Link } from "react-router-dom";
 import "../../styles/navbar.css";
 import FullPageNavbar from "./FullPageNavbar";
 import { CiMenuFries } from "react-icons/ci";
+import { IoLanguage } from "react-icons/io5";
 import { AnimatePresence, motion } from "framer-motion";
 
 const Navbar = () => {
   const [show, setShow] = useState(false);
   const [activeLink, setActiveLink] = useState("/"); // Track active link based on current path
+  const [language, setLanguage] = useState("english"); // Default language state
 
   // Set active link based on current path when component mounts
   useEffect(() => {
@@ -16,6 +18,13 @@ const Navbar = () => {
 
   const close = () => {
     setShow(false);
+  };
+
+  // Handle language change
+  const handleLanguageChange = (e) => {
+    const selectedLanguage = e.target.value;
+    setLanguage(selectedLanguage);
+    console.log("Language changed to:", selectedLanguage);
   };
 
   // Animation variants for navbar container
@@ -104,6 +113,19 @@ const Navbar = () => {
               blog
             </Link>
           </motion.div>
+          
+          {/* Language selector */}
+          <motion.div variants={itemVariants} className="nav-item language-selector">
+            <div className="lang-select-wrapper">
+              <IoLanguage className="language-icon" />
+              <select value={language} onChange={handleLanguageChange} className="language-dropdown">
+                <option value="english">English</option>
+                <option value="zulu">Zulu</option>
+                <option value="afrikaans">Afrikaans</option>
+                <option value="espanol">Español</option>
+              </select>
+            </div>
+          </motion.div>
         </motion.div>
         
         <motion.div
@@ -148,9 +170,58 @@ const Navbar = () => {
           color: #61DAFB;
         }
         
+        .language-selector {
+          margin-left: 12px;
+        }
+        
+        .lang-select-wrapper {
+          display: flex;
+          align-items: center;
+          background-color: rgba(97, 218, 251, 0.1);
+          border-radius: 20px;
+          padding: 5px 10px;
+          border: 1px solid rgba(97, 218, 251, 0.3);
+          transition: all 0.3s ease;
+          position: relative;
+        }
+        
+        .lang-select-wrapper:hover {
+          background-color: rgba(97, 218, 251, 0.2);
+          border-color: rgba(97, 218, 251, 0.6);
+        }
+        
+        .language-icon {
+          color: #61DAFB;
+          font-size: 1.1rem;
+          margin-right: 5px;
+        }
+        
+        .language-selector select {
+          background-color: transparent;
+          color: #f8f8f8;
+          border: none;
+          font-size: 0.9rem;
+          font-weight: 500;
+          cursor: pointer;
+          outline: none;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+          padding-right: 12px;
+        }
+        
+        .language-selector select option {
+          background-color: #282c34;
+          color: #f8f8f8;
+        }
+        
         @media (max-width: 768px) {
           .desktop-links {
             display: none;
+          }
+          
+          .language-selector {
+            margin-left: 10px;
           }
         }
       `}</style>
