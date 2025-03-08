@@ -245,7 +245,8 @@ const Career = () => {
       <style jsx>{`
         /* General career page styling */
         .career {
-          background-color: #000;
+          background-image: radial-gradient(circle at 50% 30%, #111111 0%, #000000 70%);
+          background-color: black;
           min-height: 100vh;
           color: #fff;
           padding: 40px 20px 80px;
@@ -262,6 +263,8 @@ const Career = () => {
           letter-spacing: 2px;
           position: relative;
           display: inline-block;
+          color: #61DAFB;
+          text-shadow: 0 0 10px rgba(97, 218, 251, 0.5);
         }
 
         .career-top h1:after {
@@ -272,7 +275,8 @@ const Career = () => {
           transform: translateX(-50%);
           width: 60px;
           height: 3px;
-          background-color: #fff;
+          background-color: #61DAFB;
+          box-shadow: 0 0 10px rgba(97, 218, 251, 0.5);
         }
 
         /* Career history section */
@@ -287,6 +291,8 @@ const Career = () => {
           margin-bottom: 60px;
           letter-spacing: 2px;
           position: relative;
+          color: #61DAFB;
+          text-shadow: 0 0 10px rgba(97, 218, 251, 0.5);
         }
 
         .career-history-title:after {
@@ -297,7 +303,8 @@ const Career = () => {
           transform: translateX(-50%);
           width: 60px;
           height: 3px;
-          background-color: #fff;
+          background-color: #61DAFB;
+          box-shadow: 0 0 10px rgba(97, 218, 251, 0.5);
         }
 
         /* Timeline styling */
@@ -312,7 +319,8 @@ const Career = () => {
           bottom: 0;
           left: 30px;
           width: 3px;
-          background-color: #333;
+          background: linear-gradient(to bottom, rgba(97, 218, 251, 0.6), rgba(97, 218, 251, 0.1));
+          box-shadow: 0 0 8px rgba(97, 218, 251, 0.3);
         }
 
         .timeline-item {
@@ -331,33 +339,43 @@ const Career = () => {
           width: 30px;
           height: 30px;
           border-radius: 50%;
-          background-color: #222;
-          border: 3px solid #444;
+          background-color: rgba(13, 13, 13, 0.9);
+          border: 3px solid rgba(97, 218, 251, 0.3);
           display: flex;
           align-items: center;
           justify-content: center;
-          color: #fff;
+          color: #61DAFB;
           font-size: 1rem;
           z-index: 2;
+          box-shadow: 0 0 15px rgba(97, 218, 251, 0.3);
+          transition: all 0.3s ease;
         }
 
         .timeline-marker.current {
-          background-color: #1a1a1a;
-          border-color: #666;
+          background-color: rgba(97, 218, 251, 0.1);
+          border-color: #61DAFB;
+          box-shadow: 0 0 20px rgba(97, 218, 251, 0.4);
+        }
+
+        .timeline-item:hover .timeline-marker {
+          transform: scale(1.1);
+          box-shadow: 0 0 25px rgba(97, 218, 251, 0.5);
         }
 
         /* Job card styling */
         .job-card {
-          background-color: #111;
+          background-color: rgba(13, 13, 13, 0.9);
           border-radius: 10px;
           padding: 30px;
           box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
           transition: transform 0.3s ease, box-shadow 0.3s ease;
+          border: 1px solid rgba(97, 218, 251, 0.1);
         }
 
         .job-card:hover {
           transform: translateY(-5px);
-          box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4), 0 0 15px rgba(97, 218, 251, 0.1);
+          border-color: rgba(97, 218, 251, 0.3);
         }
 
         .job-header {
@@ -372,7 +390,7 @@ const Career = () => {
         .job-title {
           font-size: 1.6rem;
           margin: 0 0 10px;
-          color: #fff;
+          color: #61DAFB;
         }
 
         .job-company {
@@ -394,6 +412,12 @@ const Career = () => {
           gap: 6px;
           font-size: 0.9rem;
           color: #888;
+          transition: color 0.3s ease;
+        }
+
+        .job-card:hover .job-location,
+        .job-card:hover .job-date {
+          color: #aaa;
         }
 
         .job-description,
@@ -416,7 +440,7 @@ const Career = () => {
         }
 
         .section-heading svg {
-          color: #aaa;
+          color: #61DAFB;
         }
 
         .job-description p {
@@ -437,14 +461,17 @@ const Career = () => {
           display: flex;
           align-items: center;
           gap: 12px;
-          background-color: #1a1a1a;
+          background-color: rgba(255, 255, 255, 0.05);
           padding: 12px 15px;
-          border-radius: 6px;
-          transition: background-color 0.2s ease;
+          border-radius: 8px;
+          transition: all 0.3s ease;
+          border: 1px solid transparent;
         }
 
         .responsibility-item:hover {
-          background-color: #222;
+          background-color: rgba(255, 255, 255, 0.08);
+          transform: translateX(5px);
+          border-color: rgba(97, 218, 251, 0.2);
         }
 
         .responsibility-number {
@@ -454,10 +481,16 @@ const Career = () => {
           display: flex;
           align-items: center;
           justify-content: center;
-          background-color: #333;
-          color: #fff;
+          background-color: rgba(97, 218, 251, 0.1);
+          color: #61DAFB;
           font-size: 0.8rem;
           font-weight: 600;
+          transition: all 0.3s ease;
+        }
+
+        .responsibility-item:hover .responsibility-number {
+          background-color: rgba(97, 218, 251, 0.2);
+          transform: scale(1.1);
         }
 
         .responsibility-text {
@@ -507,16 +540,30 @@ const Career = () => {
           display: flex;
           justify-content: center;
           width: 100%;
+          margin-bottom: 40px;
         }
 
         .skills-wrapper .skillsPageNewcontainer {
           margin: 0 auto;
+          background-color: rgba(13, 13, 13, 0.9);
+          border-radius: 10px;
+          padding: 30px;
+          box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+          border: 1px solid rgba(97, 218, 251, 0.1);
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .skills-wrapper .skillsPageNewcontainer:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4), 0 0 15px rgba(97, 218, 251, 0.1);
+          border-color: rgba(97, 218, 251, 0.3);
         }
 
         @media screen and (max-width: 768px) {
           .skills-wrapper .skillsPageNewcontainer {
-            width: fit-content; /* Force the width to match content */
-            margin: 0 auto; /* Center it horizontally */
+            width: fit-content;
+            margin: 0 auto;
+            padding: 20px;
           }
         }
       `}</style>

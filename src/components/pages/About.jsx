@@ -106,14 +106,14 @@ const About = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []); // Empty dependency array ensures this runs once on mount
 
-  // Professional skills data
+  // Professional skills data without percentages
   const professionalSkills = [
-    { name: "React", level: 90 },
-    { name: "JavaScript", level: 85 },
-    { name: "HTML/CSS", level: 95 },
-    { name: "Node.js", level: 75 },
-    { name: "UI/UX Design", level: 80 },
-    { name: "Responsive Design", level: 90 }
+    { name: "React" },
+    { name: "JavaScript" },
+    { name: "HTML/CSS" },
+    { name: "Node.js" },
+    { name: "UI/UX Design" },
+    { name: "Responsive Design" }
   ];
 
   // Work experience data
@@ -309,10 +309,11 @@ const About = () => {
             <span>{t.searchingFor}:</span>
           </div>
           <div className="search-items">
+            <div>The meaning of life.</div>
+            <div>The perfect lady.</div>
+            <div>More mula.</div>
             <div>Innovative projects to contribute to.</div>
-            <div>Opportunities to grow as a developer.</div>
             <div>Collaborative coding experiences.</div>
-            <div>More challenging problems to solve.</div>
           </div>
         </div>
         
@@ -351,6 +352,10 @@ const About = () => {
               <span>South African</span>
             </div>
             <div className="box2">
+              <PiEyesBold />
+              <span>Women</span>
+            </div>
+            <div className="box2">
               <FaLanguage />
               <span>English, Portuguese</span>
             </div>
@@ -370,15 +375,8 @@ const About = () => {
           <div className="skills-container">
             {professionalSkills.map((skill, index) => (
               <div key={index} className="skill-item">
-                <div className="skill-info">
-                  <span className="skill-name">{skill.name}</span>
-                  <span className="skill-percentage">{skill.level}%</span>
-                </div>
-                <div className="skill-bar-bg">
-                  <div 
-                    className="skill-bar-fill" 
-                    style={{ width: `${skill.level}%` }}
-                  ></div>
+                <div className="skill-chip">
+                  {skill.name}
                 </div>
               </div>
             ))}
@@ -493,7 +491,6 @@ const About = () => {
             <div className="box2">horror movies</div>
             <div className="box2">coding</div>
             <div className="box2">working out</div>
-            <div className="box2">UI/UX design</div>
             <div className="box2">gaming</div>
           </div>
         </div>
