@@ -128,14 +128,6 @@ const Contact = () => {
       number: "03"
     },
     {
-      id: "linkedin",
-      icon: <CiLinkedin />,
-      label: "linkedin",
-      color: "#0A66C2",
-      action: () => handleDivClick("https://linkedin.com/in/yourprofile"),
-      number: "04"
-    },
-    {
       id: "resume",
       icon: <FaFilePdf />,
       label: "download resume",
