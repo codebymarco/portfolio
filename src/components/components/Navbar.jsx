@@ -223,6 +223,8 @@ const Navbar = () => {
         
         .nav-item {
           position: relative;
+          display: flex;
+          align-items: center;
         }
         
         .desktop-links-link {
@@ -246,6 +248,9 @@ const Navbar = () => {
         /* Language selector styles */
         .language-selector {
           margin-left: 12px;
+          height: 100%;
+          display: flex;
+          align-items: center;
         }
         
         .lang-select-wrapper {
@@ -259,6 +264,7 @@ const Navbar = () => {
           position: relative;
           cursor: pointer;
           user-select: none;
+          height: 24px; /* Match the height of text links */
         }
         
         .lang-select-wrapper:hover {
@@ -277,6 +283,8 @@ const Navbar = () => {
           font-size: 0.9rem;
           font-weight: 500;
           margin-right: 4px;
+          display: flex;
+          align-items: center;
         }
         
         .arrow-icon {
