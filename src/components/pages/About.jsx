@@ -450,21 +450,6 @@ const About = () => {
                 <span>Animation</span>
               </div>
             </div>
-            <div className="project-card">
-              <div className="project-header">
-                <h3>Custom Furniture</h3>
-                <span className="project-tag">Carpentry</span>
-              </div>
-              <p>
-                Built custom furniture pieces during carpentry career,
-                showcasing attention to detail.
-              </p>
-              <div className="project-tech">
-                <span>Woodworking</span>
-                <span>Design</span>
-                <span>Craftsmanship</span>
-              </div>
-            </div>
           </div>
         </div>
 
