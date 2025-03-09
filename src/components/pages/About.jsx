@@ -29,7 +29,7 @@ import { BiCodeAlt } from "react-icons/bi";
 const About = () => {
   // Array of images (using the same image URL for demonstration)
   const images = [img, img, img, img, pic];
-  
+
   // Selected language for the interface
   const [language, setLanguage] = useState("english");
 
@@ -43,7 +43,7 @@ const About = () => {
       skills: "Professional Skills",
       experience: "Work Experience",
       education: "Education",
-      projects: "Notable Projects"
+      projects: "Notable Projects",
     },
     zulu: {
       title: "Mayelana",
@@ -54,7 +54,7 @@ const About = () => {
       skills: "Amakhono omsebenzi",
       experience: "Isipiliyoni somsebenzi",
       education: "Imfundo",
-      projects: "Amaphrojekthi abalulekile"
+      projects: "Amaphrojekthi abalulekile",
     },
     afrikaans: {
       title: "Oor",
@@ -65,7 +65,7 @@ const About = () => {
       skills: "Professionele vaardighede",
       experience: "Werkervaring",
       education: "Opvoeding",
-      projects: "Noemenswaardige projekte"
+      projects: "Noemenswaardige projekte",
     },
     espanol: {
       title: "Acerca de",
@@ -76,8 +76,8 @@ const About = () => {
       skills: "Habilidades profesionales",
       experience: "Experiencia laboral",
       education: "Educación",
-      projects: "Proyectos destacados"
-    }
+      projects: "Proyectos destacados",
+    },
   };
 
   // Get current language text
@@ -113,7 +113,7 @@ const About = () => {
     { name: "HTML/CSS" },
     { name: "Node.js" },
     { name: "UI/UX Design" },
-    { name: "Responsive Design" }
+    { name: "Responsive Design" },
   ];
 
   // Work experience data
@@ -122,14 +122,16 @@ const About = () => {
       company: "Decido (Truendo)",
       position: "Software Developer",
       period: "Present",
-      description: "Working on the Truendo product, focusing on front-end development and user experience."
+      description:
+        "Working on the Truendo product, focusing on front-end development and user experience.",
     },
     {
       company: "Previous Company",
       position: "Carpenter",
       period: "Past",
-      description: "Built sturdy tables and furniture, developing hands-on skills and attention to detail."
-    }
+      description:
+        "Built sturdy tables and furniture, developing hands-on skills and attention to detail.",
+    },
   ];
 
   return (
@@ -149,39 +151,6 @@ const About = () => {
         />
       </Helmet>
       <div className="about">
-        <div className="language-selector">
-          <div className="language-label">
-            <FaLanguage />
-            <span>Language:</span>
-          </div>
-          <div className="language-options">
-            <button 
-              className={language === "english" ? "active" : ""} 
-              onClick={() => handleLanguageChange("english")}
-            >
-              EN
-            </button>
-            <button 
-              className={language === "zulu" ? "active" : ""} 
-              onClick={() => handleLanguageChange("zulu")}
-            >
-              ZU
-            </button>
-            <button 
-              className={language === "afrikaans" ? "active" : ""} 
-              onClick={() => handleLanguageChange("afrikaans")}
-            >
-              AF
-            </button>
-            <button 
-              className={language === "espanol" ? "active" : ""} 
-              onClick={() => handleLanguageChange("espanol")}
-            >
-              ES
-            </button>
-          </div>
-        </div>
-        
         <div className="fixed-menu">
           <GrPowerReset style={{ color: "gray" }} />
           <RxCross2 style={{ color: "red" }} />
@@ -201,7 +170,7 @@ const About = () => {
             <AiFillThunderbolt style={{ color: "dodgerblue" }} />
           </div>
         </div>
-        
+
         {/* Photo section with carousel */}
         <div className="about-photo">
           <div className="about-photo-absolute">
@@ -301,7 +270,7 @@ const About = () => {
             </button>
           </div>
         </div>
-        
+
         {/* Looking for section */}
         <div className="about-about">
           <div className="about-section-top">
@@ -316,7 +285,7 @@ const About = () => {
             <div>Collaborative coding experiences.</div>
           </div>
         </div>
-        
+
         {/* About me section */}
         <div className="about-main">
           <div className="about-section-top">
@@ -326,10 +295,10 @@ const About = () => {
             Hello, I'm Marco—a South African Indian based in Durban. I completed
             high school and began my career as a carpenter. Being self-taught, I
             later transitioned into software development. I currently work for
-            Decido on the Truendo product. My diverse skill set spans from building 
-            sturdy tables to developing functional websites. I'm passionate about 
-            creating intuitive user experiences and solving complex problems through 
-            elegant code solutions.
+            Decido on the Truendo product. My diverse skill set spans from
+            building sturdy tables to developing functional websites. I'm
+            passionate about creating intuitive user experiences and solving
+            complex problems through elegant code solutions.
           </span>
         </div>
 
@@ -375,9 +344,7 @@ const About = () => {
           <div className="skills-container">
             {professionalSkills.map((skill, index) => (
               <div key={index} className="skill-item">
-                <div className="skill-chip">
-                  {skill.name}
-                </div>
+                <div className="skill-chip">{skill.name}</div>
               </div>
             ))}
           </div>
@@ -417,7 +384,10 @@ const About = () => {
               </div>
               <div className="education-content">
                 <h3>Self-taught Developer</h3>
-                <p>Continuous learning through online resources, documentation, and practical projects</p>
+                <p>
+                  Continuous learning through online resources, documentation,
+                  and practical projects
+                </p>
               </div>
             </div>
             <div className="education-item">
@@ -426,7 +396,9 @@ const About = () => {
               </div>
               <div className="education-content">
                 <h3>High School Diploma</h3>
-                <p>Completed secondary education with focus on technical subjects</p>
+                <p>
+                  Completed secondary education with focus on technical subjects
+                </p>
               </div>
             </div>
           </div>
@@ -444,7 +416,10 @@ const About = () => {
                 <h3>Truendo</h3>
                 <span className="project-tag">Professional</span>
               </div>
-              <p>Working on front-end development and user experience for the Truendo product at Decido.</p>
+              <p>
+                Working on front-end development and user experience for the
+                Truendo product at Decido.
+              </p>
               <div className="project-tech">
                 <span>React</span>
                 <span>JavaScript</span>
@@ -456,7 +431,10 @@ const About = () => {
                 <h3>Portfolio Website</h3>
                 <span className="project-tag">Personal</span>
               </div>
-              <p>Designed and developed a personal portfolio website to showcase skills and projects.</p>
+              <p>
+                Designed and developed a personal portfolio website to showcase
+                skills and projects.
+              </p>
               <div className="project-tech">
                 <span>React</span>
                 <span>CSS</span>
@@ -468,7 +446,10 @@ const About = () => {
                 <h3>Custom Furniture</h3>
                 <span className="project-tag">Carpentry</span>
               </div>
-              <p>Built custom furniture pieces during carpentry career, showcasing attention to detail.</p>
+              <p>
+                Built custom furniture pieces during carpentry career,
+                showcasing attention to detail.
+              </p>
               <div className="project-tech">
                 <span>Woodworking</span>
                 <span>Design</span>
@@ -494,7 +475,7 @@ const About = () => {
             <div className="box2">gaming</div>
           </div>
         </div>
-        
+
         {/* Music Anthems section */}
         <Anthems />
 
@@ -502,28 +483,18 @@ const About = () => {
       </div>
 
       <style jsx>{`
-        .language-selector {
-          position: absolute;
-          top: 20px;
-          right: 20px;
-          display: flex;
-          align-items: center;
-          gap: 10px;
-          z-index: 500;
-        }
-        
         .language-label {
           display: flex;
           align-items: center;
           gap: 5px;
-          color: #61DAFB;
+          color: #61dafb;
         }
-        
+
         .language-options {
           display: flex;
           gap: 5px;
         }
-        
+
         .language-options button {
           background-color: rgba(97, 218, 251, 0.1);
           border: 1px solid rgba(97, 218, 251, 0.3);
@@ -533,70 +504,70 @@ const About = () => {
           cursor: pointer;
           transition: all 0.3s ease;
         }
-        
+
         .language-options button:hover {
           background-color: rgba(97, 218, 251, 0.2);
         }
-        
+
         .language-options button.active {
           background-color: rgba(97, 218, 251, 0.3);
-          border-color: #61DAFB;
+          border-color: #61dafb;
         }
-        
+
         .search-items {
           display: flex;
           flex-direction: column;
           gap: 10px;
           margin-top: 15px;
         }
-        
+
         .search-items div {
           padding: 5px 0;
           border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
-        
+
         .about-text {
           line-height: 1.6;
           font-size: 1.05rem;
         }
-        
+
         .section-header {
           display: flex;
           align-items: center;
           gap: 10px;
           margin-bottom: 15px;
         }
-        
+
         .section-icon {
-          color: #61DAFB;
+          color: #61dafb;
           font-size: 1.3rem;
         }
-        
+
         /* Skills styles */
         .skills-container {
           display: flex;
           flex-direction: column;
           gap: 15px;
         }
-        
+
         .skill-item {
           width: 100%;
         }
-        
+
         .skill-info {
           display: flex;
           justify-content: space-between;
           margin-bottom: 5px;
         }
-        
+
         .skill-name {
           font-weight: 500;
         }
-        
+
         .skill-percentage {
-          color: #61DAFB;
+          color: #61dafb;
         }
-        
+
         .skill-bar-bg {
           width: 100%;
           height: 8px;
@@ -604,22 +575,22 @@ const About = () => {
           border-radius: 4px;
           overflow: hidden;
         }
-        
+
         .skill-bar-fill {
           height: 100%;
-          background: linear-gradient(90deg, #61DAFB, #3490dc);
+          background: linear-gradient(90deg, #61dafb, #3490dc);
           border-radius: 4px;
           transition: width 1s ease-in-out;
         }
-        
+
         /* Timeline styles */
         .timeline-container {
           position: relative;
           padding-left: 30px;
         }
-        
+
         .timeline-container:before {
-          content: '';
+          content: "";
           position: absolute;
           left: 0;
           top: 0;
@@ -627,12 +598,12 @@ const About = () => {
           width: 2px;
           background-color: rgba(97, 218, 251, 0.5);
         }
-        
+
         .timeline-item {
           position: relative;
           margin-bottom: 30px;
         }
-        
+
         .timeline-marker {
           position: absolute;
           left: -36px;
@@ -640,43 +611,43 @@ const About = () => {
           width: 12px;
           height: 12px;
           border-radius: 50%;
-          background-color: #61DAFB;
+          background-color: #61dafb;
           border: 2px solid #1a1a1a;
         }
-        
+
         .timeline-content h3 {
           margin: 0 0 5px;
           color: #fff;
         }
-        
+
         .timeline-content h4 {
           margin: 0 0 10px;
-          color: #61DAFB;
+          color: #61dafb;
           font-weight: normal;
         }
-        
+
         .timeline-period {
           font-style: italic;
           color: rgba(255, 255, 255, 0.7);
           margin-bottom: 10px;
         }
-        
+
         .timeline-description {
           line-height: 1.5;
         }
-        
+
         /* Education styles */
         .education-container {
           display: flex;
           flex-direction: column;
           gap: 20px;
         }
-        
+
         .education-item {
           display: flex;
           gap: 15px;
         }
-        
+
         .education-icon {
           background-color: rgba(97, 218, 251, 0.1);
           width: 40px;
@@ -687,108 +658,95 @@ const About = () => {
           justify-content: center;
           flex-shrink: 0;
         }
-        
+
         .education-icon svg {
-          color: #61DAFB;
+          color: #61dafb;
           font-size: 1.2rem;
         }
-        
+
         .education-content h3 {
           margin: 0 0 8px;
           color: #fff;
         }
-        
+
         .education-content p {
           margin: 0;
           color: rgba(255, 255, 255, 0.8);
           line-height: 1.5;
         }
-        
+
         /* Projects styles */
         .projects-grid {
           display: grid;
           grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
           gap: 20px;
         }
-        
+
         .project-card {
           background-color: rgba(255, 255, 255, 0.05);
           border-radius: 8px;
           padding: 20px;
           transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        
+
         .project-card:hover {
           transform: translateY(-5px);
           box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
           background-color: rgba(255, 255, 255, 0.08);
         }
-        
+
         .project-header {
           display: flex;
           justify-content: space-between;
           align-items: center;
           margin-bottom: 10px;
         }
-        
+
         .project-header h3 {
           margin: 0;
-          color: #61DAFB;
+          color: #61dafb;
         }
-        
+
         .project-tag {
           background-color: rgba(97, 218, 251, 0.2);
-          color: #61DAFB;
+          color: #61dafb;
           padding: 3px 8px;
           border-radius: 12px;
           font-size: 0.8rem;
         }
-        
+
         .project-card p {
           margin: 10px 0 15px;
           line-height: 1.5;
         }
-        
+
         .project-tech {
           display: flex;
           flex-wrap: wrap;
           gap: 8px;
         }
-        
+
         .project-tech span {
           background-color: rgba(255, 255, 255, 0.1);
           padding: 4px 10px;
           border-radius: 15px;
           font-size: 0.85rem;
         }
-        
+
         /* Responsive adjustments */
         @media (max-width: 768px) {
           .projects-grid {
             grid-template-columns: 1fr;
           }
-          
-          .language-selector {
-            top: 70px;
-            right: 10px;
-          }
         }
-        
+
         @media (max-width: 576px) {
           .education-item {
             flex-direction: column;
           }
-          
+
           .education-icon {
             margin-bottom: 10px;
-          }
-          
-          .language-selector {
-            position: relative;
-            top: auto;
-            right: auto;
-            margin-bottom: 20px;
-            justify-content: flex-end;
           }
         }
       `}</style>
