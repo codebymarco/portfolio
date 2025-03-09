@@ -1,33 +1,37 @@
-import React from 'react';
-import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
-import { MdEmail } from 'react-icons/md';
-import { FaXTwitter } from 'react-icons/fa6';
-import { HiOutlineGlobeAlt } from 'react-icons/hi';
-import { IoIosArrowDown } from 'react-icons/io';
-import { motion } from 'framer-motion';
-import useTranslationStore from '../../store/store';
+import React from "react";
+import { FaGithub, FaLinkedinIn } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+import { FaXTwitter } from "react-icons/fa6";
+import { HiOutlineGlobeAlt } from "react-icons/hi";
+import { IoIosArrowDown } from "react-icons/io";
+import { motion } from "framer-motion";
+import useTranslationStore from "../../store/store";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const { language, setLanguage } = useTranslationStore();
   const [showLanguageMenu, setShowLanguageMenu] = React.useState(false);
   const languageMenuRef = React.useRef(null);
-  
+
   const currentYear = new Date().getFullYear();
-  
+
   // Handle clicks outside the language menu
   React.useEffect(() => {
     const handleClickOutside = (event) => {
-      if (languageMenuRef.current && !languageMenuRef.current.contains(event.target)) {
+      if (
+        languageMenuRef.current &&
+        !languageMenuRef.current.contains(event.target)
+      ) {
         setShowLanguageMenu(false);
       }
     };
-    
-    document.addEventListener('mousedown', handleClickOutside);
+
+    document.addEventListener("mousedown", handleClickOutside);
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
-  
+
   // Language options
   const languages = [
     { code: "en", label: "English" },
@@ -35,48 +39,48 @@ const Footer = () => {
     { code: "af", label: "Afrikaans" },
     { code: "es", label: "Español" },
   ];
-  
+
   // Get current language display
   const getCurrentLanguageDisplay = () => {
-    const currentLang = languages.find(lang => lang.code === language);
+    const currentLang = languages.find((lang) => lang.code === language);
     return currentLang ? currentLang.label : "English";
   };
-  
+
   // Handle language change
   const handleLanguageChange = (selectedLanguage) => {
     setLanguage(selectedLanguage);
     setShowLanguageMenu(false);
   };
-  
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
         staggerChildren: 0.15,
-        delayChildren: 0.3
+        delayChildren: 0.3,
       },
     },
   };
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
       transition: {
         type: "spring",
         stiffness: 100,
-        damping: 12
-      }
+        damping: 12,
+      },
     },
   };
-  
+
   return (
     <footer className="footer">
       <div className="container">
         {/* Top section with logo and navigation */}
-        <motion.div 
+        <motion.div
           className="footer-top"
           initial="hidden"
           whileInView="visible"
@@ -86,58 +90,64 @@ const Footer = () => {
           {/* Logo/Brand */}
           <motion.div className="footer-brand" variants={itemVariants}>
             <h3 className="brand-name">Miguelmarco Ramcharan</h3>
-            <p className="brand-desc">
-              Fullstack Software Engineer
-            </p>
+            <p className="brand-desc">Fullstack Software Engineer</p>
           </motion.div>
-          
+
           {/* Quick Links */}
           <motion.div className="footer-links" variants={itemVariants}>
             <h4 className="footer-heading">Quick Links</h4>
             <ul className="footer-list">
-              {['Home', 'Projects', 'About', 'Services', 'Contact'].map((item) => (
+              {["Home", "Projects", "About", "Contact", "Career", "Blog"].map((item) => (
                 <li key={item} className="footer-list-item">
-                  <a href={`#${item.toLowerCase()}`} className="footer-link">
+                  <Link to={`${item.toLowerCase()}`} className="footer-link">
                     {item}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
           </motion.div>
-          
+
           {/* Contact Info */}
           <motion.div className="footer-contact" variants={itemVariants}>
             <h4 className="footer-heading">Contact</h4>
             <p className="contact-info">
-              <span className="contact-label">Email:</span> miguelmarcoramcharan@gmail.com
+              <span className="contact-label">Email:</span>{" "}
+              miguelmarcoramcharan@gmail.com
             </p>
             <p className="contact-info">
               <span className="contact-label">Phone:</span> 061 149 8474
             </p>
             <p className="contact-info">
-              <span className="contact-label">Location:</span> Durban, South Africa
+              <span className="contact-label">Location:</span> Durban, South
+              Africa
             </p>
           </motion.div>
-          
+
           {/* Language Selector */}
           <motion.div className="footer-language" variants={itemVariants}>
             <h4 className="footer-heading">Language</h4>
             <div className="footer-lang-selector" ref={languageMenuRef}>
-              <div 
+              <div
                 className="footer-selected-lang"
                 onClick={() => setShowLanguageMenu(!showLanguageMenu)}
               >
                 <HiOutlineGlobeAlt className="footer-lang-icon" />
                 <span>{getCurrentLanguageDisplay()}</span>
-                <IoIosArrowDown className={`footer-arrow-icon ${showLanguageMenu ? "rotated" : ""}`} />
+                <IoIosArrowDown
+                  className={`footer-arrow-icon ${
+                    showLanguageMenu ? "rotated" : ""
+                  }`}
+                />
               </div>
-              
+
               {showLanguageMenu && (
                 <div className="footer-lang-menu">
                   {languages.map((lang) => (
                     <div
                       key={lang.code}
-                      className={`footer-lang-option ${language === lang.code ? "active" : ""}`}
+                      className={`footer-lang-option ${
+                        language === lang.code ? "active" : ""
+                      }`}
                       onClick={() => handleLanguageChange(lang.code)}
                     >
                       {lang.label}
@@ -148,45 +158,53 @@ const Footer = () => {
             </div>
           </motion.div>
         </motion.div>
-        
+
         {/* Social Media Icons */}
-        <motion.div 
+        <motion.div
           className="social-icons"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
           viewport={{ once: true }}
         >
-          <a href="https://github.com/codebymarco" 
-             target="_blank" 
-             rel="noopener noreferrer"
-             className="social-icon github"
-             aria-label="GitHub Profile">
+          <a
+            href="https://github.com/codebymarco"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="social-icon github"
+            aria-label="GitHub Profile"
+          >
             <FaGithub size={24} />
           </a>
-          <a href="https://linkedin.com/in/yourusername" 
-             target="_blank" 
-             rel="noopener noreferrer"
-             className="social-icon linkedin"
-             aria-label="LinkedIn Profile">
+          <a
+            href="https://linkedin.com/in/yourusername"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="social-icon linkedin"
+            aria-label="LinkedIn Profile"
+          >
             <FaLinkedinIn size={24} />
           </a>
-          <a href="mailto:miguelmarcoramcharan@gmail.com" 
-             className="social-icon email"
-             aria-label="Send Email">
+          <a
+            href="mailto:miguelmarcoramcharan@gmail.com"
+            className="social-icon email"
+            aria-label="Send Email"
+          >
             <MdEmail size={26} />
           </a>
-          <a href="https://twitter.com/yourusername" 
-             target="_blank" 
-             rel="noopener noreferrer"
-             className="social-icon twitter"
-             aria-label="Twitter Profile">
+          <a
+            href="https://twitter.com/yourusername"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="social-icon twitter"
+            aria-label="Twitter Profile"
+          >
             <FaXTwitter size={22} />
           </a>
         </motion.div>
-        
+
         {/* Copyright */}
-        <motion.div 
+        <motion.div
           className="footer-bottom"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -209,7 +227,12 @@ const Footer = () => {
 
       <style jsx>{`
         .footer {
-          background: linear-gradient(to bottom, #000000 0%, rgba(0, 0, 0, 0.95) 70%, rgba(13, 21, 28, 0.9) 100%);
+          background: linear-gradient(
+            to bottom,
+            #000000 0%,
+            rgba(0, 0, 0, 0.95) 70%,
+            rgba(13, 21, 28, 0.9) 100%
+          );
           color: #ffffff;
           padding: 4rem 2rem 2rem;
           width: 100%;
@@ -220,7 +243,7 @@ const Footer = () => {
         }
 
         .footer::before {
-          content: '';
+          content: "";
           position: absolute;
           top: -150px;
           right: -150px;
@@ -231,9 +254,9 @@ const Footer = () => {
           filter: blur(120px);
           z-index: 0;
         }
-        
+
         .footer::after {
-          content: '';
+          content: "";
           position: absolute;
           bottom: -50px;
           left: -50px;
@@ -274,7 +297,7 @@ const Footer = () => {
         }
 
         .brand-name {
-          color: #61DAFB;
+          color: #61dafb;
           font-size: 2rem;
           margin: 0 0 1rem 0;
           position: relative;
@@ -282,7 +305,7 @@ const Footer = () => {
           text-shadow: 0 0 15px rgba(97, 218, 251, 0.4);
           letter-spacing: 1px;
           font-weight: 600;
-          background: linear-gradient(to right, #61DAFB, #ffffff);
+          background: linear-gradient(to right, #61dafb, #ffffff);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
         }
@@ -294,7 +317,11 @@ const Footer = () => {
           left: 0;
           width: 70px;
           height: 3px;
-          background: linear-gradient(to right, #61DAFB, rgba(97, 218, 251, 0.3));
+          background: linear-gradient(
+            to right,
+            #61dafb,
+            rgba(97, 218, 251, 0.3)
+          );
           border-radius: 3px;
           box-shadow: 0 0 15px rgba(97, 218, 251, 0.6);
         }
@@ -307,7 +334,9 @@ const Footer = () => {
           line-height: 1.6;
         }
 
-        .footer-links, .footer-contact, .footer-language {
+        .footer-links,
+        .footer-contact,
+        .footer-language {
           min-width: 180px;
         }
 
@@ -327,7 +356,11 @@ const Footer = () => {
           left: 0;
           width: 40px;
           height: 2px;
-          background: linear-gradient(to right, #61DAFB, rgba(97, 218, 251, 0.3));
+          background: linear-gradient(
+            to right,
+            #61dafb,
+            rgba(97, 218, 251, 0.3)
+          );
           border-radius: 2px;
           box-shadow: 0 0 10px rgba(97, 218, 251, 0.5);
         }
@@ -352,7 +385,7 @@ const Footer = () => {
         }
 
         .footer-link:hover {
-          color: #61DAFB;
+          color: #61dafb;
           padding-left: 5px;
         }
 
@@ -363,7 +396,7 @@ const Footer = () => {
           left: 0;
           width: 0;
           height: 1px;
-          background-color: #61DAFB;
+          background-color: #61dafb;
           transition: width 0.3s ease;
         }
 
@@ -415,7 +448,7 @@ const Footer = () => {
         }
 
         .footer-lang-icon {
-          color: #61DAFB;
+          color: #61dafb;
           font-size: 1.2rem;
           margin-right: 8px;
         }
@@ -424,7 +457,7 @@ const Footer = () => {
           font-size: 0.8rem;
           margin-left: 8px;
           transition: transform 0.3s ease;
-          color: #61DAFB;
+          color: #61dafb;
         }
 
         .footer-arrow-icon.rotated {
@@ -454,12 +487,12 @@ const Footer = () => {
 
         .footer-lang-option:hover {
           background-color: rgba(97, 218, 251, 0.1);
-          color: #61DAFB;
+          color: #61dafb;
         }
 
         .footer-lang-option.active {
           background-color: rgba(97, 218, 251, 0.15);
-          color: #61DAFB;
+          color: #61dafb;
           font-weight: 500;
         }
 
@@ -471,31 +504,33 @@ const Footer = () => {
           width: fit-content;
           position: relative;
         }
-        
+
         .social-icons::before {
-          content: '';
+          content: "";
           position: absolute;
           top: 0;
           left: -20%;
           width: 140%;
           height: 1px;
-          background: linear-gradient(90deg, 
-            rgba(97, 218, 251, 0), 
-            rgba(97, 218, 251, 0.3) 50%, 
+          background: linear-gradient(
+            90deg,
+            rgba(97, 218, 251, 0),
+            rgba(97, 218, 251, 0.3) 50%,
             rgba(97, 218, 251, 0)
           );
         }
-        
+
         .social-icons::after {
-          content: '';
+          content: "";
           position: absolute;
           bottom: 0;
           left: -20%;
           width: 140%;
           height: 1px;
-          background: linear-gradient(90deg, 
-            rgba(97, 218, 251, 0), 
-            rgba(97, 218, 251, 0.3) 50%, 
+          background: linear-gradient(
+            90deg,
+            rgba(97, 218, 251, 0),
+            rgba(97, 218, 251, 0.3) 50%,
             rgba(97, 218, 251, 0)
           );
         }
@@ -515,15 +550,19 @@ const Footer = () => {
           border: 1px solid rgba(97, 218, 251, 0.2);
           backdrop-filter: blur(5px);
         }
-        
+
         .social-icon::before {
-          content: '';
+          content: "";
           position: absolute;
           top: 0;
           left: 0;
           width: 100%;
           height: 100%;
-          background: linear-gradient(45deg, rgba(97, 218, 251, 0.15), transparent);
+          background: linear-gradient(
+            45deg,
+            rgba(97, 218, 251, 0.15),
+            transparent
+          );
           opacity: 0;
           transition: opacity 0.3s ease;
         }
@@ -532,38 +571,41 @@ const Footer = () => {
           color: #fff;
           transform: translateY(-5px) scale(1.1);
           border-color: rgba(97, 218, 251, 0.6);
-          box-shadow: 
-            0 10px 20px -10px rgba(0, 0, 0, 0.6),
+          box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.6),
             0 0 15px rgba(97, 218, 251, 0.3),
             inset 0 0 10px rgba(97, 218, 251, 0.15);
         }
-        
+
         .social-icon:hover::before {
           opacity: 1;
         }
-        
+
         .social-icon.github:hover {
           background: rgba(36, 41, 46, 0.8);
           border-color: #2ea44f;
-          box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.6), 0 0 15px rgba(46, 164, 79, 0.4);
+          box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.6),
+            0 0 15px rgba(46, 164, 79, 0.4);
         }
-        
+
         .social-icon.linkedin:hover {
           background: rgba(10, 102, 194, 0.2);
           border-color: #0a66c2;
-          box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.6), 0 0 15px rgba(10, 102, 194, 0.4);
+          box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.6),
+            0 0 15px rgba(10, 102, 194, 0.4);
         }
-        
+
         .social-icon.email:hover {
           background: rgba(234, 67, 53, 0.2);
           border-color: #ea4335;
-          box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.6), 0 0 15px rgba(234, 67, 53, 0.4);
+          box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.6),
+            0 0 15px rgba(234, 67, 53, 0.4);
         }
-        
+
         .social-icon.twitter:hover {
           background: rgba(29, 161, 242, 0.2);
           border-color: #1da1f2;
-          box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.6), 0 0 15px rgba(29, 161, 242, 0.4);
+          box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.6),
+            0 0 15px rgba(29, 161, 242, 0.4);
         }
 
         .footer-bottom {
@@ -575,17 +617,18 @@ const Footer = () => {
           font-size: 0.9rem;
           position: relative;
         }
-        
+
         .footer-bottom::before {
-          content: '';
+          content: "";
           position: absolute;
           top: 0;
           left: 0;
           width: 100%;
           height: 1px;
-          background: linear-gradient(90deg, 
-            rgba(97, 218, 251, 0), 
-            rgba(97, 218, 251, 0.2) 50%, 
+          background: linear-gradient(
+            90deg,
+            rgba(97, 218, 251, 0),
+            rgba(97, 218, 251, 0.2) 50%,
             rgba(97, 218, 251, 0)
           );
         }
@@ -596,14 +639,14 @@ const Footer = () => {
           font-size: 0.95rem;
           position: relative;
         }
-        
+
         .copyright::after {
-          content: '•';
-          color: #61DAFB;
+          content: "•";
+          color: #61dafb;
           margin-left: 0.5rem;
           font-size: 1.2rem;
           opacity: 0.6;
-          text-shadow: 0 0 8px #61DAFB;
+          text-shadow: 0 0 8px #61dafb;
           position: absolute;
           display: none;
         }
@@ -613,17 +656,18 @@ const Footer = () => {
           gap: 2rem;
           position: relative;
         }
-        
+
         .legal-links::before {
-          content: '';
+          content: "";
           position: absolute;
           left: -1rem;
           top: 50%;
           width: 1px;
           height: 1.2rem;
-          background: linear-gradient(to bottom, 
-            rgba(97, 218, 251, 0), 
-            rgba(97, 218, 251, 0.3), 
+          background: linear-gradient(
+            to bottom,
+            rgba(97, 218, 251, 0),
+            rgba(97, 218, 251, 0.3),
             rgba(97, 218, 251, 0)
           );
           transform: translateY(-50%);
@@ -637,22 +681,22 @@ const Footer = () => {
           position: relative;
           padding: 0.25rem 0;
         }
-        
+
         .legal-link::after {
-          content: '';
+          content: "";
           position: absolute;
           width: 0;
           height: 1px;
           bottom: 0;
           left: 0;
-          background-color: #61DAFB;
+          background-color: #61dafb;
           transition: width 0.3s ease;
         }
 
         .legal-link:hover {
-          color: #61DAFB;
+          color: #61dafb;
         }
-        
+
         .legal-link:hover::after {
           width: 100%;
         }
@@ -662,7 +706,7 @@ const Footer = () => {
           .footer {
             padding: 3rem 1.5rem 1.5rem;
           }
-          
+
           .container {
             gap: 2.5rem;
           }
@@ -673,7 +717,7 @@ const Footer = () => {
             flex-direction: column;
             gap: 2.5rem;
           }
-          
+
           .footer-brand,
           .footer-links,
           .footer-contact,
@@ -688,7 +732,7 @@ const Footer = () => {
             text-align: center;
             gap: 1rem;
           }
-          
+
           .social-icons {
             justify-content: center;
           }
@@ -698,15 +742,15 @@ const Footer = () => {
           .footer {
             padding: 2.5rem 1rem 1.5rem;
           }
-          
+
           .brand-name {
             font-size: 1.6rem;
           }
-          
+
           .footer-heading {
             font-size: 1.2rem;
           }
-          
+
           .social-icon {
             width: 40px;
             height: 40px;
