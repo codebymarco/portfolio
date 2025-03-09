@@ -171,7 +171,7 @@ const About = () => {
         <div className="top">
           <div className="top-logo">
             <PiFireSimpleFill style={{ color: "red" }} />
-            <span>DevProfile</span>
+            <span>Tinder</span>
           </div>
           <div className="top-icons">
             <IoIosNotifications style={{ color: "gray" }} />
