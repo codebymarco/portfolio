@@ -20,6 +20,7 @@ import {
 } from "react-icons/si";
 import "../../styles/skillsPage.css";
 import { motion } from "framer-motion";
+import useTranslationStore from "../../store/store";
 
 const skillIcons = {
   html: { icon: FaHtml5, color: "#E34F26" },
@@ -41,6 +42,8 @@ const skillIcons = {
 };
 
 const Skills = () => {
+  const { t } = useTranslationStore();
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -59,7 +62,7 @@ const Skills = () => {
   return (
     <div className="skillsPageNew">
       <div className="skillsPageNewTop">
-        <h1>SKILLS</h1>
+        <h1>{t("skills")}</h1>
       </div>
       <motion.div
         className="skillsPageNewcontainer"
