@@ -67,10 +67,34 @@ const BannerTwo = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.3 }}
         >
-          <FaReact className="tech-icon" title="React" />
-          <FaJs className="tech-icon" title="JavaScript" />
-          <FaNodeJs className="tech-icon" title="Node.js" />
-          <FaCode className="tech-icon" title="Full Stack" />
+          <motion.span
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 1.3 }}
+          >
+            <FaReact className="tech-icon" title="React" />
+          </motion.span>
+          <motion.span
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 1.5 }}
+          >
+            <FaJs className="tech-icon" title="JavaScript" />
+          </motion.span>
+          <motion.span
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 1.7 }}
+          >
+            <FaNodeJs className="tech-icon" title="Node.js" />
+          </motion.span>
+          <motion.span
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 1.9 }}
+          >
+            <FaCode className="tech-icon" title="Full Stack" />
+          </motion.span>
         </motion.div>
 
         <motion.p
@@ -87,12 +111,26 @@ const BannerTwo = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1.7 }}
         >
-          <Link to="/contact" className="contact-btn">
-            contact me
-          </Link>
-          <Link to="/about" className="about-btn">
-            about
-          </Link>
+          <motion.span
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 2.0 }}
+            style={{ display: 'inline-block' }}
+          >
+            <Link to="/contact" className="contact-btn">
+              contact me
+            </Link>
+          </motion.span>
+          <motion.span
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 2.2 }}
+            style={{ display: 'inline-block' }}
+          >
+            <Link to="/about" className="about-btn">
+              about
+            </Link>
+          </motion.span>
         </motion.div>
       </motion.div>
 
