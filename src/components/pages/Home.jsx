@@ -4,7 +4,6 @@ import AboutSection from "../components/AboutSection";
 import BannerTwo from "./BannerTwo";
 import Skills from "./Skills";
 import Projects from "./Projects";
-import Contact from "./Contact";
 import BlogsSection from "./BlogsSection";
 
 const Home = () => {
@@ -38,7 +37,6 @@ const Home = () => {
        */}{" "}
       <Projects />
       <BlogsSection />
-      <Contact />
       <style>
         {`      .skills-wrapper {
         }
