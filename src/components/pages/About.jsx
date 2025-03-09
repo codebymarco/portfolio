@@ -110,10 +110,19 @@ const About = () => {
   const professionalSkills = [
     { name: "React" },
     { name: "JavaScript" },
+    { name: "TypeScript" },
     { name: "HTML/CSS" },
     { name: "Node.js" },
-    { name: "UI/UX Design" },
-    { name: "Responsive Design" },
+    { name: "Golang" },
+    { name: "SQL" },
+    { name: "Docker" },
+    { name: "Jenkins" },
+    { name: "Linux" },
+    { name: "Windows" },
+    { name: "VSCode" },
+    { name: "AWS" },
+    { name: "GCP" },
+    { name: "BunnyCDN" },
   ];
 
   // Work experience data

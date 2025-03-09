@@ -2,10 +2,51 @@ import React from 'react';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 import { FaXTwitter } from 'react-icons/fa6';
+import { HiOutlineGlobeAlt } from 'react-icons/hi';
+import { IoIosArrowDown } from 'react-icons/io';
 import { motion } from 'framer-motion';
+import useTranslationStore from '../../store/store';
 
 const Footer = () => {
+  const { language, setLanguage } = useTranslationStore();
+  const [showLanguageMenu, setShowLanguageMenu] = React.useState(false);
+  const languageMenuRef = React.useRef(null);
+  
   const currentYear = new Date().getFullYear();
+  
+  // Handle clicks outside the language menu
+  React.useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (languageMenuRef.current && !languageMenuRef.current.contains(event.target)) {
+        setShowLanguageMenu(false);
+      }
+    };
+    
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+  
+  // Language options
+  const languages = [
+    { code: "en", label: "English" },
+    { code: "zu", label: "Zulu" },
+    { code: "af", label: "Afrikaans" },
+    { code: "es", label: "Español" },
+  ];
+  
+  // Get current language display
+  const getCurrentLanguageDisplay = () => {
+    const currentLang = languages.find(lang => lang.code === language);
+    return currentLang ? currentLang.label : "English";
+  };
+  
+  // Handle language change
+  const handleLanguageChange = (selectedLanguage) => {
+    setLanguage(selectedLanguage);
+    setShowLanguageMenu(false);
+  };
   
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -76,6 +117,35 @@ const Footer = () => {
             <p className="contact-info">
               <span className="contact-label">Location:</span> Durban, South Africa
             </p>
+          </motion.div>
+          
+          {/* Language Selector */}
+          <motion.div className="footer-language" variants={itemVariants}>
+            <h4 className="footer-heading">Language</h4>
+            <div className="footer-lang-selector" ref={languageMenuRef}>
+              <div 
+                className="footer-selected-lang"
+                onClick={() => setShowLanguageMenu(!showLanguageMenu)}
+              >
+                <HiOutlineGlobeAlt className="footer-lang-icon" />
+                <span>{getCurrentLanguageDisplay()}</span>
+                <IoIosArrowDown className={`footer-arrow-icon ${showLanguageMenu ? "rotated" : ""}`} />
+              </div>
+              
+              {showLanguageMenu && (
+                <div className="footer-lang-menu">
+                  {languages.map((lang) => (
+                    <div
+                      key={lang.code}
+                      className={`footer-lang-option ${language === lang.code ? "active" : ""}`}
+                      onClick={() => handleLanguageChange(lang.code)}
+                    >
+                      {lang.label}
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
           </motion.div>
         </motion.div>
         
@@ -237,7 +307,7 @@ const Footer = () => {
           line-height: 1.6;
         }
 
-        .footer-links {
+        .footer-links, .footer-contact, .footer-language {
           min-width: 180px;
         }
 
@@ -318,6 +388,79 @@ const Footer = () => {
           color: #ffffff;
           font-weight: 500;
           margin-bottom: 0.2rem;
+        }
+
+        /* Language selector styling */
+        .footer-lang-selector {
+          position: relative;
+          margin-top: 1.2rem;
+          width: 100%;
+          max-width: 200px;
+        }
+
+        .footer-selected-lang {
+          display: flex;
+          align-items: center;
+          background-color: rgba(97, 218, 251, 0.1);
+          border-radius: 8px;
+          padding: 8px 12px;
+          border: 1px solid rgba(97, 218, 251, 0.3);
+          cursor: pointer;
+          transition: all 0.3s ease;
+          width: fit-content;
+        }
+
+        .footer-selected-lang:hover {
+          background-color: rgba(97, 218, 251, 0.2);
+        }
+
+        .footer-lang-icon {
+          color: #61DAFB;
+          font-size: 1.2rem;
+          margin-right: 8px;
+        }
+
+        .footer-arrow-icon {
+          font-size: 0.8rem;
+          margin-left: 8px;
+          transition: transform 0.3s ease;
+          color: #61DAFB;
+        }
+
+        .footer-arrow-icon.rotated {
+          transform: rotate(180deg);
+        }
+
+        .footer-lang-menu {
+          position: absolute;
+          top: calc(100% + 8px);
+          left: 0;
+          background-color: rgba(13, 13, 13, 0.95);
+          border-radius: 8px;
+          overflow: hidden;
+          min-width: 160px;
+          z-index: 100;
+          border: 1px solid rgba(97, 218, 251, 0.2);
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+          width: 100%;
+        }
+
+        .footer-lang-option {
+          padding: 10px 16px;
+          cursor: pointer;
+          transition: all 0.2s ease;
+          color: #aaa;
+        }
+
+        .footer-lang-option:hover {
+          background-color: rgba(97, 218, 251, 0.1);
+          color: #61DAFB;
+        }
+
+        .footer-lang-option.active {
+          background-color: rgba(97, 218, 251, 0.15);
+          color: #61DAFB;
+          font-weight: 500;
         }
 
         .social-icons {
@@ -533,7 +676,8 @@ const Footer = () => {
           
           .footer-brand,
           .footer-links,
-          .footer-contact {
+          .footer-contact,
+          .footer-language {
             width: 100%;
             max-width: 100%;
           }
