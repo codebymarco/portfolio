@@ -36,9 +36,8 @@ const skillIcons = {
   docker: { icon: FaDocker, color: "#2496ED" },
   sql: { icon: SiPostgresql, color: "#336791" }, // Using PostgreSQL icon for SQL
   nosql: { icon: SiMongodb, color: "#47A248" },
-  "aws s3": { icon: FaAws, color: "#FF9900" },
-  "aws cloudfront": { icon: FaAws, color: "#FF9900" },
-  "google cloud platform": { icon: FaGoogle, color: "#4285F4" },
+  aws: { icon: FaAws, color: "#FF9900" },
+  gcp: { icon: FaGoogle, color: "#4285F4" },
 };
 
 const Skills = () => {
@@ -84,9 +83,8 @@ const Skills = () => {
           "docker",
           "sql",
           "nosql",
-          "aws s3",
-          "aws cloudfront",
-          "google cloud platform",
+          "aws",
+          "gcp",
         ].map((skill, index) => {
           const IconComponent = skillIcons[skill].icon;
           return (

@@ -1,5 +1,5 @@
 .skillsPageNew {
-  /* Gradient that starts from #111111 at the top (matching About section's bottom) */
+  /* Retain existing styles */
   background-image: radial-gradient(circle at 50% 30%, #111111 0%, #000000 70%);
   background-color: black;
   min-height: 90vh;
@@ -11,40 +11,14 @@
   padding: 20px;
   position: relative;
   overflow: hidden;
-  margin-top: -40px; /* Negative margin to overlap the sections slightly */
-}
-
-/* Blue glow effect */
-.skillsPageNew::before {
-  content: '';
-  position: absolute;
-  top: -200px;
-  right: -200px;
-  width: 400px;
-  height: 400px;
-  border-radius: 50%;
-  background: rgba(43, 100, 255, 0.15);
-  filter: blur(120px);
-  pointer-events: none;
-  z-index: 0;
-}
-
-/* Purple glow effect */
-.skillsPageNew::after {
-  content: '';
-  position: absolute;
-  bottom: -150px;
-  left: -150px;
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  background: rgba(100, 43, 255, 0.1);
-  filter: blur(100px);
-  pointer-events: none;
-  z-index: 0;
+  margin-top: -40px;
+  /* Add this to ensure no horizontal overflow */
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .skillsPageNewTop {
+  /* Keep existing styles */
   padding: 20px;
   text-align: center;
   color: white;
@@ -54,26 +28,24 @@
   width: 100%;
   position: relative;
   z-index: 1;
-  margin-top: 40px; /* Additional margin to adjust for the overlap */
-}
-
-.skillsPageNewTop a {
-  position: absolute;
-  right: 100px;
-  top: 50%;
-  transform: translateY(-50%);
+  margin-top: 40px;
 }
 
 .skillsPageNewcontainer {
+  /* Modified grid layout */
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 50px;
-  width: fit-content;
   position: relative;
   z-index: 1;
+  /* Center the grid */
+  margin: 0 auto;
+  width: fit-content;
+  max-width: 100%;
 }
 
 .skillsPageNewcontainer .box {
+  /* Keep existing styles */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -89,71 +61,33 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
-.skillsPageNewcontainer .box:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
-  background-color: rgba(20, 20, 20, 0.8);
-}
-
-.skillsPageNewcontainer .box span {
-  display: flex;
-  align-items: center;
-}
-
-/* Mobile Styles Only */
+/* Mobile Styles - Modified to fix centering and overflow with bigger icons */
 @media screen and (max-width: 768px) {
-  .skillsPageNew::before {
-    width: 300px;
-    height: 300px;
-    top: -150px;
-    right: -150px;
-  }
-  
-  .skillsPageNew::after {
-    width: 200px;
-    height: 200px;
-    bottom: -100px;
-    left: -100px;
-  }
-  
   .skillsPageNewcontainer {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-    width: 90%;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    padding: 0 15px;
+    width: 100%;
+    max-width: 100%;
+    justify-content: center;
   }
 
   .skillsPageNewcontainer .box {
     font-size: 5rem;
-  }
-
-  .skillsPageNewTop a {
-    right: 20px;
+    padding: 12px 15px;
   }
 }
 
-/* Small Mobile */
+/* Small Mobile - Additional fixes with bigger icons */
 @media screen and (max-width: 480px) {
-  .skillsPageNew::before,
-  .skillsPageNew::after {
-    opacity: 0.7;
-  }
-  
   .skillsPageNewcontainer {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+    padding: 0 10px;
   }
 
   .skillsPageNewcontainer .box {
     font-size: 4rem;
-  }
-
-  .skillsPageNewTop a {
-    position: static;
-    margin-top: 10px;
-    transform: none;
-  }
-
-  .skillsPageNewTop {
-    flex-direction: column;
+    padding: 10px 12px;
   }
 }
