@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import "../../styles/certs.css";
-import { useState } from "react";
 
 const Projects = () => {
   const navigate = useNavigate();
@@ -11,52 +10,54 @@ const Projects = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1,
+        staggerChildren: 0.15,
       },
     },
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, y: 40 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
         type: "spring",
-        stiffness: 100,
+        stiffness: 80,
         damping: 12,
       },
     },
   };
 
-  // Project details without tech stacks
+  // Project details
   const projects = [
     {
       name: "portfoliobio",
       description: "Personal portfolio website showcasing skills and projects",
-      liveUrl: "https://iportfolio-console.vercel.app",
+      liveUrl: "https://iportfolio-console.vercel.app"
     },
     {
       name: "indeed",
       description: "Job search platform clone with custom filtering",
-      liveUrl: "https://indeed-console.vercel.app",
+      liveUrl: "https://indeed-console.vercel.app"
     },
     {
       name: "linkbio",
       description: "Linktree-style bio page for social media profiles",
-      liveUrl: "https://linkbio-console.vercel.app",
+      liveUrl: "https://linkbio-console.vercel.app"
     },
     {
       name: "formio",
       description: "Dynamic form builder and submission management system",
-      liveUrl: "https://formio-console.vercel.app",
+      liveUrl: "https://formio-console.vercel.app"
     },
   ];
 
   return (
     <div className="projects">
+      <div className="stars"></div>
       <div className="projects-top">
         <h1>PROJECTS</h1>
+        <div className="projects-intro">Explore my digital creations</div>
       </div>
       <motion.div
         className="projects-container"
@@ -64,88 +65,163 @@ const Projects = () => {
         animate="visible"
         variants={containerVariants}
       >
-        {projects.map((project) => {
-          return (
-            <motion.div
-              className="project-card-container"
-              variants={itemVariants}
-              key={project.name}
-            >
-              <div className="project-card">
-                <div className="project-card-front">
-                  <h2 className="project-title">{project.name}</h2>
-                </div>
-                <div className="project-card-back">
-                  <p className="project-description">{project.description}</p>
-                  <div className="project-actions">
-                    <div
-                      className="view-project"
-                      onClick={() => navigate(`/apps/${project.name}`)}
-                    >
-                      View Details <span>→</span>
-                    </div>
-                    <a
-                      href={project.liveUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="live-link"
-                      onClick={(e) => e.stopPropagation()}
-                    >
-                      Live Project <span>↗</span>
-                    </a>
-                  </div>
+        {projects.map((project, index) => (
+          <motion.div
+            className="flip-card"
+            variants={itemVariants}
+            key={project.name}
+            whileHover={{ scale: 1.03 }}
+          >
+            <div className="flip-card-inner">
+              <div className="flip-card-front">
+                <div className="card-content">
+                  <h2 className="project-title">
+                    {project.name}
+                  </h2>
+                  <div className="front-button">Explore</div>
                 </div>
               </div>
-            </motion.div>
-          );
-        })}
+              <div className="flip-card-back">
+                <p className="project-description">{project.description}</p>
+                <div className="project-actions">
+                  <div
+                    className="view-project"
+                    onClick={() => navigate(`/apps/${project.name}`)}
+                  >
+                    <span className="btn-text">View Details</span>
+                    <span className="btn-icon">→</span>
+                  </div>
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="live-link"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    <span className="btn-text">Live Project</span>
+                    <span className="btn-icon">↗</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        ))}
       </motion.div>
 
       <style jsx>{`
         .projects {
-          background-image: radial-gradient(
-            circle at 50% 30%,
-            #111111 0%,
-            #000000 70%
-          );
-          background-color: black;
-          min-height: 90vh;
+          background: #030307;
+          min-height: 100vh;
           display: flex;
           flex-direction: column;
           align-items: center;
           justify-content: center;
-          gap: 30px;
+          gap: 40px;
           padding: 60px 20px;
+          position: relative;
+          overflow: hidden;
+        }
+        
+        .projects::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: radial-gradient(circle at 50% 20%, rgba(30, 30, 70, 0.15), rgba(0, 0, 0, 0) 70%);
+          pointer-events: none;
+        }
+        
+        .stars {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          pointer-events: none;
+          background-image: radial-gradient(2px 2px at 20px 30px, #eee, rgba(0,0,0,0)),
+                            radial-gradient(2px 2px at 40px 70px, #fff, rgba(0,0,0,0)),
+                            radial-gradient(2px 2px at 50px 160px, #ddd, rgba(0,0,0,0)),
+                            radial-gradient(2px 2px at 90px 40px, #fff, rgba(0,0,0,0)),
+                            radial-gradient(2px 2px at 130px 80px, #fff, rgba(0,0,0,0)),
+                            radial-gradient(2px 2px at 160px 120px, #ddd, rgba(0,0,0,0));
+          background-repeat: repeat;
+          background-size: 200px 200px;
+          animation: animateStars 100s linear infinite;
+          opacity: 0.5;
+        }
+        
+        @keyframes animateStars {
+          0% {
+            background-position: 0 0;
+          }
+          100% {
+            background-position: 1000px 1000px;
+          }
         }
 
         .projects-top {
           padding: 20px;
           text-align: center;
           color: white;
-          margin-bottom: 30px;
+          margin-bottom: 20px;
           position: relative;
+          z-index: 1;
         }
 
         .projects-top h1 {
-          font-size: 3rem;
-          letter-spacing: 3px;
+          font-size: 4rem;
+          letter-spacing: 8px;
           position: relative;
           display: inline-block;
-          color: #61dafb;
-          text-shadow: 0 0 15px rgba(97, 218, 251, 0.6);
-          font-weight: 700;
+          color: transparent;
+          background: linear-gradient(45deg, #61dafb, #a139ff);
+          -webkit-background-clip: text;
+          text-shadow: 0 5px 25px rgba(97, 218, 251, 0.4);
+          font-weight: 800;
+          margin: 0;
+          animation: glow 3s ease-in-out infinite alternate;
+        }
+        
+        @keyframes glow {
+          0% {
+            text-shadow: 0 0 10px rgba(97, 218, 251, 0.4);
+          }
+          100% {
+            text-shadow: 0 0 30px rgba(97, 218, 251, 0.8), 0 0 40px rgba(161, 57, 255, 0.4);
+          }
+        }
+        
+        .projects-intro {
+          font-size: 1.2rem;
+          color: #a0a0a0;
+          margin-top: 15px;
+          letter-spacing: 2px;
+          font-weight: 300;
         }
 
         .projects-top h1:after {
           content: "";
           position: absolute;
-          bottom: -12px;
+          bottom: -15px;
           left: 50%;
           transform: translateX(-50%);
-          width: 80px;
-          height: 4px;
-          background-color: #61dafb;
-          box-shadow: 0 0 15px rgba(97, 218, 251, 0.7);
+          width: 120px;
+          height: 3px;
+          background: linear-gradient(90deg, transparent, #61dafb, #a139ff, transparent);
+          animation: lineGlow 2s infinite;
+        }
+        
+        @keyframes lineGlow {
+          0%, 100% {
+            opacity: 0.5;
+            box-shadow: 0 0 5px rgba(97, 218, 251, 0.5);
+          }
+          50% {
+            opacity: 1;
+            box-shadow: 0 0 15px rgba(97, 218, 251, 0.8), 0 0 25px rgba(161, 57, 255, 0.5);
+          }
         }
 
         .projects-container {
@@ -154,129 +230,155 @@ const Projects = () => {
           gap: 50px;
           width: fit-content;
           max-width: 1200px;
+          z-index: 1;
         }
 
-        .project-card-container {
-          perspective: 1000px;
-          width: 320px;
+        /* Flip card styles */
+        .flip-card {
+          width: 330px;
           height: 250px;
-        }
-
-        .project-card {
-          position: relative;
-          width: 100%;
-          height: 100%;
-          transition: transform 0.8s;
-          transform-style: preserve-3d;
+          perspective: 1000px;
           cursor: pointer;
         }
 
-        .project-card-container:hover .project-card {
+        .flip-card-inner {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          text-align: center;
+          transition: transform 0.6s;
+          transform-style: preserve-3d;
+          box-shadow: 0 4px 20px rgba(0,0,0,0.35), 0 0 15px rgba(97, 218, 251, 0.1);
+          border-radius: 20px;
+        }
+
+        .flip-card:hover .flip-card-inner {
           transform: rotateY(180deg);
         }
 
-        .project-card-front, .project-card-back {
+        .flip-card-front, .flip-card-back {
           position: absolute;
           width: 100%;
           height: 100%;
+          -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
-          border-radius: 18px;
+          border-radius: 20px;
           display: flex;
           flex-direction: column;
+          overflow: hidden;
         }
 
-        .project-card-front {
-          background-color: rgba(13, 13, 13, 0.9);
-          border: 1px solid rgba(97, 218, 251, 0.15);
-          box-shadow: 0 5px 20px rgba(0, 0, 0, 0.35);
-          color: white;
-          display: flex;
+        .flip-card-front {
           justify-content: center;
           align-items: center;
+          padding: 30px;
+          background-color: #111111;
+          border: 1px solid rgba(97, 218, 251, 0.15);
         }
 
-        .project-card-back {
-          background-color: rgba(18, 18, 24, 0.95);
+        .flip-card-back {
+          background: rgba(20, 20, 35, 0.95);
           color: white;
           transform: rotateY(180deg);
-          padding: 25px;
-          border: 1px solid rgba(97, 218, 251, 0.4);
-          box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5),
-            0 0 20px rgba(97, 218, 251, 0.2);
+          padding: 30px;
           justify-content: space-between;
+          border: 1px solid rgba(97, 218, 251, 0.3);
+        }
+        
+        .card-content {
+          position: relative;
+          z-index: 1;
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 25px;
         }
 
         .project-title {
-          font-size: 2.4rem;
+          font-size: 2.6rem;
           margin: 0;
-          color: #61dafb;
-          font-weight: 700;
-          letter-spacing: 0.5px;
+          font-weight: 800;
+          letter-spacing: 1px;
           text-transform: uppercase;
-          text-shadow: 0 0 10px rgba(97, 218, 251, 0.3);
+          text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+          transition: transform 0.3s ease;
+          color: #61dafb;
+        }
+        
+        .front-button {
+          background: rgba(255, 255, 255, 0.2);
+          color: white;
+          padding: 8px 24px;
+          border-radius: 30px;
+          font-size: 0.9rem;
+          font-weight: 600;
+          letter-spacing: 1px;
+          backdrop-filter: blur(5px);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+          opacity: 0;
+          transform: translateY(20px);
+          transition: all 0.3s ease;
+        }
+        
+        .flip-card:hover .front-button {
+          opacity: 1;
+          transform: translateY(0);
         }
 
         .project-description {
           color: #ddd;
-          line-height: 1.6;
+          line-height: 1.7;
           margin: 0 0 20px 0;
           font-size: 1.05rem;
+          position: relative;
+          text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
         }
 
         .project-actions {
           display: flex;
           justify-content: space-between;
           align-items: center;
+          z-index: 1;
         }
 
         .view-project,
         .live-link {
           color: #61dafb;
           font-size: 1rem;
-          font-weight: 500;
+          font-weight: 600;
           display: flex;
           align-items: center;
-          gap: 8px;
+          gap: 10px;
           text-decoration: none;
           transition: all 0.3s ease;
-          padding: 8px 0;
+          padding: 10px 16px;
+          background: rgba(97, 218, 251, 0.1);
+          border-radius: 30px;
+          border: 1px solid rgba(97, 218, 251, 0.2);
         }
 
         .view-project:hover,
         .live-link:hover {
           color: white;
+          background: rgba(97, 218, 251, 0.25);
+          box-shadow: 0 0 15px rgba(97, 218, 251, 0.3);
         }
 
-        .view-project span,
-        .live-link span {
+        .btn-icon {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
           transition: transform 0.3s ease;
         }
 
-        .view-project:hover span {
+        .view-project:hover .btn-icon {
           transform: translateX(5px);
         }
 
-        .live-link:hover span {
+        .live-link:hover .btn-icon {
           transform: translate(3px, -3px);
-        }
-
-        .live-link {
-          position: relative;
-        }
-
-        .live-link::after {
-          content: "";
-          position: absolute;
-          bottom: -2px;
-          left: 0;
-          width: 0;
-          height: 1px;
-          background-color: #61dafb;
-          transition: width 0.3s ease;
-        }
-
-        .live-link:hover::after {
-          width: 100%;
         }
 
         /* Responsive styles - tablet */
@@ -285,17 +387,22 @@ const Projects = () => {
             grid-template-columns: 1fr;
             gap: 40px;
           }
+          
+          .projects-top h1 {
+            font-size: 3rem;
+          }
         }
 
         /* Responsive styles - mobile */
         @media screen and (max-width: 480px) {
-          .project-card-container {
-            width: 280px;
+          .flip-card {
+            width: 290px;
             height: 230px;
           }
 
           .projects-top h1 {
-            font-size: 2.2rem;
+            font-size: 2.5rem;
+            letter-spacing: 5px;
           }
 
           .projects {
@@ -310,23 +417,27 @@ const Projects = () => {
           }
 
           .project-title {
-            font-size: 1.8rem;
+            font-size: 2.2rem;
+          }
+          
+          .flip-card-front, .flip-card-back {
+            padding: 25px;
           }
         }
 
         /* Very small devices */
         @media screen and (max-width: 320px) {
-          .project-card-container {
-            width: 240px;
+          .flip-card {
+            width: 250px;
             height: 200px;
           }
 
           .project-title {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
           }
-
-          .project-card-back {
-            padding: 20px;
+          
+          .projects-top h1 {
+            font-size: 2.2rem;
           }
         }
       `}</style>
