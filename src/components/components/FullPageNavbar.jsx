@@ -56,7 +56,8 @@ const FullPageNavbar = ({ close }) => {
     { label: "about", path: "/about" },
     { label: "contact", path: "/contact" },
     { label: "blog", path: "/blog" },
-    { label: "career", path: "/career" }
+    { label: "career", path: "/career" },
+    { label: "projects", path: "/apps" }
   ];
 
   return (

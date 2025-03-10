@@ -55,6 +55,11 @@ const Projects = () => {
   return (
     <div className="projects">
       <div className="stars"></div>
+      <div className="planets">
+        <div className="planet planet-1"></div>
+        <div className="planet planet-2"></div>
+        <div className="galaxy"></div>
+      </div>
       <div className="projects-top">
         <h1>PROJECTS</h1>
         <div className="projects-intro">Explore my digital creations</div>
@@ -110,7 +115,8 @@ const Projects = () => {
 
       <style jsx>{`
         .projects {
-          background: #030307;
+          background: #030318;
+          background: linear-gradient(to bottom, #01010d, #030318, #050520);
           min-height: 100vh;
           display: flex;
           flex-direction: column;
@@ -145,11 +151,101 @@ const Projects = () => {
                             radial-gradient(2px 2px at 50px 160px, #ddd, rgba(0,0,0,0)),
                             radial-gradient(2px 2px at 90px 40px, #fff, rgba(0,0,0,0)),
                             radial-gradient(2px 2px at 130px 80px, #fff, rgba(0,0,0,0)),
-                            radial-gradient(2px 2px at 160px 120px, #ddd, rgba(0,0,0,0));
+                            radial-gradient(1px 1px at 160px 120px, #ddd, rgba(0,0,0,0)),
+                            radial-gradient(1.5px 1.5px at 200px 190px, #fff, rgba(0,0,0,0)),
+                            radial-gradient(1px 1px at 240px 230px, #ddd, rgba(0,0,0,0)),
+                            radial-gradient(1.5px 1.5px at 280px 270px, #eee, rgba(0,0,0,0));
           background-repeat: repeat;
-          background-size: 200px 200px;
-          animation: animateStars 100s linear infinite;
-          opacity: 0.5;
+          background-size: 300px 300px;
+          animation: animateStars 150s linear infinite;
+          opacity: 0.7;
+        }
+
+        .planets {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          pointer-events: none;
+          overflow: hidden;
+        }
+        
+        .planet {
+          position: absolute;
+          border-radius: 50%;
+          opacity: 0.15;
+        }
+        
+        .planet-1 {
+          top: 15%;
+          right: 15%;
+          width: 80px;
+          height: 80px;
+          background: radial-gradient(circle at 30% 40%, #6b93d6, #3a539b 60%, #24365e);
+          box-shadow: 0 0 40px rgba(107, 147, 214, 0.3);
+          animation: rotatePlanet 120s linear infinite;
+        }
+        
+        .planet-2 {
+          bottom: 10%;
+          left: 10%;
+          width: 120px;
+          height: 120px;
+          background: radial-gradient(circle at 30% 40%, #ffb38a, #d46464 60%, #782b2b);
+          box-shadow: 0 0 40px rgba(212, 100, 100, 0.2);
+          animation: orbitPlanet 180s linear infinite;
+        }
+        
+        .galaxy {
+          position: absolute;
+          top: 75%;
+          right: 25%;
+          width: 200px;
+          height: 200px;
+          border-radius: 50%;
+          background: radial-gradient(ellipse at center, rgba(210, 188, 233, 0.3) 0%, rgba(161, 57, 255, 0.1) 40%, rgba(0, 0, 0, 0) 70%);
+          transform: rotate(-45deg) scale(1.5);
+          opacity: 0.2;
+          animation: pulseGalaxy 15s ease-in-out infinite alternate;
+        }
+        
+        @keyframes rotatePlanet {
+          0% {
+            transform: rotate(0deg);
+          }
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+        
+        @keyframes orbitPlanet {
+          0% {
+            transform: translateX(0) translateY(0);
+          }
+          25% {
+            transform: translateX(30px) translateY(-20px);
+          }
+          50% {
+            transform: translateX(10px) translateY(-40px);
+          }
+          75% {
+            transform: translateX(-30px) translateY(-20px);
+          }
+          100% {
+            transform: translateX(0) translateY(0);
+          }
+        }
+        
+        @keyframes pulseGalaxy {
+          0%, 100% {
+            transform: rotate(-45deg) scale(1.5);
+            opacity: 0.2;
+          }
+          50% {
+            transform: rotate(-45deg) scale(1.8);
+            opacity: 0.3;
+          }
         }
         
         @keyframes animateStars {
