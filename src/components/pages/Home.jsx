@@ -4,7 +4,7 @@ import AboutSection from "../components/AboutSection";
 import BannerTwo from "./BannerTwo";
 import Skills from "./Skills";
 import BlogsSection from "./BlogsSection";
-import ProjectsSection from "./ProjectsSection";
+import Projects from "./Projects";
 
 const Home = () => {
   useEffect(() => {
@@ -35,7 +35,7 @@ const Home = () => {
       </div>
       {/*       <Certs />
        */}{" "}
-      <ProjectsSection />
+      <Projects />
       <BlogsSection />
       <style>
         {`      .skills-wrapper {
