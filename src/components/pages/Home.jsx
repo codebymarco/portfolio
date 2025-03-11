@@ -3,8 +3,8 @@ import { Helmet } from "react-helmet";
 import AboutSection from "../components/AboutSection";
 import BannerTwo from "./BannerTwo";
 import Skills from "./Skills";
-import Projects from "./Projects";
 import BlogsSection from "./BlogsSection";
+import ProjectsSection from "./ProjectsSection";
 
 const Home = () => {
   useEffect(() => {
@@ -35,7 +35,7 @@ const Home = () => {
       </div>
       {/*       <Certs />
        */}{" "}
-      <Projects />
+      <ProjectsSection />
       <BlogsSection />
       <style>
         {`      .skills-wrapper {

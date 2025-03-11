@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import "../../styles/certs.css";
+import { Link } from "react-router-dom";
 
-const Projects = () => {
+const ProjectsSection = () => {
   const navigate = useNavigate();
 
   const containerVariants = {
@@ -40,21 +41,6 @@ const Projects = () => {
       description: "Job search platform clone with custom filtering",
       liveUrl: "https://indeed-console.vercel.app",
     },
-    {
-      name: "linkbio",
-      description: "Linktree-style bio page for social media profiles",
-      liveUrl: "https://linkbio-console.vercel.app",
-    },
-    {
-      name: "formio",
-      description: "Dynamic form builder and submission management system",
-      liveUrl: "https://formio-console.vercel.app",
-    },
-    {
-      name: "el-shaddai interiors website",
-      description: "Dynamic form builder and submission management system",
-      liveUrl: "https://formio-console.vercel.app",
-    },
   ];
 
   return (
@@ -68,6 +54,9 @@ const Projects = () => {
       <div className="projects-top">
         <h1>PROJECTS</h1>
         <div className="projects-intro">Explore my digital creations</div>
+        <Link to="/projects" className="more-link">
+          more
+        </Link>
       </div>
       <motion.div
         className="projects-container"
@@ -325,6 +314,41 @@ const Projects = () => {
           font-weight: 300;
         }
 
+        .more-link {
+          display: inline-block;
+          margin-top: 15px;
+          color: #61dafb;
+          font-size: 1rem;
+          text-decoration: none;
+          font-weight: 600;
+          letter-spacing: 1px;
+          position: relative;
+          transition: all 0.3s ease;
+          padding: 8px 20px;
+          border-radius: 25px;
+          background: rgba(97, 218, 251, 0.1);
+          border: 1px solid rgba(97, 218, 251, 0.2);
+          overflow: hidden;
+        }
+
+        .more-link:hover {
+          color: white;
+          background: rgba(97, 218, 251, 0.2);
+          box-shadow: 0 0 15px rgba(97, 218, 251, 0.3);
+        }
+
+        .more-link::after {
+          content: "→";
+          opacity: 0;
+          margin-left: -10px;
+          transition: all 0.3s ease;
+        }
+
+        .more-link:hover::after {
+          opacity: 1;
+          margin-left: 8px;
+        }
+
         .projects-top h1:after {
           content: "";
           position: absolute;
@@ -580,4 +604,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default ProjectsSection;
