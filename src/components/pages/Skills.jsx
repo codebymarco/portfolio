@@ -61,7 +61,7 @@ const Skills = () => {
   return (
     <div className="skillsPageNew">
       <div className="skillsPageNewTop">
-        <h1>{t("skills")}</h1>
+        <h1 className="career-history-title">{t("skills")}</h1>
       </div>
       <motion.div
         className="skillsPageNewcontainer"
