@@ -1,8 +1,7 @@
 {
-    "welcome": "Welcome to our app",
-    "about": "About us",
-    "contact": "Contact us",
-    "switchLanguage": "Switch Language",
-    "skills": "SKILLS"
-  }
-  
+  "skills": "SKILLS",
+  "banner_occupation": "SOFTWARE DEVELOPER",
+  "banner_description": "Building elegant solutions to complex problems",
+  "banner_link_about": "contact me",
+  "banner_link_contact": "about"
+}

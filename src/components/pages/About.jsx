@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { Helmet } from "react-helmet";
 import "../../styles/about.css";
 import { IoIosNotifications, IoIosSend } from "react-icons/io";
@@ -27,12 +27,41 @@ import pic from "../../assets/upgrade.svg";
 import img from "../../assets/image.png";
 import { BiCodeAlt } from "react-icons/bi";
 
+// Swipe Hint Component (internal)
+const SwipeHint = () => {
+  const [visible, setVisible] = useState(true);
+
+  useEffect(() => {
+    // Hide hint after 3 seconds
+    const timer = setTimeout(() => {
+      setVisible(false);
+    }, 3000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (!visible) return null;
+
+  return (
+    <div className="swipe-hint">
+      <span>← Swipe to navigate →</span>
+    </div>
+  );
+};
+
 const About = () => {
   // Array of images (using the same image URL for demonstration)
   const images = [img, img, img, img, pic];
 
   // Selected language for the interface
   const [language, setLanguage] = useState("english");
+
+  // Touch handling state
+  const [touchStart, setTouchStart] = useState(null);
+  const [touchEnd, setTouchEnd] = useState(null);
+  const carouselRef = useRef(null);
+  
+  // Minimum swipe distance (in px)
+  const minSwipeDistance = 50;
 
   const translations = {
     english: {
@@ -85,6 +114,30 @@ const About = () => {
   const t = translations[language];
 
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  // Touch handlers
+  const onTouchStart = (e) => {
+    setTouchEnd(null); // Reset touchEnd
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+  
+  const onTouchMove = (e) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+  
+  const onTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+    
+    if (isLeftSwipe) {
+      handleNext();
+    } else if (isRightSwipe) {
+      handlePrev();
+    }
+  };
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
@@ -207,7 +260,14 @@ const About = () => {
             <FaArrowAltCircleUp style={{ color: "white" }} />
           </div>
 
-          <div className="photo-section" style={{ position: "relative" }}>
+          <div 
+            className="photo-section" 
+            ref={carouselRef}
+            style={{ position: "relative" }}
+            onTouchStart={onTouchStart}
+            onTouchMove={onTouchMove}
+            onTouchEnd={onTouchEnd}
+          >
             <div className="tab-buttons">
               {images.map((_, index) => (
                 <div
@@ -280,6 +340,7 @@ const About = () => {
             >
               →
             </button>
+            <SwipeHint />
           </div>
         </div>
 
@@ -543,41 +604,16 @@ const About = () => {
         /* Skills styles */
         .skills-container {
           display: flex;
-          flex-direction: column;
-          gap: 15px;
+          flex-wrap: wrap;
+          gap: 10px;
         }
 
-        .skill-item {
-          width: 100%;
-        }
-
-        .skill-info {
-          display: flex;
-          justify-content: space-between;
-          margin-bottom: 5px;
-        }
-
-        .skill-name {
-          font-weight: 500;
-        }
-
-        .skill-percentage {
-          color: #61dafb;
-        }
-
-        .skill-bar-bg {
-          width: 100%;
-          height: 8px;
-          background-color: rgba(255, 255, 255, 0.1);
-          border-radius: 4px;
-          overflow: hidden;
-        }
-
-        .skill-bar-fill {
-          height: 100%;
-          background: linear-gradient(90deg, #61dafb, #3490dc);
-          border-radius: 4px;
-          transition: width 1s ease-in-out;
+        .skill-chip {
+          background-color: rgba(97, 218, 251, 0.1);
+          border: 1px solid rgba(97, 218, 251, 0.3);
+          border-radius: 15px;
+          padding: 5px 12px;
+          font-size: 0.9rem;
         }
 
         /* Timeline styles */
@@ -728,6 +764,63 @@ const About = () => {
           padding: 4px 10px;
           border-radius: 15px;
           font-size: 0.85rem;
+        }
+
+        /* Photo section styles */
+        .photo-section {
+          position: relative;
+          touch-action: pan-y; /* Improves touch behavior on mobile */
+          user-select: none; /* Prevents text selection during swipe */
+        }
+
+        .tab-buttons {
+          display: flex;
+          gap: 5px;
+          position: absolute;
+          top: 10px;
+          left: 0;
+          right: 0;
+          z-index: 10;
+          padding: 0 15px;
+        }
+
+        /* Swipe hint */
+        .swipe-hint {
+          position: absolute;
+          bottom: 20px;
+          left: 0;
+          right: 0;
+          text-align: center;
+          color: white;
+          background: rgba(0,0,0,0.5);
+          padding: 10px;
+          border-radius: 20px;
+          margin: 0 auto;
+          width: 200px;
+          animation: fadeOut 3s forwards;
+          display: none;
+        }
+
+        @keyframes fadeOut {
+          0% { opacity: 1; }
+          70% { opacity: 1; }
+          100% { opacity: 0; }
+        }
+
+        /* Media queries */
+        @media (max-width: 768px) {
+          .prev-arrow, .next-arrow {
+            display: none;
+          }
+          
+          .swipe-hint {
+            display: block;
+          }
+          
+          /* Make tab indicators slightly larger on mobile for easier tapping */
+          .tab-buttons div {
+            height: 12px !important;
+          }
         }
 
         /* Responsive adjustments */
