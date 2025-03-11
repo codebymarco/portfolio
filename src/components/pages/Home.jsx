@@ -13,7 +13,7 @@ const Home = () => {
   }, []); // Empty dependency array ensures this runs once on mount
 
   return (
-    <div>
+    <div className="home">
       <Helmet>
         <title>
           Home | Software Developer Portfolio | Miguelmarco Ramcharan

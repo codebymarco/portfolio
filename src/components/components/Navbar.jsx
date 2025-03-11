@@ -151,6 +151,18 @@ const Navbar = () => {
           <motion.div variants={itemVariants} className="nav-item">
             <Link
               className={`desktop-links-link ${
+                activeLink === "/apps" ? "active" : ""
+              }`}
+              to="/apps"
+              onClick={() => setActiveLink("/apps")}
+            >
+              projects
+            </Link>
+          </motion.div>
+
+          <motion.div variants={itemVariants} className="nav-item">
+            <Link
+              className={`desktop-links-link ${
                 activeLink === "/career" ? "active" : ""
               }`}
               to="/career"

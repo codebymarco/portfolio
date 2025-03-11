@@ -5,7 +5,6 @@ import { LiaTasksSolid } from "react-icons/lia";
 import { GrInfo } from "react-icons/gr";
 import { HiOutlineBriefcase } from "react-icons/hi";
 import Skills from "./Skills";
-import Projects from "./Projects";
 import { Helmet } from "react-helmet";
 
 const Career = () => {
@@ -39,7 +38,6 @@ const Career = () => {
         </div>{" "}
         {/*         <Certs />
          */}{" "}
-        <Projects />
         <div className="career-history-section">
           <h1 className="career-history-title">CAREER HISTORY</h1>
 
@@ -245,7 +243,11 @@ const Career = () => {
       <style jsx>{`
         /* General career page styling */
         .career {
-          background-image: radial-gradient(circle at 50% 30%, #111111 0%, #000000 70%);
+          background-image: radial-gradient(
+            circle at 50% 30%,
+            #111111 0%,
+            #000000 70%
+          );
           background-color: black;
           min-height: 100vh;
           color: #fff;
@@ -263,7 +265,7 @@ const Career = () => {
           letter-spacing: 2px;
           position: relative;
           display: inline-block;
-          color: #61DAFB;
+          color: #61dafb;
           text-shadow: 0 0 10px rgba(97, 218, 251, 0.5);
         }
 
@@ -275,7 +277,7 @@ const Career = () => {
           transform: translateX(-50%);
           width: 60px;
           height: 3px;
-          background-color: #61DAFB;
+          background-color: #61dafb;
           box-shadow: 0 0 10px rgba(97, 218, 251, 0.5);
         }
 
@@ -291,7 +293,7 @@ const Career = () => {
           margin-bottom: 60px;
           letter-spacing: 2px;
           position: relative;
-          color: #61DAFB;
+          color: #61dafb;
           text-shadow: 0 0 10px rgba(97, 218, 251, 0.5);
         }
 
@@ -303,7 +305,7 @@ const Career = () => {
           transform: translateX(-50%);
           width: 60px;
           height: 3px;
-          background-color: #61DAFB;
+          background-color: #61dafb;
           box-shadow: 0 0 10px rgba(97, 218, 251, 0.5);
         }
 
@@ -319,7 +321,11 @@ const Career = () => {
           bottom: 0;
           left: 30px;
           width: 3px;
-          background: linear-gradient(to bottom, rgba(97, 218, 251, 0.6), rgba(97, 218, 251, 0.1));
+          background: linear-gradient(
+            to bottom,
+            rgba(97, 218, 251, 0.6),
+            rgba(97, 218, 251, 0.1)
+          );
           box-shadow: 0 0 8px rgba(97, 218, 251, 0.3);
         }
 
@@ -344,7 +350,7 @@ const Career = () => {
           display: flex;
           align-items: center;
           justify-content: center;
-          color: #61DAFB;
+          color: #61dafb;
           font-size: 1rem;
           z-index: 2;
           box-shadow: 0 0 15px rgba(97, 218, 251, 0.3);
@@ -353,7 +359,7 @@ const Career = () => {
 
         .timeline-marker.current {
           background-color: rgba(97, 218, 251, 0.1);
-          border-color: #61DAFB;
+          border-color: #61dafb;
           box-shadow: 0 0 20px rgba(97, 218, 251, 0.4);
         }
 
@@ -374,7 +380,8 @@ const Career = () => {
 
         .job-card:hover {
           transform: translateY(-5px);
-          box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4), 0 0 15px rgba(97, 218, 251, 0.1);
+          box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4),
+            0 0 15px rgba(97, 218, 251, 0.1);
           border-color: rgba(97, 218, 251, 0.3);
         }
 
@@ -390,7 +397,7 @@ const Career = () => {
         .job-title {
           font-size: 1.6rem;
           margin: 0 0 10px;
-          color: #61DAFB;
+          color: #61dafb;
         }
 
         .job-company {
@@ -440,7 +447,7 @@ const Career = () => {
         }
 
         .section-heading svg {
-          color: #61DAFB;
+          color: #61dafb;
         }
 
         .job-description p {
@@ -482,7 +489,7 @@ const Career = () => {
           align-items: center;
           justify-content: center;
           background-color: rgba(97, 218, 251, 0.1);
-          color: #61DAFB;
+          color: #61dafb;
           font-size: 0.8rem;
           font-weight: 600;
           transition: all 0.3s ease;
@@ -555,7 +562,8 @@ const Career = () => {
 
         .skills-wrapper .skillsPageNewcontainer:hover {
           transform: translateY(-5px);
-          box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4), 0 0 15px rgba(97, 218, 251, 0.1);
+          box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4),
+            0 0 15px rgba(97, 218, 251, 0.1);
           border-color: rgba(97, 218, 251, 0.3);
         }
 
