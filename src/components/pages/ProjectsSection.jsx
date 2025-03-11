@@ -382,7 +382,7 @@ const ProjectsSection = () => {
 
         .projects-container {
           display: grid;
-          grid-template-columns: 1fr 1fr;
+          grid-template-columns: 1fr;
           gap: 50px;
           width: fit-content;
           max-width: 1200px;
@@ -391,8 +391,8 @@ const ProjectsSection = () => {
 
         /* Flip card styles */
         .flip-card {
-          width: 330px;
-          height: 250px;
+          width: 700px;
+          height: 120px;
           perspective: 1000px;
           cursor: pointer;
         }
