@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import "../../styles/about.css";
 import { IoIosNotifications, IoIosSend } from "react-icons/io";
+import ScrollToTop from "../components/ScrollToTop";
 import {
   FaArrowAltCircleUp,
   FaCode,
@@ -159,6 +160,8 @@ const About = () => {
           content="marco ramcharan, codebymarco, software developer portfolio"
         />
       </Helmet>
+      <ScrollToTop />
+
       <div className="about">
         <div className="fixed-menu">
           <GrPowerReset style={{ color: "gray" }} />
@@ -301,8 +304,8 @@ const About = () => {
             <span>{t.aboutMe}:</span>
           </div>
           <span className="about-text">
-            Hello, I'm Marco—a South African based in Durban. I completed
-            high school and began my career as a carpenter. Being self-taught, I
+            Hello, I'm Marco—a South African based in Durban. I completed high
+            school and began my career as a carpenter. Being self-taught, I
             later transitioned into software development. I currently work for
             Decido on the Truendo product. My diverse skill set spans from
             building sturdy tables to developing functional websites. I'm

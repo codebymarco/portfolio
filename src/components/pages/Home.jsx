@@ -4,7 +4,8 @@ import AboutSection from "../components/AboutSection";
 import BannerTwo from "./BannerTwo";
 import Skills from "./Skills";
 import BlogsSection from "./BlogsSection";
-import Projects from "./Projects";
+import ProjectsSection from "./ProjectsSection";
+import ScrollToTop from "../components/ScrollToTop";
 
 const Home = () => {
   useEffect(() => {
@@ -28,6 +29,7 @@ const Home = () => {
           content="marco ramcharan, codebymarco, software developer portfolio"
         />
       </Helmet>
+      <ScrollToTop />
       <BannerTwo />
       <AboutSection />
       <div className="skills-wrapper">
@@ -35,7 +37,7 @@ const Home = () => {
       </div>
       {/*       <Certs />
        */}{" "}
-      <Projects />
+      <ProjectsSection />
       <BlogsSection />
       <style>
         {`      .skills-wrapper {

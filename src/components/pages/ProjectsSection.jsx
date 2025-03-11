@@ -1,9 +1,13 @@
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import "../../styles/certs.css";
-import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 const ProjectsSection = () => {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
+
   const navigate = useNavigate();
 
   const containerVariants = {
@@ -54,9 +58,6 @@ const ProjectsSection = () => {
       <div className="projects-top">
         <h1>PROJECTS</h1>
         <div className="projects-intro">Explore my digital creations</div>
-        <Link to="/projects" className="more-link">
-          more
-        </Link>
       </div>
       <motion.div
         className="projects-container"
@@ -66,41 +67,13 @@ const ProjectsSection = () => {
       >
         {projects.map((project, index) => (
           <motion.div
-            className="flip-card"
+            className="project-card"
             variants={itemVariants}
             key={project.name}
             whileHover={{ scale: 1.03 }}
+            onClick={() => navigate(`/apps/${project.name}`)}
           >
-            <div className="flip-card-inner">
-              <div className="flip-card-front">
-                <div className="card-content">
-                  <h2 className="project-title">{project.name}</h2>
-                  <div className="front-button">Explore</div>
-                </div>
-              </div>
-              <div className="flip-card-back">
-                <p className="project-description">{project.description}</p>
-                <div className="project-actions">
-                  <div
-                    className="view-project"
-                    onClick={() => navigate(`/apps/${project.name}`)}
-                  >
-                    <span className="btn-text">View Details</span>
-                    <span className="btn-icon">→</span>
-                  </div>
-                  <a
-                    href={project.liveUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="live-link"
-                    onClick={(e) => e.stopPropagation()}
-                  >
-                    <span className="btn-text">Live Project</span>
-                    <span className="btn-icon">↗</span>
-                  </a>
-                </div>
-              </div>
-            </div>
+            <h2 className="project-title">{project.name}</h2>
           </motion.div>
         ))}
       </motion.div>
@@ -314,41 +287,6 @@ const ProjectsSection = () => {
           font-weight: 300;
         }
 
-        .more-link {
-          display: inline-block;
-          margin-top: 15px;
-          color: #61dafb;
-          font-size: 1rem;
-          text-decoration: none;
-          font-weight: 600;
-          letter-spacing: 1px;
-          position: relative;
-          transition: all 0.3s ease;
-          padding: 8px 20px;
-          border-radius: 25px;
-          background: rgba(97, 218, 251, 0.1);
-          border: 1px solid rgba(97, 218, 251, 0.2);
-          overflow: hidden;
-        }
-
-        .more-link:hover {
-          color: white;
-          background: rgba(97, 218, 251, 0.2);
-          box-shadow: 0 0 15px rgba(97, 218, 251, 0.3);
-        }
-
-        .more-link::after {
-          content: "→";
-          opacity: 0;
-          margin-left: -10px;
-          transition: all 0.3s ease;
-        }
-
-        .more-link:hover::after {
-          opacity: 1;
-          margin-left: 8px;
-        }
-
         .projects-top h1:after {
           content: "";
           position: absolute;
@@ -389,154 +327,33 @@ const ProjectsSection = () => {
           z-index: 1;
         }
 
-        /* Flip card styles */
-        .flip-card {
+        /* Project card styles */
+        .project-card {
           width: 700px;
           height: 120px;
-          perspective: 1000px;
-          cursor: pointer;
-        }
-
-        .flip-card-inner {
-          position: relative;
-          width: 100%;
-          height: 100%;
-          text-align: center;
-          transition: transform 0.6s;
-          transform-style: preserve-3d;
-          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35),
-            0 0 15px rgba(97, 218, 251, 0.1);
-          border-radius: 20px;
-        }
-
-        .flip-card:hover .flip-card-inner {
-          transform: rotateY(180deg);
-        }
-
-        .flip-card-front,
-        .flip-card-back {
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-          border-radius: 20px;
-          display: flex;
-          flex-direction: column;
-          overflow: hidden;
-        }
-
-        .flip-card-front {
-          justify-content: center;
-          align-items: center;
-          padding: 30px;
           background-color: #111111;
           border: 1px solid rgba(97, 218, 251, 0.15);
-        }
-
-        .flip-card-back {
-          background: rgba(20, 20, 35, 0.95);
-          color: white;
-          transform: rotateY(180deg);
-          padding: 30px;
-          justify-content: space-between;
-          border: 1px solid rgba(97, 218, 251, 0.3);
-        }
-
-        .card-content {
-          position: relative;
-          z-index: 1;
-          text-align: center;
+          border-radius: 20px;
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35),
+            0 0 15px rgba(97, 218, 251, 0.1);
+          padding: 0;
           display: flex;
           flex-direction: column;
+          justify-content: center;
           align-items: center;
-          gap: 25px;
+          cursor: pointer;
+          position: relative;
         }
 
         .project-title {
-          font-size: 2.6rem;
+          font-size: 1.8rem;
           margin: 0;
           font-weight: 800;
           letter-spacing: 1px;
           text-transform: uppercase;
           text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-          transition: transform 0.3s ease;
+          text-align: center;
           color: #61dafb;
-        }
-
-        .front-button {
-          background: rgba(255, 255, 255, 0.2);
-          color: white;
-          padding: 8px 24px;
-          border-radius: 30px;
-          font-size: 0.9rem;
-          font-weight: 600;
-          letter-spacing: 1px;
-          backdrop-filter: blur(5px);
-          border: 1px solid rgba(255, 255, 255, 0.1);
-          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-          opacity: 0;
-          transform: translateY(20px);
-          transition: all 0.3s ease;
-        }
-
-        .flip-card:hover .front-button {
-          opacity: 1;
-          transform: translateY(0);
-        }
-
-        .project-description {
-          color: #ddd;
-          line-height: 1.7;
-          margin: 0 0 20px 0;
-          font-size: 1.05rem;
-          position: relative;
-          text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-        }
-
-        .project-actions {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          z-index: 1;
-        }
-
-        .view-project,
-        .live-link {
-          color: #61dafb;
-          font-size: 1rem;
-          font-weight: 600;
-          display: flex;
-          align-items: center;
-          gap: 10px;
-          text-decoration: none;
-          transition: all 0.3s ease;
-          padding: 10px 16px;
-          background: rgba(97, 218, 251, 0.1);
-          border-radius: 30px;
-          border: 1px solid rgba(97, 218, 251, 0.2);
-        }
-
-        .view-project:hover,
-        .live-link:hover {
-          color: white;
-          background: rgba(97, 218, 251, 0.25);
-          box-shadow: 0 0 15px rgba(97, 218, 251, 0.3);
-        }
-
-        .btn-icon {
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          transition: transform 0.3s ease;
-        }
-
-        .view-project:hover .btn-icon {
-          transform: translateX(5px);
-        }
-
-        .live-link:hover .btn-icon {
-          transform: translate(3px, -3px);
         }
 
         /* Responsive styles - tablet */
@@ -549,13 +366,20 @@ const ProjectsSection = () => {
           .projects-top h1 {
             font-size: 3rem;
           }
+
+          .project-card {
+            width: 90%;
+            height: auto;
+            padding: 25px;
+          }
         }
 
         /* Responsive styles - mobile */
         @media screen and (max-width: 480px) {
-          .flip-card {
+          .project-card {
             width: 290px;
-            height: 230px;
+            height: auto;
+            padding: 20px;
           }
 
           .projects-top h1 {
@@ -570,29 +394,25 @@ const ProjectsSection = () => {
 
           .project-actions {
             flex-direction: column;
-            align-items: flex-start;
+            align-items: center;
             gap: 15px;
           }
 
           .project-title {
             font-size: 2.2rem;
-          }
-
-          .flip-card-front,
-          .flip-card-back {
-            padding: 25px;
+            margin-bottom: 15px;
           }
         }
 
         /* Very small devices */
         @media screen and (max-width: 320px) {
-          .flip-card {
+          .project-card {
             width: 250px;
-            height: 200px;
+            padding: 0;
           }
 
           .project-title {
-            font-size: 1.8rem;
+            font-size: 1.3rem;
           }
 
           .projects-top h1 {
