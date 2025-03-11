@@ -229,7 +229,7 @@ const Blogs = () => {
         </div>
 
         {/* Tags filter section */}
-        <div className="blog-tags-filter">
+        {/*         <div className="blog-tags-filter">
           <span className="blog-tags-label">Popular Topics:</span>
           <div className="blog-tags-list">
             {popularTags.map((tag) => (
@@ -245,7 +245,7 @@ const Blogs = () => {
             ))}
           </div>
         </div>
-
+ */}
         {/* Blog grid */}
         <motion.div
           className="blog-grid"

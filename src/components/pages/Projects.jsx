@@ -1,8 +1,14 @@
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import "../../styles/certs.css";
+import { useEffect } from "react";
 
 const Projects = () => {
+  
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []); 
+
   const navigate = useNavigate();
 
   const containerVariants = {

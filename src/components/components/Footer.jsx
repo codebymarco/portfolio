@@ -177,29 +177,11 @@ const Footer = () => {
             <FaGithub size={24} />
           </a>
           <a
-            href="https://linkedin.com/in/yourusername"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="social-icon linkedin"
-            aria-label="LinkedIn Profile"
-          >
-            <FaLinkedinIn size={24} />
-          </a>
-          <a
             href="mailto:miguelmarcoramcharan@gmail.com"
             className="social-icon email"
             aria-label="Send Email"
           >
             <MdEmail size={26} />
-          </a>
-          <a
-            href="https://twitter.com/yourusername"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="social-icon twitter"
-            aria-label="Twitter Profile"
-          >
-            <FaXTwitter size={22} />
           </a>
         </motion.div>
 

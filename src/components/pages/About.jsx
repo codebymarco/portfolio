@@ -301,7 +301,7 @@ const About = () => {
             <span>{t.aboutMe}:</span>
           </div>
           <span className="about-text">
-            Hello, I'm Marco—a South African Indian based in Durban. I completed
+            Hello, I'm Marco—a South African based in Durban. I completed
             high school and began my career as a carpenter. Being self-taught, I
             later transitioned into software development. I currently work for
             Decido on the Truendo product. My diverse skill set spans from
