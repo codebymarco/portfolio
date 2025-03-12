@@ -120,7 +120,7 @@ const Navbar = () => {
               to="/"
               onClick={() => setActiveLink("/")}
             >
-              home
+              {t("nav_link_home")}
             </Link>
           </motion.div>
 
@@ -132,7 +132,7 @@ const Navbar = () => {
               to="/about"
               onClick={() => setActiveLink("/about")}
             >
-              about
+              {t("nav_link_about")}
             </Link>
           </motion.div>
 
@@ -144,7 +144,7 @@ const Navbar = () => {
               to="/contact"
               onClick={() => setActiveLink("/contact")}
             >
-              contact
+              {t("nav_link_contact")}
             </Link>
           </motion.div>
 
@@ -156,7 +156,7 @@ const Navbar = () => {
               to="/apps"
               onClick={() => setActiveLink("/apps")}
             >
-              projects
+              {t("nav_link_projects")}
             </Link>
           </motion.div>
 
@@ -168,7 +168,7 @@ const Navbar = () => {
               to="/career"
               onClick={() => setActiveLink("/career")}
             >
-              career
+              {t("nav_link_career")}
             </Link>
           </motion.div>
 
@@ -180,7 +180,7 @@ const Navbar = () => {
               to="/blog"
               onClick={() => setActiveLink("/blog")}
             >
-              blog
+              {t("nav_link_blog")}
             </Link>
           </motion.div>
 

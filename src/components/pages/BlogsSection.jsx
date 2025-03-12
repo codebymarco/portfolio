@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import "../../styles/blogsSection.css";
+import useTranslationStore from "../../store/store";
 
 // Import sample blog data (top 3)
 const blogData = [
@@ -31,6 +32,8 @@ const blogData = [
 ];
 
 const BlogsSection = () => {
+  const { t } = useTranslationStore();
+
   const navigate = useNavigate();
 
   // Animation variants
@@ -58,8 +61,8 @@ const BlogsSection = () => {
   return (
     <div className="blogsSection">
       <div className="blogsSectionTop">
-        <h1>BLOGS</h1>
-        <Link to="/blog">more</Link>
+        <h1>{t("blogs_section_heading")}</h1>
+        <Link to="/blog">{t("blogs_section_more")}</Link>
       </div>
       <motion.div
         className="blogsSectionContainer"

@@ -9,6 +9,8 @@ import useTranslationStore from "../../store/store";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
+  const { t } = useTranslationStore();
+
   const { language, setLanguage } = useTranslationStore();
   const [showLanguageMenu, setShowLanguageMenu] = React.useState(false);
   const languageMenuRef = React.useRef(null);
@@ -79,7 +81,6 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="container">
-        {/* Top section with logo and navigation */}
         <motion.div
           className="footer-top"
           initial="hidden"
@@ -87,45 +88,46 @@ const Footer = () => {
           viewport={{ once: true, amount: 0.3 }}
           variants={containerVariants}
         >
-          {/* Logo/Brand */}
           <motion.div className="footer-brand" variants={itemVariants}>
             <h3 className="brand-name">Miguelmarco Ramcharan</h3>
-            <p className="brand-desc">Fullstack Software Engineer</p>
+            <p className="brand-desc">{t("footer_occupation")}</p>
           </motion.div>
 
-          {/* Quick Links */}
           <motion.div className="footer-links" variants={itemVariants}>
-            <h4 className="footer-heading">Quick Links</h4>
+            <h4 className="footer-heading">{t("footer_quick_links")}</h4>
             <ul className="footer-list">
-              {["Home", "Projects", "About", "Contact", "Career", "Blog"].map((item) => (
-                <li key={item} className="footer-list-item">
-                  <Link to={`${item.toLowerCase()}`} className="footer-link">
-                    {item}
-                  </Link>
-                </li>
-              ))}
+              {["home", "projects", "about", "contact", "career", "blog"].map(
+                (item) => (
+                  <li key={item} className="footer-list-item">
+                    <Link to={`${item.toLowerCase()}`} className="footer-link">
+                      {t(`footer_link_${item}`)}
+                    </Link>
+                  </li>
+                )
+              )}
             </ul>
           </motion.div>
 
           {/* Contact Info */}
           <motion.div className="footer-contact" variants={itemVariants}>
-            <h4 className="footer-heading">Contact</h4>
+            <h4 className="footer-heading">{t("footer_contact")}</h4>
             <p className="contact-info">
-              <span className="contact-label">Email:</span>{" "}
+              <span className="contact-label">{t("footer_email")}:</span>{" "}
               miguelmarcoramcharan@gmail.com
             </p>
             <p className="contact-info">
-              <span className="contact-label">Phone:</span> 061 149 8474
+              <span className="contact-label">{t("footer_phone")}:</span> 061
+              149 8474
             </p>
             <p className="contact-info">
-              <span className="contact-label">Location:</span> Durban, South
-              Africa
+              <span className="contact-label">{t("footer_location")}:</span>{" "}
+              Durban, South Africa
             </p>
           </motion.div>
 
           {/* Language Selector */}
           <motion.div className="footer-language" variants={itemVariants}>
-            <h4 className="footer-heading">Language</h4>
+            <h4 className="footer-heading">{t("footer_language")}</h4>
             <div className="footer-lang-selector" ref={languageMenuRef}>
               <div
                 className="footer-selected-lang"
@@ -194,14 +196,14 @@ const Footer = () => {
           viewport={{ once: true }}
         >
           <p className="copyright">
-            © {currentYear} Miguelmarco Ramcharan. All rights reserved.
+            © {currentYear} Miguelmarco Ramcharan. {t("footer_rights")}
           </p>
           <div className="legal-links">
             <a href="#privacy" className="legal-link">
-              Privacy Policy
+              {t("footer_policy")}
             </a>
             <a href="#terms" className="legal-link">
-              Terms of Service
+              {t("footer_terms")}
             </a>
           </div>
         </motion.div>

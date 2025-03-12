@@ -4,8 +4,11 @@ import "../../styles/banner.css";
 import image from "../../assets/image.png";
 import { Link, useNavigate } from "react-router-dom";
 import { FaReact, FaJs, FaNodeJs, FaCode } from "react-icons/fa";
+import useTranslationStore from "../../store/store";
 
 const BannerTwo = () => {
+  const { t } = useTranslationStore();
+
   const navigate = useNavigate();
 
   const showAbout = () => {
@@ -58,7 +61,7 @@ const BannerTwo = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 1.1 }}
         >
-          SOFTWARE DEVELOPER
+          {t("banner_occupation")}
         </motion.p>
 
         <motion.div
@@ -103,7 +106,7 @@ const BannerTwo = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 1.5 }}
         >
-          Building elegant solutions to complex problems
+          {t("banner_description")}
         </motion.p>
 
         <motion.div
@@ -115,20 +118,20 @@ const BannerTwo = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 2.0 }}
-            style={{ display: 'inline-block' }}
+            style={{ display: "inline-block" }}
           >
             <Link to="/contact" className="contact-btn">
-              contact me
+            {t("banner_link_contact")}
             </Link>
           </motion.span>
           <motion.span
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 2.2 }}
-            style={{ display: 'inline-block' }}
+            style={{ display: "inline-block" }}
           >
             <Link to="/about" className="about-btn">
-              about
+            {t("banner_link_about")}
             </Link>
           </motion.span>
         </motion.div>
