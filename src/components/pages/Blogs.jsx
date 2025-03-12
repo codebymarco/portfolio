@@ -194,8 +194,8 @@ const Blogs = () => {
       </Helmet>
       <ScrollToTop />
       <div className="blog-page">
-        <div className="blog-header">
-          <h1>BLOG</h1>
+        <div className="blog-top">
+          <h1>MY BLOG</h1>
           <p>
             Insights and tutorials on web development, DevOps, and modern
             technologies
@@ -229,7 +229,7 @@ const Blogs = () => {
         </div>
 
         {/* Tags filter section */}
-        {/*         <div className="blog-tags-filter">
+{/*         <div className="blog-tags-filter">
           <span className="blog-tags-label">Popular Topics:</span>
           <div className="blog-tags-list">
             {popularTags.map((tag) => (
@@ -244,8 +244,8 @@ const Blogs = () => {
               </button>
             ))}
           </div>
-        </div>
- */}
+        </div> */}
+
         {/* Blog grid */}
         <motion.div
           className="blog-grid"
@@ -305,41 +305,65 @@ const Blogs = () => {
         </motion.div>
 
         <style jsx>{`
+          /* General blog page styling - using the radial gradient from Career */
           .blog-page {
-            background-color: #000;
+            background-image: radial-gradient(
+              circle at 50% 30%,
+              #111111 0%,
+              #000000 70%
+            );
+            background-color: black;
             min-height: 100vh;
-            padding: 40px 20px;
+            color: #fff;
+            padding: 40px 20px 80px;
             display: flex;
             flex-direction: column;
             align-items: center;
           }
 
-          .blog-header {
+          /* Blog header styling - matching the career-top */
+          .blog-top {
             text-align: center;
-            color: white;
-            margin-bottom: 40px;
+            margin-bottom: 50px;
+            padding: 20px 0;
             width: 100%;
-            max-width: 800px;
           }
 
-          .blog-header h1 {
+          .blog-top h1 {
             font-size: 2.5rem;
-            margin-bottom: 10px;
-            font-weight: 700;
+            letter-spacing: 2px;
+            position: relative;
+            display: inline-block;
+            color: #61dafb;
+            text-shadow: 0 0 10px rgba(97, 218, 251, 0.5);
           }
 
-          .blog-header p {
+          .blog-top h1:after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background-color: #61dafb;
+            box-shadow: 0 0 10px rgba(97, 218, 251, 0.5);
+          }
+
+          .blog-top p {
             color: #aaa;
             font-size: 1.1rem;
+            margin-top: 20px;
           }
 
+          /* Filter section */
           .blog-filter-section {
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
             margin-bottom: 30px;
             width: 100%;
-            max-width: 1200px;
+            max-width: 1000px;
             justify-content: center;
           }
 
@@ -355,7 +379,7 @@ const Blogs = () => {
             left: 15px;
             top: 50%;
             transform: translateY(-50%);
-            color: #666;
+            color: #61dafb;
           }
 
           .blog-search-input {
@@ -363,16 +387,18 @@ const Blogs = () => {
             padding: 12px 12px 12px 40px;
             border: none;
             border-radius: 8px;
-            background-color: #111;
+            background-color: rgba(13, 13, 13, 0.9);
             color: white;
             font-size: 1rem;
             transition: all 0.3s ease;
+            border: 1px solid rgba(97, 218, 251, 0.1);
           }
 
           .blog-search-input:focus {
             outline: none;
-            background-color: #1a1a1a;
-            box-shadow: 0 0 0 2px #333;
+            background-color: rgba(13, 13, 13, 0.9);
+            box-shadow: 0 0 15px rgba(97, 218, 251, 0.1);
+            border-color: rgba(97, 218, 251, 0.3);
           }
 
           .blog-sort-container {
@@ -385,7 +411,7 @@ const Blogs = () => {
             left: 15px;
             top: 50%;
             transform: translateY(-50%);
-            color: #666;
+            color: #61dafb;
           }
 
           .blog-sort-select {
@@ -394,26 +420,29 @@ const Blogs = () => {
             appearance: none;
             border: none;
             border-radius: 8px;
-            background-color: #111;
+            background-color: rgba(13, 13, 13, 0.9);
             color: white;
             font-size: 1rem;
             cursor: pointer;
             transition: all 0.3s ease;
+            border: 1px solid rgba(97, 218, 251, 0.1);
           }
 
           .blog-sort-select:focus {
             outline: none;
-            background-color: #1a1a1a;
-            box-shadow: 0 0 0 2px #333;
+            background-color: rgba(13, 13, 13, 0.9);
+            box-shadow: 0 0 15px rgba(97, 218, 251, 0.1);
+            border-color: rgba(97, 218, 251, 0.3);
           }
 
+          /* Tags filter section */
           .blog-tags-filter {
             display: flex;
             flex-wrap: wrap;
             gap: 15px;
             margin-bottom: 40px;
             width: 100%;
-            max-width: 1200px;
+            max-width: 1000px;
             align-items: center;
             justify-content: center;
           }
@@ -435,51 +464,60 @@ const Blogs = () => {
             gap: 6px;
             padding: 6px 12px;
             border-radius: 20px;
-            background-color: #1a1a1a;
-            color: #ddd;
-            border: 1px solid #333;
+            background-color: rgba(13, 13, 13, 0.9);
+            color: #aaa;
+            border: 1px solid rgba(97, 218, 251, 0.1);
             font-size: 0.9rem;
             cursor: pointer;
-            transition: all 0.2s ease;
+            transition: all 0.3s ease;
           }
 
           .blog-tag-button:hover {
-            background-color: #222;
+            background-color: rgba(13, 13, 13, 0.9);
+            transform: translateY(-3px);
+            border-color: rgba(97, 218, 251, 0.3);
+            box-shadow: 0 0 15px rgba(97, 218, 251, 0.1);
           }
 
           .blog-tag-button.active {
-            background-color: #333;
-            color: white;
-            border-color: #444;
+            background-color: rgba(97, 218, 251, 0.1);
+            color: #61dafb;
+            border-color: rgba(97, 218, 251, 0.3);
+            box-shadow: 0 0 15px rgba(97, 218, 251, 0.2);
           }
 
+          /* Blog grid styling */
           .blog-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 30px;
             width: 100%;
-            max-width: 1200px;
+            max-width: 1000px;
           }
 
+          /* Blog card styling - matching job-card */
           .blog-card {
-            background-color: #111;
-            border-radius: 12px;
+            background-color: rgba(13, 13, 13, 0.9);
+            border-radius: 10px;
             overflow: hidden;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             height: 100%;
             cursor: pointer;
             display: flex;
             flex-direction: column;
+            border: 1px solid rgba(97, 218, 251, 0.1);
           }
 
           .blog-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4),
+              0 0 15px rgba(97, 218, 251, 0.1);
+            border-color: rgba(97, 218, 251, 0.3);
           }
 
           .blog-card-image-container {
             width: 100%;
-            height: 200px;
+            height: 180px;
             overflow: hidden;
           }
 
@@ -504,7 +542,7 @@ const Blogs = () => {
           .blog-card-title {
             font-size: 1.2rem;
             font-weight: 600;
-            color: white;
+            color: #61dafb;
             margin-bottom: 15px;
             line-height: 1.4;
           }
@@ -521,58 +559,68 @@ const Blogs = () => {
             font-size: 0.8rem;
             padding: 4px 8px;
             border-radius: 4px;
-            background-color: #222;
-            color: #aaa;
+            background-color: rgba(255, 255, 255, 0.05);
+            color: #ccc;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+          }
+
+          .blog-card:hover .blog-card-tag {
+            background-color: rgba(255, 255, 255, 0.08);
+            border-color: rgba(97, 218, 251, 0.2);
           }
 
           .blog-card-tag-more {
             font-size: 0.8rem;
             padding: 4px 8px;
             border-radius: 4px;
-            background-color: #333;
-            color: #ddd;
+            background-color: rgba(97, 218, 251, 0.1);
+            color: #61dafb;
           }
 
           .blog-card-date {
             font-size: 0.85rem;
-            color: #666;
+            color: #888;
             margin-top: 10px;
           }
 
+          /* No results styling */
           .blog-no-results {
             grid-column: 1 / -1;
             text-align: center;
             padding: 60px 20px;
             color: #aaa;
+            background-color: rgba(13, 13, 13, 0.9);
+            border-radius: 10px;
+            border: 1px solid rgba(97, 218, 251, 0.1);
           }
 
           .blog-no-results h3 {
             font-size: 1.5rem;
             margin-bottom: 10px;
-            color: white;
-          }
-
-          .blog-no-results p {
-            margin-bottom: 20px;
+            color: #61dafb;
           }
 
           .blog-reset-button {
             padding: 10px 20px;
-            background-color: #333;
-            color: white;
-            border: none;
+            background-color: rgba(97, 218, 251, 0.1);
+            color: #61dafb;
+            border: 1px solid rgba(97, 218, 251, 0.3);
             border-radius: 6px;
             font-size: 1rem;
             cursor: pointer;
-            transition: background-color 0.2s ease;
+            transition: all 0.3s ease;
+            margin-top: 15px;
           }
 
           .blog-reset-button:hover {
-            background-color: #444;
+            background-color: rgba(97, 218, 251, 0.2);
+            box-shadow: 0 0 15px rgba(97, 218, 251, 0.2);
           }
 
+          /* Responsive adjustments */
           @media (max-width: 768px) {
-            .blog-header h1 {
+            .blog-top h1 {
               font-size: 2rem;
             }
 
