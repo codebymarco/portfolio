@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
+import emailjs from '@emailjs/browser';
 
 const ContactForm = () => {
+  const form = useRef();
   const [formValues, setFormValues] = useState({
     name: "",
     email: "",
@@ -80,18 +82,34 @@ const ContactForm = () => {
 
     setIsSubmitting(true);
 
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSnackbarMessage("Thank you! Your message has been sent successfully.");
-      setSnackbarSeverity("success");
-      setSnackbarOpen(true);
-
-      setFormValues({
-        name: "",
-        email: "",
-        message: "",
+    // EmailJS integration
+    emailjs.sendForm(
+      'service_q56q0zv',     // Replace with your EmailJS service ID
+      'template_7ofgugz',    // Replace with your EmailJS template ID
+      form.current,          // Your form reference
+      'IHnFIsA1asbqgAOkK'      // Replace with your EmailJS public key
+    )
+      .then((result) => {
+        console.log('Email sent successfully!', result.text);
+        setSnackbarMessage("Thank you! Your message has been sent successfully.");
+        setSnackbarSeverity("success");
+        setSnackbarOpen(true);
+        
+        setFormValues({
+          name: "",
+          email: "",
+          message: "",
+        });
+      })
+      .catch((error) => {
+        console.error('Failed to send email:', error.text);
+        setSnackbarMessage("Failed to send message. Please try again later.");
+        setSnackbarSeverity("error");
+        setSnackbarOpen(true);
+      })
+      .finally(() => {
+        setIsSubmitting(false);
       });
-    }, 1500);
   };
 
   const handleCloseSnackbar = () => {
@@ -109,7 +127,7 @@ const ContactForm = () => {
           </p>
         </div>
 
-        <form className="contact-form" onSubmit={handleSubmit}>
+        <form className="contact-form" ref={form} onSubmit={handleSubmit}>
           <div className="form-field">
             <label htmlFor="name" className="form-label">Name</label>
             <input
