@@ -6,8 +6,11 @@ import { GrInfo } from "react-icons/gr";
 import { HiOutlineBriefcase } from "react-icons/hi";
 import Skills from "./Skills";
 import { Helmet } from "react-helmet";
+import useTranslationStore from "../../store/store";
 
 const Career = () => {
+  const { t } = useTranslationStore();
+
   useEffect(() => {
     // Scroll to the top of the page on component mount
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -31,7 +34,7 @@ const Career = () => {
       </Helmet>
       <div className="career">
         <div className="career-top">
-          <h1>MY PRO CAREER</h1>
+          <h1>{t("career_heading")}</h1>
         </div>
         <div className="skills-wrapper">
           <Skills />
@@ -39,7 +42,7 @@ const Career = () => {
         {/*         <Certs />
          */}{" "}
         <div className="career-history-section">
-          <h1 className="career-history-title">CAREER HISTORY</h1>
+          <h1 className="career-history-title">{t("career_history")}</h1>
 
           <div className="career-timeline">
             <div className="timeline-line"></div>
@@ -53,7 +56,7 @@ const Career = () => {
                 <div className="job-card">
                   <div className="job-header">
                     <div className="job-title-section">
-                      <h2 className="job-title">Fullstack Developer</h2>
+                      <h2 className="job-title">{t("job_title_one")}</h2>
                       <div className="job-company">
                         <span>Decidio GMBH</span>
                       </div>
@@ -73,22 +76,15 @@ const Career = () => {
                   <div className="job-description">
                     <div className="section-heading">
                       <GrInfo />
-                      <h3>Description</h3>
+                      <h3>{t("job_description")}</h3>
                     </div>
-                    <p>
-                      I initially joined Decidio to work as a support agent on
-                      the TRUENDO product. I was then promoted to a developer
-                      role, more specifically working on the backend and
-                      operations as well as some frontend tasks from time to
-                      time. I had to learn new technologies as I got deeper into
-                      the product.
-                    </p>
+                    <p>{t("job_description_one")}</p>
                   </div>
 
                   <div className="job-responsibilities">
                     <div className="section-heading">
                       <LiaTasksSolid />
-                      <h3>Responsibilities</h3>
+                      <h3>{t("job_responsibility")}</h3>
                     </div>
                     <div className="responsibilities-grid">
                       <div className="responsibility-item">

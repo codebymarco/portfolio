@@ -15,6 +15,7 @@ import {
 import { Helmet } from "react-helmet";
 import bunnyImage from "../../assets/blog/bunny.jpg";
 import ScrollToTop from "../components/ScrollToTop";
+import useTranslationStore from "../../store/store";
 
 // Blog data with added tags and images
 const blogData = [
@@ -102,6 +103,9 @@ const popularTags = [
 ];
 
 const Blogs = () => {
+
+  const { t } = useTranslationStore();
+
   useEffect(() => {
     // Scroll to the top of the page on component mount
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -195,10 +199,9 @@ const Blogs = () => {
       <ScrollToTop />
       <div className="blog-page">
         <div className="blog-top">
-          <h1>MY BLOG</h1>
+          <h1>{t("blog_heading")}</h1>
           <p>
-            Insights and tutorials on web development, DevOps, and modern
-            technologies
+          {t("blog_description")}
           </p>
         </div>
 
