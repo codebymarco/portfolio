@@ -44,5 +44,19 @@
   "contact_form_name_placeholder": "Enter your name",
   "contact_form_email_placeholder": "Enter your email address",
   "contact_form_message_placeholder": "Enter your message",
-  "contact_form_button": "Send Message"
+  "contact_form_button": "Send Message",
+  "career_heading": "career_heading",
+  "career_history": "career_heading",
+  "job_title_one": "career_heading",
+  "job_company_one": "career_heading",
+  "job_description_one": "career_heading",
+  "job_res_one_1": "career_heading",
+  "job_title_two": "career_heading",
+  "job_company_two": "career_heading",
+  "job_description_two": "career_heading",
+  "job_res_two_1": "career_heading",
+  "job_responsibility": "career_heading",
+  "job_description": "career_heading",
+  "blog_heading": "career_heading",
+  "blog_description": "career_heading"
 }
