@@ -8,8 +8,11 @@ import "../../styles/contact.css";
 import OnlyFans from "../components/OnlyFans";
 import resumePDF from "../../../public/resume.pdf";
 import { Helmet } from "react-helmet";
+import useTranslationStore from "../../store/store";
 
 const Contact = () => {
+  const { t } = useTranslationStore();
+
   useEffect(() => {
     // Scroll to the top of the page on component mount
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -52,28 +55,28 @@ const Contact = () => {
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
       transition: {
         type: "spring",
         stiffness: 100,
-        damping: 12
-      }
+        damping: 12,
+      },
     },
   };
 
   const formVariants = {
     hidden: { opacity: 0, y: 30 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
       transition: {
         type: "spring",
         stiffness: 70,
         damping: 14,
-        delay: 0.4
-      }
+        delay: 0.4,
+      },
     },
   };
 
@@ -100,7 +103,7 @@ const Contact = () => {
       setShow(false);
     }, 2000); // 2000 milliseconds = 2 seconds
   };
-  
+
   // Contact options with icons and details
   const contactOptions = [
     {
@@ -109,7 +112,7 @@ const Contact = () => {
       label: "miguelmarcoramcharan@gmail.com",
       color: "#EA4335",
       action: handleClick2,
-      number: "01"
+      number: "01",
     },
     {
       id: "github",
@@ -117,7 +120,7 @@ const Contact = () => {
       label: "github",
       color: "#ffffff",
       action: () => handleDivClick("https://github.com/codebymarco"),
-      number: "02"
+      number: "02",
     },
     {
       id: "onlyfans",
@@ -125,7 +128,7 @@ const Contact = () => {
       label: "onlyfans",
       color: "#61DAFB",
       action: showComp,
-      number: "03"
+      number: "03",
     },
     {
       id: "resume",
@@ -133,8 +136,8 @@ const Contact = () => {
       label: "download resume",
       color: "#FF5733",
       action: handleDownloadResume,
-      number: "05"
-    }
+      number: "05",
+    },
   ];
 
   // Form handling
@@ -236,14 +239,12 @@ const Contact = () => {
       </Helmet>
       <div className="contact">
         {show ? <OnlyFans /> : null}
-        
+
         <div className="contact-top">
-          <h1>GET IN TOUCH</h1>
+          <h1>{t("contact_heading")}</h1>
         </div>
-        <p className="contact-subtitle">
-          Feel free to reach out through any of these channels
-        </p>
-        
+        <p className="contact-subtitle">{t("contact_description")}</p>
+
         {/* Contact options */}
         <motion.div
           className="contact-container"
@@ -257,15 +258,21 @@ const Contact = () => {
               variants={itemVariants}
               className="contact-box"
               onClick={option.action}
-              whileHover={{ 
-                y: -5, 
-                boxShadow: "0 10px 25px rgba(0, 0, 0, 0.4), 0 0 15px rgba(97, 218, 251, 0.1)"
+              whileHover={{
+                y: -5,
+                boxShadow:
+                  "0 10px 25px rgba(0, 0, 0, 0.4), 0 0 15px rgba(97, 218, 251, 0.1)",
               }}
               transition={{ duration: 0.3 }}
             >
               <div className="contact-content">
-                <div className="icon-wrapper" style={{ backgroundColor: `${option.color}15` }}>
-                  {React.cloneElement(option.icon, { style: { color: option.color } })}
+                <div
+                  className="icon-wrapper"
+                  style={{ backgroundColor: `${option.color}15` }}
+                >
+                  {React.cloneElement(option.icon, {
+                    style: { color: option.color },
+                  })}
                 </div>
                 <span className="contact-label">{option.label}</span>
               </div>
@@ -273,9 +280,9 @@ const Contact = () => {
             </motion.div>
           ))}
         </motion.div>
-        
+
         {/* Contact Form */}
-        <motion.div 
+        <motion.div
           className="contact-form-container"
           initial="hidden"
           animate="visible"
@@ -283,24 +290,27 @@ const Contact = () => {
         >
           <div className="contact-form-wrapper">
             <div className="form-header">
-              <h2 className="contact-form-title">Send Me a Message</h2>
+              <h2 className="contact-form-title">
+                {t("contact_form_heading")}
+              </h2>
               <p className="contact-form-description">
-                Have a question or want to work together? Fill out the form below and
-                I'll get back to you as soon as possible.
+                {t("contact_form_description")}
               </p>
             </div>
 
             <form className="contact-form" onSubmit={handleSubmit}>
               <div className="form-field">
-                <label htmlFor="name" className="form-label">Name</label>
+                <label htmlFor="name" className="form-label">
+                {t("contact_form_name")}
+                </label>
                 <input
                   type="text"
                   id="name"
                   name="name"
                   value={formValues.name}
                   onChange={handleInputChange}
-                  className={`form-input ${formErrors.name ? 'error' : ''}`}
-                  placeholder="Enter your name"
+                  className={`form-input ${formErrors.name ? "error" : ""}`}
+                  placeholder={t("contact_form_name_placeholder")}
                 />
                 {formErrors.name && (
                   <span className="error-message">{formErrors.name}</span>
@@ -308,15 +318,17 @@ const Contact = () => {
               </div>
 
               <div className="form-field">
-                <label htmlFor="email" className="form-label">Email</label>
+                <label htmlFor="email" className="form-label">
+                {t("contact_form_email")}
+                </label>
                 <input
                   type="email"
                   id="email"
                   name="email"
                   value={formValues.email}
                   onChange={handleInputChange}
-                  className={`form-input ${formErrors.email ? 'error' : ''}`}
-                  placeholder="Enter your email address"
+                  className={`form-input ${formErrors.email ? "error" : ""}`}
+                  placeholder={t("contact_form_email_placeholder")}
                 />
                 {formErrors.email && (
                   <span className="error-message">{formErrors.email}</span>
@@ -324,14 +336,16 @@ const Contact = () => {
               </div>
 
               <div className="form-field">
-                <label htmlFor="message" className="form-label">Message</label>
+                <label htmlFor="message" className="form-label">
+                {t("contact_form_message")}
+                </label>
                 <textarea
                   id="message"
                   name="message"
                   value={formValues.message}
                   onChange={handleInputChange}
-                  className={`form-input ${formErrors.message ? 'error' : ''}`}
-                  placeholder="Enter your message"
+                  className={`form-input ${formErrors.message ? "error" : ""}`}
+                  placeholder={t("contact_form_message_placeholder")}
                   rows="5"
                 />
                 {formErrors.message && (
@@ -350,15 +364,13 @@ const Contact = () => {
                     Sending...
                   </span>
                 ) : (
-                  <span className="button-content">
-                    Send Message
-                  </span>
+                  <span className="button-content">{t("contact_form_button")}</span>
                 )}
               </button>
             </form>
           </div>
         </motion.div>
-        
+
         {/* Notification */}
         {snackbarOpen && (
           <div className={`snackbar ${snackbarSeverity}`}>
@@ -375,7 +387,11 @@ const Contact = () => {
 
       <style jsx>{`
         .contact {
-          background-image: radial-gradient(circle at 50% 30%, #111111 0%, #000000 70%);
+          background-image: radial-gradient(
+            circle at 50% 30%,
+            #111111 0%,
+            #000000 70%
+          );
           background-color: black;
           display: flex;
           flex-direction: column;
@@ -395,7 +411,7 @@ const Contact = () => {
           letter-spacing: 2px;
           position: relative;
           display: inline-block;
-          color: #61DAFB;
+          color: #61dafb;
           text-shadow: 0 0 10px rgba(97, 218, 251, 0.5);
           margin-bottom: 20px;
         }
@@ -408,7 +424,7 @@ const Contact = () => {
           transform: translateX(-50%);
           width: 60px;
           height: 3px;
-          background-color: #61DAFB;
+          background-color: #61dafb;
           box-shadow: 0 0 10px rgba(97, 218, 251, 0.5);
         }
 
@@ -478,17 +494,18 @@ const Contact = () => {
         }
 
         .contact-number {
-          font-family: 'Courier New', monospace;
+          font-family: "Courier New", monospace;
           font-weight: bold;
           opacity: 0.6;
           font-size: 1.2rem;
-          color: #61DAFB;
+          color: #61dafb;
         }
 
         .contact-box:hover {
           transform: translateY(-5px);
           border-color: rgba(97, 218, 251, 0.3);
-          box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4), 0 0 15px rgba(97, 218, 251, 0.1);
+          box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4),
+            0 0 15px rgba(97, 218, 251, 0.1);
         }
 
         /* Contact Form Styles */
@@ -501,7 +518,7 @@ const Contact = () => {
           margin-top: 20px;
           padding: 0 20px;
         }
-        
+
         .contact-form-wrapper {
           background-color: rgba(13, 13, 13, 0.9);
           backdrop-filter: blur(10px);
@@ -514,55 +531,56 @@ const Contact = () => {
           border: 1px solid rgba(97, 218, 251, 0.1);
           transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        
+
         .contact-form-wrapper:hover {
           transform: translateY(-5px);
-          box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.8), 0 0 20px rgba(97, 218, 251, 0.1);
+          box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.8),
+            0 0 20px rgba(97, 218, 251, 0.1);
           border-color: rgba(97, 218, 251, 0.2);
         }
-        
+
         .form-header {
           margin-bottom: 40px;
           position: relative;
         }
-        
+
         .form-header::after {
-          content: '';
+          content: "";
           position: absolute;
           bottom: -20px;
           left: 0;
           width: 60px;
           height: 3px;
-          background: #61DAFB;
+          background: #61dafb;
           border-radius: 2px;
           box-shadow: 0 0 10px rgba(97, 218, 251, 0.5);
         }
-        
+
         .contact-form-title {
           font-size: 2.2rem;
           font-weight: 700;
           margin-bottom: 16px;
-          color: #61DAFB;
+          color: #61dafb;
           letter-spacing: -0.02em;
           text-shadow: 0 0 10px rgba(97, 218, 251, 0.3);
         }
-        
+
         .contact-form-description {
           font-size: 1.1rem;
           color: #aaaaaa;
           line-height: 1.6;
         }
-        
+
         .contact-form {
           display: flex;
           flex-direction: column;
           gap: 24px;
         }
-        
+
         .form-field {
           position: relative;
         }
-        
+
         .form-label {
           display: block;
           margin-bottom: 8px;
@@ -570,7 +588,7 @@ const Contact = () => {
           font-weight: 500;
           color: #dddddd;
         }
-        
+
         .form-input {
           width: 100%;
           padding: 14px 16px;
@@ -581,44 +599,54 @@ const Contact = () => {
           font-size: 1rem;
           transition: all 0.3s ease;
         }
-        
+
         .form-input::placeholder {
           color: #666666;
         }
-        
+
         .form-input:focus {
           outline: none;
-          border-color: #61DAFB;
+          border-color: #61dafb;
           box-shadow: 0 0 15px rgba(97, 218, 251, 0.15);
           background-color: rgba(25, 25, 25, 0.9);
         }
-        
+
         .form-input.error {
-          border-color: #FF4757;
+          border-color: #ff4757;
           background-color: rgba(40, 20, 20, 0.7);
         }
-        
+
         textarea.form-input {
           min-height: 140px;
           resize: vertical;
           line-height: 1.6;
         }
-        
+
         .error-message {
-          color: #FF4757;
+          color: #ff4757;
           font-size: 0.85rem;
           margin-top: 6px;
           display: block;
           animation: fadeIn 0.3s ease;
         }
-        
+
         @keyframes fadeIn {
-          from { opacity: 0; transform: translateY(-5px); }
-          to { opacity: 1; transform: translateY(0); }
+          from {
+            opacity: 0;
+            transform: translateY(-5px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
         }
-        
+
         .submit-button {
-          background: linear-gradient(90deg, rgba(97, 218, 251, 0.8), rgba(97, 218, 251, 0.6));
+          background: linear-gradient(
+            90deg,
+            rgba(97, 218, 251, 0.8),
+            rgba(97, 218, 251, 0.6)
+          );
           border: none;
           padding: 15px;
           font-size: 1rem;
@@ -633,40 +661,49 @@ const Contact = () => {
           box-shadow: 0 5px 15px rgba(97, 218, 251, 0.2);
           text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
         }
-        
+
         .submit-button:disabled {
-          background: #1E1E1E;
+          background: #1e1e1e;
           color: #555555;
           cursor: not-allowed;
           box-shadow: none;
           text-shadow: none;
         }
-        
+
         .submit-button:hover:not(:disabled) {
           transform: translateY(-2px);
           box-shadow: 0 8px 25px rgba(97, 218, 251, 0.3);
-          background: linear-gradient(90deg, rgba(97, 218, 251, 0.9), rgba(97, 218, 251, 0.7));
+          background: linear-gradient(
+            90deg,
+            rgba(97, 218, 251, 0.9),
+            rgba(97, 218, 251, 0.7)
+          );
         }
-        
+
         .submit-button:active:not(:disabled) {
           transform: translateY(0);
         }
-        
+
         .submit-button::before {
-          content: '';
+          content: "";
           position: absolute;
           top: 0;
           left: -100%;
           width: 100%;
           height: 100%;
-          background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+          background: linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 255, 255, 0.2),
+            transparent
+          );
           transition: all 0.5s ease;
         }
-        
+
         .submit-button:hover::before {
           left: 100%;
         }
-        
+
         .button-content {
           display: flex;
           align-items: center;
@@ -675,7 +712,7 @@ const Contact = () => {
           position: relative;
           z-index: 1;
         }
-        
+
         .spinner {
           display: inline-block;
           width: 20px;
@@ -685,11 +722,13 @@ const Contact = () => {
           border-top-color: #fff;
           animation: spin 0.8s linear infinite;
         }
-        
+
         @keyframes spin {
-          to { transform: rotate(360deg); }
+          to {
+            transform: rotate(360deg);
+          }
         }
-        
+
         /* Notification Styles */
         .snackbar {
           position: fixed;
@@ -707,7 +746,7 @@ const Contact = () => {
           animation: slideUp 0.3s ease;
           overflow: hidden;
         }
-        
+
         .snackbar-content {
           display: flex;
           align-items: center;
@@ -715,7 +754,7 @@ const Contact = () => {
           padding: 16px;
           flex: 1;
         }
-        
+
         .snackbar-icon {
           display: flex;
           align-items: center;
@@ -726,7 +765,7 @@ const Contact = () => {
           background: rgba(255, 255, 255, 0.2);
           font-size: 14px;
         }
-        
+
         .snackbar-close {
           background: transparent;
           border: none;
@@ -739,31 +778,37 @@ const Contact = () => {
           align-items: center;
           justify-content: center;
         }
-        
+
         .snackbar-close:hover {
           background: rgba(255, 255, 255, 0.1);
         }
-        
+
         @keyframes slideUp {
-          from { transform: translate(-50%, 20px); opacity: 0; }
-          to { transform: translate(-50%, 0); opacity: 1; }
+          from {
+            transform: translate(-50%, 20px);
+            opacity: 0;
+          }
+          to {
+            transform: translate(-50%, 0);
+            opacity: 1;
+          }
         }
-        
+
         .snackbar.success {
           background-color: rgba(13, 13, 13, 0.95);
           color: #ffffff;
-          border-left: 3px solid #61DAFB;
+          border-left: 3px solid #61dafb;
         }
-        
+
         .snackbar.error {
           background-color: rgba(13, 13, 13, 0.95);
           color: #ffffff;
-          border-left: 3px solid #FF4757;
+          border-left: 3px solid #ff4757;
         }
-        
+
         /* Ambient background glow */
         .contact-form-wrapper::before {
-          content: '';
+          content: "";
           position: absolute;
           top: -150px;
           right: -150px;
@@ -774,9 +819,9 @@ const Contact = () => {
           filter: blur(80px);
           z-index: -1;
         }
-        
+
         .contact-form-wrapper::after {
-          content: '';
+          content: "";
           position: absolute;
           bottom: -150px;
           left: -150px;
@@ -790,49 +835,52 @@ const Contact = () => {
 
         /* Responsive styles */
         @media screen and (max-width: 1200px) {
-          .contact-container, .contact-form-container {
+          .contact-container,
+          .contact-form-container {
             width: 90%;
             padding: 0;
           }
         }
 
         @media screen and (max-width: 992px) {
-          .contact-container, .contact-form-container {
+          .contact-container,
+          .contact-form-container {
             width: 95%;
           }
-          
+
           .contact-box {
             padding: 18px 25px;
           }
-          
+
           .contact-form-wrapper {
             padding: 35px;
           }
         }
 
         @media screen and (max-width: 768px) {
-          .contact-container, .contact-form-container {
+          .contact-container,
+          .contact-form-container {
             width: 100%;
           }
-          
+
           .contact-box {
             padding: 15px 20px;
           }
-          
+
           .icon-wrapper {
             width: 45px;
             height: 45px;
             font-size: 1.3rem;
           }
-          
+
           .contact-top h1 {
             font-size: 2.2rem;
           }
-          
+
           .contact-form-wrapper {
             padding: 30px 20px;
           }
-          
+
           .contact-form-title {
             font-size: 1.8rem;
           }
@@ -842,38 +890,38 @@ const Contact = () => {
           .contact-top h1 {
             font-size: 2rem;
           }
-          
+
           .contact-subtitle {
             font-size: 1rem;
           }
-          
+
           .contact-box {
             padding: 15px;
           }
-          
+
           .contact-content {
             gap: 15px;
           }
-          
+
           .icon-wrapper {
             width: 40px;
             height: 40px;
             font-size: 1.2rem;
           }
-          
+
           .contact-label {
             font-size: 1rem;
           }
-          
+
           .contact-number {
             font-size: 1rem;
           }
-          
+
           .form-header::after {
             width: 50px;
             height: 3px;
           }
-          
+
           .snackbar {
             width: 90%;
             min-width: auto;
@@ -884,21 +932,21 @@ const Contact = () => {
           .contact-box {
             padding: 12px 15px;
           }
-          
+
           .contact-content {
             gap: 10px;
           }
-          
+
           .icon-wrapper {
             width: 36px;
             height: 36px;
             font-size: 1.1rem;
           }
-          
+
           .contact-label {
             font-size: 0.9rem;
           }
-          
+
           .contact-number {
             font-size: 0.9rem;
           }
