@@ -112,6 +112,7 @@ const Navbar = () => {
           id="desktop-links"
           variants={navVariants}
         >
+
           <motion.div variants={itemVariants} className="nav-item">
             <Link
               className={`desktop-links-link ${
