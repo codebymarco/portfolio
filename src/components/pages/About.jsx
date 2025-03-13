@@ -26,6 +26,7 @@ import { RxCross2 } from "react-icons/rx";
 import pic from "../../assets/upgrade.svg";
 import img from "../../assets/image.png";
 import { BiCodeAlt } from "react-icons/bi";
+import useTranslationStore from "../../store/store";
 
 // Swipe Hint Component (internal)
 const SwipeHint = () => {
@@ -49,6 +50,8 @@ const SwipeHint = () => {
 };
 
 const About = () => {
+  const { t: trans } = useTranslationStore();
+
   // Array of images (using the same image URL for demonstration)
   const images = [img, img, img, img, pic];
 
@@ -59,7 +62,7 @@ const About = () => {
   const [touchStart, setTouchStart] = useState(null);
   const [touchEnd, setTouchEnd] = useState(null);
   const carouselRef = useRef(null);
-  
+
   // Minimum swipe distance (in px)
   const minSwipeDistance = 50;
 
@@ -120,18 +123,18 @@ const About = () => {
     setTouchEnd(null); // Reset touchEnd
     setTouchStart(e.targetTouches[0].clientX);
   };
-  
+
   const onTouchMove = (e) => {
     setTouchEnd(e.targetTouches[0].clientX);
   };
-  
+
   const onTouchEnd = () => {
     if (!touchStart || !touchEnd) return;
-    
+
     const distance = touchStart - touchEnd;
     const isLeftSwipe = distance > minSwipeDistance;
     const isRightSwipe = distance < -minSwipeDistance;
-    
+
     if (isLeftSwipe) {
       handleNext();
     } else if (isRightSwipe) {
@@ -242,7 +245,7 @@ const About = () => {
             <div className="left-div">
               <div>
                 <FaLocationPin />
-                <span>Durban, South Africa</span>
+                <span>{trans("about_location")}</span>
               </div>
               <div>
                 <h4>Marco 22</h4>
@@ -250,18 +253,18 @@ const About = () => {
               </div>
               <div>
                 <BiCodeAlt />
-                <span>Software Developer</span>
+                <span>{trans("about_occupation")}</span>
               </div>
               <div>
                 <PiHouseLineBold />
-                <span>Lives in Durban</span>
+                <span>{trans("about_lives")}</span>
               </div>
             </div>
             <FaArrowAltCircleUp style={{ color: "white" }} />
           </div>
 
-          <div 
-            className="photo-section" 
+          <div
+            className="photo-section"
             ref={carouselRef}
             style={{ position: "relative" }}
             onTouchStart={onTouchStart}
@@ -348,62 +351,54 @@ const About = () => {
         <div className="about-about">
           <div className="about-section-top">
             <CiSearch />
-            <span>{t.searchingFor}:</span>
+            <span>{trans("about_searching_for")}:</span>
           </div>
           <div className="search-items">
-            <div>The meaning of life.</div>
-            <div>The perfect lady.</div>
-            <div>More mula.</div>
-            <div>Innovative projects to contribute to.</div>
-            <div>Collaborative coding experiences.</div>
+            <div>{trans("about_searching_for_1")}</div>
+            <div>{trans("about_searching_for_2")}</div>
+            <div>{trans("about_searching_for_3")}</div>
+            <div>{trans("about_searching_for_4")}</div>
+            <div>{trans("about_searching_for_5")}</div>
           </div>
         </div>
 
         {/* About me section */}
         <div className="about-main">
           <div className="about-section-top">
-            <span>{t.aboutMe}:</span>
+            <span>{trans("about_about_heading")}:</span>
           </div>
-          <span className="about-text">
-            Hello, I'm Marco—a South African based in Durban. I completed high
-            school and began my career as a carpenter. Being self-taught, I
-            later transitioned into software development. I currently work for
-            Decido on the Truendo product. My diverse skill set spans from
-            building sturdy tables to developing functional websites. I'm
-            passionate about creating intuitive user experiences and solving
-            complex problems through elegant code solutions.
-          </span>
+          <span className="about-text">{trans("about_about_description")}</span>
         </div>
 
         {/* Essential info */}
         <div className="about-stats">
           <div>
-            <span>{t.essentials}:</span>
+            <span>{trans("about_about_essentials")}:</span>
           </div>
           <div className="about-stats-container">
             <div className="box2">
               <FaLocationPin />
-              <span>Durban, South Africa</span>
+              <span>{trans("about_about_essentials_1")}</span>
             </div>
             <div className="box2">
               <CiRuler />
-              <span>6 feet</span>
+              <span>{trans("about_about_essentials_2")}</span>
             </div>
             <div className="box2">
               <GiWorld />
-              <span>South African</span>
+              <span>{trans("about_about_essentials_3")}</span>
             </div>
             <div className="box2">
               <PiEyesBold />
-              <span>Women</span>
+              <span>{trans("about_about_essentials_4")}</span>
             </div>
             <div className="box2">
               <FaLanguage />
-              <span>English, Portuguese</span>
+              <span>{trans("about_about_essentials_5")}</span>
             </div>
             <div className="box2">
               <MdWork />
-              <span>Software Developer at Decido</span>
+              <span>{trans("about_about_essentials_6")}</span>
             </div>
           </div>
         </div>
@@ -412,7 +407,7 @@ const About = () => {
         <div className="about-stats">
           <div className="section-header">
             <FaCode className="section-icon" />
-            <span>{t.skills}</span>
+            <span>{trans("about_skills_heading")}</span>
           </div>
           <div className="skills-container">
             {professionalSkills.map((skill, index) => (
@@ -427,7 +422,7 @@ const About = () => {
         <div className="about-stats">
           <div className="section-header">
             <MdWork className="section-icon" />
-            <span>{t.experience}</span>
+            <span>{trans("about_we_heading")}</span>
           </div>
           <div className="timeline-container">
             {workExperience.map((job, index) => (
@@ -448,7 +443,7 @@ const About = () => {
         <div className="about-stats">
           <div className="section-header">
             <HiOutlineAcademicCap className="section-icon" />
-            <span>{t.education}</span>
+            <span>{trans("about_edu_heading")}</span>
           </div>
           <div className="education-container">
             <div className="education-item">
@@ -481,7 +476,7 @@ const About = () => {
         <div className="about-stats">
           <div className="section-header">
             <FaToolbox className="section-icon" />
-            <span>{t.projects}</span>
+            <span>{trans("about_projects_heading")}</span>
           </div>
           <div className="projects-grid">
             <div className="project-card">
@@ -520,7 +515,7 @@ const About = () => {
         {/* Hobbies section */}
         <div className="about-stats">
           <div>
-            <span>{t.hobbies}</span>
+            <span>{trans("about_hoobies_etc_heading")}</span>
           </div>
           <div className="about-stats-container-flex-row">
             <div className="box2">football</div>
@@ -792,7 +787,7 @@ const About = () => {
           right: 0;
           text-align: center;
           color: white;
-          background: rgba(0,0,0,0.5);
+          background: rgba(0, 0, 0, 0.5);
           padding: 10px;
           border-radius: 20px;
           margin: 0 auto;
@@ -802,21 +797,28 @@ const About = () => {
         }
 
         @keyframes fadeOut {
-          0% { opacity: 1; }
-          70% { opacity: 1; }
-          100% { opacity: 0; }
+          0% {
+            opacity: 1;
+          }
+          70% {
+            opacity: 1;
+          }
+          100% {
+            opacity: 0;
+          }
         }
 
         /* Media queries */
         @media (max-width: 768px) {
-          .prev-arrow, .next-arrow {
+          .prev-arrow,
+          .next-arrow {
             display: none;
           }
-          
+
           .swipe-hint {
             display: block;
           }
-          
+
           /* Make tab indicators slightly larger on mobile for easier tapping */
           .tab-buttons div {
             height: 12px !important;

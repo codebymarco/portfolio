@@ -6,6 +6,7 @@ import pic4 from "../../assets/ub40kt.jpg";
 import pic5 from "../../assets/lb.jpg";
 import pic6 from "../../assets/mv.jpg";
 import "../../styles/about.css";
+import useTranslationStore from "../../store/store";
 
 const anthemsData = [
   {
@@ -47,11 +48,13 @@ const anthemsData = [
 ];
 
 const Anthems = () => {
+  const { t: trans } = useTranslationStore();
+
   return (
     <div className="about-stats">
       <div className="about-stats-top">
         <FaMusic style={{ color: "gray" }} />
-        <span style={{ color: "white" }}>Anthems</span>
+        <span style={{ color: "white" }}>{trans("about_anthem_heading")}</span>
       </div>
       <div className="about-stats-container-anthem">
         {anthemsData.map((anthem) => (

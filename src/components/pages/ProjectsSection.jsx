@@ -80,6 +80,18 @@ const ProjectsSection = () => {
           </motion.div>
         ))}
       </motion.div>
+      
+      <motion.div 
+        className="more-link-container"
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.8, type: "spring", stiffness: 50 }}
+      >
+        <a className="more-link" href="/all-projects">
+          <span>{t("more")}</span>
+          <div className="cosmic-trail"></div>
+        </a>
+      </motion.div>
 
       <style jsx>{`
         .projects {
@@ -359,6 +371,85 @@ const ProjectsSection = () => {
           color: #61dafb;
         }
 
+        /* More link styles */
+        .more-link-container {
+          margin-top: 50px;
+          position: relative;
+          z-index: 1;
+        }
+
+        .more-link {
+          display: inline-block;
+          font-size: 1.4rem;
+          color: #61dafb;
+          text-decoration: none;
+          letter-spacing: 4px;
+          text-transform: uppercase;
+          font-weight: 600;
+          padding: 12px 30px;
+          border: 1px solid rgba(97, 218, 251, 0.3);
+          border-radius: 30px;
+          background: rgba(17, 17, 17, 0.6);
+          backdrop-filter: blur(5px);
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3), 0 0 15px rgba(97, 218, 251, 0.15);
+          transition: all 0.3s ease;
+          position: relative;
+          overflow: hidden;
+        }
+
+        .more-link:hover {
+          background: rgba(17, 17, 17, 0.8);
+          box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4), 0 0 20px rgba(97, 218, 251, 0.25);
+          transform: translateY(-2px);
+          color: #a139ff;
+          border-color: rgba(161, 57, 255, 0.4);
+        }
+
+        .more-link span {
+          position: relative;
+          z-index: 2;
+        }
+
+        .cosmic-trail {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(90deg, transparent, rgba(97, 218, 251, 0.1), rgba(161, 57, 255, 0.2), transparent);
+          transform: translateX(-100%);
+          transition: transform 0.6s ease;
+          pointer-events: none;
+        }
+
+        .more-link:hover .cosmic-trail {
+          transform: translateX(100%);
+        }
+
+        @keyframes starryEffect {
+          0% {
+            box-shadow: 0 0 5px rgba(161, 57, 255, 0.3);
+          }
+          50% {
+            box-shadow: 0 0 15px rgba(97, 218, 251, 0.5), 0 0 25px rgba(161, 57, 255, 0.3);
+          }
+          100% {
+            box-shadow: 0 0 5px rgba(161, 57, 255, 0.3);
+          }
+        }
+
+        .more-link:after {
+          content: "";
+          position: absolute;
+          bottom: -2px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 70%;
+          height: 1px;
+          background: linear-gradient(90deg, transparent, #61dafb, #a139ff, transparent);
+          animation: starryEffect 3s infinite;
+        }
+
         /* Responsive styles - tablet */
         @media screen and (max-width: 768px) {
           .projects-container {
@@ -405,6 +496,11 @@ const ProjectsSection = () => {
             font-size: 2.2rem;
             margin-bottom: 15px;
           }
+          
+          .more-link {
+            font-size: 1.2rem;
+            padding: 10px 25px;
+          }
         }
 
         /* Very small devices */
@@ -420,6 +516,11 @@ const ProjectsSection = () => {
 
           .projects-top h1 {
             font-size: 2.2rem;
+          }
+
+          .more-link {
+            font-size: 1.1rem;
+            padding: 10px 20px;
           }
         }
       `}</style>
