@@ -90,53 +90,56 @@ const Career = () => {
                       <div className="responsibility-item">
                         <span className="responsibility-number">1</span>
                         <span className="responsibility-text">
-                          Find bugs and fix them
+                          {t("job_res_one_1")}
                         </span>
                       </div>
                       <div className="responsibility-item">
                         <span className="responsibility-number">2</span>
                         <span className="responsibility-text">
-                          Optimization of data
+                          {t("job_res_one_2")}
                         </span>
                       </div>
                       <div className="responsibility-item">
                         <span className="responsibility-number">3</span>
                         <span className="responsibility-text">
-                          Implement new features
+                          {t("job_res_one_3")}
                         </span>
                       </div>
                       <div className="responsibility-item">
                         <span className="responsibility-number">4</span>
-                        <span className="responsibility-text">Quick fixes</span>
+                        <span className="responsibility-text">
+                          {t("job_res_one_4")}
+                        </span>
                       </div>
                       <div className="responsibility-item">
                         <span className="responsibility-number">5</span>
                         <span className="responsibility-text">
-                          Fix client issues
+                        {t("job_res_one_5")}
+
                         </span>
                       </div>
                       <div className="responsibility-item">
                         <span className="responsibility-number">6</span>
                         <span className="responsibility-text">
-                          DevOps assistance
+                        {t("job_res_one_6")}
                         </span>
                       </div>
                       <div className="responsibility-item">
                         <span className="responsibility-number">7</span>
                         <span className="responsibility-text">
-                          DB migration
+                        {t("job_res_one_7")}
                         </span>
                       </div>
                       <div className="responsibility-item">
                         <span className="responsibility-number">8</span>
                         <span className="responsibility-text">
-                          Docker migration
+                        {t("job_res_one_8")}
                         </span>
                       </div>
                       <div className="responsibility-item">
                         <span className="responsibility-number">9</span>
                         <span className="responsibility-text">
-                          Consent record migration
+                        {t("job_res_one_9")}
                         </span>
                       </div>
                     </div>
@@ -154,7 +157,7 @@ const Career = () => {
                 <div className="job-card">
                   <div className="job-header">
                     <div className="job-title-section">
-                      <h2 className="job-title">Fitter</h2>
+                      <h2 className="job-title">{t("job_title_one")}</h2>
                       <div className="job-company">
                         <span>El-Shaddai Interiors</span>
                       </div>
@@ -174,57 +177,51 @@ const Career = () => {
                   <div className="job-description">
                     <div className="section-heading">
                       <GrInfo />
-                      <h3>Description</h3>
+                      <h3> {t("job_description")}</h3>
                     </div>
-                    <p>
-                      I started working for my dad straight after high school.
-                      My job was to learn everything my dad knew so I could
-                      lessen the burden on him. Left after I found a new career
-                      path. Just to put it out there, my brother took over from
-                      me.
-                    </p>
+                    <p>{t("job_description_two")}</p>
                   </div>
 
                   <div className="job-responsibilities">
                     <div className="section-heading">
                       <LiaTasksSolid />
-                      <h3>Responsibilities</h3>
+                      <h3>{t("job_responsibility")}</h3>
                     </div>
                     <div className="responsibilities-grid">
                       <div className="responsibility-item">
                         <span className="responsibility-number">1</span>
                         <span className="responsibility-text">
-                          Accept order from supplier
+                        {t("job_res_two_1")}
                         </span>
                       </div>
                       <div className="responsibility-item">
                         <span className="responsibility-number">2</span>
                         <span className="responsibility-text">
-                          Check if order is correct
+                        {t("job_res_two_2")}
                         </span>
                       </div>
                       <div className="responsibility-item">
                         <span className="responsibility-number">3</span>
                         <span className="responsibility-text">
-                          Categorize pieces based on the units
+                        {t("job_res_two_3")}
                         </span>
                       </div>
                       <div className="responsibility-item">
                         <span className="responsibility-number">4</span>
                         <span className="responsibility-text">
-                          Assemble the units
+                        {t("job_res_two_4")}
                         </span>
                       </div>
                       <div className="responsibility-item">
                         <span className="responsibility-number">5</span>
                         <span className="responsibility-text">
-                          Fit and finish units
+                        {t("job_res_two_5")}
                         </span>
                       </div>
                       <div className="responsibility-item">
                         <span className="responsibility-number">6</span>
                         <span className="responsibility-text">
-                          Allocate tasks to my team
+                        {t("job_res_two_6")}
                         </span>
                       </div>
                     </div>
