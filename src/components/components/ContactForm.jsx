@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import emailjs from '@emailjs/browser';
 
 const ContactForm = () => {
@@ -19,6 +19,11 @@ const ContactForm = () => {
   const [snackbarOpen, setSnackbarOpen] = useState(false);
   const [snackbarMessage, setSnackbarMessage] = useState("");
   const [snackbarSeverity, setSnackbarSeverity] = useState("success");
+
+  // Initialize EmailJS
+  useEffect(() => {
+    emailjs.init('IHnFIsA1asbqgAOkK');
+  }, []);
 
   const isEmailValid = (email) => {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -82,15 +87,24 @@ const ContactForm = () => {
 
     setIsSubmitting(true);
 
-    // EmailJS integration
-    emailjs.sendForm(
-      'service_q56q0zv',     // Replace with your EmailJS service ID
-      'template_7ofgugz',    // Replace with your EmailJS template ID
-      form.current,          // Your form reference
-      'IHnFIsA1asbqgAOkK'      // Replace with your EmailJS public key
+    // ALTERNATIVE APPROACH: Using send() instead of sendForm()
+    // This explicitly sends the template parameters rather than relying on form field names
+    emailjs.send(
+      'service_q56q0zv',    // Service ID
+      'template_7ofgugz',   // Template ID
+      {
+        name: formValues.name,
+        email: formValues.email,
+        message: formValues.message,
+        to_email: 'your-recipient-email@example.com' // Add your recipient email here if not in template
+      },
+      'IHnFIsA1asbqgAOkK'   // Public key
     )
       .then((result) => {
-        console.log('Email sent successfully!', result.text);
+        console.log('Email sent successfully! Full response:', result);
+        console.log('Status:', result.status);
+        console.log('Text:', result.text);
+        
         setSnackbarMessage("Thank you! Your message has been sent successfully.");
         setSnackbarSeverity("success");
         setSnackbarOpen(true);
@@ -102,7 +116,7 @@ const ContactForm = () => {
         });
       })
       .catch((error) => {
-        console.error('Failed to send email:', error.text);
+        console.error('Failed to send email. Full error:', error);
         setSnackbarMessage("Failed to send message. Please try again later.");
         setSnackbarSeverity("error");
         setSnackbarOpen(true);
@@ -217,6 +231,7 @@ const ContactForm = () => {
           background-color: black;
         }
         
+        /* Rest of your CSS styles remain unchanged */
         .contact-form-wrapper {
           background-color: rgba(13, 13, 13, 0.9);
           backdrop-filter: blur(10px);
