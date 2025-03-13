@@ -186,17 +186,15 @@ const About = () => {
   const workExperience = [
     {
       company: "Decido (Truendo)",
-      position: "Software Developer",
-      period: "Present",
-      description:
-        "Working on the Truendo product, focusing on front-end development and user experience.",
+      position: "about_we_one_occupation",
+      period: "present",
+      description: "about_we_one_description",
     },
     {
       company: "Previous Company",
-      position: "Carpenter",
-      period: "Past",
-      description:
-        "Built sturdy tables and furniture, developing hands-on skills and attention to detail.",
+      position: "about_we_two_occupation",
+      period: "past",
+      description: "about_we_two_description",
     },
   ];
 
@@ -429,10 +427,12 @@ const About = () => {
               <div key={index} className="timeline-item">
                 <div className="timeline-marker"></div>
                 <div className="timeline-content">
-                  <h3>{job.position}</h3>
+                  <h3>{trans(job.position)}</h3>
                   <h4>{job.company}</h4>
-                  <p className="timeline-period">{job.period}</p>
-                  <p className="timeline-description">{job.description}</p>
+                  <p className="timeline-period">{trans(job.period)}</p>
+                  <p className="timeline-description">
+                    {trans(job.description)}
+                  </p>
                 </div>
               </div>
             ))}
@@ -451,11 +451,8 @@ const About = () => {
                 <FaGraduationCap />
               </div>
               <div className="education-content">
-                <h3>Self-taught Developer</h3>
-                <p>
-                  Continuous learning through online resources, documentation,
-                  and practical projects
-                </p>
+                <h3>{trans("about_edu_one_title")}</h3>
+                <p>{trans("about_edu_one_description")}</p>
               </div>
             </div>
             <div className="education-item">
@@ -463,10 +460,8 @@ const About = () => {
                 <FaGraduationCap />
               </div>
               <div className="education-content">
-                <h3>High School Diploma</h3>
-                <p>
-                  Completed secondary education with focus on technical subjects
-                </p>
+                <h3>{trans("about_edu_two_title")}</h3>
+                <p>{trans("about_edu_two_description")}</p>
               </div>
             </div>
           </div>
@@ -484,10 +479,7 @@ const About = () => {
                 <h3>Truendo</h3>
                 <span className="project-tag">Professional</span>
               </div>
-              <p>
-                Working on front-end development and user experience for the
-                Truendo product at Decido.
-              </p>
+              <p>{trans("about_projects_one_description")}</p>
               <div className="project-tech">
                 <span>React</span>
                 <span>JavaScript</span>
@@ -499,10 +491,7 @@ const About = () => {
                 <h3>Portfolio Website</h3>
                 <span className="project-tag">Personal</span>
               </div>
-              <p>
-                Designed and developed a personal portfolio website to showcase
-                skills and projects.
-              </p>
+              <p>{trans("about_projects_two_description")}</p>
               <div className="project-tech">
                 <span>React</span>
                 <span>CSS</span>
@@ -518,14 +507,14 @@ const About = () => {
             <span>{trans("about_hoobies_etc_heading")}</span>
           </div>
           <div className="about-stats-container-flex-row">
-            <div className="box2">football</div>
-            <div className="box2">youtube</div>
-            <div className="box2">old tv shows and movies</div>
-            <div className="box2">music</div>
-            <div className="box2">horror movies</div>
-            <div className="box2">coding</div>
-            <div className="box2">working out</div>
-            <div className="box2">gaming</div>
+            <div className="box2">{trans("about_hobbies_1")}</div>
+            <div className="box2">{trans("about_hobbies_2")}</div>
+            <div className="box2">{trans("about_hobbies_3")}</div>
+            <div className="box2">{trans("about_hobbies_4")}</div>
+            <div className="box2">{trans("about_hobbies_5")}</div>
+            <div className="box2">{trans("about_hobbies_6")}</div>
+            <div className="box2">{trans("about_hobbies_7")}</div>
+            <div className="box2">{trans("about_hobbies_8")}</div>
           </div>
         </div>
 
