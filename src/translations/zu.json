@@ -33,5 +33,16 @@
     "nav_link_contact": "xhumana",
     "nav_link_projects": "amaprojekthi",
     "nav_link_career": "umsebenzi",
-    "nav_link_blog": "ibhulogi"
+    "nav_link_blog": "ibhulogi",
+    "contact_heading": "THINTANA NAMI",
+    "contact_description": "Ungangabazi ukuxhumana nami ngezindlela ezilandelayo",
+    "contact_form_heading": "Ngithumelele Umyalezo",
+    "contact_form_description": "Unombuzo noma ufuna ukusebenzisana? Gcwalisa ifomu ngezansi futhi ngizokuphendula masinyane.",
+    "contact_form_name": "Igama",
+    "contact_form_email": "I-imeyili",
+    "contact_form_message": "Umyalezo",
+    "contact_form_name_placeholder": "Faka igama lakho",
+    "contact_form_email_placeholder": "Faka ikheli lakho le-imeyili",
+    "contact_form_message_placeholder": "Faka umyalezo wakho",
+    "contact_form_button": "Thumela Umyalezo"
   }

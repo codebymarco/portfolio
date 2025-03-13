@@ -33,5 +33,16 @@
   "nav_link_contact": "contacto",
   "nav_link_projects": "proyectos",
   "nav_link_career": "carrera",
-  "nav_link_blog": "blog"
+  "nav_link_blog": "blog",
+  "contact_heading": "PONTE EN CONTACTO",
+  "contact_description": "No dudes en comunicarte a través de cualquiera de estos canales",
+  "contact_form_heading": "Envíame un Mensaje",
+  "contact_form_description": "¿Tienes una pregunta o quieres trabajar juntos? Completa el formulario a continuación y te responderé lo antes posible.",
+  "contact_form_name": "Nombre",
+  "contact_form_email": "Correo electrónico",
+  "contact_form_message": "Mensaje",
+  "contact_form_name_placeholder": "Introduce tu nombre",
+  "contact_form_email_placeholder": "Introduce tu dirección de correo electrónico",
+  "contact_form_message_placeholder": "Introduce tu mensaje",
+  "contact_form_button": "Enviar Mensaje"
 }

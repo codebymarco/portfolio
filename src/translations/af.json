@@ -33,5 +33,16 @@
   "nav_link_contact": "kontak",
   "nav_link_projects": "projekte",
   "nav_link_career": "loopbaan",
-  "nav_link_blog": "blog"
+  "nav_link_blog": "blog",
+  "contact_heading": "KOM IN AANRAKING",
+  "contact_description": "Voel vry om deur enige van hierdie kanale te kontak",
+  "contact_form_heading": "Stuur My 'n Boodskap",
+  "contact_form_description": "Het jy 'n vraag of wil jy saamwerk? Vul die vorm hieronder in en ek sal so gou as moontlik by jou terugkom.",
+  "contact_form_name": "Naam",
+  "contact_form_email": "E-pos",
+  "contact_form_message": "Boodskap",
+  "contact_form_name_placeholder": "Voer jou naam in",
+  "contact_form_email_placeholder": "Voer jou e-posadres in",
+  "contact_form_message_placeholder": "Voer jou boodskap in",
+  "contact_form_button": "Stuur Boodskap"
 }
