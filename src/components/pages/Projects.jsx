@@ -3,8 +3,11 @@ import { useNavigate } from "react-router-dom";
 import "../../styles/certs.css";
 import { useEffect } from "react";
 import { Helmet } from "react-helmet";
+import useTranslationStore from "../../store/store";
 
 const Projects = () => {
+  const { t } = useTranslationStore();
+
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
@@ -87,8 +90,8 @@ const Projects = () => {
           <div className="galaxy"></div>
         </div>
         <div className="projects-top">
-          <h1>PROJECTS</h1>
-          <div className="projects-intro">Explore my digital creations</div>
+          <h1>{t("projects_heading")}</h1>
+          <div className="projects-intro">{t("projects_description")}</div>
         </div>
         <motion.div
           className="projects-container"
