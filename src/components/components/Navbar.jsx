@@ -197,14 +197,14 @@ const Navbar = () => {
               <HiOutlineGlobeAlt className="language-icon" />
               <span className="current-language">
                 {language === "en"
-                  ? "ENGLISH"
+                  ? "en"
                   : language === "zu"
-                  ? "ZULU"
+                  ? "zu"
                   : language === "af"
-                  ? "AFRIKAANS"
+                  ? "af"
                   : language === "es"
-                  ? "SPANISH"
-                  : "ENGLISH"}
+                  ? "es"
+                  : "en"}
               </span>
               <IoIosArrowDown
                 className={`arrow-icon ${showLanguageMenu ? "rotated" : ""}`}
