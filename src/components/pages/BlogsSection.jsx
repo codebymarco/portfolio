@@ -61,7 +61,7 @@ const BlogsSection = () => {
   return (
     <div className="blogsSection">
       <div className="blogsSectionTop">
-        <h1>{t("blogs_section_heading")}</h1>
+        <h1 className="blogsHeading">{t("blogs_section_heading")}</h1>
         <Link to="/blog">{t("blogs_section_more")}</Link>
       </div>
       <motion.div

@@ -158,7 +158,7 @@ const Blogs = () => {
         </div>
 
         {/* Search and filter section */}
-        <div className="blog-filter-section">
+{/*         <div className="blog-filter-section">
           <div className="blog-search-container">
             <FaSearch className="blog-search-icon" />
             <input
@@ -181,7 +181,7 @@ const Blogs = () => {
               <option value="oldest">Oldest First</option>
             </select>
           </div>
-        </div>
+        </div> */}
 
         {/* Tags filter section */}
 {/*         <div className="blog-tags-filter">
