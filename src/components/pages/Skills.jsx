@@ -8,6 +8,7 @@ import {
   FaDocker,
   FaAws,
   FaGoogle,
+  FaAngular,
 } from "react-icons/fa";
 import {
   SiTypescript,
@@ -18,6 +19,8 @@ import {
   SiMongodb,
   SiPostgresql,
 } from "react-icons/si";
+import { TbBrandCSharp } from "react-icons/tb";
+
 import "../../styles/skillsPage.css";
 import { motion } from "framer-motion";
 import useTranslationStore from "../../store/store";
@@ -38,6 +41,8 @@ const skillIcons = {
   nosql: { icon: SiMongodb, color: "#47A248" },
   aws: { icon: FaAws, color: "#FF9900" },
   gcp: { icon: FaGoogle, color: "#4285F4" },
+  angular: { icon: FaAngular, color: "#4285F4" },
+  c_sharp: { icon: TbBrandCSharp, color: "#4285F4" },
 };
 
 const Skills = () => {
@@ -85,6 +90,8 @@ const Skills = () => {
           "nosql",
           "aws",
           "gcp",
+          "angular",
+          "c_sharp",
         ].map((skill, index) => {
           const IconComponent = skillIcons[skill].icon;
           return (

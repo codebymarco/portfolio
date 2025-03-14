@@ -40,55 +40,7 @@ const blogData = [
     tags: ["kubernetes", "docker", "debugging"],
     date: "2025-02-15",
     image: "https://cloud2data.com/wp-content/uploads/2023/05/Kubernetes.png",
-  },
-  {
-    id: 4,
-    title: "Docker Migration To Artifact Repo",
-    tags: ["kubernetes", "docker", "debugging"],
-    date: "2025-02-15",
-    image:
-      "https://3.bp.blogspot.com/-8PzSTH6N1Cs/V2f3rO3hsRI/AAAAAAAAid8/2QxOlHz9MnohU-baWnepmxG4ENz78IHpwCLcB/s1600/Capture.PNG",
-  },
-  {
-    id: 5,
-    title: "React Helmet",
-    tags: ["frontend", "seo", "react"],
-    date: "2025-02-15",
-    image:
-      "https://th.bing.com/th/id/OIP.t4Em-3T6FZqHzZxxUH22wgHaGa?rs=1&pid=ImgDetMain",
-  },
-  {
-    id: 6,
-    title: "Node vs Bun",
-    tags: ["backend", "server", "javascript"],
-    date: "2025-02-15",
-    image:
-      "https://miro.medium.com/v2/resize:fit:480/1*YxBJCMcyz2cOP6AqshyhRg.jpeg",
-  },
-  {
-    id: 7,
-    title: "The Ultimate Guide to Full-Stack Cloud Development",
-    tags: ["backend", "server", "devops"],
-    date: "2025-02-15",
-    image:
-      "https://img.freepik.com/premium-photo/cloud-computing-technology_1083198-314.jpg",
-  },
-  {
-    id: 8,
-    title: "Building Event-Driven Architectures with Golang",
-    tags: ["backend", "golang"],
-    date: "2025-02-15",
-    image:
-      "https://iconlogovector.com/uploads/images/2024/04/md-6619d74e0c9e1-GO-Golang.webp",
-  },
-  {
-    id: 9,
-    title: "Building Cross-Platform Mobile Apps with React Native",
-    tags: ["react", "mobile", "ios", "android"],
-    date: "2025-02-15",
-    image:
-      "https://www.nectarpourtous.com/wp-content/uploads/2023/11/React-Native-1-1024x1024.jpg",
-  },
+  }
 ];
 
 // Popular tags for filter
