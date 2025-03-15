@@ -60,16 +60,6 @@ const Projects = () => {
       liveUrl: "https://formio-console.vercel.app",
     },
     {
-      name: "todo app",
-      description: "Todo app",
-      liveUrl: "https://formio-console.vercel.app",
-    },
-    {
-      name: "android life tracker app",
-      description: "Life Tracker App",
-      liveUrl: "https://formio-console.vercel.app",
-    },
-    {
       name: "el-shaddai interiors website",
       description: "Dynamic form builder and submission management system",
       liveUrl: "https://formio-console.vercel.app",

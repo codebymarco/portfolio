@@ -1,14 +1,12 @@
 import {
   FaHtml5,
   FaCss3Alt,
-  FaJs,
   FaReact,
   FaNodeJs,
   FaPython,
   FaDocker,
   FaAws,
   FaGoogle,
-  FaAngular,
 } from "react-icons/fa";
 import {
   SiTypescript,
@@ -41,8 +39,6 @@ const skillIcons = {
   nosql: { icon: SiMongodb, color: "#47A248" },
   aws: { icon: FaAws, color: "#FF9900" },
   gcp: { icon: FaGoogle, color: "#4285F4" },
-  angular: { icon: FaAngular, color: "#4285F4" },
-  c_sharp: { icon: TbBrandCSharp, color: "#4285F4" },
 };
 
 const Skills = () => {
@@ -90,8 +86,6 @@ const Skills = () => {
           "nosql",
           "aws",
           "gcp",
-          "angular",
-          "c_sharp",
         ].map((skill, index) => {
           const IconComponent = skillIcons[skill].icon;
           return (
