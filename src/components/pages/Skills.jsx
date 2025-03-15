@@ -228,7 +228,7 @@ const Skills = () => {
 
         .skillsContainer {
           display: grid;
-          grid-template-columns: repeat(4, 1fr);
+          grid-template-columns: repeat(5, 1fr);
           gap: 30px;
           width: 100%;
           z-index: 1;
