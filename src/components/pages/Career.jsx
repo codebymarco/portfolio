@@ -4,7 +4,6 @@ import { BsCalendarDate } from "react-icons/bs";
 import { LiaTasksSolid } from "react-icons/lia";
 import { GrInfo } from "react-icons/gr";
 import { HiOutlineBriefcase } from "react-icons/hi";
-import Skills from "./Skills";
 import { Helmet } from "react-helmet";
 import useTranslationStore from "../../store/store";
 
@@ -36,13 +35,9 @@ const Career = () => {
         <div className="career-top">
           <h1>{t("career_heading")}</h1>
         </div>
-        <div className="skills-wrapper">
-          <Skills />
-        </div>{" "}
         {/*         <Certs />
          */}{" "}
         <div className="career-history-section">
-          <h1 className="career-history-title">{t("career_history")}</h1>
 
           <div className="career-timeline">
             <div className="timeline-line"></div>

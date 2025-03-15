@@ -195,17 +195,18 @@
   }
 }
 
-.blogsHeading{
-  font-size: 4rem;
+.blogsHeading {
+  font-size: 3rem;
   letter-spacing: 8px;
   position: relative;
   display: inline-block;
-  color: transparent;
-  background: linear-gradient(45deg, #61dafb, #a139ff);
+  color: white;
+  /*   background: linear-gradient(45deg, #61dafb, #a139ff);
   -webkit-background-clip: text;
   background-clip: text;
-  text-shadow: 0 5px 25px rgba(97, 218, 251, 0.4);
+  text-shadow: 0 5px 25px rgba(97, 218, 251, 0.4); */
   font-weight: 800;
   margin: 0;
-  animation: glow 3s ease-in-out infinite alternate;
+  /*   animation: glow 3s ease-in-out infinite alternate;
+ */
 }
