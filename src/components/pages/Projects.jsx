@@ -40,11 +40,6 @@ const Projects = () => {
   // Project details
   const projects = [
     {
-      name: "portfoliobio",
-      description: "Personal portfolio website showcasing skills and projects",
-      liveUrl: "https://iportfolio-console.vercel.app",
-    },
-    {
       name: "indeed",
       description: "Job search platform clone with custom filtering",
       liveUrl: "https://indeed-console.vercel.app",
@@ -58,12 +53,7 @@ const Projects = () => {
       name: "formio",
       description: "Dynamic form builder and submission management system",
       liveUrl: "https://formio-console.vercel.app",
-    },
-    {
-      name: "el-shaddai interiors website",
-      description: "Dynamic form builder and submission management system",
-      liveUrl: "https://formio-console.vercel.app",
-    },
+    }
   ];
 
   return (

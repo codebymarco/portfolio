@@ -40,9 +40,9 @@ const ProjectsSection = () => {
   // Project details
   const projects = [
     {
-      name: "portfoliobio",
-      description: "Personal portfolio website showcasing skills and projects",
-      liveUrl: "https://iportfolio-console.vercel.app",
+      name: "linkbio",
+      description: "Personal linkbio website showcasing all links",
+      liveUrl: "https://linkbio-console.vercel.app",
     },
     {
       name: "indeed",

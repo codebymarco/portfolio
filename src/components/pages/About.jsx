@@ -246,7 +246,7 @@ const About = () => {
                 <span>{trans("about_location")}</span>
               </div>
               <div>
-                <h4>Marco 22</h4>
+                <h4>Marco 26</h4>
                 <MdVerified style={{ color: "dodgerblue" }} />
               </div>
               <div>
