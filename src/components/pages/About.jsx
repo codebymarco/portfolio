@@ -25,6 +25,10 @@ import { HiAdjustmentsHorizontal, HiOutlineAcademicCap } from "react-icons/hi2";
 import { RxCross2 } from "react-icons/rx";
 import pic from "../../assets/upgrade.svg";
 import img from "../../assets/image.png";
+import img2 from "../../assets/my_pics/six.jpg";
+import img3 from "../../assets/my_pics/five.jpg";
+import img4 from "../../assets/my_pics/seven.jpg";
+import img5 from "../../assets/my_pics/one.jpg";
 import { BiCodeAlt } from "react-icons/bi";
 import useTranslationStore from "../../store/store";
 
@@ -53,7 +57,7 @@ const About = () => {
   const { t: trans } = useTranslationStore();
 
   // Array of images (using the same image URL for demonstration)
-  const images = [img, img, img, img, pic];
+  const images = [img, img2, img3, img4, img5, pic];
 
   // Selected language for the interface
   const [language, setLanguage] = useState("english");

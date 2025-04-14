@@ -75,28 +75,28 @@ const BannerTwo = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 1.3 }}
           >
-            <FaReact className="tech-icon" title="React" />
+            <FaReact className="tech-icon" title="React" style={{color:'dodgerblue'}}/>
           </motion.span>
           <motion.span
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 1.5 }}
           >
-            <FaJs className="tech-icon" title="JavaScript" />
+            <FaJs className="tech-icon" title="JavaScript" style={{color:'green'}}/>
           </motion.span>
           <motion.span
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 1.7 }}
           >
-            <FaNodeJs className="tech-icon" title="Node.js" />
+            <FaNodeJs className="tech-icon" title="Node.js" style={{color:'orange'}}/>
           </motion.span>
           <motion.span
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 1.9 }}
           >
-            <FaCode className="tech-icon" title="Full Stack" />
+            <FaCode className="tech-icon" title="Full Stack" style={{color:'white'}}/>
           </motion.span>
         </motion.div>
 
