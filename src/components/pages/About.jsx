@@ -357,7 +357,6 @@ const About = () => {
           </div>
           <div className="search-items">
             <div>{trans("about_searching_for_1")}</div>
-            <div>{trans("about_searching_for_2")}</div>
             <div>{trans("about_searching_for_3")}</div>
             <div>{trans("about_searching_for_4")}</div>
             <div>{trans("about_searching_for_5")}</div>
@@ -455,15 +454,6 @@ const About = () => {
                 <FaGraduationCap />
               </div>
               <div className="education-content">
-                <h3>{trans("about_edu_one_title")}</h3>
-                <p>{trans("about_edu_one_description")}</p>
-              </div>
-            </div>
-            <div className="education-item">
-              <div className="education-icon">
-                <FaGraduationCap />
-              </div>
-              <div className="education-content">
                 <h3>{trans("about_edu_two_title")}</h3>
                 <p>{trans("about_edu_two_description")}</p>
               </div>
@@ -480,8 +470,8 @@ const About = () => {
           <div className="projects-grid">
             <div className="project-card">
               <div className="project-header">
-                <h3>Truendo</h3>
-                <span className="project-tag">Professional</span>
+                <h3>Linkbio</h3>
+                <span className="project-tag">Personal</span>
               </div>
               <p>{trans("about_projects_one_description")}</p>
               <div className="project-tech">
@@ -492,7 +482,7 @@ const About = () => {
             </div>
             <div className="project-card">
               <div className="project-header">
-                <h3>Portfolio Website</h3>
+                <h3>Formio</h3>
                 <span className="project-tag">Personal</span>
               </div>
               <p>{trans("about_projects_two_description")}</p>
