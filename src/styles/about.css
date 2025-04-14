@@ -277,7 +277,7 @@
   justify-content: space-between;
   align-items: flex-end;
   gap: 30px;
-  z-index: 499;
+  z-index: 498;
   background: linear-gradient(
     to top,
     rgba(0, 0, 0, 0.8) 0%,
