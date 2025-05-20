@@ -16,18 +16,25 @@ const Home = () => {
   return (
     <div className="home">
       <Helmet>
-        <title>
-          Home | Software Developer Portfolio | Miguelmarco Ramcharan
-        </title>
-        <meta
-          name="description"
-          content="Welcome to the portfolio of Miguelmarco Ramcharan. Explore projects, skills, and more by CodeByMarco."
-        />
-        <meta name="author" content="Miguelmarco Ramcharan" />
-        <meta
-          name="keywords"
-          content="marco ramcharan, codebymarco, software developer portfolio"
-        />
+
+        <title>CodeByMarco | Fullstack Software Developer - Durban, KZN</title>
+        <meta name="description" content="Miguelmarco Ramcharan of CodeByMarco: Expert Fullstack Software Developer in Durban, KZN. Building robust web & mobile apps with React, Node.js & more." />
+        <link rel="canonical" href="https://www.codebymarco.com/" />
+
+        <meta property="og:title" content="CodeByMarco | Fullstack Software Developer - Durban, KZN" />
+        <meta property="og:description" content="Miguelmarco Ramcharan of CodeByMarco: Expert Fullstack Software Developer in Durban, KZN. Building robust web & mobile apps with React, Node.js & more." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.codebymarco.com/" />
+        <meta property="og:image" content="https://www.codebymarco.com/images/codebymarco-og-image.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="CodeByMarco" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@your_twitter_handle" />
+        <meta name="twitter:creator" content="@your_twitter_handle" />
+        <meta name="twitter:title" content="CodeByMarco | Fullstack Software Developer - Durban, KZN" />
+        <meta name="twitter:description" content="Miguelmarco Ramcharan of CodeByMarco: Expert Fullstack Software Developer in Durban, KZN. Building robust web & mobile apps with React, Node.js & more." />
+        <meta name="twitter:image" content="https://www.codebymarco.com/images/codebymarco-og-image.jpg" />
       </Helmet>
       <ScrollToTop />
       <BannerTwo />
