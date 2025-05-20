@@ -205,18 +205,28 @@ const About = () => {
   return (
     <div>
       <Helmet>
-        <title>
-          About | Software Developer Portfolio | Miguelmarco Ramcharan
-        </title>
-        <meta
-          name="description"
-          content="Welcome to the portfolio of Miguelmarco Ramcharan. Explore projects, skills, and more by CodeByMarco."
-        />
-        <meta name="author" content="Miguelmarco Ramcharan" />
-        <meta
-          name="keywords"
-          content="marco ramcharan, codebymarco, software developer portfolio"
-        />
+        {/* Basic SEO Tags */}
+        <title>About Miguelmarco Ramcharan | CodeByMarco's Unique Fullstack Developer Profile</title>
+        <meta name="description" content="Swipe right on Miguelmarco Ramcharan, a Fullstack Software Developer in Durban, KZN. Discover my coding journey, skills & unique personality on this 'Tinder' style profile." />
+        <link rel="canonical" href="https://www.codebymarco.com/about" />
+
+        {/* Open Graph Tags (for Facebook, LinkedIn, WhatsApp etc.) */}
+        <meta property="og:title" content="CodeByMarco | Miguelmarco Ramcharan: Fullstack Developer Profile" />
+        <meta property="og:description" content="Swipe right on Miguelmarco Ramcharan, a Fullstack Software Developer in Durban, KZN. Discover my coding journey, skills & unique personality on this 'Tinder' style profile." />
+        <meta property="og:type" content="profile" />
+        <meta property="og:url" content="https://www.codebymarco.com/about" />
+        <meta property="og:image" content="https://www.codebymarco.com/images/codebymarco-about-og-image.jpg" /> {/* IMPORTANT: Create this image! */}
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="CodeByMarco" />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@your_twitter_handle" /> {/* IMPORTANT: Replace with your actual Twitter handle */}
+        <meta name="twitter:creator" content="@your_twitter_handle" /> {/* IMPORTANT: Replace with your actual Twitter handle */}
+        <meta name="twitter:title" content="CodeByMarco | Miguelmarco Ramcharan: Fullstack Developer Profile" />
+        <meta name="twitter:description" content="Swipe right on Miguelmarco Ramcharan, a Fullstack Software Developer in Durban, KZN. Discover my coding journey, skills & unique personality on this 'Tinder' style profile." />
+        <meta name="twitter:image" content="https://www.codebymarco.com/images/codebymarco-about-og-image.jpg" />
       </Helmet>
       <ScrollToTop />
 
