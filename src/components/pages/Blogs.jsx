@@ -142,18 +142,28 @@ const Blogs = () => {
   return (
     <div className="blogWrapper">
       <Helmet>
-        <title>
-          Blogs | Software Developer Portfolio | Miguelmarco Ramcharan
-        </title>
-        <meta
-          name="description"
-          content="Welcome to the portfolio of Miguelmarco Ramcharan. Explore projects, skills, and more by CodeByMarco."
-        />
-        <meta name="author" content="Miguelmarco Ramcharan" />
-        <meta
-          name="keywords"
-          content="marco ramcharan, codebymarco, software developer portfolio about"
-        />
+        {/* Basic SEO Tags */}
+        <title>CodeByMarco Blog | Software Development Articles & Tech Insights by Miguelmarco</title>
+        <meta name="description" content="Explore the CodeByMarco blog by Miguelmarco Ramcharan. Find insightful articles, coding tutorials & fullstack development tips on React, Node.js & more." />
+        <link rel="canonical" href="https://www.codebymarco.com/blogs" />
+
+        {/* Open Graph Tags (for Facebook, LinkedIn, WhatsApp etc.) */}
+        <meta property="og:title" content="CodeByMarco Blog | Software Development Articles & Tech Insights" />
+        <meta property="og:description" content="Explore the CodeByMarco blog by Miguelmarco Ramcharan. Find insightful articles, coding tutorials & fullstack development tips on React, Node.js & more." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.codebymarco.com/blogs" />
+        <meta property="og:image" content="https://www.codebymarco.com/images/codebymarco-blog-og-image.jpg" /> {/* IMPORTANT: Create this image! */}
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="CodeByMarco" />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@your_twitter_handle" /> {/* IMPORTANT: Replace with your actual Twitter handle */}
+        <meta name="twitter:creator" content="@your_twitter_handle" /> {/* IMPORTANT: Replace with your actual Twitter handle */}
+        <meta name="twitter:title" content="CodeByMarco Blog | Software Development Articles & Tech Insights" />
+        <meta name="twitter:description" content="Explore the CodeByMarco blog by Miguelmarco Ramcharan. Find insightful articles, coding tutorials & fullstack development tips on React, Node.js & more." />
+        <meta name="twitter:image" content="https://www.codebymarco.com/images/codebymarco-blog-og-image.jpg" />
       </Helmet>
       <ScrollToTop />
       <div className="container">
