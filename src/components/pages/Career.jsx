@@ -18,18 +18,28 @@ const Career = () => {
   return (
     <div>
       <Helmet>
-        <title>
-          Career | Software Developer Portfolio | Miguelmarco Ramcharan
-        </title>
-        <meta
-          name="description"
-          content="Welcome to the portfolio of Miguelmarco Ramcharan. Explore projects, skills, and more by CodeByMarco."
-        />
-        <meta name="author" content="Miguelmarco Ramcharan" />
-        <meta
-          name="keywords"
-          content="marco ramcharan, codebymarco, software developer portfolio about"
-        />
+        {/* Basic SEO Tags */}
+        <title>Career & Work Experience | Miguelmarco Ramcharan - Fullstack Developer</title>
+        <meta name="description" content="Explore the career journey of Miguelmarco Ramcharan of CodeByMarco: a Fullstack Software Developer showcasing work experience, key projects & technical skills."></meta>
+        <link rel="canonical" href="https://www.codebymarco.com/career" />
+
+        {/* Open Graph Tags (for Facebook, LinkedIn, WhatsApp etc.) */}
+        <meta property="og:title" content="Career & Work Experience | Miguelmarco Ramcharan - Fullstack Developer" />
+        <meta property="og:description" content="Explore the career journey of Miguelmarco Ramcharan of CodeByMarco: a Fullstack Software Developer showcasing work experience, key projects & technical skills." />
+        <meta property="og:type" content="profile" />
+        <meta property="og:url" content="https://www.codebymarco.com/career" />
+        <meta property="og:image" content="https://www.codebymarco.com/images/codebymarco-career-og-image.jpg" /> {/* IMPORTANT: Create this image! */}
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="CodeByMarco" />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@your_twitter_handle" /> {/* IMPORTANT: Replace with your actual Twitter handle */}
+        <meta name="twitter:creator" content="@your_twitter_handle" /> {/* IMPORTANT: Replace with your actual Twitter handle */}
+        <meta name="twitter:title" content="Career & Work Experience | Miguelmarco Ramcharan - Fullstack Developer" />
+        <meta name="twitter:description" content="Explore the career journey of Miguelmarco Ramcharan of CodeByMarco: a Fullstack Software Developer showcasing work experience, key projects & technical skills." />
+        <meta name="twitter:image" content="https://www.codebymarco.com/images/codebymarco-career-og-image.jpg" />
       </Helmet>
       <div className="career">
         <div className="career-top">
