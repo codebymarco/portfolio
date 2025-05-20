@@ -22,6 +22,7 @@ import { TbBrandCSharp } from "react-icons/tb";
 import "../../styles/skillsPage.css";
 import { motion } from "framer-motion";
 import useTranslationStore from "../../store/store";
+import { Helmet } from "react-helmet";
 
 const skillIcons = {
   html: { icon: FaHtml5, color: "#E34F26" },
@@ -69,6 +70,30 @@ const Skills = () => {
 
   return (
     <div className="skillsPage">
+            <Helmet>
+        {/* Basic SEO Tags */}
+        <title>Technical Skills & Expertise | Miguelmarco Ramcharan - Fullstack Developer</title>
+        <meta name="description" content="Explore the technical skills of Miguelmarco Ramcharan of CodeByMarco: a Fullstack Developer proficient in React, Node.js, JavaScript, Python & more. See my expertise." />
+        <link rel="canonical" href="https://www.codebymarco.com/skills" />
+
+        {/* Open Graph Tags (for Facebook, LinkedIn, WhatsApp etc.) */}
+        <meta property="og:title" content="Technical Skills & Expertise | Miguelmarco Ramcharan - Fullstack Developer" />
+        <meta property="og:description" content="Explore the technical skills of Miguelmarco Ramcharan of CodeByMarco: a Fullstack Developer proficient in React, Node.js, JavaScript, Python & more. See my expertise." />
+        <meta property="og:type" content="profile" />
+        <meta property="og:url" content="https://www.codebymarco.com/skills" />
+        <meta property="og:image" content="https://www.codebymarco.com/images/codebymarco-skills-og-image.jpg" /> {/* IMPORTANT: Create this image! */}
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="CodeByMarco" />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@your_twitter_handle" /> {/* IMPORTANT: Replace with your actual Twitter handle */}
+        <meta name="twitter:creator" content="@your_twitter_handle" /> {/* IMPORTANT: Replace with your actual Twitter handle */}
+        <meta name="twitter:title" content="Technical Skills & Expertise | Miguelmarco Ramcharan - Fullstack Developer" />
+        <meta name="twitter:description" content="Explore the technical skills of Miguelmarco Ramcharan of CodeByMarco: a Fullstack Developer proficient in React, Node.js, JavaScript, Python & more. See my expertise." />
+        <meta name="twitter:image" content="https://www.codebymarco.com/images/codebymarco-skills-og-image.jpg" />
+      </Helmet>
       <div className="container">
         <div className="skillsPageTop">
           <h1 className="skillsHeading">{t("skills_heading")}</h1>
