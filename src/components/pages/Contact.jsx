@@ -224,18 +224,28 @@ const Contact = () => {
   return (
     <div>
       <Helmet>
-        <title>
-          Contact | Software Developer Portfolio | Miguelmarco Ramcharan
-        </title>
-        <meta
-          name="description"
-          content="Welcome to the portfolio of Miguelmarco Ramcharan. Explore projects, skills, and more by CodeByMarco."
-        />
-        <meta name="author" content="Miguelmarco Ramcharan" />
-        <meta
-          name="keywords"
-          content="marco ramcharan, codebymarco, software developer portfolio about"
-        />
+        {/* Basic SEO Tags */}
+        <title>Contact CodeByMarco | Miguelmarco Ramcharan - Fullstack Developer Durban</title>
+        <meta name="description" content="Get in touch with Miguelmarco Ramcharan of CodeByMarco for fullstack software development needs in Durban, KZN. Request a quote or discuss your project today!" />
+        <link rel="canonical" href="https://www.codebymarco.com/contact" />
+
+        {/* Open Graph Tags (for Facebook, LinkedIn, WhatsApp etc.) */}
+        <meta property="og:title" content="Contact CodeByMarco | Miguelmarco Ramcharan" />
+        <meta property="og:description" content="Get in touch with Miguelmarco Ramcharan of CodeByMarco for fullstack software development needs in Durban, KZN. Request a quote or discuss your project today!" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.codebymarco.com/contact" />
+        <meta property="og:image" content="https://www.codebymarco.com/images/codebymarco-contact-og-image.jpg" /> {/* IMPORTANT: Create this image! */}
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="CodeByMarco" />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@your_twitter_handle" /> {/* IMPORTANT: Replace with your actual Twitter handle */}
+        <meta name="twitter:creator" content="@your_twitter_handle" /> {/* IMPORTANT: Replace with your actual Twitter handle */}
+        <meta name="twitter:title" content="Contact CodeByMarco | Miguelmarco Ramcharan" />
+        <meta name="twitter:description" content="Get in touch with Miguelmarco Ramcharan of CodeByMarco for fullstack software development needs in Durban, KZN. Request a quote or discuss your project today!" />
+        <meta name="twitter:image" content="https://www.codebymarco.com/images/codebymarco-contact-og-image.jpg" />
       </Helmet>
       <div className="contact">
         {show ? <OnlyFans /> : null}
