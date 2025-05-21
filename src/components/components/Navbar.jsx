@@ -7,7 +7,7 @@ import { HiOutlineGlobeAlt } from "react-icons/hi";
 import { IoIosArrowDown } from "react-icons/io";
 import { AnimatePresence, motion } from "framer-motion";
 import useTranslationStore from "../../store/store";
-
+import logo from '../../assets/logo.jpg'
 const Navbar = () => {
   const { language, setLanguage, t } = useTranslationStore();
 
@@ -112,6 +112,8 @@ const Navbar = () => {
           id="desktop-links"
           variants={navVariants}
         >
+
+        <img src={logo} height="50px" width="auto"/>
 
           <motion.div variants={itemVariants} className="nav-item">
             <Link
