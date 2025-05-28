@@ -1,89 +1,101 @@
-import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
-import "../../styles/certs.css";
-import { useEffect } from "react";
-import useTranslationStore from "../../store/store";
-import { Link } from "react-router-dom";
+import React from "react";
 
 const Projects = () => {
-  const { t } = useTranslationStore();
-
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }, []);
-
-  const navigate = useNavigate();
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.15,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 40 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        type: "spring",
-        stiffness: 80,
-        damping: 12,
-      },
-    },
-  };
-
-  // Project details
   const projects = [
     {
-      name: "linkbio",
-      description: "Personal linkbio website showcasing all links",
+      name: "LinkBio",
+      description: "Personal linkbio website showcasing all links with analytics and custom themes",
       liveUrl: "https://linkbio-console.vercel.app",
+      image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&h=300&fit=crop",
+      tags: ["React", "Node.js", "Analytics"],
+      size: "large",
+      gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+      type: "project"
     },
     {
-      name: "indeed",
-      description: "Job search platform clone with custom filtering",
+      type: "filler",
+      content: "💡 Currently obsessed with building seamless user experiences",
+      gradient: "linear-gradient(135deg, #ff6b6b 0%, #feca57 100%)",
+      size: "small"
+    },
+    {
+      name: "Indeed Clone",
+      description: "Job search platform clone with custom filtering and real-time search",
       liveUrl: "https://indeed-console.vercel.app",
+      image: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=400&h=300&fit=crop",
+      tags: ["React", "API", "Search"],
+      size: "medium",
+      gradient: "linear-gradient(135deg, #11998e 0%, #38ef7d 100%)",
+      type: "project"
     },
     {
-      name: "formio",
-      description: "Personal linkbio website showcasing all links",
-      liveUrl: "https://linkbio-console.vercel.app",
+      type: "filler",
+      content: "🚀 50+ Projects Completed\n3+ Years of Coding",
+      gradient: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
+      size: "small"
     },
+    {
+      name: "FormIO",
+      description: "Dynamic form builder with drag-and-drop interface and validation",
+      liveUrl: "https://linkbio-console.vercel.app",
+      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=300&fit=crop",
+      tags: ["Forms", "Builder", "Validation"],
+      size: "medium",
+      gradient: "linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)",
+      type: "project"
+    },
+    {
+      type: "filler",
+      content: "\"Code is poetry written in logic\" ✨",
+      gradient: "linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)",
+      size: "small"
+    },
+    {
+      name: "ChatBot AI",
+      description: "Intelligent chatbot with natural language processing and machine learning",
+      liveUrl: "#",
+      image: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=400&h=300&fit=crop",
+      tags: ["AI", "NLP", "Python"],
+      size: "large",
+      gradient: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
+      type: "project"
+    },
+    {
+      type: "filler",
+      content: "💻 Pro Tip:\nAlways comment your code - your future self will thank you!",
+      gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+      size: "small"
+    },
+    {
+      name: "Weather Dashboard",
+      description: "Real-time weather app with beautiful animations and forecasts",
+      liveUrl: "#",
+      image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=400&h=300&fit=crop",
+      tags: ["API", "Weather", "Charts"],
+      size: "small",
+      gradient: "linear-gradient(135deg, #fa709a 0%, #fee140 100%)",
+      type: "project"
+    },
+    {
+      type: "filler",
+      content: "🎯 Let's build something amazing together!\nAlways open to new opportunities",
+      gradient: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
+      size: "small"
+    },
+    {
+      name: "E-Commerce Store",
+      description: "Full-stack e-commerce platform with payment integration, inventory management, and admin dashboard",
+      liveUrl: "#",
+      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=300&fit=crop",
+      tags: ["React", "Node.js", "Stripe", "MongoDB"],
+      size: "medium",
+      gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+      type: "project"
+    }
   ];
 
   return (
-    <div className="projects">
-      <div className="container">
-        <div className="projects-top">
-          <h1>{t("projects_heading")}</h1>
-          <div className="projects-intro">{t("projects_description")}</div>
-        </div>
-        
-        <motion.div
-          className="projects-container"
-          initial="hidden"
-          animate="visible"
-          variants={containerVariants}
-        >
-          {projects.map((project, index) => (
-            <motion.div
-              className="project-card"
-              variants={itemVariants}
-              key={project.name}
-              whileHover={{ scale: 1.03 }}
-              onClick={() => navigate(`/apps/${project.name}`)}
-            >
-              <h2 className="project-title">{project.name}</h2>
-            </motion.div>
-          ))}
-        </motion.div>
-      </div>
-
+    <>
       <style jsx>{`
         .projects {
           background: linear-gradient(
@@ -93,14 +105,9 @@ const Projects = () => {
             rgba(13, 21, 28, 0.9) 100%
           );
           min-height: 100vh;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
           padding: 60px 20px;
           position: relative;
           overflow: hidden;
-          box-shadow: inset 0 20px 20px -20px rgba(0, 0, 0, 0.8);
         }
 
         .projects::before {
@@ -130,50 +137,36 @@ const Projects = () => {
         }
 
         .container {
-          max-width: 1200px;
+          max-width: 1400px;
           margin: 0 auto;
-          display: flex;
-          flex-direction: column;
-          gap: 3rem;
           position: relative;
           z-index: 1;
-          background: rgba(0, 0, 0, 0.3);
-          backdrop-filter: blur(10px);
-          border-radius: 20px;
-          padding: 2.5rem;
-          box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-          border: 1px solid rgba(97, 218, 251, 0.1);
         }
 
-        .projects-top {
-          padding: 20px;
+        .projects-header {
           text-align: center;
-          margin-bottom: 20px;
-          position: relative;
-          z-index: 1;
+          margin-bottom: 60px;
         }
 
-        .projects-top h1 {
+        .projects-title {
           color: #61dafb;
-          font-size: 2.5rem;
+          font-size: 3rem;
           letter-spacing: 2px;
-          position: relative;
-          display: inline-block;
-          text-shadow: 0 0 15px rgba(97, 218, 251, 0.4);
           font-weight: 600;
           margin: 0;
           background: linear-gradient(to right, #61dafb, #ffffff);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
+          text-shadow: 0 0 15px rgba(97, 218, 251, 0.4);
         }
 
-        .projects-top h1::after {
+        .projects-title::after {
           content: "";
           position: absolute;
           bottom: -8px;
           left: 50%;
           transform: translateX(-50%);
-          width: 100px;
+          width: 120px;
           height: 3px;
           background: linear-gradient(
             to right,
@@ -185,48 +178,40 @@ const Projects = () => {
           box-shadow: 0 0 15px rgba(97, 218, 251, 0.6);
         }
 
-        .projects-intro {
+        .projects-subtitle {
           font-size: 1.2rem;
           color: #aaa;
-          margin-top: 15px;
+          margin-top: 20px;
           letter-spacing: 1px;
           font-weight: 300;
         }
 
-        .projects-container {
-          display: flex;
-          flex-direction: column;
-          gap: 30px;
-          width: 100%;
-          z-index: 1;
-          align-items: center;
+        .projects-masonry {
+          columns: 3;
+          column-gap: 30px;
+          margin: 0 auto;
         }
 
-        /* Project card styles */
         .project-card {
-          width: 700px;
-          height: 120px;
-          background-color: rgba(10, 10, 10, 0.6);
+          break-inside: avoid;
+          margin-bottom: 30px;
+          border-radius: 20px;
+          overflow: hidden;
+          background: rgba(10, 10, 10, 0.6);
           border: 1px solid rgba(97, 218, 251, 0.15);
-          border-radius: 15px;
           box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35),
             0 0 15px rgba(97, 218, 251, 0.1);
-          padding: 0;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          cursor: pointer;
-          position: relative;
           transition: all 0.3s ease;
+          cursor: pointer;
           backdrop-filter: blur(5px);
+          position: relative;
         }
 
         .project-card:hover {
+          transform: translateY(-10px);
           border-color: rgba(97, 218, 251, 0.3);
-          box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4), 
-            0 0 20px rgba(97, 218, 251, 0.2);
-          transform: translateY(-5px);
+          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 
+            0 0 25px rgba(97, 218, 251, 0.2);
         }
 
         .project-card::before {
@@ -241,167 +226,263 @@ const Projects = () => {
             rgba(97, 218, 251, 0.05),
             transparent
           );
-          border-radius: 15px;
+          border-radius: 20px;
           opacity: 0;
           transition: opacity 0.3s ease;
+          z-index: 1;
         }
 
         .project-card:hover::before {
           opacity: 1;
         }
 
-        .project-title {
-          font-size: 1.8rem;
-          margin: 0;
-          font-weight: 600;
-          letter-spacing: 1px;
-          text-transform: uppercase;
-          text-align: center;
-          color: #61dafb;
-        }
-
-        /* More link styles */
-        .more-link-container {
-          margin-top: 30px;
-          position: relative;
-          z-index: 1;
-          text-align: center;
-        }
-
-        .more-link {
-          display: inline-block;
-          font-size: 1.4rem;
-          color: #61dafb;
-          text-decoration: none;
-          letter-spacing: 2px;
-          text-transform: uppercase;
-          font-weight: 500;
-          padding: 12px 30px;
-          border: 1px solid rgba(97, 218, 251, 0.3);
-          border-radius: 30px;
-          background: rgba(10, 10, 10, 0.6);
-          backdrop-filter: blur(5px);
-          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3), 0 0 15px rgba(97, 218, 251, 0.15);
-          transition: all 0.3s ease;
+        .project-header {
+          height: 200px;
           position: relative;
           overflow: hidden;
         }
 
-        .more-link:hover {
-          background: rgba(17, 17, 17, 0.8);
-          box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4), 0 0 20px rgba(97, 218, 251, 0.25);
-          transform: translateY(-2px);
-          color: #ffffff;
-          border-color: rgba(97, 218, 251, 0.5);
+        .project-large .project-header {
+          height: 300px;
         }
 
-        .more-link span {
-          position: relative;
-          z-index: 2;
+        .project-small .project-header {
+          height: 150px;
         }
 
-        .cosmic-trail {
+        .project-image {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: transform 0.5s ease;
+        }
+
+        .project-card:hover .project-image {
+          transform: scale(1.1);
+        }
+
+        .project-overlay {
           position: absolute;
           top: 0;
           left: 0;
           width: 100%;
           height: 100%;
-          background: linear-gradient(90deg, transparent, rgba(97, 218, 251, 0.1), rgba(97, 218, 251, 0.2), transparent);
-          transform: translateX(-100%);
-          transition: transform 0.6s ease;
-          pointer-events: none;
+          opacity: 0.8;
+          z-index: 2;
         }
 
-        .more-link:hover .cosmic-trail {
-          transform: translateX(100%);
+        .project-content {
+          padding: 25px;
+          position: relative;
+          z-index: 3;
         }
 
-        .more-link:after {
-          content: "";
-          position: absolute;
-          bottom: -2px;
-          left: 50%;
-          transform: translateX(-50%);
-          width: 70%;
-          height: 1px;
-          background: linear-gradient(90deg, transparent, #61dafb, transparent);
+        .project-name {
+          font-size: 1.8rem;
+          font-weight: 700;
+          color: white;
+          margin: 0 0 15px 0;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+        }
+
+        .project-large .project-name {
+          font-size: 2.2rem;
+        }
+
+        .project-description {
+          font-size: 1rem;
+          color: #ccc;
+          line-height: 1.6;
+          margin-bottom: 20px;
+        }
+
+        .project-tags {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 8px;
+          margin-bottom: 20px;
+        }
+
+        .project-tag {
+          background: rgba(97, 218, 251, 0.1);
+          color: #61dafb;
+          padding: 6px 12px;
+          border-radius: 15px;
+          font-size: 0.8rem;
+          font-weight: 500;
+          border: 1px solid rgba(97, 218, 251, 0.2);
+        }
+
+        .project-link {
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          background: rgba(97, 218, 251, 0.1);
+          color: #61dafb;
+          padding: 10px 20px;
+          border-radius: 25px;
+          text-decoration: none;
+          font-weight: 600;
+          font-size: 0.9rem;
+          border: 1px solid rgba(97, 218, 251, 0.2);
           transition: all 0.3s ease;
         }
 
-        /* Responsive styles - tablet */
-        @media screen and (max-width: 768px) {
-          .projects-container {
-            gap: 25px;
-          }
+        .filler-card {
+          break-inside: avoid;
+          margin-bottom: 30px;
+          border-radius: 20px;
+          padding: 25px;
+          background: rgba(10, 10, 10, 0.6);
+          border: 1px solid rgba(97, 218, 251, 0.15);
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35),
+            0 0 15px rgba(97, 218, 251, 0.1);
+          transition: all 0.3s ease;
+          backdrop-filter: blur(5px);
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          min-height: 120px;
+        }
 
-          .projects-top h1 {
-            font-size: 2.2rem;
-          }
+        .filler-card:hover {
+          transform: translateY(-5px);
+          border-color: rgba(97, 218, 251, 0.3);
+          box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4), 
+            0 0 20px rgba(97, 218, 251, 0.2);
+        }
 
-          .project-card {
-            width: 90%;
-            height: auto;
-            padding: 25px;
-          }
-          
-          .container {
-            padding: 1.5rem;
+        .filler-content {
+          font-size: 1.1rem;
+          font-weight: 600;
+          color: white;
+          line-height: 1.5;
+          text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+          white-space: pre-line;
+          z-index: 2;
+          position: relative;
+        }
+
+        .project-link:hover {
+          background: rgba(97, 218, 251, 0.2);
+          transform: translateX(5px);
+          box-shadow: 0 5px 15px rgba(97, 218, 251, 0.2);
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+          .projects-masonry {
+            columns: 2;
+            column-gap: 25px;
           }
         }
 
-        /* Responsive styles - mobile */
-        @media screen and (max-width: 480px) {
-          .project-card {
-            width: 100%;
-            height: auto;
-            padding: 20px;
+        @media (max-width: 768px) {
+          .projects-masonry {
+            columns: 1;
+            column-gap: 0;
           }
 
-          .projects-top h1 {
-            font-size: 1.8rem;
-            letter-spacing: 1px;
+          .projects-title {
+            font-size: 2.5rem;
           }
 
           .projects {
             padding: 40px 15px;
           }
 
-          .project-title {
-            font-size: 1.6rem;
+          .project-card {
+            margin-bottom: 25px;
           }
-          
-          .more-link {
-            font-size: 1.2rem;
-            padding: 10px 25px;
-          }
-          
-          .container {
-            padding: 1rem;
-            gap: 2rem;
+
+          .project-content {
+            padding: 20px;
           }
         }
 
-        /* Very small devices */
-        @media screen and (max-width: 320px) {
-          .project-card {
-            padding: 15px;
+        @media (max-width: 480px) {
+          .projects-title {
+            font-size: 2rem;
           }
 
-          .project-title {
-            font-size: 1.3rem;
+          .project-name {
+            font-size: 1.5rem;
           }
 
-          .projects-top h1 {
-            font-size: 1.6rem;
-          }
-
-          .more-link {
-            font-size: 1.1rem;
-            padding: 10px 20px;
+          .project-large .project-name {
+            font-size: 1.8rem;
           }
         }
       `}</style>
-    </div>
+
+      <div className="projects">
+        <div className="container">
+          <div className="projects-header">
+            <h1 className="projects-title">My Projects</h1>
+            <p className="projects-subtitle">Crafted with passion and precision</p>
+          </div>
+
+          <div className="projects-masonry">
+            {projects.map((item, index) => (
+              item.type === "filler" ? (
+                <div
+                  key={`filler-${index}`}
+                  className={`filler-card filler-${item.size}`}
+                >
+                  <div 
+                    className="filler-overlay"
+                    style={{ background: item.gradient }}
+                  />
+                  <div className="filler-content">{item.content}</div>
+                </div>
+              ) : (
+                <div
+                  key={item.name}
+                  className={`project-card project-${item.size}`}
+                  onClick={() => window.open(item.liveUrl, '_blank')}
+                >
+                  <div className="project-header">
+                    <img
+                      src={item.image}
+                      alt={item.name}
+                      className="project-image"
+                    />
+                    <div 
+                      className="project-overlay"
+                      style={{ background: item.gradient }}
+                    />
+                  </div>
+                  
+                  <div className="project-content">
+                    <h3 className="project-name">{item.name}</h3>
+                    <p className="project-description">{item.description}</p>
+                    
+                    <div className="project-tags">
+                      {item.tags.map((tag) => (
+                        <span key={tag} className="project-tag">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    
+                    <a 
+                      href={item.liveUrl} 
+                      className="project-link"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      View Project →
+                    </a>
+                  </div>
+                </div>
+              )
+            ))}
+          </div>
+        </div>
+      </div>
+    </>
   );
 };
 

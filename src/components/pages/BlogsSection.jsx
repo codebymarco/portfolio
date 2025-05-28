@@ -1,491 +1,218 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
-import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
-import "../../styles/blogsSection.css";
-import useTranslationStore from "../../store/store";
+import React, { useState } from "react";
 
-// Import sample blog data (top 3)
-const blogData = [
-  {
-    id: 1,
-    title: "Dockerize a react app",
-    tags: ["docker", "react", "javascript", "devops"],
-    date: "2025-02-28",
-    image:
-      "https://th.bing.com/th/id/R.796523382777357d18ba619048335003?rik=hi%2f%2bPd07IRqj%2fA&pid=ImgRaw&r=0",
-  },
-  {
-    id: 2,
-    title: "BunnyCDN, Faster and cheaper than AWS Cloudfront",
-    tags: ["cdn", "devops", "cache", "backend"],
-    date: "2025-02-20",
-    image: "https://cloud2data.com/wp-content/uploads/2023/05/Kubernetes.png",
-  },
-  {
-    id: 3,
-    title: "Kubernetes Errors",
-    tags: ["kubernetes", "docker", "debugging"],
-    date: "2025-02-15",
-    image: "https://cloud2data.com/wp-content/uploads/2023/05/Kubernetes.png",
-  },
-];
-
-const BlogsSection = () => {
-  const { t } = useTranslationStore();
-
-  const navigate = useNavigate();
-
-  // Animation variants
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.15,
-      },
+const NavigationSection = () => {
+  const navData = [
+    {
+      id: 1,
+      title: "Apps",
+      tags: ["react", "javascript", "web apps", "projects"],
+      image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&h=300&fit=crop",
     },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: { 
-      opacity: 1, 
-      y: 0,
-      transition: {
-        type: "spring",
-        stiffness: 80,
-        damping: 12,
-      },
+    {
+      id: 2,
+      title: "Blogs",
+      tags: ["tech", "tutorials", "insights", "coding"],
+      image: "https://images.unsplash.com/photo-1486312338219-ce68e2c6b7d0?w=400&h=300&fit=crop",
     },
-  };
-
-  // Format date to be more readable
-  const formatDate = (dateString) => {
-    const options = { year: "numeric", month: "long", day: "numeric" };
-    return new Date(dateString).toLocaleDateString("en-US", options);
-  };
+    {
+      id: 3,
+      title: "Games",
+      tags: ["unity", "javascript", "interactive", "fun"],
+      image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=400&h=300&fit=crop",
+    },
+  ];
 
   return (
-    <div className="blogsSection">
-      <div className="container">
-        <div className="blogsSectionTop">
-          <h1 className="blogsHeading">{t("blogs_section_heading")}</h1>
-          <div className="blogs-intro">Explore the latest tech articles and insights</div>
-        </div>
-        
-        <motion.div
-          className="blogsSectionContainer"
-          initial="hidden"
-          animate="visible"
-          variants={containerVariants}
-        >
-          {blogData.map((blog) => (
-            <motion.div
-              key={blog.id}
-              className="blog-card"
-              variants={itemVariants}
-              whileHover={{ scale: 1.03 }}
-              onClick={() => navigate(`/blog/${blog.id}`)}
-            >
-              <div className="blog-card-image-container">
-                <img
-                  src={blog.image}
-                  alt={blog.title}
-                  className="blog-card-image"
-                />
-              </div>
-              <div className="blog-card-content">
-                <h3 className="blog-card-title">{blog.title}</h3>
-                <div className="blog-card-tags">
-                  {blog.tags.slice(0, 3).map((tag) => (
-                    <span key={tag} className="blog-card-tag">
-                      {tag}
-                    </span>
-                  ))}
-                  {blog.tags.length > 3 && (
-                    <span className="blog-card-tag-more">
-                      +{blog.tags.length - 3}
-                    </span>
-                  )}
-                </div>
-                <div className="blog-card-date">{formatDate(blog.date)}</div>
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
-        
-      </div>
-
+    <>
       <style jsx>{`
-        .blogsSection {
-          background: linear-gradient(
-            to bottom,
-            #000000 0%,
-            rgba(0, 0, 0, 0.95) 70%,
-            rgba(13, 21, 28, 0.9) 100%
-          );
-          min-height: 100vh;
+        .navigationSection {
+          background-image: radial-gradient(circle at 50% 30%, #111111 0%, #000000 70%);
+          min-height: 90vh;
           display: flex;
           flex-direction: column;
           align-items: center;
           justify-content: center;
-          padding: 60px 20px;
-          position: relative;
-          overflow: hidden;
-          box-shadow: inset 0 20px 20px -20px rgba(0, 0, 0, 0.8);
+          gap: 20px;
+          padding: 20px;
         }
 
-        .blogsSection::before {
-          content: "";
-          position: absolute;
-          top: -150px;
-          right: -150px;
-          width: 300px;
-          height: 300px;
-          border-radius: 50%;
-          background: rgba(97, 218, 251, 0.1);
-          filter: blur(120px);
-          z-index: 0;
-        }
-
-        .blogsSection::after {
-          content: "";
-          position: absolute;
-          bottom: -50px;
-          left: -50px;
-          width: 250px;
-          height: 250px;
-          border-radius: 50%;
-          background: rgba(97, 218, 251, 0.08);
-          filter: blur(100px);
-          z-index: 0;
-        }
-
-        .container {
-          max-width: 1200px;
-          margin: 0 auto;
-          display: flex;
-          flex-direction: column;
-          gap: 3rem;
-          position: relative;
-          z-index: 1;
-          background: rgba(0, 0, 0, 0.3);
-          backdrop-filter: blur(10px);
-          border-radius: 20px;
-          padding: 2.5rem;
-          box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-          border: 1px solid rgba(97, 218, 251, 0.1);
-        }
-
-        .blogsSectionTop {
+        .navigationSectionTop {
           padding: 20px;
           text-align: center;
-          margin-bottom: 20px;
+          color: white;
+          font-size: 1rem;
+          display: flex;
+          justify-content: center;
+          width: 100%;
           position: relative;
-          gap:20px;
-          z-index: 1;
+          margin-bottom: 20px;
         }
 
-        .blogsHeading {
-          color: #61dafb;
+        .navigationSectionTop h1 {
           font-size: 2.5rem;
-          letter-spacing: 2px;
+          margin-bottom: 10px;
+          font-weight: 700;
+        }
+
+        .navigationHeading {
+          font-size: 3rem;
+          letter-spacing: 8px;
           position: relative;
           display: inline-block;
-          text-shadow: 0 0 15px rgba(97, 218, 251, 0.4);
-          font-weight: 600;
+          color: white;
+          font-weight: 800;
           margin: 0;
-          background: linear-gradient(to right, #61dafb, #ffffff);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
         }
 
-        .blogsHeading::after {
-          content: "";
-          position: absolute;
-          bottom: -8px;
-          left: 50%;
-          transform: translateX(-50%);
-          width: 100px;
-          height: 3px;
-          background: linear-gradient(
-            to right,
-            rgba(97, 218, 251, 0.3),
-            #61dafb,
-            rgba(97, 218, 251, 0.3)
-          );
-          border-radius: 3px;
-          box-shadow: 0 0 15px rgba(97, 218, 251, 0.6);
-        }
-
-        .blogs-intro {
-          font-size: 1.2rem;
-          color: #aaa;
-          margin-top: 15px;
-          letter-spacing: 1px;
-          font-weight: 300;
-        }
-
-        .blogsSectionContainer {
+        .navigationSectionContainer {
           display: grid;
-          grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+          grid-template-columns: repeat(3, 1fr);
           gap: 30px;
           width: 100%;
-          z-index: 1;
+          max-width: 1200px;
         }
 
-        .blog-card {
-          background-color: rgba(10, 10, 10, 0.6);
-          border: 1px solid rgba(97, 218, 251, 0.15);
-          border-radius: 15px;
+        .nav-card {
+          background-color: #111;
+          border-radius: 12px;
           overflow: hidden;
-          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35),
-            0 0 15px rgba(97, 218, 251, 0.1);
-          cursor: pointer;
-          position: relative;
-          transition: all 0.3s ease;
-          backdrop-filter: blur(5px);
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
           height: 100%;
+          cursor: pointer;
           display: flex;
           flex-direction: column;
         }
 
-        .blog-card:hover {
-          border-color: rgba(97, 218, 251, 0.3);
-          box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4), 
-            0 0 20px rgba(97, 218, 251, 0.2);
+        .nav-card:hover {
           transform: translateY(-5px);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
 
-        .blog-card::before {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: 0;
+        .nav-card-image-container {
           width: 100%;
-          height: 100%;
-          background: linear-gradient(
-            45deg,
-            rgba(97, 218, 251, 0.05),
-            transparent
-          );
-          border-radius: 15px;
-          opacity: 0;
-          transition: opacity 0.3s ease;
-        }
-
-        .blog-card:hover::before {
-          opacity: 1;
-        }
-
-        .blog-card-image-container {
-          width: 100%;
-          height: 180px;
+          height: 200px;
           overflow: hidden;
-          position: relative;
         }
 
-        .blog-card-image {
+        .nav-card-image {
           width: 100%;
           height: 100%;
           object-fit: cover;
-          transition: transform 0.5s ease;
+          transition: transform 0.3s ease;
         }
 
-        .blog-card:hover .blog-card-image {
+        .nav-card:hover .nav-card-image {
           transform: scale(1.05);
         }
 
-        .blog-card-content {
+        .nav-card-content {
           padding: 20px;
+          flex: 1;
           display: flex;
           flex-direction: column;
-          flex: 1;
         }
 
-        .blog-card-title {
+        .nav-card-title {
           font-size: 1.2rem;
-          color: #ffffff;
-          margin: 0 0 15px 0;
           font-weight: 600;
+          color: white;
+          margin-bottom: 15px;
           line-height: 1.4;
-          transition: color 0.3s ease;
         }
 
-        .blog-card:hover .blog-card-title {
-          color: #61dafb;
-        }
-
-        .blog-card-tags {
+        .nav-card-tags {
           display: flex;
           flex-wrap: wrap;
           gap: 8px;
           margin-bottom: 15px;
-        }
-
-        .blog-card-tag {
-          background: rgba(97, 218, 251, 0.1);
-          color: #61dafb;
-          padding: 4px 10px;
-          border-radius: 20px;
-          font-size: 0.8rem;
-          font-weight: 500;
-          border: 1px solid rgba(97, 218, 251, 0.2);
-          transition: all 0.3s ease;
-        }
-
-        .blog-card:hover .blog-card-tag {
-          background: rgba(97, 218, 251, 0.15);
-          border-color: rgba(97, 218, 251, 0.3);
-        }
-
-        .blog-card-tag-more {
-          background: rgba(161, 57, 255, 0.1);
-          color: #a139ff;
-          padding: 4px 10px;
-          border-radius: 20px;
-          font-size: 0.8rem;
-          font-weight: 500;
-          border: 1px solid rgba(161, 57, 255, 0.2);
-        }
-
-        .blog-card-date {
-          color: #aaa;
-          font-size: 0.9rem;
           margin-top: auto;
-          padding-top: 15px;
-          border-top: 1px solid rgba(97, 218, 251, 0.1);
         }
 
-        /* More link styles */
-        .more-link-container {
-          margin-top: 30px;
-          position: relative;
-          z-index: 1;
-          text-align: center;
+        .nav-card-tag {
+          font-size: 0.8rem;
+          padding: 4px 8px;
+          border-radius: 4px;
+          background-color: #222;
+          color: #aaa;
         }
 
-        .more-link {
-          display: inline-block;
-          font-size: 1.4rem;
-          color: #61dafb;
-          text-decoration: none;
-          letter-spacing: 2px;
-          text-transform: uppercase;
-          font-weight: 500;
-          padding: 12px 30px;
-          border: 1px solid rgba(97, 218, 251, 0.3);
-          border-radius: 30px;
-          background: rgba(10, 10, 10, 0.6);
-          backdrop-filter: blur(5px);
-          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3), 0 0 15px rgba(97, 218, 251, 0.15);
-          transition: all 0.3s ease;
-          position: relative;
-          overflow: hidden;
+        /* Responsive styles */
+        @media screen and (max-width: 992px) {
+          .navigationSectionContainer {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+          }
         }
 
-        .more-link:hover {
-          background: rgba(17, 17, 17, 0.8);
-          box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4), 0 0 20px rgba(97, 218, 251, 0.25);
-          transform: translateY(-2px);
-          color: #ffffff;
-          border-color: rgba(97, 218, 251, 0.5);
-        }
-
-        .more-link span {
-          position: relative;
-          z-index: 2;
-        }
-
-        .cosmic-trail {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background: linear-gradient(90deg, transparent, rgba(97, 218, 251, 0.1), rgba(97, 218, 251, 0.2), transparent);
-          transform: translateX(-100%);
-          transition: transform 0.6s ease;
-          pointer-events: none;
-        }
-
-        .more-link:hover .cosmic-trail {
-          transform: translateX(100%);
-        }
-
-        .more-link:after {
-          content: "";
-          position: absolute;
-          bottom: -2px;
-          left: 50%;
-          transform: translateX(-50%);
-          width: 70%;
-          height: 1px;
-          background: linear-gradient(90deg, transparent, #61dafb, transparent);
-          transition: all 0.3s ease;
-        }
-
-        /* Responsive styles - tablet */
         @media screen and (max-width: 768px) {
-          .blogsSectionContainer {
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 25px;
-          }
-
-          .blogsHeading {
-            font-size: 2.2rem;
-          }
-          
-          .container {
-            padding: 1.5rem;
-          }
-        }
-
-        /* Responsive styles - mobile */
-        @media screen and (max-width: 480px) {
-          .blogsSectionContainer {
+          .navigationSectionContainer {
             grid-template-columns: 1fr;
+            gap: 25px;
+            max-width: 500px;
+            padding: 0 15px;
           }
 
-          .blogsHeading {
-            font-size: 1.8rem;
-            letter-spacing: 1px;
+          .navigationSectionTop {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
           }
 
-          .blogsSection {
-            padding: 40px 15px;
-          }
-          
-          .more-link {
-            font-size: 1.2rem;
-            padding: 10px 25px;
-          }
-          
-          .container {
-            padding: 1rem;
-            gap: 2rem;
+          .navigationSectionTop h1 {
+            font-size: 2rem;
           }
         }
 
-        /* Very small devices */
-        @media screen and (max-width: 320px) {
-          .blog-card-title {
-            font-size: 1.1rem;
+        @media screen and (max-width: 400px) {
+          .navigationSection {
+            padding: 15px 20px;
+            gap: 15px;
           }
 
-          .blogsHeading {
-            font-size: 1.6rem;
-          }
-
-          .more-link {
-            font-size: 1.1rem;
-            padding: 10px 20px;
+          .navigationSectionContainer {
+            padding: 0 10px;
+            width: 90%;
           }
         }
       `}</style>
-    </div>
+
+      <div className="navigationSection">
+        <div className="navigationSectionTop">
+          <h1 className="navigationHeading">EXPLORE</h1>
+        </div>
+        
+        <div className="navigationSectionContainer">
+          {navData.map((item) => (
+            <div
+              key={item.id}
+              className="nav-card"
+              onClick={() => window.location.href = `/${item.title.toLowerCase()}`}
+            >
+              <div className="nav-card-image-container">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="nav-card-image"
+                />
+              </div>
+              <div className="nav-card-content">
+                <h3 className="nav-card-title">{item.title}</h3>
+                <div className="nav-card-tags">
+                  {item.tags.slice(0, 4).map((tag) => (
+                    <span key={tag} className="nav-card-tag">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </>
   );
 };
 
-export default BlogsSection;
+export default NavigationSection;

@@ -1,180 +1,265 @@
 import React from "react";
-import { motion } from "framer-motion";
-import "../../styles/banner.css";
-import image from "../../assets/image.png";
-import { Link, useNavigate } from "react-router-dom";
-import { FaReact, FaJs, FaNodeJs, FaCode } from "react-icons/fa";
-import useTranslationStore from "../../store/store";
+// import { Link } from "react-router-dom";
+// import { FaTwitter, FaInstagram, FaTiktok, FaYoutube, FaLinkedin } from "react-icons/fa";
 
 const BannerTwo = () => {
-  const { t } = useTranslationStore();
-
-  const navigate = useNavigate();
-
-  const showAbout = () => {
-    navigate("/about");
-  };
-
   return (
-    <div className="banner">
-      <motion.div className="banner-img-container">
-        <motion.img
-          src={image}
-          alt="Marco Ramcharan"
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="profile-image"
-        />
-        <motion.div
-          className="img-backdrop"
-          initial={{ opacity: 0, rotate: -5 }}
-          animate={{ opacity: 1, rotate: 0 }}
-          transition={{ duration: 1, delay: 0.3 }}
-        />
-      </motion.div>
-
-      <motion.div
-        className="banner-right"
-        initial={{ opacity: 0, x: 20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8, delay: 0.4 }}
-      >
-        <div className="name-container">
-          <motion.h3
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-          >
-            MARCO<br></br>RAMCHARAN
-          </motion.h3>
-
-          {/* CSS animated line instead of framer-motion */}
-          <div className="gradient-line-container">
-            <div className="gradient-line css-animated-line"></div>
-          </div>
-        </div>
-
-        <motion.p
-          className="job-title"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 1.1 }}
-        >
-          {t("banner_occupation")}
-        </motion.p>
-
-        <motion.div
-          className="tech-icons"
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.3 }}
-        >
-          <motion.span
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 1.3 }}
-          >
-            <FaReact className="tech-icon" title="React" style={{color:'dodgerblue'}}/>
-          </motion.span>
-          <motion.span
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 1.5 }}
-          >
-            <FaJs className="tech-icon" title="JavaScript" style={{color:'green'}}/>
-          </motion.span>
-          <motion.span
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 1.7 }}
-          >
-            <FaNodeJs className="tech-icon" title="Node.js" style={{color:'orange'}}/>
-          </motion.span>
-          <motion.span
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 1.9 }}
-          >
-            <FaCode className="tech-icon" title="Full Stack" style={{color:'white'}}/>
-          </motion.span>
-        </motion.div>
-
-        <motion.p
-          className="tagline"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 1.5 }}
-        >
-          {t("banner_description")}
-        </motion.p>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 1.7 }}
-        >
-          <motion.span
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: 2.0 }}
-            style={{ display: "inline-block" }}
-          >
-            <Link to="/contact" className="contact-btn">
-            {t("banner_link_contact")}
-            </Link>
-          </motion.span>
-          <motion.span
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: 2.2 }}
-            style={{ display: "inline-block" }}
-          >
-            <Link to="/about" className="about-btn">
-            {t("banner_link_about")}
-            </Link>
-          </motion.span>
-        </motion.div>
-      </motion.div>
-
-      {/* Add this style tag for the CSS animation */}
+    <>
       <style jsx>{`
-        .gradient-line-container {
-          width: 100%;
+        .banner {
+          height: 90vh;
           position: relative;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          padding: 20px;
           overflow: hidden;
-          visibility: hidden;
-          animation: showLineContainer 1.1s forwards;
         }
 
-        .css-animated-line {
-          width: 0;
-          animation: expandLine 0.8s forwards;
-          animation-delay: 1.1s;
+        .banner-bg {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          z-index: 1;
         }
 
-        @keyframes showLineContainer {
-          0% {
-            visibility: hidden;
+        .bg-image {
+          flex: 1;
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+        }
+
+        .bg-image-1 {
+          background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop');
+        }
+
+        .bg-image-2 {
+          background-image: url('https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&h=600&fit=crop');
+        }
+
+        .bg-image-3 {
+          background-image: url('https://images.unsplash.com/photo-1494790108755-2616c28ca2a5?w=800&h=600&fit=crop');
+        }
+
+        .banner-overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.9);
+          z-index: 2;
+        }
+
+        .banner-content {
+          position: relative;
+          z-index: 3;
+          text-align: center;
+          color: white;
+          max-width: 800px;
+        }
+
+        .banner-name {
+          font-size: 4rem;
+          font-weight: 800;
+          margin-bottom: 10px;
+          background: linear-gradient(to right, #ffffff, #e0e0e0);
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          letter-spacing: 2px;
+        }
+
+        .job-title {
+          font-size: 1.8rem;
+          color: #a0a0a0;
+          margin-bottom: 15px;
+          letter-spacing: 3px;
+          font-weight: 300;
+        }
+
+        .tagline {
+          font-size: 1.2rem;
+          color: #cccccc;
+          margin-bottom: 30px;
+          font-style: italic;
+          max-width: 600px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        .social-icons {
+          display: flex;
+          justify-content: center;
+          gap: 25px;
+          margin-bottom: 40px;
+        }
+
+        .social-icon {
+          font-size: 28px;
+          color: #a0a0a0;
+          transition: all 0.3s ease;
+          cursor: pointer;
+        }
+
+        .social-icon:hover {
+          color: dodgerblue;
+          transform: scale(1.1);
+        }
+
+        .banner-buttons {
+          display: flex;
+          gap: 20px;
+          justify-content: center;
+          flex-wrap: wrap;
+        }
+
+        .banner-btn {
+          padding: 12px 30px;
+          border-radius: 25px;
+          text-decoration: none;
+          font-weight: 600;
+          transition: all 0.3s ease;
+          min-width: 140px;
+          text-align: center;
+        }
+
+        .contact-btn {
+          background: white;
+          color: black;
+          border: 2px solid white;
+        }
+
+        .contact-btn:hover {
+          background: dodgerblue;
+          color: white;
+          border-color: dodgerblue;
+        }
+
+        .about-btn {
+          background: transparent;
+          color: white;
+          border: 2px solid white;
+        }
+
+        .about-btn:hover {
+          background: rgba(255, 255, 255, 0.1);
+          border-color: dodgerblue;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+          .banner {
+            padding: 15px;
           }
-          99% {
-            visibility: hidden;
+
+          .banner-name {
+            font-size: 2.5rem;
           }
-          100% {
-            visibility: visible;
+
+          .job-title {
+            font-size: 1.4rem;
+          }
+
+          .tagline {
+            font-size: 1rem;
+          }
+
+          .social-icons {
+            gap: 20px;
+            margin-bottom: 30px;
+          }
+
+          .social-icon {
+            font-size: 24px;
+          }
+
+          .banner-buttons {
+            flex-direction: column;
+            align-items: center;
+          }
+
+          .banner-btn {
+            width: 200px;
           }
         }
 
-        @keyframes expandLine {
-          0% {
-            width: 0;
+        @media (max-width: 480px) {
+          .banner-name {
+            font-size: 2rem;
           }
-          100% {
-            width: 100%;
+
+          .job-title {
+            font-size: 1.2rem;
+          }
+
+          .social-icons {
+            gap: 15px;
+          }
+
+          .social-icon {
+            font-size: 22px;
           }
         }
       `}</style>
-    </div>
+
+      <div className="banner">
+        {/* Background Images */}
+        <div className="banner-bg">
+          <div className="bg-image bg-image-1"></div>
+          <div className="bg-image bg-image-2"></div>
+          <div className="bg-image bg-image-3"></div>
+        </div>
+
+        {/* Dark Overlay */}
+        <div className="banner-overlay"></div>
+
+        {/* Content */}
+        <div className="banner-content">
+          <h1 className="banner-name">MARCO RAMCHARAN</h1>
+          
+          <p className="job-title">FULL STACK DEVELOPER</p>
+          
+          <p className="tagline">
+            Crafting digital experiences with passion and precision
+          </p>
+
+          {/* Social Media Icons */}
+          <div className="social-icons">
+            <a href="#" className="social-icon">
+              🐦
+            </a>
+            <a href="#" className="social-icon">
+              📷
+            </a>
+            <a href="#" className="social-icon">
+              🎵
+            </a>
+            <a href="#" className="social-icon">
+              📺
+            </a>
+            <a href="#" className="social-icon">
+              💼
+            </a>
+          </div>
+
+          {/* Buttons */}
+          <div className="banner-buttons">
+            <a href="/contact" className="banner-btn contact-btn">
+              Contact Me
+            </a>
+            <a href="/about" className="banner-btn about-btn">
+              About Me
+            </a>
+          </div>
+        </div>
+      </div>
+    </>
   );
 };
 

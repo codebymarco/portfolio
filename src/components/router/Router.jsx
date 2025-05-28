@@ -21,6 +21,7 @@ import Three from "../pages/blogs/Three";
 import Four from "../pages/blogs/Four";
 import Five from "../pages/blogs/Five";
 import Six from "../pages/blogs/Six";
+import GamesPage from "../pages/Games";
 
 const Router = () => {
   return (
@@ -32,6 +33,7 @@ const Router = () => {
           <Route path="about" element={<About />}></Route>
           <Route path="skills" element={<Skills />}></Route>
           <Route path="contact" element={<Contact />}></Route>
+          <Route path="games" element={<GamesPage />}></Route>
           <Route path="apps" element={<Projects />}></Route>
           <Route path="career" element={<Career />}></Route>
           <Route path="blog" element={<Blogs />}></Route>
