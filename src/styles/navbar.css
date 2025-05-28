@@ -1,6 +1,7 @@
 nav {
   background-image: radial-gradient(circle at 50% 30%, #111111 0%, #000000 70%);
-  background-color: black;  height: 10svh;
+  background-color: black;
+  height: 10svh;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -11,7 +12,7 @@ nav {
   z-index: 500;
 }
 
-nav img{
+nav img {
   height: 60px;
   width: 100px;
   padding: 10px;
@@ -108,4 +109,120 @@ nav h1 {
   }
 }
 
+.desktop-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
 
+.nav-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.desktop-links-link {
+  color: #f8f8f8;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  padding: 6px 4px;
+  transition: color 0.3s ease;
+}
+
+.desktop-links-link:hover {
+  color: rgba(97, 218, 251, 0.8);
+}
+
+.desktop-links-link.active {
+  color: #61dafb;
+}
+
+/* Language selector styles */
+.language-selector {
+  margin-left: 12px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.lang-select-wrapper {
+  display: flex;
+  align-items: center;
+  background-color: rgba(97, 218, 251, 0.1);
+  border-radius: 20px;
+  padding: 5px 10px;
+  border: 1px solid rgba(97, 218, 251, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  height: 24px; /* Match the height of text links */
+}
+
+.lang-select-wrapper:hover {
+  background-color: rgba(97, 218, 251, 0.2);
+  border-color: rgba(97, 218, 251, 0.6);
+}
+
+.language-icon {
+  color: #61dafb;
+  font-size: 1.1rem;
+  margin-right: 5px;
+}
+
+.current-language {
+  color: #f8f8f8;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-right: 4px;
+  display: flex;
+  align-items: center;
+}
+
+.arrow-icon {
+  font-size: 0.8rem;
+  transition: transform 0.2s ease;
+}
+
+.arrow-icon.rotated {
+  transform: rotate(180deg);
+}
+
+.language-menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  background-color: #1a1e23;
+  border-radius: 6px;
+  overflow: hidden;
+  min-width: 140px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+  border: 1px solid rgba(97, 218, 251, 0.2);
+}
+
+.language-option {
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.95rem;
+}
+
+.language-option:hover {
+  background-color: rgba(97, 218, 251, 0.1);
+  color: #61dafb;
+}
+
+.language-option.active {
+  background-color: rgba(97, 218, 251, 0.15);
+  color: #61dafb;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .desktop-links {
+    display: none;
+  }
+}
