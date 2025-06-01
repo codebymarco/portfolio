@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import apps from "../../../public/apps.png";
+import games from "../../../public/games.png";
+import blogs from "../../../public/blogs.png";
 
 const NavigationSection = () => {
   const navData = [
@@ -6,19 +9,19 @@ const NavigationSection = () => {
       id: 1,
       title: "Apps",
       tags: ["react", "javascript", "web apps", "projects"],
-      image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&h=300&fit=crop",
+      image: apps,
     },
     {
       id: 2,
       title: "Blogs",
       tags: ["tech", "tutorials", "insights", "coding"],
-      image: "https://images.unsplash.com/photo-1486312338219-ce68e2c6b7d0?w=400&h=300&fit=crop",
+      image: blogs,
     },
     {
       id: 3,
       title: "Games",
       tags: ["unity", "javascript", "interactive", "fun"],
-      image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=400&h=300&fit=crop",
+      image: games,
     },
   ];
 
@@ -26,7 +29,11 @@ const NavigationSection = () => {
     <>
       <style jsx>{`
         .navigationSection {
-          background-image: radial-gradient(circle at 50% 30%, #111111 0%, #000000 70%);
+          background-image: radial-gradient(
+            circle at 50% 30%,
+            #111111 0%,
+            #000000 70%
+          );
           min-height: 90vh;
           display: flex;
           flex-direction: column;
@@ -182,13 +189,15 @@ const NavigationSection = () => {
         <div className="navigationSectionTop">
           <h1 className="navigationHeading">EXPLORE</h1>
         </div>
-        
+
         <div className="navigationSectionContainer">
           {navData.map((item) => (
             <div
               key={item.id}
               className="nav-card"
-              onClick={() => window.location.href = `/${item.title.toLowerCase()}`}
+              onClick={() =>
+                (window.location.href = `/${item.title.toLowerCase()}`)
+              }
             >
               <div className="nav-card-image-container">
                 <img

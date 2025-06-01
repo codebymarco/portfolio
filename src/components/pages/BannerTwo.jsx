@@ -35,15 +35,15 @@ const BannerTwo = () => {
         }
 
         .bg-image-1 {
-          background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop');
+          background-image: url("/public/image.png");
         }
 
         .bg-image-2 {
-          background-image: url('https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&h=600&fit=crop');
+          background-image: url("/public/image3.png");
         }
 
         .bg-image-3 {
-          background-image: url('https://images.unsplash.com/photo-1494790108755-2616c28ca2a5?w=800&h=600&fit=crop');
+          background-image: url("/public/image2.png");
         }
 
         .banner-overlay {
@@ -52,7 +52,7 @@ const BannerTwo = () => {
           left: 0;
           width: 100%;
           height: 100%;
-          background: rgba(0, 0, 0, 0.9);
+          background: rgba(0, 0, 0, 0.92);
           z-index: 2;
         }
 
@@ -222,9 +222,9 @@ const BannerTwo = () => {
         {/* Content */}
         <div className="banner-content">
           <h1 className="banner-name">MARCO RAMCHARAN</h1>
-          
+
           <p className="job-title">FULL STACK DEVELOPER</p>
-          
+
           <p className="tagline">
             Crafting digital experiences with passion and precision
           </p>

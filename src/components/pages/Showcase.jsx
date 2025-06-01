@@ -1,4 +1,8 @@
 import React from "react";
+import linkbio from "../../../public/linkbio.png";
+import fartup from "../../../public/fartup.png";
+import blog from "../../../public/blog.png";
+import blog2 from "../../../public/blog2.png";
 
 const Showcase = () => {
   return (
@@ -24,6 +28,13 @@ const Showcase = () => {
             columns: 2;
           }
         }
+
+        .project-image {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 10px;
+        }
       `}</style>
 
       <div className="masonry">
@@ -46,11 +57,15 @@ const Showcase = () => {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              fontSize: "4rem",
               marginBottom: "20px",
+              overflow: "hidden",
             }}
           >
-            🔗
+            <img
+              src={linkbio}
+              alt="LinkBio Project"
+              className="project-image"
+            />
           </div>
           <h3 style={{ fontSize: "2rem", marginBottom: "15px" }}>LinkBio</h3>
           <p
@@ -125,11 +140,15 @@ const Showcase = () => {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              fontSize: "3rem",
               marginBottom: "20px",
+              overflow: "hidden",
             }}
           >
-            🎮
+            <img
+            src={fartup}
+              alt="Fartup Game"
+              className="project-image"
+            />
           </div>
           <h3 style={{ fontSize: "1.8rem", marginBottom: "15px" }}>Fartup</h3>
           <p
@@ -203,11 +222,15 @@ const Showcase = () => {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              fontSize: "2rem",
               marginBottom: "15px",
+              overflow: "hidden",
             }}
           >
-            📝
+            <img
+            src={blog}
+              alt="React Development"
+              className="project-image"
+            />
           </div>
           <div
             style={{
@@ -265,11 +288,15 @@ const Showcase = () => {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              fontSize: "2rem",
               marginBottom: "15px",
+              overflow: "hidden",
             }}
           >
-            💻
+            <img
+            src={blog2}
+              alt="Web Development"
+              className="project-image"
+            />
           </div>
           <div
             style={{
