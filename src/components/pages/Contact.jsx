@@ -115,6 +115,14 @@ const Contact = () => {
       number: "01",
     },
     {
+      id: "email",
+      icon: <SiGmail />,
+      label: "marco@codebymarco.com",
+      color: "#EA4335",
+      action: handleClick2,
+      number: "01",
+    },
+    {
       id: "github",
       icon: <FaGithub />,
       label: "github",
@@ -193,8 +201,7 @@ const Contact = () => {
     setFormErrors(errors);
     return isValid;
   };
-
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (!validateForm()) {
@@ -203,18 +210,45 @@ const Contact = () => {
 
     setIsSubmitting(true);
 
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSnackbarMessage("Thank you! Your message has been sent successfully.");
-      setSnackbarSeverity("success");
-      setSnackbarOpen(true);
-
-      setFormValues({
-        name: "",
-        email: "",
-        message: "",
+    try {
+      const response = await fetch("https://formspree.io/f/mqabzrwd", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: formValues.name,
+          email: formValues.email,
+          message: formValues.message,
+        }),
       });
-    }, 1500);
+
+      if (response.ok) {
+        setSnackbarMessage(
+          "Thank you! Your message has been sent successfully."
+        );
+        setSnackbarSeverity("success");
+        setSnackbarOpen(true);
+
+        // Reset form
+        setFormValues({
+          name: "",
+          email: "",
+          message: "",
+        });
+      } else {
+        throw new Error("Failed to send message");
+      }
+    } catch (error) {
+      console.error("Error sending message:", error);
+      setSnackbarMessage(
+        "Sorry, there was an error sending your message. Please try again."
+      );
+      setSnackbarSeverity("error");
+      setSnackbarOpen(true);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleCloseSnackbar = () => {
@@ -225,27 +259,52 @@ const Contact = () => {
     <div>
       <Helmet>
         {/* Basic SEO Tags */}
-        <title>Contact CodeByMarco | Miguelmarco Ramcharan - Fullstack Developer Durban</title>
-        <meta name="description" content="Get in touch with Miguelmarco Ramcharan of CodeByMarco for fullstack software development needs in Durban, KZN. Request a quote or discuss your project today!" />
+        <title>
+          Contact CodeByMarco | Miguelmarco Ramcharan - Fullstack Developer
+          Durban
+        </title>
+        <meta
+          name="description"
+          content="Get in touch with Miguelmarco Ramcharan of CodeByMarco for fullstack software development needs in Durban, KZN. Request a quote or discuss your project today!"
+        />
         <link rel="canonical" href="https://www.codebymarco.com/contact" />
-
         {/* Open Graph Tags (for Facebook, LinkedIn, WhatsApp etc.) */}
-        <meta property="og:title" content="Contact CodeByMarco | Miguelmarco Ramcharan" />
-        <meta property="og:description" content="Get in touch with Miguelmarco Ramcharan of CodeByMarco for fullstack software development needs in Durban, KZN. Request a quote or discuss your project today!" />
+        <meta
+          property="og:title"
+          content="Contact CodeByMarco | Miguelmarco Ramcharan"
+        />
+        <meta
+          property="og:description"
+          content="Get in touch with Miguelmarco Ramcharan of CodeByMarco for fullstack software development needs in Durban, KZN. Request a quote or discuss your project today!"
+        />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.codebymarco.com/contact" />
-        <meta property="og:image" content="https://www.codebymarco.com/images/codebymarco-contact-og-image.jpg" /> {/* IMPORTANT: Create this image! */}
+        <meta
+          property="og:image"
+          content="https://www.codebymarco.com/images/codebymarco-contact-og-image.jpg"
+        />{" "}
+        {/* IMPORTANT: Create this image! */}
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:site_name" content="CodeByMarco" />
-
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@your_twitter_handle" /> {/* IMPORTANT: Replace with your actual Twitter handle */}
-        <meta name="twitter:creator" content="@your_twitter_handle" /> {/* IMPORTANT: Replace with your actual Twitter handle */}
-        <meta name="twitter:title" content="Contact CodeByMarco | Miguelmarco Ramcharan" />
-        <meta name="twitter:description" content="Get in touch with Miguelmarco Ramcharan of CodeByMarco for fullstack software development needs in Durban, KZN. Request a quote or discuss your project today!" />
-        <meta name="twitter:image" content="https://www.codebymarco.com/images/codebymarco-contact-og-image.jpg" />
+        <meta name="twitter:site" content="@your_twitter_handle" />{" "}
+        {/* IMPORTANT: Replace with your actual Twitter handle */}
+        <meta name="twitter:creator" content="@your_twitter_handle" />{" "}
+        {/* IMPORTANT: Replace with your actual Twitter handle */}
+        <meta
+          name="twitter:title"
+          content="Contact CodeByMarco | Miguelmarco Ramcharan"
+        />
+        <meta
+          name="twitter:description"
+          content="Get in touch with Miguelmarco Ramcharan of CodeByMarco for fullstack software development needs in Durban, KZN. Request a quote or discuss your project today!"
+        />
+        <meta
+          name="twitter:image"
+          content="https://www.codebymarco.com/images/codebymarco-contact-og-image.jpg"
+        />
       </Helmet>
       <div className="contact">
         {show ? <OnlyFans /> : null}
@@ -308,10 +367,16 @@ const Contact = () => {
               </p>
             </div>
 
-            <form className="contact-form" onSubmit={handleSubmit}>
+            <form
+              className="contact-form"
+              onSubmit={handleSubmit}
+              action="https://formspree.io/f/YOUR_FORM_ID"
+              method="POST"
+            >
+              {" "}
               <div className="form-field">
                 <label htmlFor="name" className="form-label">
-                {t("contact_form_name")}
+                  {t("contact_form_name")}
                 </label>
                 <input
                   type="text"
@@ -326,10 +391,9 @@ const Contact = () => {
                   <span className="error-message">{formErrors.name}</span>
                 )}
               </div>
-
               <div className="form-field">
                 <label htmlFor="email" className="form-label">
-                {t("contact_form_email")}
+                  {t("contact_form_email")}
                 </label>
                 <input
                   type="email"
@@ -344,10 +408,9 @@ const Contact = () => {
                   <span className="error-message">{formErrors.email}</span>
                 )}
               </div>
-
               <div className="form-field">
                 <label htmlFor="message" className="form-label">
-                {t("contact_form_message")}
+                  {t("contact_form_message")}
                 </label>
                 <textarea
                   id="message"
@@ -362,7 +425,6 @@ const Contact = () => {
                   <span className="error-message">{formErrors.message}</span>
                 )}
               </div>
-
               <button
                 type="submit"
                 className="submit-button"
@@ -374,7 +436,9 @@ const Contact = () => {
                     Sending...
                   </span>
                 ) : (
-                  <span className="button-content">{t("contact_form_button")}</span>
+                  <span className="button-content">
+                    {t("contact_form_button")}
+                  </span>
                 )}
               </button>
             </form>

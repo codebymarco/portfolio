@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaArrowLeft, FaShare, FaBookmark } from "react-icons/fa";
-import img from "../../../assets/blog/bunny.jpg";
+import img from "../../../assets/blog/bunny.png";
 
 const BunnyCDNBlog = () => {
   const navigate = useNavigate();

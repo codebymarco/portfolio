@@ -13,9 +13,10 @@ import {
   FaCloud,
 } from "react-icons/fa";
 import { Helmet } from "react-helmet";
-import bunnyImage from "../../assets/blog/bunny.jpg";
+import bunnyImage from "../../assets/blog/bunny.png";
 import ScrollToTop from "../components/ScrollToTop";
 import useTranslationStore from "../../store/store";
+import react from "../../assets/blog/react.png";
 
 // Blog data with added tags and images
 const blogData = [
@@ -24,8 +25,7 @@ const blogData = [
     title: "Dockerize a react app",
     tags: ["docker", "react", "javascript", "devops"],
     date: "2025-02-28",
-    image:
-      "https://th.bing.com/th/id/R.796523382777357d18ba619048335003?rik=hi%2f%2bPd07IRqj%2fA&pid=ImgRaw&r=0",
+    image: react,
   },
   {
     id: 2,
@@ -40,7 +40,7 @@ const blogData = [
     tags: ["kubernetes", "docker", "debugging"],
     date: "2025-02-15",
     image: "https://cloud2data.com/wp-content/uploads/2023/05/Kubernetes.png",
-  }
+  },
 ];
 
 // Popular tags for filter
@@ -81,8 +81,8 @@ const Blogs = () => {
 
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
       transition: {
         type: "spring",
@@ -143,35 +143,58 @@ const Blogs = () => {
     <div className="blogWrapper">
       <Helmet>
         {/* Basic SEO Tags */}
-        <title>CodeByMarco Blog | Software Development Articles & Tech Insights by Miguelmarco</title>
-        <meta name="description" content="Explore the CodeByMarco blog by Miguelmarco Ramcharan. Find insightful articles, coding tutorials & fullstack development tips on React, Node.js & more." />
+        <title>
+          CodeByMarco Blog | Software Development Articles & Tech Insights by
+          Miguelmarco
+        </title>
+        <meta
+          name="description"
+          content="Explore the CodeByMarco blog by Miguelmarco Ramcharan. Find insightful articles, coding tutorials & fullstack development tips on React, Node.js & more."
+        />
         <link rel="canonical" href="https://www.codebymarco.com/blogs" />
-
         {/* Open Graph Tags (for Facebook, LinkedIn, WhatsApp etc.) */}
-        <meta property="og:title" content="CodeByMarco Blog | Software Development Articles & Tech Insights" />
-        <meta property="og:description" content="Explore the CodeByMarco blog by Miguelmarco Ramcharan. Find insightful articles, coding tutorials & fullstack development tips on React, Node.js & more." />
+        <meta
+          property="og:title"
+          content="CodeByMarco Blog | Software Development Articles & Tech Insights"
+        />
+        <meta
+          property="og:description"
+          content="Explore the CodeByMarco blog by Miguelmarco Ramcharan. Find insightful articles, coding tutorials & fullstack development tips on React, Node.js & more."
+        />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.codebymarco.com/blogs" />
-        <meta property="og:image" content="https://www.codebymarco.com/images/codebymarco-blog-og-image.jpg" /> {/* IMPORTANT: Create this image! */}
+        <meta
+          property="og:image"
+          content="https://www.codebymarco.com/images/codebymarco-blog-og-image.jpg"
+        />{" "}
+        {/* IMPORTANT: Create this image! */}
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:site_name" content="CodeByMarco" />
-
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@your_twitter_handle" /> {/* IMPORTANT: Replace with your actual Twitter handle */}
-        <meta name="twitter:creator" content="@your_twitter_handle" /> {/* IMPORTANT: Replace with your actual Twitter handle */}
-        <meta name="twitter:title" content="CodeByMarco Blog | Software Development Articles & Tech Insights" />
-        <meta name="twitter:description" content="Explore the CodeByMarco blog by Miguelmarco Ramcharan. Find insightful articles, coding tutorials & fullstack development tips on React, Node.js & more." />
-        <meta name="twitter:image" content="https://www.codebymarco.com/images/codebymarco-blog-og-image.jpg" />
+        <meta name="twitter:site" content="@your_twitter_handle" />{" "}
+        {/* IMPORTANT: Replace with your actual Twitter handle */}
+        <meta name="twitter:creator" content="@your_twitter_handle" />{" "}
+        {/* IMPORTANT: Replace with your actual Twitter handle */}
+        <meta
+          name="twitter:title"
+          content="CodeByMarco Blog | Software Development Articles & Tech Insights"
+        />
+        <meta
+          name="twitter:description"
+          content="Explore the CodeByMarco blog by Miguelmarco Ramcharan. Find insightful articles, coding tutorials & fullstack development tips on React, Node.js & more."
+        />
+        <meta
+          name="twitter:image"
+          content="https://www.codebymarco.com/images/codebymarco-blog-og-image.jpg"
+        />
       </Helmet>
       <ScrollToTop />
       <div className="container">
         <div className="blog-top">
           <h1 className="blog-heading">{t("blog_heading")}</h1>
-          <p className="blog-intro">
-            {t("blog_description")}
-          </p>
+          <p className="blog-intro">{t("blog_description")}</p>
         </div>
 
         {/* Blog grid */}
@@ -370,7 +393,7 @@ const Blogs = () => {
 
         .blog-card:hover {
           border-color: rgba(97, 218, 251, 0.3);
-          box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4), 
+          box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4),
             0 0 20px rgba(97, 218, 251, 0.2);
           transform: translateY(-5px);
         }
@@ -510,7 +533,8 @@ const Blogs = () => {
 
         .blog-reset-button:hover {
           background: rgba(97, 218, 251, 0.15);
-          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3), 0 0 10px rgba(97, 218, 251, 0.15);
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3),
+            0 0 10px rgba(97, 218, 251, 0.15);
           transform: translateY(-2px);
         }
 
@@ -524,7 +548,7 @@ const Blogs = () => {
           .blog-heading {
             font-size: 2.2rem;
           }
-          
+
           .container {
             padding: 1.5rem;
           }
@@ -545,7 +569,7 @@ const Blogs = () => {
           .blogWrapper {
             padding: 40px 15px;
           }
-          
+
           .container {
             padding: 1rem;
             gap: 2rem;

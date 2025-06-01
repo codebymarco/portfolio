@@ -1,12 +1,18 @@
 import React from "react";
+import formio from "../../../public/formio.png";
+import linkbio from "../../../public/linkbio.png";
+import indeed from "../../../public/indeed.png";
+import ai_translator from "../../../public/ai_translator.png";
+import nft_shop from "../../../public/nft_shop.png";
+import portfoliobio from "../../../public/portfoliobio.png";
 
 const Projects = () => {
   const projects = [
     {
-      name: "LinkBio",
+      name: "LINKBIO",
       description: "Personal linkbio website showcasing all links with analytics and custom themes",
       liveUrl: "https://linkbio-console.vercel.app",
-      image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&h=300&fit=crop",
+      image: linkbio,
       tags: ["React", "Node.js", "Analytics"],
       size: "large",
       gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
@@ -19,10 +25,10 @@ const Projects = () => {
       size: "small"
     },
     {
-      name: "Indeed Clone",
+      name: "INDEED",
       description: "Job search platform clone with custom filtering and real-time search",
       liveUrl: "https://indeed-console.vercel.app",
-      image: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=400&h=300&fit=crop",
+      image: indeed,
       tags: ["React", "API", "Search"],
       size: "medium",
       gradient: "linear-gradient(135deg, #11998e 0%, #38ef7d 100%)",
@@ -35,10 +41,10 @@ const Projects = () => {
       size: "small"
     },
     {
-      name: "FormIO",
+      name: "FORMIO",
       description: "Dynamic form builder with drag-and-drop interface and validation",
       liveUrl: "https://linkbio-console.vercel.app",
-      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=300&fit=crop",
+      image: formio,
       tags: ["Forms", "Builder", "Validation"],
       size: "medium",
       gradient: "linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)",
@@ -51,10 +57,10 @@ const Projects = () => {
       size: "small"
     },
     {
-      name: "ChatBot AI",
+      name: "AI TRANSLATOR",
       description: "Intelligent chatbot with natural language processing and machine learning",
       liveUrl: "#",
-      image: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=400&h=300&fit=crop",
+      image: ai_translator,
       tags: ["AI", "NLP", "Python"],
       size: "large",
       gradient: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
@@ -67,10 +73,10 @@ const Projects = () => {
       size: "small"
     },
     {
-      name: "Weather Dashboard",
+      name: "PORTFOLIOBIO",
       description: "Real-time weather app with beautiful animations and forecasts",
       liveUrl: "#",
-      image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=400&h=300&fit=crop",
+      image: portfoliobio,
       tags: ["API", "Weather", "Charts"],
       size: "small",
       gradient: "linear-gradient(135deg, #fa709a 0%, #fee140 100%)",
@@ -83,10 +89,10 @@ const Projects = () => {
       size: "small"
     },
     {
-      name: "E-Commerce Store",
+      name: "NFT SHOP",
       description: "Full-stack e-commerce platform with payment integration, inventory management, and admin dashboard",
       liveUrl: "#",
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=300&fit=crop",
+      image: nft_shop,
       tags: ["React", "Node.js", "Stripe", "MongoDB"],
       size: "medium",
       gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",

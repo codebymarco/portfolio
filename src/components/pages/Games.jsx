@@ -1,59 +1,45 @@
 import React from "react";
+import transporter from "../../../public/transporter.png";
+import fartup from "../../../public/fartup.png";
 
 const GamesPage = () => {
   const games = [
     {
       id: 1,
       name: "Fartup",
-      description: "A hilarious timing-based game where you help your character navigate through challenges!",
-      image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=400&h=300&fit=crop",
+      description:
+        "A hilarious flappy inspired  game where you help your character navigate through challenges by using your butt!",
+      image: fartup,
       difficulty: "Easy",
       genre: "Arcade",
       players: "1 Player",
       gradient: "linear-gradient(135deg, #ff6b6b 0%, #feca57 100%)",
-      playUrl: "/games/fartup"
+      playUrl: "https://games-one-lemon.vercel.app/flappy",
     },
     {
       id: 2,
-      name: "Snake Revenge",
-      description: "Classic snake game with a modern twist - power-ups, obstacles, and epic boss battles!",
-      image: "https://images.unsplash.com/photo-1554519884-5c9e04e1e79c?w=400&h=300&fit=crop",
+      name: "Transporter",
+      description:
+        "Pick and drop off clients in different locations, while dodging the bad guys",
+      image: transporter,
       difficulty: "Medium",
       genre: "Classic",
       players: "1 Player",
       gradient: "linear-gradient(135deg, #11998e 0%, #38ef7d 100%)",
-      playUrl: "/games/snake"
+      playUrl: "https://games-one-lemon.vercel.app/transporter",
     },
-    {
-      id: 3,
-      name: "Pixel Shooter",
-      description: "Fast-paced retro shooter with pixel art graphics and endless waves of enemies!",
-      image: "https://images.unsplash.com/photo-1551103782-8ab07afd45c1?w=400&h=300&fit=crop",
-      difficulty: "Hard",
-      genre: "Shooter",
-      players: "1-2 Players",
-      gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
-      playUrl: "/games/shooter"
-    },
-    {
-      id: 4,
-      name: "Memory Matrix",
-      description: "Test your memory with this cyberpunk-themed puzzle game featuring neon colors and beats!",
-      image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&h=300&fit=crop",
-      difficulty: "Medium",
-      genre: "Puzzle",
-      players: "1 Player",
-      gradient: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
-      playUrl: "/games/memory"
-    }
   ];
 
   const getDifficultyColor = (difficulty) => {
-    switch(difficulty) {
-      case "Easy": return "#38ef7d";
-      case "Medium": return "#feca57";
-      case "Hard": return "#ff6b6b";
-      default: return "#61dafb";
+    switch (difficulty) {
+      case "Easy":
+        return "#38ef7d";
+      case "Medium":
+        return "#feca57";
+      case "Hard":
+        return "#ff6b6b";
+      default:
+        return "#61dafb";
     }
   };
 
@@ -235,7 +221,7 @@ const GamesPage = () => {
           margin: 0 0 10px 0;
           text-transform: uppercase;
           letter-spacing: 2px;
-          text-shadow: 0 2px 8px rgba(0,0,0,0.8);
+          text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
         }
 
         .game-description {
@@ -273,9 +259,15 @@ const GamesPage = () => {
           font-weight: 700;
         }
 
-        .difficulty-easy { color: #38ef7d; }
-        .difficulty-medium { color: #feca57; }
-        .difficulty-hard { color: #ff6b6b; }
+        .difficulty-easy {
+          color: #38ef7d;
+        }
+        .difficulty-medium {
+          color: #feca57;
+        }
+        .difficulty-hard {
+          color: #ff6b6b;
+        }
 
         .play-button {
           width: 100%;
@@ -352,7 +344,7 @@ const GamesPage = () => {
 
       <div className="games-page">
         <div className="arcade-header">
-          <h1 className="arcade-title">🎮 ARCADE 🎮</h1>
+          <h1 className="arcade-title">🎮 GAMES 🎮</h1>
           <p className="arcade-subtitle">Choose Your Adventure</p>
         </div>
 
@@ -361,28 +353,26 @@ const GamesPage = () => {
             <div
               key={game.id}
               className="game-card"
-              onClick={() => window.location.href = game.playUrl}
+              onClick={() => (window.location.href = game.playUrl)}
             >
               <div className="game-image-container">
-                <img
-                  src={game.image}
-                  alt={game.name}
-                  className="game-image"
-                />
-                <div 
+                <img src={game.image} alt={game.name} className="game-image" />
+                <div
                   className="game-overlay"
                   style={{ background: game.gradient }}
                 />
               </div>
-              
+
               <div className="game-content">
                 <h3 className="game-name">{game.name}</h3>
                 <p className="game-description">{game.description}</p>
-                
+
                 <div className="game-stats">
                   <div className="game-stat">
                     <span className="stat-label">Difficulty</span>
-                    <span className={`stat-value difficulty-${game.difficulty.toLowerCase()}`}>
+                    <span
+                      className={`stat-value difficulty-${game.difficulty.toLowerCase()}`}
+                    >
                       {game.difficulty}
                     </span>
                   </div>
@@ -395,10 +385,8 @@ const GamesPage = () => {
                     <span className="stat-value">{game.players}</span>
                   </div>
                 </div>
-                
-                <button className="play-button">
-                  Play Now
-                </button>
+
+                <button className="play-button">Play Now</button>
               </div>
             </div>
           ))}
