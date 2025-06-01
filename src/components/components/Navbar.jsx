@@ -7,7 +7,8 @@ import { HiOutlineGlobeAlt } from "react-icons/hi";
 import { IoIosArrowDown } from "react-icons/io";
 import { AnimatePresence, motion } from "framer-motion";
 import useTranslationStore from "../../store/store";
-import logo from '../../assets/logo.jpg'
+import logo from '../../assets/logo.png'
+
 const Navbar = () => {
   const { language, setLanguage, t } = useTranslationStore();
 
@@ -105,16 +106,21 @@ const Navbar = () => {
       <AnimatePresence>
         {show && <FullPageNavbar key="full-page-navbar" close={close} />}
       </AnimatePresence>
-      <div></div>
+      
+      {/* Logo on the left */}
+      <motion.div
+        initial={{ opacity: 0, x: -20 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ delay: 0.2, duration: 0.4 }}
+      >
+      </motion.div>
+
       <div>
         <motion.div
           className="desktop-links"
           id="desktop-links"
           variants={navVariants}
         >
-
-        <img src={logo} height="50px" width="auto"/>
-
           <motion.div variants={itemVariants} className="nav-item">
             <Link
               className={`desktop-links-link ${
@@ -251,8 +257,6 @@ const Navbar = () => {
           />
         </motion.div>
       </div>
-
-
     </motion.nav>
   );
 };

@@ -10,94 +10,107 @@ const Projects = () => {
   const projects = [
     {
       name: "LINKBIO",
-      description: "Personal linkbio website showcasing all links with analytics and custom themes",
+      description:
+        "Personal linkbio website showcasing all links with analytics and custom themes",
       liveUrl: "https://linkbio-console.vercel.app",
+      info: "/apps/linkbio",
       image: linkbio,
       tags: ["React", "Node.js", "Analytics"],
       size: "large",
       gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
-      type: "project"
+      type: "project",
     },
     {
       type: "filler",
       content: "💡 Currently obsessed with building seamless user experiences",
       gradient: "linear-gradient(135deg, #ff6b6b 0%, #feca57 100%)",
-      size: "small"
+      size: "small",
     },
     {
       name: "INDEED",
-      description: "Job search platform clone with custom filtering and real-time search",
+      description:
+        "Job search platform clone with custom filtering and real-time search",
       liveUrl: "https://indeed-console.vercel.app",
+      info: "/apps/indeed",
       image: indeed,
       tags: ["React", "API", "Search"],
       size: "medium",
       gradient: "linear-gradient(135deg, #11998e 0%, #38ef7d 100%)",
-      type: "project"
+      type: "project",
     },
     {
       type: "filler",
       content: "🚀 50+ Projects Completed\n3+ Years of Coding",
       gradient: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
-      size: "small"
+      size: "small",
     },
     {
       name: "FORMIO",
-      description: "Dynamic form builder with drag-and-drop interface and validation",
+      description:
+        "Dynamic form builder with drag-and-drop interface and validation",
       liveUrl: "https://linkbio-console.vercel.app",
+      info: "/apps/formio",
       image: formio,
       tags: ["Forms", "Builder", "Validation"],
       size: "medium",
       gradient: "linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)",
-      type: "project"
+      type: "project",
     },
     {
       type: "filler",
-      content: "\"Code is poetry written in logic\" ✨",
+      content: '"Code is poetry written in logic" ✨',
       gradient: "linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)",
-      size: "small"
+      size: "small",
     },
     {
       name: "AI TRANSLATOR",
-      description: "Intelligent chatbot with natural language processing and machine learning",
-      liveUrl: "#",
+      description:
+        "Intelligent chatbot with natural language processing and machine learning",
+      liveUrl: "/",
+      liveUrl: "translator",
       image: ai_translator,
       tags: ["AI", "NLP", "Python"],
       size: "large",
       gradient: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
-      type: "project"
+      type: "project",
     },
     {
       type: "filler",
-      content: "💻 Pro Tip:\nAlways comment your code - your future self will thank you!",
+      content:
+        "💻 Pro Tip:\nAlways comment your code - your future self will thank you!",
       gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
-      size: "small"
+      size: "small",
     },
     {
       name: "PORTFOLIOBIO",
-      description: "Real-time weather app with beautiful animations and forecasts",
-      liveUrl: "#",
+      description:
+        "Real-time weather app with beautiful animations and forecasts",
+      liveUrl: "https://iportfolio-console.vercel.app/",
+      info: "/apps/portfoliobio",
       image: portfoliobio,
       tags: ["API", "Weather", "Charts"],
       size: "small",
       gradient: "linear-gradient(135deg, #fa709a 0%, #fee140 100%)",
-      type: "project"
+      type: "project",
     },
     {
       type: "filler",
-      content: "🎯 Let's build something amazing together!\nAlways open to new opportunities",
+      content:
+        "🎯 Let's build something amazing together!\nAlways open to new opportunities",
       gradient: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
-      size: "small"
+      size: "small",
     },
     {
       name: "NFT SHOP",
-      description: "Full-stack e-commerce platform with payment integration, inventory management, and admin dashboard",
+      description:
+        "Full-stack e-commerce platform with payment integration, inventory management, and admin dashboard",
       liveUrl: "#",
       image: nft_shop,
       tags: ["React", "Node.js", "Stripe", "MongoDB"],
       size: "medium",
       gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
-      type: "project"
-    }
+      type: "project",
+    },
   ];
 
   return (
@@ -216,7 +229,7 @@ const Projects = () => {
         .project-card:hover {
           transform: translateY(-10px);
           border-color: rgba(97, 218, 251, 0.3);
-          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 
+          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4),
             0 0 25px rgba(97, 218, 251, 0.2);
         }
 
@@ -357,7 +370,7 @@ const Projects = () => {
         .filler-card:hover {
           transform: translateY(-5px);
           border-color: rgba(97, 218, 251, 0.3);
-          box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4), 
+          box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4),
             0 0 20px rgba(97, 218, 251, 0.2);
         }
 
@@ -366,7 +379,7 @@ const Projects = () => {
           font-weight: 600;
           color: white;
           line-height: 1.5;
-          text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+          text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
           white-space: pre-line;
           z-index: 2;
           position: relative;
@@ -428,17 +441,19 @@ const Projects = () => {
         <div className="container">
           <div className="projects-header">
             <h1 className="projects-title">My Projects</h1>
-            <p className="projects-subtitle">Crafted with passion and precision</p>
+            <p className="projects-subtitle">
+              Crafted with passion and precision
+            </p>
           </div>
 
           <div className="projects-masonry">
-            {projects.map((item, index) => (
+            {projects.map((item, index) =>
               item.type === "filler" ? (
                 <div
                   key={`filler-${index}`}
                   className={`filler-card filler-${item.size}`}
                 >
-                  <div 
+                  <div
                     className="filler-overlay"
                     style={{ background: item.gradient }}
                   />
@@ -448,7 +463,7 @@ const Projects = () => {
                 <div
                   key={item.name}
                   className={`project-card project-${item.size}`}
-                  onClick={() => window.open(item.liveUrl, '_blank')}
+                  onClick={() => window.open(item.liveUrl, "_blank")}
                 >
                   <div className="project-header">
                     <img
@@ -456,16 +471,16 @@ const Projects = () => {
                       alt={item.name}
                       className="project-image"
                     />
-                    <div 
+                    <div
                       className="project-overlay"
                       style={{ background: item.gradient }}
                     />
                   </div>
-                  
+
                   <div className="project-content">
                     <h3 className="project-name">{item.name}</h3>
                     <p className="project-description">{item.description}</p>
-                    
+
                     <div className="project-tags">
                       {item.tags.map((tag) => (
                         <span key={tag} className="project-tag">
@@ -473,18 +488,27 @@ const Projects = () => {
                         </span>
                       ))}
                     </div>
-                    
-                    <a 
-                      href={item.liveUrl} 
-                      className="project-link"
-                      onClick={(e) => e.stopPropagation()}
-                    >
-                      View Project →
-                    </a>
+
+                    <div style={{display:"flex",flexDirection:"column", gap:"10px"}}>
+                      <a
+                        href={item.liveUrl}
+                        className="project-link"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        View Project →
+                      </a>
+                      <a
+                        href={item.info}
+                        className="project-link"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        Project Details →
+                      </a>
+                    </div>
                   </div>
                 </div>
               )
-            ))}
+            )}
           </div>
         </div>
       </div>
