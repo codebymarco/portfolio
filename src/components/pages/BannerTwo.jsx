@@ -35,15 +35,15 @@ const BannerTwo = () => {
         }
 
         .bg-image-1 {
-          background-image: url("/public/image.png");
+          background-image: url("/image.png");
         }
 
         .bg-image-2 {
-          background-image: url("/public/image3.png");
+          background-image: url("/image3.png");
         }
 
         .bg-image-3 {
-          background-image: url("/public/image2.png");
+          background-image: url("/image2.png");
         }
 
         .banner-overlay {
