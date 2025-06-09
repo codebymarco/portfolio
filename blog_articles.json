@@ -1,8 +1,8 @@
 [
-  { "title": "How I Became a Full-Stack Developer", "image": "/blog_images/a688925c-06da-4a71-885d-5a8dea807770.png" },
-  { "title": "My Favorite Developer Tools in 2025", "image": "" },
-  { "title": "How to Structure a Developer Portfolio", "image": "" },
-  { "title": "Why You Should Learn Golang as a JavaScript Dev", "image": "" },
+  { "title": "How I Became a Full-Stack Developer", "image": "a688925c-06da-4a71-885d-5a8dea807770.png" },
+  { "title": "My Favorite Developer Tools in 2025", "image": "e3fb4e0b-6a37-410a-9cf0-5ba199c315a5.png" },
+  { "title": "How to Structure a Developer Portfolio", "image": "5e7ecde6-2be8-445f-a791-e46721ee5b35" },
+  { "title": "Why You Should Learn Golang as a JavaScript Dev", "image": "9e285974-5436-4e92-a3c0-6bc05b85daa5" },
   { "title": "What I Learned Migrating from PHP to Node.js", "image": "" },
   { "title": "How Blogging Helped My Developer Career", "image": "" },
   { "title": "My Daily Workflow as a Full-Stack Dev", "image": "" },

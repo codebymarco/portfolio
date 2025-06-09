@@ -1,6 +1,8 @@
 import React from "react";
-// import { Link } from "react-router-dom";
-// import { FaTwitter, FaInstagram, FaTiktok, FaYoutube, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedinIn } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+import { FaXTwitter } from "react-icons/fa6";
+import { FaInstagram, FaTiktok, FaYoutube } from "react-icons/fa";
 
 const BannerTwo = () => {
   return (
@@ -101,15 +103,98 @@ const BannerTwo = () => {
         }
 
         .social-icon {
-          font-size: 28px;
           color: #a0a0a0;
-          transition: all 0.3s ease;
-          cursor: pointer;
+          background: rgba(255, 255, 255, 0.1);
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          position: relative;
+          overflow: hidden;
+          border: 1px solid rgba(255, 255, 255, 0.2);
+          backdrop-filter: blur(5px);
+          text-decoration: none;
+        }
+
+        .social-icon::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(
+            45deg,
+            rgba(255, 255, 255, 0.15),
+            transparent
+          );
+          opacity: 0;
+          transition: opacity 0.3s ease;
         }
 
         .social-icon:hover {
-          color: dodgerblue;
-          transform: scale(1.1);
+          color: #fff;
+          transform: translateY(-5px) scale(1.1);
+          border-color: rgba(255, 255, 255, 0.6);
+          box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.6),
+            0 0 15px rgba(255, 255, 255, 0.3),
+            inset 0 0 10px rgba(255, 255, 255, 0.15);
+        }
+
+        .social-icon:hover::before {
+          opacity: 1;
+        }
+
+        .social-icon.github:hover {
+          background: rgba(36, 41, 46, 0.8);
+          border-color: #2ea44f;
+          box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.6),
+            0 0 15px rgba(46, 164, 79, 0.4);
+        }
+
+        .social-icon.linkedin:hover {
+          background: rgba(10, 102, 194, 0.2);
+          border-color: #0a66c2;
+          box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.6),
+            0 0 15px rgba(10, 102, 194, 0.4);
+        }
+
+        .social-icon.email:hover {
+          background: rgba(234, 67, 53, 0.2);
+          border-color: #ea4335;
+          box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.6),
+            0 0 15px rgba(234, 67, 53, 0.4);
+        }
+
+        .social-icon.twitter:hover {
+          background: rgba(29, 161, 242, 0.2);
+          border-color: #1da1f2;
+          box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.6),
+            0 0 15px rgba(29, 161, 242, 0.4);
+        }
+
+        .social-icon.instagram:hover {
+          background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+          border-color: #e1306c;
+          box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.6),
+            0 0 15px rgba(225, 48, 108, 0.4);
+        }
+
+        .social-icon.tiktok:hover {
+          background: rgba(254, 44, 85, 0.2);
+          border-color: #fe2c55;
+          box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.6),
+            0 0 15px rgba(254, 44, 85, 0.4);
+        }
+
+        .social-icon.youtube:hover {
+          background: rgba(255, 0, 0, 0.2);
+          border-color: #ff0000;
+          box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.6),
+            0 0 15px rgba(255, 0, 0, 0.4);
         }
 
         .banner-buttons {
@@ -117,7 +202,7 @@ const BannerTwo = () => {
           gap: 20px;
           justify-content: center;
           flex-wrap: wrap;
-          margin-top:20px;
+          margin-top: 20px;
         }
 
         .banner-btn {
@@ -177,7 +262,8 @@ const BannerTwo = () => {
           }
 
           .social-icon {
-            font-size: 24px;
+            width: 45px;
+            height: 45px;
           }
 
           .banner-buttons {
@@ -204,7 +290,8 @@ const BannerTwo = () => {
           }
 
           .social-icon {
-            font-size: 22px;
+            width: 40px;
+            height: 40px;
           }
         }
       `}</style>
@@ -232,20 +319,48 @@ const BannerTwo = () => {
 
           {/* Social Media Icons */}
           <div className="social-icons">
-            <a href="#" className="social-icon">
-              🐦
+            <a 
+              href="https://github.com/codebymarco" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-icon github"
+              aria-label="GitHub Profile"
+            >
+              <FaGithub size={24} />
             </a>
-            <a href="#" className="social-icon">
-              📷
+            <a 
+              href="https://linkedin.com/in/your-profile" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-icon linkedin"
+              aria-label="LinkedIn Profile"
+            >
+              <FaLinkedinIn size={24} />
             </a>
-            <a href="#" className="social-icon">
-              🎵
+            <a 
+              href="mailto:miguelmarcoramcharan@gmail.com"
+              className="social-icon email"
+              aria-label="Send Email"
+            >
+              <MdEmail size={26} />
             </a>
-            <a href="#" className="social-icon">
-              📺
+            <a 
+              href="https://twitter.com/your-handle" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-icon twitter"
+              aria-label="Twitter Profile"
+            >
+              <FaXTwitter size={24} />
             </a>
-            <a href="#" className="social-icon">
-              💼
+            <a 
+              href="https://instagram.com/your-handle" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-icon instagram"
+              aria-label="Instagram Profile"
+            >
+              <FaInstagram size={24} />
             </a>
           </div>
 
