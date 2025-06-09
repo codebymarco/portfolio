@@ -117,6 +117,7 @@ const BannerTwo = () => {
           gap: 20px;
           justify-content: center;
           flex-wrap: wrap;
+          margin-top:20px;
         }
 
         .banner-btn {

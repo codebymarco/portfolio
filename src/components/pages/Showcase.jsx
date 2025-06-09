@@ -105,20 +105,36 @@ const Showcase = () => {
               Node.js
             </span>
           </div>
-          <a
-            href="#"
-            style={{
-              display: "inline-block",
-              backgroundColor: "dodgerblue",
-              color: "white",
-              padding: "12px 24px",
-              borderRadius: "20px",
-              textDecoration: "none",
-              fontWeight: "600",
-            }}
-          >
-            View Project
-          </a>
+          <div style={{ display: "flex", gap: "10px" }}>
+            <a
+              href="#"
+              style={{
+                display: "inline-block",
+                backgroundColor: "dodgerblue",
+                color: "white",
+                padding: "12px 24px",
+                borderRadius: "20px",
+                textDecoration: "none",
+                fontWeight: "600",
+              }}
+            >
+              Live
+            </a>
+            <a
+              href="#"
+              style={{
+                display: "inline-block",
+                backgroundColor: "dodgerblue",
+                color: "white",
+                padding: "12px 24px",
+                borderRadius: "20px",
+                textDecoration: "none",
+                fontWeight: "600",
+              }}
+            >
+              Project Details
+            </a>
+          </div>
         </div>
 
         {/* Fartup */}
@@ -144,11 +160,7 @@ const Showcase = () => {
               overflow: "hidden",
             }}
           >
-            <img
-            src={fartup}
-              alt="Fartup Game"
-              className="project-image"
-            />
+            <img src={fartup} alt="Fartup Game" className="project-image" />
           </div>
           <h3 style={{ fontSize: "1.8rem", marginBottom: "15px" }}>Fartup</h3>
           <p
@@ -187,20 +199,36 @@ const Showcase = () => {
               C#
             </span>
           </div>
-          <a
-            href="#"
-            style={{
-              display: "inline-block",
-              backgroundColor: "dodgerblue",
-              color: "white",
-              padding: "12px 24px",
-              borderRadius: "20px",
-              textDecoration: "none",
-              fontWeight: "600",
-            }}
-          >
-            Play Game
-          </a>
+          <div style={{ display: "flex", gap: "10px" }}>
+            <a
+              href="#"
+              style={{
+                display: "inline-block",
+                backgroundColor: "dodgerblue",
+                color: "white",
+                padding: "12px 24px",
+                borderRadius: "20px",
+                textDecoration: "none",
+                fontWeight: "600",
+              }}
+            >
+              Live
+            </a>
+            <a
+              href="#"
+              style={{
+                display: "inline-block",
+                backgroundColor: "dodgerblue",
+                color: "white",
+                padding: "12px 24px",
+                borderRadius: "20px",
+                textDecoration: "none",
+                fontWeight: "600",
+              }}
+            >
+              Project Details
+            </a>
+          </div>
         </div>
 
         {/* Blog 1 */}
@@ -226,11 +254,7 @@ const Showcase = () => {
               overflow: "hidden",
             }}
           >
-            <img
-            src={blog}
-              alt="React Development"
-              className="project-image"
-            />
+            <img src={blog} alt="React Development" className="project-image" />
           </div>
           <div
             style={{
@@ -292,11 +316,7 @@ const Showcase = () => {
               overflow: "hidden",
             }}
           >
-            <img
-            src={blog2}
-              alt="Web Development"
-              className="project-image"
-            />
+            <img src={blog2} alt="Web Development" className="project-image" />
           </div>
           <div
             style={{

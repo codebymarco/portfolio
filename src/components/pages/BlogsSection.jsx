@@ -8,7 +8,7 @@ const NavigationSection = () => {
     {
       id: 1,
       title: "Apps",
-      tags: ["react", "javascript", "web apps", "projects"],
+      tags: ["react", "expressjs", "ai", "mongodb"],
       image: apps,
     },
     {
@@ -20,7 +20,7 @@ const NavigationSection = () => {
     {
       id: 3,
       title: "Games",
-      tags: ["unity", "javascript", "interactive", "fun"],
+      tags: ["html", "css", "javascript", "flash", "ai", "claude"],
       image: games,
     },
   ];
