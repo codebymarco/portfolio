@@ -13,10 +13,10 @@ import Home from "../pages/Home";
 import Projects from "../pages/Projects";
 import Blogs from "../pages/Blogs";
 import Blog from "../pages/Blog";
-import BunnyCDNBlog from "../pages/blogs/BunnyCDNBlog";
-import KubernetesErrorsBlog from "../pages/blogs/KubernetesErrorsBlog";
+import BunnyCDNBlog from "../pages/blogs/DeveloperToolsBlog";
+import KubernetesErrorsBlog from "../pages/blogs/PortfolioStructureBlog";
 import One from "../pages/blogs/One";
-import Two from "../pages/blogs/Two";
+import Two from "../pages/blogs/FutureWebDevBlog";
 import Three from "../pages/blogs/Three";
 import Four from "../pages/blogs/Four";
 import Five from "../pages/blogs/Five";
@@ -25,6 +25,10 @@ import GamesPage from "../pages/Games";
 import Fartup from "../pages/apps/Fartup";
 import NftShop from "../pages/apps/NftShop";
 import AiTranslator from "../pages/apps/AiTranslator";
+import DeveloperToolsBlog from "../pages/blogs/DeveloperToolsBlog";
+import PortfolioStructureBlog from "../pages/blogs/PortfolioStructureBlog";
+import ScalableReactBlog from "../pages/blogs/ScalableReactBlog ";
+import FutureWebDevBlog from "../pages/blogs/FutureWebDevBlog";
 
 const Router = () => {
   return (
@@ -41,10 +45,10 @@ const Router = () => {
           <Route path="career" element={<Career />}></Route>
           <Route path="blog" element={<Blogs />}></Route>
           <Route path="blog/1" element={<Blog />}></Route>
-          <Route path="blog/2" element={<BunnyCDNBlog />}></Route>
-          <Route path="blog/3" element={<KubernetesErrorsBlog />}></Route>
-          <Route path="blog/4" element={<One />}></Route>
-          <Route path="blog/5" element={<Two />}></Route>
+          <Route path="blog/2" element={< DeveloperToolsBlog/>}></Route>
+          <Route path="blog/3" element={<PortfolioStructureBlog />}></Route>
+          <Route path="blog/4" element={<ScalableReactBlog />}></Route>
+          <Route path="blog/5" element={<FutureWebDevBlog />}></Route>
           <Route path="blog/6" element={<Three />}></Route>
           <Route path="blog/7" element={<Four />}></Route>
           <Route path="blog/8" element={<Five />}></Route>

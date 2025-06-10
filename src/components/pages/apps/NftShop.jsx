@@ -32,8 +32,8 @@ const NftShop = () => {
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
       transition: {
         type: "spring",
@@ -47,9 +47,11 @@ const NftShop = () => {
     <div className="appWrapper">
       <div className="container">
         <div className="app-nav">
-          <Link to="/apps" className="app-breadcrumb">apps / nft shop</Link>
+          <Link to="/apps" className="app-breadcrumb">
+            apps / nft shop
+          </Link>
         </div>
-        
+
         <div className="app-top">
           <motion.h1
             initial={{ opacity: 0, y: -20 }}
@@ -59,10 +61,10 @@ const NftShop = () => {
           >
             NFT SHOP
           </motion.h1>
-          
+
           <div className="app-links">
-            <motion.a 
-              href="https://indeed-console.vercel.app/" 
+            <motion.a
+              href="https://indeed-console.vercel.app/"
               target="_blank"
               className="app-link"
               initial={{ opacity: 0, y: 20 }}
@@ -72,8 +74,8 @@ const NftShop = () => {
             >
               View Site
             </motion.a>
-            <motion.a 
-              href="https://github.com/codebymarco/indeed_backend" 
+            <motion.a
+              href="https://github.com/codebymarco/indeed_backend"
               target="_blank"
               className="app-link"
               initial={{ opacity: 0, y: 20 }}
@@ -86,7 +88,7 @@ const NftShop = () => {
             </motion.a>
           </div>
         </div>
-        
+
         <div className="app-container">
           <motion.div
             className="app-photo"
@@ -94,10 +96,14 @@ const NftShop = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.3, duration: 0.5 }}
           >
-            <img src={img} alt="Indeed project screenshot" className="project-image" />
+            <img
+              src={img}
+              alt="Indeed project screenshot"
+              className="project-image"
+            />
           </motion.div>
-          
-          <motion.div 
+
+          <motion.div
             className="app-details"
             variants={containerVariants}
             initial="hidden"
@@ -106,19 +112,20 @@ const NftShop = () => {
             <motion.div className="app-details-box" variants={itemVariants}>
               <h2 className="section-title">Description</h2>
               <p className="description-text">
-                <span className="highlight">NFT SHOP</span> is a
-                comprehensive job listing site designed to help employers find the
-                right talent and job seekers discover their ideal roles. Whether
-                you're a company looking to post job openings or a professional
-                searching for your next career move, JobPortal offers a
-                streamlined platform to manage and browse job listings with ease.
-                Our site provides powerful search features and an intuitive
-                interface to enhance your job search and recruitment experience.
+                <span className="highlight">NFT SHOP</span> is your ultimate
+                destination for discovering, buying, and selling digital
+                collectibles. Whether you're a seasoned NFT collector or just
+                getting started in the world of digital art, NFT SHOP makes
+                exploring blockchain-based assets easy and exciting. With a
+                sleek interface, powerful search tools, and secure transactions,
+                we connect creators and collectors in a thriving marketplace
+                built for the future of ownership. From rare art pieces to
+                trending tokens, find your next favorite NFT today.
               </p>
             </motion.div>
-            
+
             <div className="divider"></div>
-            
+
             <motion.div className="app-details-box" variants={itemVariants}>
               <h2 className="section-title">Technologies Used</h2>
               <div className="tech-grid">
@@ -156,9 +163,9 @@ const NftShop = () => {
                 </div>
               </div>
             </motion.div>
-            
+
             <div className="divider"></div>
-            
+
             <motion.div className="app-details-box" variants={itemVariants}>
               <h2 className="section-title">Hosting</h2>
               <div className="tech-grid">
@@ -176,9 +183,9 @@ const NftShop = () => {
                 </div>
               </div>
             </motion.div>
-            
+
             <div className="divider"></div>
-            
+
             <motion.div className="app-details-box" variants={itemVariants}>
               <h2 className="section-title">Links</h2>
               <div className="links-grid">
@@ -349,7 +356,8 @@ const NftShop = () => {
           background: rgba(17, 17, 17, 0.8);
           border-color: rgba(97, 218, 251, 0.5);
           transform: translateY(-2px);
-          box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3), 0 0 10px rgba(97, 218, 251, 0.2);
+          box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3),
+            0 0 10px rgba(97, 218, 251, 0.2);
         }
 
         .link-icon {
@@ -366,7 +374,8 @@ const NftShop = () => {
           width: 100%;
           border-radius: 15px;
           overflow: hidden;
-          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(97, 218, 251, 0.1);
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5),
+            0 0 15px rgba(97, 218, 251, 0.1);
           border: 1px solid rgba(97, 218, 251, 0.15);
         }
 
@@ -453,7 +462,8 @@ const NftShop = () => {
           border-color: rgba(97, 218, 251, 0.3);
           background-color: rgba(17, 17, 17, 0.7);
           transform: translateY(-3px);
-          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2), 0 0 8px rgba(97, 218, 251, 0.1);
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2),
+            0 0 8px rgba(97, 218, 251, 0.1);
         }
 
         .tech-box span {
@@ -489,7 +499,8 @@ const NftShop = () => {
           background-color: rgba(17, 17, 17, 0.8);
           border-color: rgba(97, 218, 251, 0.4);
           transform: translateY(-3px);
-          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3), 0 0 10px rgba(97, 218, 251, 0.15);
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3),
+            0 0 10px rgba(97, 218, 251, 0.15);
         }
 
         /* Responsive styles - tablet */
@@ -497,15 +508,16 @@ const NftShop = () => {
           .app-container {
             gap: 2rem;
           }
-          
+
           .app-title {
             font-size: 2.5rem;
           }
-          
-          .tech-grid, .links-grid {
+
+          .tech-grid,
+          .links-grid {
             grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
           }
-          
+
           .container {
             padding: 1.5rem;
           }
@@ -517,32 +529,32 @@ const NftShop = () => {
             font-size: 2rem;
             letter-spacing: 2px;
           }
-          
+
           .app-links {
             flex-direction: column;
             gap: 10px;
             align-items: center;
           }
-          
+
           .app-link {
             width: 100%;
             justify-content: center;
           }
-          
+
           .tech-grid {
             grid-template-columns: repeat(2, 1fr);
             gap: 10px;
           }
-          
+
           .links-grid {
             grid-template-columns: 1fr;
           }
-          
+
           .container {
             padding: 1rem;
             gap: 1.5rem;
           }
-          
+
           .section-title {
             font-size: 1.3rem;
           }
@@ -553,7 +565,7 @@ const NftShop = () => {
           .app-title {
             font-size: 1.8rem;
           }
-          
+
           .tech-grid {
             grid-template-columns: 1fr;
           }

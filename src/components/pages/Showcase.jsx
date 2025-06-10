@@ -278,7 +278,7 @@ const Showcase = () => {
             Learn best practices for structuring large React applications.
           </p>
           <a
-            href="#"
+            href="/blog/4"
             style={{
               display: "inline-block",
               backgroundColor: "dodgerblue",
@@ -340,7 +340,7 @@ const Showcase = () => {
             Exploring emerging technologies that will shape web development.
           </p>
           <a
-            href="#"
+            href="blog/5"
             style={{
               display: "inline-block",
               backgroundColor: "dodgerblue",

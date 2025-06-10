@@ -11,7 +11,7 @@ import {
 } from "react-icons/si";
 import { IoLogoVercel } from "react-icons/io5";
 import { FiGithub } from "react-icons/fi";
-import img from "../../../assets/indeed.png";
+import img from "../../../assets/fartup.png";
 import { useEffect } from "react";
 
 const Fartup = () => {
@@ -48,7 +48,7 @@ const Fartup = () => {
       <div className="container">
         <div className="app-nav">
           <Link to="/apps" className="app-breadcrumb">
-            apps / indeed
+            apps / fartup
           </Link>
         </div>
 
@@ -59,7 +59,7 @@ const Fartup = () => {
             transition={{ duration: 0.5, type: "spring", stiffness: 100 }}
             className="app-title"
           >
-            FRATUP
+            FARTUP
           </motion.h1>
 
           <div className="app-links">
@@ -73,18 +73,6 @@ const Fartup = () => {
               whileHover={{ scale: 1.05 }}
             >
               View Site
-            </motion.a>
-            <motion.a
-              href="https://github.com/codebymarco/indeed_backend"
-              target="_blank"
-              className="app-link"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3, duration: 0.4 }}
-              whileHover={{ scale: 1.05 }}
-            >
-              <FiGithub className="link-icon" />
-              Repository
             </motion.a>
           </div>
         </div>
@@ -112,14 +100,14 @@ const Fartup = () => {
             <motion.div className="app-details-box" variants={itemVariants}>
               <h2 className="section-title">Description</h2>
               <p className="description-text">
-                <span className="highlight">INDEED</span> is a comprehensive job
-                listing site designed to help employers find the right talent
-                and job seekers discover their ideal roles. Whether you're a
-                company looking to post job openings or a professional searching
-                for your next career move, JobPortal offers a streamlined
-                platform to manage and browse job listings with ease. Our site
-                provides powerful search features and an intuitive interface to
-                enhance your job search and recruitment experience.
+                <span className="highlight">FARTUP</span> is a hilarious
+                arcade-style game inspired by the classic Flappy Bird. But
+                instead of flapping wings, you're rocketing through the air with
+                high-powered farts! Navigate tricky obstacles, time your gas
+                bursts just right, and soar to new heights in this outrageously
+                funny flying challenge. Whether you're aiming for a new high
+                score or just want a laugh, FARTUP delivers fart-fueled fun with
+                every tap.
               </p>
             </motion.div>
 
@@ -138,27 +126,7 @@ const Fartup = () => {
                 </div>
                 <div className="tech-box">
                   <SiTypescript color="#007ACC" size={22} />
-                  <span>TypeScript</span>
-                </div>
-                <div className="tech-box">
-                  <FaNodeJs color="#339933" size={22} />
-                  <span>Node</span>
-                </div>
-                <div className="tech-box">
-                  <SiMongodb color="#47A248" size={22} />
-                  <span>NoSQL</span>
-                </div>
-                <div className="tech-box">
-                  <SiMongodb color="#47A248" size={22} />
-                  <span>MongoDB</span>
-                </div>
-                <div className="tech-box">
-                  <SiRabbitmq color="#FF6600" size={22} />
-                  <span>RabbitMQ</span>
-                </div>
-                <div className="tech-box">
-                  <SiOpenstreetmap color="#7EBC6F" size={22} />
-                  <span>OpenStreetMap</span>
+                  <span>JavaScript</span>
                 </div>
               </div>
             </motion.div>
@@ -172,14 +140,6 @@ const Fartup = () => {
                   <IoLogoVercel color="white" size={22} />
                   <span>Vercel</span>
                 </div>
-                <div className="tech-box">
-                  <SiRender color="#46E3B7" size={22} />
-                  <span>Render</span>
-                </div>
-                <div className="tech-box">
-                  <SiMongodb color="#47A248" size={22} />
-                  <span>MongoDB Atlas</span>
-                </div>
               </div>
             </motion.div>
 
@@ -189,21 +149,12 @@ const Fartup = () => {
               <h2 className="section-title">Links</h2>
               <div className="links-grid">
                 <a
-                  href="https://indeed-console.vercel.app/"
+                  href="https://games-one-lemon.vercel.app/flappy"
                   target="_blank"
                   className="link-box"
                   rel="noopener noreferrer"
                 >
                   Live App
-                </a>
-                <a
-                  href="https://github.com/codebymarco/indeed_backend"
-                  target="_blank"
-                  className="link-box"
-                  rel="noopener noreferrer"
-                >
-                  <FiGithub color="white" size={16} className="link-icon" />
-                  GitHub Repository
                 </a>
               </div>
             </motion.div>

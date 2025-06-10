@@ -1,8 +1,11 @@
 import React from "react";
 import transporter from "../../../public/transporter.png";
 import fartup from "../../../public/fartup.png";
+import { useNavigate } from "react-router-dom";
 
 const GamesPage = () => {
+  const navigate = useNavigate();
+
   const games = [
     {
       id: 1,
@@ -15,18 +18,7 @@ const GamesPage = () => {
       players: "1 Player",
       gradient: "linear-gradient(135deg, #ff6b6b 0%, #feca57 100%)",
       playUrl: "https://games-one-lemon.vercel.app/flappy",
-    },
-    {
-      id: 2,
-      name: "Transporter",
-      description:
-        "Pick and drop off clients in different locations, while dodging the bad guys",
-      image: transporter,
-      difficulty: "Medium",
-      genre: "Classic",
-      players: "1 Player",
-      gradient: "linear-gradient(135deg, #11998e 0%, #38ef7d 100%)",
-      playUrl: "https://games-one-lemon.vercel.app/transporter",
+      info: "/apps/fartup",
     },
   ];
 
@@ -386,7 +378,20 @@ const GamesPage = () => {
                   </div>
                 </div>
 
-                <button className="play-button">Play Now</button>
+                <div style={{display:'flex', gap:'10px'}}>
+                  <button
+                    onClick={() => navigate(game.playUrl)}
+                    className="play-button"
+                  >
+                    Play Now
+                  </button>
+                  <button
+                    onClick={() => navigate(game.info)}
+                    className="play-button"
+                  >
+                    Details
+                  </button>
+                </div>
               </div>
             </div>
           ))}
