@@ -64,7 +64,7 @@ const NftShop = () => {
 
           <div className="app-links">
             <motion.a
-              href="https://indeed-console.vercel.app/"
+              href="https://nft-shop-six.vercel.app/"
               target="_blank"
               className="app-link"
               initial={{ opacity: 0, y: 20 }}
@@ -73,18 +73,6 @@ const NftShop = () => {
               whileHover={{ scale: 1.05 }}
             >
               View Site
-            </motion.a>
-            <motion.a
-              href="https://github.com/codebymarco/indeed_backend"
-              target="_blank"
-              className="app-link"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3, duration: 0.4 }}
-              whileHover={{ scale: 1.05 }}
-            >
-              <FiGithub className="link-icon" />
-              Repository
             </motion.a>
           </div>
         </div>
@@ -139,27 +127,7 @@ const NftShop = () => {
                 </div>
                 <div className="tech-box">
                   <SiTypescript color="#007ACC" size={22} />
-                  <span>TypeScript</span>
-                </div>
-                <div className="tech-box">
-                  <FaNodeJs color="#339933" size={22} />
-                  <span>Node</span>
-                </div>
-                <div className="tech-box">
-                  <SiMongodb color="#47A248" size={22} />
-                  <span>NoSQL</span>
-                </div>
-                <div className="tech-box">
-                  <SiMongodb color="#47A248" size={22} />
-                  <span>MongoDB</span>
-                </div>
-                <div className="tech-box">
-                  <SiRabbitmq color="#FF6600" size={22} />
-                  <span>RabbitMQ</span>
-                </div>
-                <div className="tech-box">
-                  <SiOpenstreetmap color="#7EBC6F" size={22} />
-                  <span>OpenStreetMap</span>
+                  <span>JavaScript</span>
                 </div>
               </div>
             </motion.div>
@@ -173,14 +141,6 @@ const NftShop = () => {
                   <IoLogoVercel color="white" size={22} />
                   <span>Vercel</span>
                 </div>
-                <div className="tech-box">
-                  <SiRender color="#46E3B7" size={22} />
-                  <span>Render</span>
-                </div>
-                <div className="tech-box">
-                  <SiMongodb color="#47A248" size={22} />
-                  <span>MongoDB Atlas</span>
-                </div>
               </div>
             </motion.div>
 
@@ -190,21 +150,12 @@ const NftShop = () => {
               <h2 className="section-title">Links</h2>
               <div className="links-grid">
                 <a
-                  href="https://indeed-console.vercel.app/"
+                  href="https://nft-shop-six.vercel.app/"
                   target="_blank"
                   className="link-box"
                   rel="noopener noreferrer"
                 >
                   Live App
-                </a>
-                <a
-                  href="https://github.com/codebymarco/indeed_backend"
-                  target="_blank"
-                  className="link-box"
-                  rel="noopener noreferrer"
-                >
-                  <FiGithub color="white" size={16} className="link-icon" />
-                  GitHub Repository
                 </a>
               </div>
             </motion.div>

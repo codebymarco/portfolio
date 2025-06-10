@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { FaArrowLeft, FaShare, FaBookmark } from "react-icons/fa";
 import { useEffect } from "react";
 import '../../../styles/blog.css'
+import image from "../../../assets/blog_images/e3fb4e0b-6a37-410a-9cf0-5ba199c315a5.png";
 
 const DeveloperToolsBlog = () => {
   useEffect(() => {
@@ -70,7 +71,7 @@ const DeveloperToolsBlog = () => {
           transition={{ delay: 0.2, duration: 0.5 }}
         >
           <img
-            src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+          src={image}
             alt="Developer workspace with multiple monitors showing code and development tools"
             className="blog-featured-image"
           />

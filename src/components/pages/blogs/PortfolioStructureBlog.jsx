@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { FaArrowLeft, FaShare, FaBookmark } from "react-icons/fa";
 import { useEffect } from "react";
 import '../../../styles/blog.css'
-
+import image from "../../../assets/blog_images/5e7ecde6-2be8-445f-a791-e46721ee5b35.png";
 
 const PortfolioStructureBlog = () => {
   useEffect(() => {
@@ -74,7 +74,7 @@ const PortfolioStructureBlog = () => {
           transition={{ delay: 0.2, duration: 0.5 }}
         >
           <img
-            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+          src={image}
             alt="Developer working on portfolio website with multiple projects displayed"
             className="blog-featured-image"
           />

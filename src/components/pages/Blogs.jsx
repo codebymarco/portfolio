@@ -17,29 +17,32 @@ import bunnyImage from "../../assets/blog/bunny.png";
 import ScrollToTop from "../components/ScrollToTop";
 import useTranslationStore from "../../store/store";
 import react from "../../assets/blog/react.png";
+import image1 from "../../assets/blog_images/a688925c-06da-4a71-885d-5a8dea807770.png";
+import image2 from "../../assets/blog_images/e3fb4e0b-6a37-410a-9cf0-5ba199c315a5.png";
+import image3 from "../../assets/blog_images/5e7ecde6-2be8-445f-a791-e46721ee5b35.png";
 
 // Blog data with added tags and images
 const blogData = [
   {
     id: 1,
-    title: "Dockerize a react app",
-    tags: ["docker", "react", "javascript", "devops"],
+    title: "How I Became a Full-Stack Developer",
+    tags: ["fullstack", "developer", "how tow"],
     date: "2025-02-28",
-    image: react,
+    image: image1,
   },
   {
     id: 2,
-    title: "BunnyCDN, Faster and cheaper than AWS Cloudfront",
-    tags: ["cdn", "devops", "cache", "backend"],
+    title: "My Favorite Developer Tools in 2025",
+    tags: ["developer", "tools", "2025"],
     date: "2025-02-20",
-    image: bunnyImage,
+    image: image2,
   },
   {
     id: 3,
-    title: "Kubernetes Errors",
-    tags: ["kubernetes", "docker", "debugging"],
+    title: "How to Structure a Developer Portfolio",
+    tags: ["portfolio", "developer", "ui/ux"],
     date: "2025-02-15",
-    image: "https://cloud2data.com/wp-content/uploads/2023/05/Kubernetes.png",
+    image: image3,
   },
 ];
 
