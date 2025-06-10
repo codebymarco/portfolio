@@ -66,7 +66,7 @@ const Projects = () => {
       name: "AI TRANSLATOR",
       description:
         "Intelligent chatbot with natural language processing and machine learning",
-      liveUrl: "translator",
+      liveUrl: "https://ai-translator-green.vercel.app/",
       info: "/apps/aitranslator",
       image: ai_translator,
       tags: ["AI", "NLP", "Python"],

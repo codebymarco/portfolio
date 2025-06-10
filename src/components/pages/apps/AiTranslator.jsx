@@ -11,7 +11,7 @@ import {
 } from "react-icons/si";
 import { IoLogoVercel } from "react-icons/io5";
 import { FiGithub } from "react-icons/fi";
-import img from "../../../assets/indeed.png";
+import img from "../../../assets/translator.png";
 import { useEffect } from "react";
 
 const AiTranslator = () => {
