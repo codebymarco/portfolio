@@ -61,9 +61,7 @@ const Home = () => {
       <BannerTwo />
       <Showcase />
       <AboutSection />
-      <div className="skills-wrapper">
         <Skills />
-      </div>
       {/*       <Certs />
        */}{" "}
       <BlogsSection />

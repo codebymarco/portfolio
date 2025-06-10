@@ -107,7 +107,7 @@ const Showcase = () => {
           </div>
           <div style={{ display: "flex", gap: "10px" }}>
             <a
-              href="#"
+              href="https://linkbio-console.vercel.app/"
               style={{
                 display: "inline-block",
                 backgroundColor: "dodgerblue",
@@ -121,7 +121,7 @@ const Showcase = () => {
               Live
             </a>
             <a
-              href="#"
+              href="/apps/linkbio"
               style={{
                 display: "inline-block",
                 backgroundColor: "dodgerblue",
@@ -201,7 +201,7 @@ const Showcase = () => {
           </div>
           <div style={{ display: "flex", gap: "10px" }}>
             <a
-              href="#"
+              href="https://games-one-lemon.vercel.app/flappy"
               style={{
                 display: "inline-block",
                 backgroundColor: "dodgerblue",
@@ -215,7 +215,7 @@ const Showcase = () => {
               Live
             </a>
             <a
-              href="#"
+              href="/apps/fartup"
               style={{
                 display: "inline-block",
                 backgroundColor: "dodgerblue",

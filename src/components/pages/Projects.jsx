@@ -66,8 +66,8 @@ const Projects = () => {
       name: "AI TRANSLATOR",
       description:
         "Intelligent chatbot with natural language processing and machine learning",
-      liveUrl: "/",
       liveUrl: "translator",
+      info: "/apps/aitranslator",
       image: ai_translator,
       tags: ["AI", "NLP", "Python"],
       size: "large",
@@ -104,8 +104,9 @@ const Projects = () => {
       name: "NFT SHOP",
       description:
         "Full-stack e-commerce platform with payment integration, inventory management, and admin dashboard",
-      liveUrl: "#",
+      liveUrl: "https://nft-shop-six.vercel.app/",
       image: nft_shop,
+      info: "/apps/nftshop",
       tags: ["React", "Node.js", "Stripe", "MongoDB"],
       size: "medium",
       gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
@@ -489,7 +490,13 @@ const Projects = () => {
                       ))}
                     </div>
 
-                    <div style={{display:"flex",flexDirection:"column", gap:"10px"}}>
+                    <div
+                      style={{
+                        display: "flex",
+                        flexDirection: "column",
+                        gap: "10px",
+                      }}
+                    >
                       <a
                         href={item.liveUrl}
                         className="project-link"

@@ -1,104 +1,184 @@
-.skillsPageNew {
+/* skillsPageMobile.css - Clean mobile-first skills page */
+
+.skillsPageMobile {
   min-height: 90vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 40px;
   padding: 20px;
   position: relative;
   overflow: hidden;
-  margin-top: -40px;
-  /* Add this to ensure no horizontal overflow */
   width: 100%;
   overflow-x: hidden;
 }
 
-.skillsPageNewTop {
-  /* Keep existing styles */
-  padding: 20px;
+.skillsHeaderMobile {
   text-align: center;
   color: white;
-  font-size: 1rem;
-  display: flex;
-  justify-content: center;
+  position: relative;
+  z-index: 1;
   width: 100%;
-  position: relative;
-  z-index: 1;
-  margin-top: 40px;
 }
 
-.skillsPageNewcontainer {
-  /* Modified grid layout */
+.skillsTitleMobile {
+  font-size: 2.5rem;
+  letter-spacing: 4px;
+  font-weight: 800;
+  margin: 0 0 10px 0;
+  color: #61dafb;
+}
+
+.skillsSubtitleMobile {
+  font-size: 1.1rem;
+  color: #aaa;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.skillsGridMobile {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 50px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
   position: relative;
   z-index: 1;
-  /* Center the grid */
-  margin: 0 auto;
-  width: fit-content;
-  max-width: 100%;
 }
 
-.skillsPageNewcontainer .box {
-  /* Keep existing styles */
+.skillBoxMobile {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-radius: 20px;
-  color: white;
-  font-size: 7rem;
-  padding: 10px 20px;
+  justify-content: center;
+  border-radius: 15px;
+  background-color: rgba(13, 13, 13, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(97, 218, 251, 0.15);
+  padding: 20px 15px;
   cursor: pointer;
-  background-color: rgba(13, 13, 13, 0.7);
-  backdrop-filter: blur(5px);
   transition: all 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-}
-
-/* Mobile Styles - Modified to fix centering and overflow with bigger icons */
-@media screen and (max-width: 768px) {
-  .skillsPageNewcontainer {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-    padding: 0 15px;
-    width: 100%;
-    max-width: 100%;
-    justify-content: center;
-  }
-
-  .skillsPageNewcontainer .box {
-    font-size: 5rem;
-    padding: 12px 15px;
-  }
-}
-
-/* Small Mobile - Additional fixes with bigger icons */
-@media screen and (max-width: 480px) {
-  .skillsPageNewcontainer {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    padding: 0 10px;
-  }
-
-  .skillsPageNewcontainer .box {
-    font-size: 4rem;
-    padding: 10px 12px;
-  }
-}
-
-.career-history-title {
-  font-size: 3rem;
-  letter-spacing: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  aspect-ratio: 1;
   position: relative;
-  display: inline-block;
+}
+
+.skillBoxMobile:hover {
+  transform: translateY(-5px);
+  border-color: rgba(97, 218, 251, 0.4);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+.skillIconMobile {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+}
+
+.skillNameMobile {
   color: white;
-/*   background: linear-gradient(45deg, #61dafb, #a139ff);
-  -webkit-background-clip: text;
-  text-shadow: 0 5px 25px rgba(97, 218, 251, 0.4); */
-  font-weight: 800;
-  margin: 0;
-/*   animation: glow 3s ease-in-out infinite alternate;
- */}
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+.skillBoxMobile:hover .skillNameMobile {
+  color: #61dafb;
+}
+
+/* Tablet Styles */
+@media screen and (max-width: 768px) {
+  .skillsGridMobile {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    max-width: 500px;
+    padding: 0 30px;
+    justify-items: center;
+  }
+  
+  .skillsTitleMobile {
+    font-size: 2.2rem;
+    letter-spacing: 3px;
+  }
+  
+  .skillBoxMobile {
+    padding: 22px 15px;
+    width: 100%;
+    min-height: 130px;
+  }
+  
+  .skillIconMobile {
+    font-size: 2.5rem;
+  }
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 480px) {
+  .skillsPageMobile {
+    gap: 30px;
+    padding: 20px;
+  }
+  
+  .skillsGridMobile {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 400px;
+    padding: 0 20px;
+    justify-items: center;
+  }
+  
+  .skillsTitleMobile {
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+  }
+  
+  .skillsSubtitleMobile {
+    font-size: 1rem;
+  }
+  
+  .skillBoxMobile {
+    padding: 20px 15px;
+    border-radius: 12px;
+    width: 100%;
+    min-height: 120px;
+  }
+  
+  .skillIconMobile {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .skillNameMobile {
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+  }
+}
+
+/* Extra Small Mobile */
+@media screen and (max-width: 360px) {
+  .skillsGridMobile {
+    gap: 12px;
+    padding: 0 5px;
+  }
+  
+  .skillsTitleMobile {
+    font-size: 1.6rem;
+  }
+  
+  .skillBoxMobile {
+    padding: 12px 8px;
+  }
+  
+  .skillIconMobile {
+    font-size: 1.6rem;
+  }
+  
+  .skillNameMobile {
+    font-size: 0.75rem;
+  }
+}

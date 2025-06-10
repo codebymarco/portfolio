@@ -177,7 +177,14 @@ const BannerTwo = () => {
         }
 
         .social-icon.instagram:hover {
-          background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+          background: linear-gradient(
+            45deg,
+            #f09433 0%,
+            #e6683c 25%,
+            #dc2743 50%,
+            #cc2366 75%,
+            #bc1888 100%
+          );
           border-color: #e1306c;
           box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.6),
             0 0 15px rgba(225, 48, 108, 0.4);
@@ -242,6 +249,11 @@ const BannerTwo = () => {
         @media (max-width: 768px) {
           .banner {
             padding: 15px;
+          }
+
+          .bg-image-2,
+          .bg-image-3 {
+            display: none;
           }
 
           .banner-name {
@@ -319,8 +331,8 @@ const BannerTwo = () => {
 
           {/* Social Media Icons */}
           <div className="social-icons">
-            <a 
-              href="https://github.com/codebymarco" 
+            <a
+              href="https://github.com/codebymarco"
               target="_blank"
               rel="noopener noreferrer"
               className="social-icon github"
@@ -328,8 +340,8 @@ const BannerTwo = () => {
             >
               <FaGithub size={24} />
             </a>
-            <a 
-              href="https://linkedin.com/in/your-profile" 
+            <a
+              href="https://linkedin.com/in/your-profile"
               target="_blank"
               rel="noopener noreferrer"
               className="social-icon linkedin"
@@ -337,15 +349,15 @@ const BannerTwo = () => {
             >
               <FaLinkedinIn size={24} />
             </a>
-            <a 
+            <a
               href="mailto:miguelmarcoramcharan@gmail.com"
               className="social-icon email"
               aria-label="Send Email"
             >
               <MdEmail size={26} />
             </a>
-            <a 
-              href="https://twitter.com/your-handle" 
+            <a
+              href="https://twitter.com/your-handle"
               target="_blank"
               rel="noopener noreferrer"
               className="social-icon twitter"
@@ -353,8 +365,8 @@ const BannerTwo = () => {
             >
               <FaXTwitter size={24} />
             </a>
-            <a 
-              href="https://instagram.com/your-handle" 
+            <a
+              href="https://instagram.com/your-handle"
               target="_blank"
               rel="noopener noreferrer"
               className="social-icon instagram"

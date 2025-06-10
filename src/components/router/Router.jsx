@@ -22,6 +22,9 @@ import Four from "../pages/blogs/Four";
 import Five from "../pages/blogs/Five";
 import Six from "../pages/blogs/Six";
 import GamesPage from "../pages/Games";
+import Fartup from "../pages/apps/Fartup";
+import NftShop from "../pages/apps/NftShop";
+import AiTranslator from "../pages/apps/AiTranslator";
 
 const Router = () => {
   return (
@@ -53,6 +56,9 @@ const Router = () => {
         <Route path="/apps/linkbio" element={<LinkBio />}></Route>
         <Route path="/apps/formio" element={<Formio />}></Route>
         <Route path="/apps/indeed" element={<Indeed />}></Route>
+        <Route path="/apps/fartup" element={<Fartup />}></Route>
+        <Route path="/apps/nftshop" element={<NftShop />}></Route>
+        <Route path="/apps/aitranslator" element={<AiTranslator />}></Route>
       </Routes>
     </BrowserRouter>
   );
