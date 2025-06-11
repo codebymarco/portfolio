@@ -1,8 +1,8 @@
 import React from "react";
 import linkbio from "../../../public/linkbio.png";
 import fartup from "../../../public/fartup.png";
-import blog from "../../../public/blog.png";
-import blog2 from "../../../public/blog2.png";
+import blog from "../../assets/blog_images/36ec38b6-82a6-4ab8-82f7-ffdf7e0514b4.png";
+import blog2 from "../../assets/blog_images/452a6885-7483-423c-86c0-a96a4a76e831.png";
 
 const Showcase = () => {
   return (
