@@ -201,7 +201,7 @@ const Showcase = () => {
           </div>
           <div style={{ display: "flex", gap: "10px" }}>
             <a
-              href="https://games-one-lemon.vercel.app/flappy"
+              href="https://games-one-lemon.vercel.app/fartup"
               style={{
                 display: "inline-block",
                 backgroundColor: "dodgerblue",
