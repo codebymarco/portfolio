@@ -20,6 +20,9 @@ import react from "../../assets/blog/react.png";
 import image1 from "../../assets/blog_images/a688925c-06da-4a71-885d-5a8dea807770.png";
 import image2 from "../../assets/blog_images/e3fb4e0b-6a37-410a-9cf0-5ba199c315a5.png";
 import image3 from "../../assets/blog_images/5e7ecde6-2be8-445f-a791-e46721ee5b35.png";
+import image4 from "../../assets/blog_images/36ec38b6-82a6-4ab8-82f7-ffdf7e0514b4.png";
+import image5 from "../../assets/blog_images/452a6885-7483-423c-86c0-a96a4a76e831.png";
+import image6 from "../../assets/blog_images/e02c3a6c-cbef-4ddc-bd6d-435fa8ac7481.png";
 
 // Blog data with added tags and images
 const blogData = [
@@ -43,6 +46,27 @@ const blogData = [
     tags: ["portfolio", "developer", "ui/ux"],
     date: "2025-02-15",
     image: image3,
+  },
+  {
+    id: 4,
+    title: "Building Scalable React Apps",
+    tags: ["react", "scaling"],
+    date: "2025-02-15",
+    image: image4,
+  },
+  {
+    id: 5,
+    title: "The Future of Web Development",
+    tags: ["web", "future"],
+    date: "2025-02-15",
+    image: image5,
+  },
+  {
+    id: 6,
+    title: "Why You Should Learn Golang as a JavaScript Developer",
+    tags: ["golang", "javascript"],
+    date: "2025-02-15",
+    image: image6,
   },
 ];
 

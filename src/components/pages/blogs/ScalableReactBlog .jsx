@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { FaArrowLeft, FaShare, FaBookmark } from "react-icons/fa";
 import { useEffect } from "react";
 import '../../../styles/blog.css'
+import image from '../../../assets/blog_images/36ec38b6-82a6-4ab8-82f7-ffdf7e0514b4.png'
 
 
 const ScalableReactBlog = () => {
@@ -70,7 +71,7 @@ const ScalableReactBlog = () => {
           transition={{ delay: 0.2, duration: 0.5 }}
         >
           <img
-            src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+          src={image}
             alt="Complex React component architecture diagram with interconnected modules"
             className="blog-featured-image"
           />

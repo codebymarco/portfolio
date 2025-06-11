@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import '../../../styles/blog.css'
 import { FaArrowLeft, FaShare, FaBookmark } from "react-icons/fa";
 import { useEffect } from "react";
+import image from '../../../assets/blog_images/452a6885-7483-423c-86c0-a96a4a76e831.png'
+
 
 const FutureWebDevBlog = () => {
   useEffect(() => {
@@ -67,7 +69,7 @@ const FutureWebDevBlog = () => {
           transition={{ delay: 0.2, duration: 0.5 }}
         >
           <img
-            src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2025&q=80"
+          src={image}
             alt="Futuristic web development workspace"
             className="blog-featured-image"
           />

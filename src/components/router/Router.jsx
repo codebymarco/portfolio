@@ -13,14 +13,7 @@ import Home from "../pages/Home";
 import Projects from "../pages/Projects";
 import Blogs from "../pages/Blogs";
 import Blog from "../pages/Blog";
-import BunnyCDNBlog from "../pages/blogs/DeveloperToolsBlog";
-import KubernetesErrorsBlog from "../pages/blogs/PortfolioStructureBlog";
-import One from "../pages/blogs/One";
-import Two from "../pages/blogs/FutureWebDevBlog";
 import Three from "../pages/blogs/Three";
-import Four from "../pages/blogs/Four";
-import Five from "../pages/blogs/Five";
-import Six from "../pages/blogs/Six";
 import GamesPage from "../pages/Games";
 import Fartup from "../pages/apps/Fartup";
 import NftShop from "../pages/apps/NftShop";
@@ -29,6 +22,7 @@ import DeveloperToolsBlog from "../pages/blogs/DeveloperToolsBlog";
 import PortfolioStructureBlog from "../pages/blogs/PortfolioStructureBlog";
 import ScalableReactBlog from "../pages/blogs/ScalableReactBlog ";
 import FutureWebDevBlog from "../pages/blogs/FutureWebDevBlog";
+import GolangBlog from "../pages/blogs/GolangBlog";
 
 const Router = () => {
   return (
@@ -45,14 +39,11 @@ const Router = () => {
           <Route path="career" element={<Career />}></Route>
           <Route path="blog" element={<Blogs />}></Route>
           <Route path="blog/1" element={<Blog />}></Route>
-          <Route path="blog/2" element={< DeveloperToolsBlog/>}></Route>
+          <Route path="blog/2" element={<DeveloperToolsBlog />}></Route>
           <Route path="blog/3" element={<PortfolioStructureBlog />}></Route>
           <Route path="blog/4" element={<ScalableReactBlog />}></Route>
           <Route path="blog/5" element={<FutureWebDevBlog />}></Route>
-          <Route path="blog/6" element={<Three />}></Route>
-          <Route path="blog/7" element={<Four />}></Route>
-          <Route path="blog/8" element={<Five />}></Route>
-          <Route path="blog/9" element={<Six />}></Route>
+          <Route path="blog/6" element={<GolangBlog />}></Route>
         </Route>
 
         <Route path="/apps/app" element={<App />}></Route>
