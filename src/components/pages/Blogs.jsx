@@ -23,6 +23,9 @@ import image3 from "../../assets/blog_images/5e7ecde6-2be8-445f-a791-e46721ee5b3
 import image4 from "../../assets/blog_images/36ec38b6-82a6-4ab8-82f7-ffdf7e0514b4.png";
 import image5 from "../../assets/blog_images/452a6885-7483-423c-86c0-a96a4a76e831.png";
 import image6 from "../../assets/blog_images/e02c3a6c-cbef-4ddc-bd6d-435fa8ac7481.png";
+import image7 from "../../assets/blog_images/28130c2c-f2e2-450a-9e96-ec74bcb4e439.png";
+import image8 from "../../assets/blog_images/5860329d-befc-4519-814e-0793d7862823.png";
+import image9 from "../../assets/blog_images/ac7210a0-0171-4401-bb23-899225ff4212.png";
 
 // Blog data with added tags and images
 const blogData = [
@@ -68,6 +71,27 @@ const blogData = [
     date: "2025-02-15",
     image: image6,
   },
+  {
+    id: 7,
+    title: "How Blogging Helped My Developer Career",
+    tags: ["blogging", "career", "development"],
+    date: "2025-02-15",
+    image: image7,
+  },
+  {
+    id: 8,
+    title: "My Daily Workflow as a Full-Stack Dev",
+    tags: ["workflow", "fullstack"],
+    date: "2025-02-15",
+    image: image8,
+  },
+  {
+    id: 9,
+    title: "Soft Skills That Make You a Better Programmer",
+    tags: ["soft skills", "improvement"],
+    date: "2025-02-15",
+    image: image9,
+  }
 ];
 
 // Popular tags for filter

@@ -23,6 +23,9 @@ import PortfolioStructureBlog from "../pages/blogs/PortfolioStructureBlog";
 import ScalableReactBlog from "../pages/blogs/ScalableReactBlog ";
 import FutureWebDevBlog from "../pages/blogs/FutureWebDevBlog";
 import GolangBlog from "../pages/blogs/GolangBlog";
+import BloggingCareerBlog from "../pages/blogs/HowBloggingHelpedMyDeveloperCareer";
+import DailyWorkflowBlog from "../pages/blogs/DailyWorkflowBlog";
+import SoftSkillsBlog from "../pages/blogs/SoftSkillsBlog";
 
 const Router = () => {
   return (
@@ -44,6 +47,9 @@ const Router = () => {
           <Route path="blog/4" element={<ScalableReactBlog />}></Route>
           <Route path="blog/5" element={<FutureWebDevBlog />}></Route>
           <Route path="blog/6" element={<GolangBlog />}></Route>
+          <Route path="blog/7" element={<BloggingCareerBlog />}></Route>
+          <Route path="blog/8" element={<DailyWorkflowBlog />}></Route>
+          <Route path="blog/9" element={<SoftSkillsBlog/>}></Route>
         </Route>
 
         <Route path="/apps/app" element={<App />}></Route>
