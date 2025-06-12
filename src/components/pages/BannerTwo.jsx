@@ -37,15 +37,15 @@ const BannerTwo = () => {
         }
 
         .bg-image-1 {
-          background-image: url("/image.png");
+          background-image: url("/image.webp");
         }
 
         .bg-image-2 {
-          background-image: url("/image3.png");
+          background-image: url("/image3.webp");
         }
 
         .bg-image-3 {
-          background-image: url("/image2.png");
+          background-image: url("/image2.webp");
         }
 
         .banner-overlay {
@@ -340,7 +340,7 @@ const BannerTwo = () => {
             >
               <FaGithub size={24} />
             </a>
-            <a
+{/*             <a
               href="https://linkedin.com/in/your-profile"
               target="_blank"
               rel="noopener noreferrer"
@@ -348,7 +348,7 @@ const BannerTwo = () => {
               aria-label="LinkedIn Profile"
             >
               <FaLinkedinIn size={24} />
-            </a>
+            </a> */}
             <a
               href="mailto:miguelmarcoramcharan@gmail.com"
               className="social-icon email"
@@ -357,7 +357,7 @@ const BannerTwo = () => {
               <MdEmail size={26} />
             </a>
             <a
-              href="https://twitter.com/your-handle"
+              href="https://twitter.com/@Miguelmarc32625"
               target="_blank"
               rel="noopener noreferrer"
               className="social-icon twitter"
@@ -365,7 +365,7 @@ const BannerTwo = () => {
             >
               <FaXTwitter size={24} />
             </a>
-            <a
+{/*             <a
               href="https://instagram.com/your-handle"
               target="_blank"
               rel="noopener noreferrer"
@@ -373,7 +373,7 @@ const BannerTwo = () => {
               aria-label="Instagram Profile"
             >
               <FaInstagram size={24} />
-            </a>
+            </a> */}
           </div>
 
           {/* Buttons */}

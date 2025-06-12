@@ -281,15 +281,6 @@ const Projects = () => {
           transform: scale(1.1);
         }
 
-        .project-overlay {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          opacity: 0.8;
-          z-index: 2;
-        }
 
         .project-content {
           padding: 25px;

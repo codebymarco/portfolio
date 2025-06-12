@@ -185,6 +185,12 @@ const Footer = () => {
           >
             <MdEmail size={26} />
           </a>
+          <a
+            href="https://twitter.com/@Miguelmarc32625"
+            className="social-icon"
+          >
+            <FaXTwitter size={26} />
+          </a>
         </motion.div>
 
         {/* Copyright */}

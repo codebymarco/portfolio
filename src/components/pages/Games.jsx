@@ -1,5 +1,4 @@
 import React from "react";
-import transporter from "../../../public/transporter.png";
 import fartup from "../../../public/fartup.png";
 import { useNavigate } from "react-router-dom";
 
@@ -17,7 +16,7 @@ const GamesPage = () => {
       genre: "Arcade",
       players: "1 Player",
       gradient: "linear-gradient(135deg, #ff6b6b 0%, #feca57 100%)",
-      playUrl: "https://games-one-lemon.vercel.app/flappy",
+      playUrl: "https://games-one-lemon.vercel.app/fartup",
       info: "/apps/fartup",
     },
   ];
@@ -122,15 +121,21 @@ const GamesPage = () => {
           font-weight: 300;
         }
 
-        .games-grid {
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          gap: 40px;
-          max-width: 1200px;
-          margin: 0 auto;
-          position: relative;
-          z-index: 1;
-        }
+        .game-card:only-child {
+  grid-column: 1 / -1;
+  max-width: 500px;
+}
+
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  justify-items: center;
+}
 
         .game-card {
           background: rgba(10, 10, 10, 0.8);
@@ -188,16 +193,6 @@ const GamesPage = () => {
 
         .game-card:hover .game-image {
           transform: scale(1.1);
-        }
-
-        .game-overlay {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          opacity: 0.7;
-          z-index: 2;
         }
 
         .game-content {
