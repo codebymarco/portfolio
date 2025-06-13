@@ -13,7 +13,7 @@ const NavigationSection = () => {
     },
     {
       id: 2,
-      title: "Blogs",
+      title: "Blog",
       tags: ["tech", "tutorials", "insights", "coding"],
       image: blogs,
     },
