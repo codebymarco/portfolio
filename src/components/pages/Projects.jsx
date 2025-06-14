@@ -12,7 +12,7 @@ const Projects = () => {
       name: "LINKBIO",
       description:
         "Personal linkbio website showcasing all links with analytics and custom themes",
-      liveUrl: "https://linkbio-console.vercel.app",
+      liveUrl: "https://linkbio.codebymarco.com",
       info: "/apps/linkbio",
       image: linkbio,
       tags: ["REACT", "EXPRESSJS", "MONGODB"],
@@ -30,7 +30,7 @@ const Projects = () => {
       name: "INDEED",
       description:
         "Job search platform clone with custom filtering and real-time search",
-      liveUrl: "https://indeed-console.vercel.app",
+      liveUrl: "https://indeed.codebymarco.com",
       info: "/apps/indeed",
       image: indeed,
       tags: ["REACT", "EXPRESSJS", "MONGODB"],
@@ -48,7 +48,7 @@ const Projects = () => {
       name: "FORMIO",
       description:
         "Dynamic form builder with drag-and-drop interface and validation",
-      liveUrl: "https://linkbio-console.vercel.app",
+      liveUrl: "https://formio.codebymarco.com",
       info: "/apps/formio",
       image: formio,
       tags: ["REACT", "EXPRESSJS", "MONGODB"],
@@ -66,7 +66,7 @@ const Projects = () => {
       name: "AI TRANSLATOR",
       description:
         "Intelligent chatbot with natural language processing and machine learning",
-      liveUrl: "https://ai-translator-green.vercel.app/",
+      liveUrl: "https://translato.codebymarco.com",
       info: "/apps/aitranslator",
       image: ai_translator,
       tags: ["HTML", "CSS", "JS", "OPEN AI"],
@@ -85,7 +85,7 @@ const Projects = () => {
       name: "PORTFOLIOBIO",
       description:
         "Real-time weather app with beautiful animations and forecasts",
-      liveUrl: "https://iportfolio-console.vercel.app/",
+      liveUrl: "https://portfoliobio.codebymarco.com",
       info: "/apps/portfoliobio",
       image: portfoliobio,
       tags: ["REACT", "EXPRESSJS", "MONGODB"],
@@ -104,7 +104,7 @@ const Projects = () => {
       name: "NFT SHOP",
       description:
         "Full-stack e-commerce platform with payment integration, inventory management, and admin dashboard",
-      liveUrl: "https://nft-shop-six.vercel.app/",
+      liveUrl: "https://nftcentral.codebymarco.com/",
       image: nft_shop,
       info: "/apps/nftshop",
       tags: ["HTML", "CSS", "JS"],

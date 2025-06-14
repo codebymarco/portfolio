@@ -62,7 +62,7 @@ const Indeed = () => {
           
           <div className="app-links">
             <motion.a 
-              href="https://indeed-console.vercel.app/" 
+              href="https://indeed.codebymarco.com" 
               target="_blank"
               className="app-link"
               initial={{ opacity: 0, y: 20 }}
@@ -183,7 +183,7 @@ const Indeed = () => {
               <h2 className="section-title">Links</h2>
               <div className="links-grid">
                 <a
-                  href="https://indeed-console.vercel.app/"
+                  href="https://indeed.codebymarco.com"
                   target="_blank"
                   className="link-box"
                   rel="noopener noreferrer"

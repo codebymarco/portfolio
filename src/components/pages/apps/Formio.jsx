@@ -62,7 +62,7 @@ const Formio = () => {
           
           <div className="app-links">
             <motion.a 
-              href="https://formio-console.vercel.app/" 
+              href="https://formio.codebymarco.com" 
               target="_blank"
               className="app-link"
               initial={{ opacity: 0, y: 20 }}
@@ -184,7 +184,7 @@ const Formio = () => {
               <h2 className="section-title">Links</h2>
               <div className="links-grid">
                 <a
-                  href="https://formio-console.vercel.app/"
+                  href="https://formio.codebymarco.com"
                   target="_blank"
                   className="link-box"
                   rel="noopener noreferrer"

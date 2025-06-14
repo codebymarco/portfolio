@@ -64,7 +64,7 @@ const Fartup = () => {
 
           <div className="app-links">
             <motion.a
-              href="https://games-one-lemon.vercel.app/flappy"
+              href="https://nftcentral.codebymarco.com/"
               target="_blank"
               className="app-link"
               initial={{ opacity: 0, y: 20 }}
@@ -149,7 +149,7 @@ const Fartup = () => {
               <h2 className="section-title">Links</h2>
               <div className="links-grid">
                 <a
-                  href="https://games-one-lemon.vercel.app/flappy"
+                  href="https://nftcentral.codebymarco.com/"
                   target="_blank"
                   className="link-box"
                   rel="noopener noreferrer"

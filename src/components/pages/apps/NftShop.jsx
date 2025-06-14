@@ -64,7 +64,7 @@ const NftShop = () => {
 
           <div className="app-links">
             <motion.a
-              href="https://nft-shop-six.vercel.app/"
+              href="https://nftcentral.codebymarco.com/"
               target="_blank"
               className="app-link"
               initial={{ opacity: 0, y: 20 }}
@@ -150,7 +150,7 @@ const NftShop = () => {
               <h2 className="section-title">Links</h2>
               <div className="links-grid">
                 <a
-                  href="https://nft-shop-six.vercel.app/"
+                  href="https://nftcentral.codebymarco.com/"
                   target="_blank"
                   className="link-box"
                   rel="noopener noreferrer"

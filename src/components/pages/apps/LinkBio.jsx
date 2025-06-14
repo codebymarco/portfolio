@@ -62,7 +62,7 @@ const LinkBio = () => {
           
           <div className="app-links">
             <motion.a 
-              href="https://linkbio-console.vercel.app/" 
+              href="https://linkbio.codebymarco.com" 
               target="_blank"
               className="app-link"
               initial={{ opacity: 0, y: 20 }}
@@ -184,7 +184,7 @@ const LinkBio = () => {
               <h2 className="section-title">Links</h2>
               <div className="links-grid">
                 <a
-                  href="https://linkbio-console.vercel.app/"
+                  href="https://linkbio.codebymarco.com"
                   target="_blank"
                   className="link-box"
                   rel="noopener noreferrer"

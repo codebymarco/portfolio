@@ -16,7 +16,7 @@ const GamesPage = () => {
       genre: "Arcade",
       players: "1 Player",
       gradient: "linear-gradient(135deg, #ff6b6b 0%, #feca57 100%)",
-      playUrl: "https://games-one-lemon.vercel.app/fartup",
+      playUrl: "https://fartup.codebymarco.com",
       info: "/apps/fartup",
     },
   ];
@@ -340,7 +340,6 @@ const GamesPage = () => {
             <div
               key={game.id}
               className="game-card"
-              onClick={() => (window.location.href = game.playUrl)}
             >
               <div className="game-image-container">
                 <img src={game.image} alt={game.name} className="game-image" />
