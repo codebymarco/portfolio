@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { FaArrowLeft, FaShare, FaBookmark } from "react-icons/fa";
 import { useEffect } from "react";
 import '../../../styles/blog.css'
-import image from '../../../assets/blog_images/36ec38b6-82a6-4ab8-82f7-ffdf7e0514b4.png'
+import image from '../../../assets/blog_images/36ec38b6-82a6-4ab8-82f7-ffdf7e0514b4.jpg'
 
 
 const ScalableReactBlog = () => {

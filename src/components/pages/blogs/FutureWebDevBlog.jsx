@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import '../../../styles/blog.css'
 import { FaArrowLeft, FaShare, FaBookmark } from "react-icons/fa";
 import { useEffect } from "react";
-import image from '../../../assets/blog_images/452a6885-7483-423c-86c0-a96a4a76e831.png'
+import image from '../../../assets/blog_images/452a6885-7483-423c-86c0-a96a4a76e831.jpg'
 
 
 const FutureWebDevBlog = () => {
