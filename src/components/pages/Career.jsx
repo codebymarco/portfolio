@@ -162,7 +162,7 @@ const Career = () => {
                 <div className="job-card">
                   <div className="job-header">
                     <div className="job-title-section">
-                      <h2 className="job-title">{t("job_title_one")}</h2>
+                      <h2 className="job-title">{t("job_title_two")}</h2>
                       <div className="job-company">
                         <span>El-Shaddai Interiors</span>
                       </div>
