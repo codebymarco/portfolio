@@ -24,6 +24,7 @@ import { motion } from "framer-motion";
 import useTranslationStore from "../../store/store";
 import { Helmet } from "react-helmet";
 import '../../styles/skillsPage.css'
+import my_image from "../../assets/blog_images/452a6885-7483-423c-86c0-a96a4a76e831.jpg";
 
 const skillIcons = {
   html: { icon: FaHtml5, color: "#E34F26" },
@@ -41,6 +42,16 @@ const skillIcons = {
   nosql: { icon: SiMongodb, color: "#47A248" },
   aws: { icon: FaAws, color: "#FF9900" },
   gcp: { icon: FaGoogle, color: "#4285F4" },
+  // New skills using image
+  n8n: { icon: my_image, color: "#EA4B71", isImage: true },
+  zabbix: { icon: my_image, color: "#CC0000", isImage: true },
+  ai: { icon: my_image, color: "#FF6B6B", isImage: true },
+  chatgpt: { icon: my_image, color: "#10A37F", isImage: true },
+  claude: { icon: my_image, color: "#CC785C", isImage: true },
+  vscode: { icon: my_image, color: "#007ACC", isImage: true },
+  apis: { icon: my_image, color: "#4A90E2", isImage: true },
+  rest: { icon: my_image, color: "#61DAFB", isImage: true },
+  xml: { icon: my_image, color: "#FF6600", isImage: true },
 };
 
 const Skills = () => {
@@ -118,8 +129,19 @@ const Skills = () => {
           "nosql",
           "aws",
           "gcp",
+          "n8n",
+          "zabbix",
+          "ai",
+          "chatgpt",
+          "claude",
+          "vscode",
+          "apis",
+          "rest",
+          "xml",
         ].map((skill) => {
-          const IconComponent = skillIcons[skill].icon;
+          const skillData = skillIcons[skill];
+          const IconComponent = skillData.icon;
+          
           return (
             <motion.div 
               className="skillBoxMobile" 
@@ -127,11 +149,24 @@ const Skills = () => {
               key={skill}
               whileHover={{ 
                 scale: 1.05,
-                boxShadow: `0 8px 25px rgba(0, 0, 0, 0.5), 0 0 20px ${skillIcons[skill].color}30`
+                boxShadow: `0 8px 25px rgba(0, 0, 0, 0.5), 0 0 20px ${skillData.color}30`
               }}
             >
               <div className="skillIconMobile">
-                <IconComponent color={skillIcons[skill].color} />
+                {skillData.isImage ? (
+                  <img 
+                    src={IconComponent} 
+                    alt={skill}
+                    style={{ 
+                      width: '60px', 
+                      height: '60px', 
+                      objectFit: 'cover',
+                      borderRadius: '4px'
+                    }} 
+                  />
+                ) : (
+                  <IconComponent color={skillData.color} />
+                )}
               </div>
               <span className="skillNameMobile">{skill}</span>
             </motion.div>
