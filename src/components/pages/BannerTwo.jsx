@@ -8,6 +8,8 @@ const BannerTwo = () => {
   return (
     <>
       <style jsx>{`
+        @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;600;700&display=swap");
+
         .banner {
           height: 90vh;
           position: relative;
@@ -17,6 +19,7 @@ const BannerTwo = () => {
           align-items: center;
           padding: 20px;
           overflow: hidden;
+          font-family: "Orbitron", monospace;
         }
 
         .banner-bg {
@@ -340,7 +343,7 @@ const BannerTwo = () => {
             >
               <FaGithub size={24} />
             </a>
-{/*             <a
+            {/*             <a
               href="https://linkedin.com/in/your-profile"
               target="_blank"
               rel="noopener noreferrer"
@@ -365,7 +368,7 @@ const BannerTwo = () => {
             >
               <FaXTwitter size={24} />
             </a>
-{/*             <a
+            {/*             <a
               href="https://instagram.com/your-handle"
               target="_blank"
               rel="noopener noreferrer"

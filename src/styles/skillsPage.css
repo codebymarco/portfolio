@@ -1,5 +1,7 @@
 /* skillsPageMobile.css - Clean mobile-first skills page */
 
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;600;700&display=swap");
+
 .skillsPageMobile {
   min-height: 90vh;
   display: flex;
@@ -12,6 +14,7 @@
   overflow: hidden;
   width: 100%;
   overflow-x: hidden;
+  font-family: "Orbitron", monospace;
 }
 
 .skillsHeaderMobile {
@@ -100,18 +103,18 @@
     padding: 0 30px;
     justify-items: center;
   }
-  
+
   .skillsTitleMobile {
     font-size: 2.2rem;
     letter-spacing: 3px;
   }
-  
+
   .skillBoxMobile {
     padding: 22px 15px;
     width: 100%;
     min-height: 130px;
   }
-  
+
   .skillIconMobile {
     font-size: 2.5rem;
   }
@@ -123,7 +126,7 @@
     gap: 30px;
     padding: 20px;
   }
-  
+
   .skillsGridMobile {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
@@ -131,28 +134,28 @@
     padding: 0 20px;
     justify-items: center;
   }
-  
+
   .skillsTitleMobile {
     font-size: 1.8rem;
     letter-spacing: 2px;
   }
-  
+
   .skillsSubtitleMobile {
     font-size: 1rem;
   }
-  
+
   .skillBoxMobile {
     padding: 20px 15px;
     border-radius: 12px;
     width: 100%;
     min-height: 120px;
   }
-  
+
   .skillIconMobile {
     font-size: 2.2rem;
     margin-bottom: 10px;
   }
-  
+
   .skillNameMobile {
     font-size: 0.85rem;
     letter-spacing: 0.5px;
@@ -165,19 +168,19 @@
     gap: 12px;
     padding: 0 5px;
   }
-  
+
   .skillsTitleMobile {
     font-size: 1.6rem;
   }
-  
+
   .skillBoxMobile {
     padding: 12px 8px;
   }
-  
+
   .skillIconMobile {
     font-size: 1.6rem;
   }
-  
+
   .skillNameMobile {
     font-size: 0.75rem;
   }

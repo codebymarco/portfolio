@@ -117,6 +117,8 @@ const Projects = () => {
   return (
     <>
       <style jsx>{`
+        @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;600;700&display=swap");
+
         .projects {
           background: linear-gradient(
             to bottom,
@@ -125,9 +127,9 @@ const Projects = () => {
             rgba(13, 21, 28, 0.9) 100%
           );
           min-height: 100vh;
-          padding: 60px 20px;
           position: relative;
           overflow: hidden;
+          font-family: "Orbitron", monospace;
         }
 
         .projects::before {
@@ -137,7 +139,6 @@ const Projects = () => {
           right: -150px;
           width: 300px;
           height: 300px;
-          border-radius: 50%;
           background: rgba(97, 218, 251, 0.1);
           filter: blur(120px);
           z-index: 0;
@@ -150,7 +151,6 @@ const Projects = () => {
           left: -50px;
           width: 250px;
           height: 250px;
-          border-radius: 50%;
           background: rgba(97, 218, 251, 0.08);
           filter: blur(100px);
           z-index: 0;
@@ -194,7 +194,6 @@ const Projects = () => {
             #61dafb,
             rgba(97, 218, 251, 0.3)
           );
-          border-radius: 3px;
           box-shadow: 0 0 15px rgba(97, 218, 251, 0.6);
         }
 
@@ -280,7 +279,6 @@ const Projects = () => {
         .project-card:hover .project-image {
           transform: scale(1.1);
         }
-
 
         .project-content {
           padding: 25px;

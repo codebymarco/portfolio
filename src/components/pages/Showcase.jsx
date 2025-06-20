@@ -10,11 +10,14 @@ const Showcase = () => {
       style={{ padding: "50px 20px", backgroundColor: "#000", color: "white" }}
     >
       <style jsx>{`
+        @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;600;700&display=swap");
+
         .masonry {
           columns: 3;
           column-gap: 20px;
           max-width: 1200px;
           margin: 0 auto;
+          font-family: "Orbitron", monospace;
         }
 
         @media (max-width: 768px) {

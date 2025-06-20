@@ -19,27 +19,51 @@ const Career = () => {
     <div>
       <Helmet>
         {/* Basic SEO Tags */}
-        <title>Career & Work Experience | Miguelmarco Ramcharan - Fullstack Developer</title>
-        <meta name="description" content="Explore the career journey of Miguelmarco Ramcharan of CodeByMarco: a Fullstack Software Developer showcasing work experience, key projects & technical skills."></meta>
+        <title>
+          Career & Work Experience | Miguelmarco Ramcharan - Fullstack Developer
+        </title>
+        <meta
+          name="description"
+          content="Explore the career journey of Miguelmarco Ramcharan of CodeByMarco: a Fullstack Software Developer showcasing work experience, key projects & technical skills."
+        ></meta>
         <link rel="canonical" href="https://www.codebymarco.com/career" />
-
         {/* Open Graph Tags (for Facebook, LinkedIn, WhatsApp etc.) */}
-        <meta property="og:title" content="Career & Work Experience | Miguelmarco Ramcharan - Fullstack Developer" />
-        <meta property="og:description" content="Explore the career journey of Miguelmarco Ramcharan of CodeByMarco: a Fullstack Software Developer showcasing work experience, key projects & technical skills." />
+        <meta
+          property="og:title"
+          content="Career & Work Experience | Miguelmarco Ramcharan - Fullstack Developer"
+        />
+        <meta
+          property="og:description"
+          content="Explore the career journey of Miguelmarco Ramcharan of CodeByMarco: a Fullstack Software Developer showcasing work experience, key projects & technical skills."
+        />
         <meta property="og:type" content="profile" />
         <meta property="og:url" content="https://www.codebymarco.com/career" />
-        <meta property="og:image" content="https://www.codebymarco.com/images/codebymarco-career-og-image.jpg" /> {/* IMPORTANT: Create this image! */}
+        <meta
+          property="og:image"
+          content="https://www.codebymarco.com/images/codebymarco-career-og-image.jpg"
+        />{" "}
+        {/* IMPORTANT: Create this image! */}
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:site_name" content="CodeByMarco" />
-
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@your_twitter_handle" /> {/* IMPORTANT: Replace with your actual Twitter handle */}
-        <meta name="twitter:creator" content="@your_twitter_handle" /> {/* IMPORTANT: Replace with your actual Twitter handle */}
-        <meta name="twitter:title" content="Career & Work Experience | Miguelmarco Ramcharan - Fullstack Developer" />
-        <meta name="twitter:description" content="Explore the career journey of Miguelmarco Ramcharan of CodeByMarco: a Fullstack Software Developer showcasing work experience, key projects & technical skills." />
-        <meta name="twitter:image" content="https://www.codebymarco.com/images/codebymarco-career-og-image.jpg" />
+        <meta name="twitter:site" content="@your_twitter_handle" />{" "}
+        {/* IMPORTANT: Replace with your actual Twitter handle */}
+        <meta name="twitter:creator" content="@your_twitter_handle" />{" "}
+        {/* IMPORTANT: Replace with your actual Twitter handle */}
+        <meta
+          name="twitter:title"
+          content="Career & Work Experience | Miguelmarco Ramcharan - Fullstack Developer"
+        />
+        <meta
+          name="twitter:description"
+          content="Explore the career journey of Miguelmarco Ramcharan of CodeByMarco: a Fullstack Software Developer showcasing work experience, key projects & technical skills."
+        />
+        <meta
+          name="twitter:image"
+          content="https://www.codebymarco.com/images/codebymarco-career-og-image.jpg"
+        />
       </Helmet>
       <div className="career">
         <div className="career-top">
@@ -48,7 +72,6 @@ const Career = () => {
         {/*         <Certs />
          */}{" "}
         <div className="career-history-section">
-
           <div className="career-timeline">
             <div className="timeline-line"></div>
 
@@ -119,32 +142,31 @@ const Career = () => {
                       <div className="responsibility-item">
                         <span className="responsibility-number">5</span>
                         <span className="responsibility-text">
-                        {t("job_res_one_5")}
-
+                          {t("job_res_one_5")}
                         </span>
                       </div>
                       <div className="responsibility-item">
                         <span className="responsibility-number">6</span>
                         <span className="responsibility-text">
-                        {t("job_res_one_6")}
+                          {t("job_res_one_6")}
                         </span>
                       </div>
                       <div className="responsibility-item">
                         <span className="responsibility-number">7</span>
                         <span className="responsibility-text">
-                        {t("job_res_one_7")}
+                          {t("job_res_one_7")}
                         </span>
                       </div>
                       <div className="responsibility-item">
                         <span className="responsibility-number">8</span>
                         <span className="responsibility-text">
-                        {t("job_res_one_8")}
+                          {t("job_res_one_8")}
                         </span>
                       </div>
                       <div className="responsibility-item">
                         <span className="responsibility-number">9</span>
                         <span className="responsibility-text">
-                        {t("job_res_one_9")}
+                          {t("job_res_one_9")}
                         </span>
                       </div>
                     </div>
@@ -196,37 +218,37 @@ const Career = () => {
                       <div className="responsibility-item">
                         <span className="responsibility-number">1</span>
                         <span className="responsibility-text">
-                        {t("job_res_two_1")}
+                          {t("job_res_two_1")}
                         </span>
                       </div>
                       <div className="responsibility-item">
                         <span className="responsibility-number">2</span>
                         <span className="responsibility-text">
-                        {t("job_res_two_2")}
+                          {t("job_res_two_2")}
                         </span>
                       </div>
                       <div className="responsibility-item">
                         <span className="responsibility-number">3</span>
                         <span className="responsibility-text">
-                        {t("job_res_two_3")}
+                          {t("job_res_two_3")}
                         </span>
                       </div>
                       <div className="responsibility-item">
                         <span className="responsibility-number">4</span>
                         <span className="responsibility-text">
-                        {t("job_res_two_4")}
+                          {t("job_res_two_4")}
                         </span>
                       </div>
                       <div className="responsibility-item">
                         <span className="responsibility-number">5</span>
                         <span className="responsibility-text">
-                        {t("job_res_two_5")}
+                          {t("job_res_two_5")}
                         </span>
                       </div>
                       <div className="responsibility-item">
                         <span className="responsibility-number">6</span>
                         <span className="responsibility-text">
-                        {t("job_res_two_6")}
+                          {t("job_res_two_6")}
                         </span>
                       </div>
                     </div>
@@ -239,8 +261,12 @@ const Career = () => {
       </div>
 
       <style jsx>{`
+        @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;600;700&display=swap");
+
         /* General career page styling */
         .career {
+          font-family: "Orbitron", monospace;
+
           background-image: radial-gradient(
             circle at 50% 30%,
             #111111 0%,

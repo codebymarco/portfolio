@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;600;700&display=swap");
+
 .aboutSection {
   background-color: black;
   /* Gradient that fades to #111111 at the bottom to match the Skills component top */
@@ -10,6 +12,7 @@
   justify-content: center;
   width: 100%;
   position: relative;
+  font-family: "Orbitron", monospace;
 }
 
 .aboutSection p {
@@ -45,7 +48,7 @@
   .aboutSection {
     padding: 80px 30px 100px; /* Extra padding at bottom for fade effect */
   }
-  
+
   .aboutSection p {
     font-size: 1.75rem;
   }
@@ -56,7 +59,7 @@
   .aboutSection {
     padding: 100px 40px 120px; /* Extra padding at bottom for fade effect */
   }
-  
+
   .aboutSection p {
     font-size: 2rem;
   }

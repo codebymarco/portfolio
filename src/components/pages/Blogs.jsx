@@ -91,7 +91,7 @@ const blogData = [
     tags: ["soft skills", "improvement"],
     date: "2025-02-15",
     image: image9,
-  }
+  },
 ];
 
 // Popular tags for filter
@@ -309,6 +309,8 @@ const Blogs = () => {
       </div>
 
       <style jsx>{`
+        @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;600;700&display=swap");
+
         .blogWrapper {
           background: linear-gradient(
             to bottom,
@@ -320,10 +322,10 @@ const Blogs = () => {
           display: flex;
           flex-direction: column;
           align-items: center;
-          padding: 60px 20px;
           position: relative;
           overflow: hidden;
           box-shadow: inset 0 20px 20px -20px rgba(0, 0, 0, 0.8);
+          font-family: "Orbitron", monospace;
         }
 
         .blogWrapper::before {
@@ -353,7 +355,7 @@ const Blogs = () => {
         }
 
         .container {
-          max-width: 1200px;
+          max-width: 100%;
           width: 100%;
           margin: 0 auto;
           display: flex;
@@ -364,7 +366,6 @@ const Blogs = () => {
           background: rgba(0, 0, 0, 0.3);
           backdrop-filter: blur(10px);
           border-radius: 20px;
-          padding: 2.5rem;
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
           border: 1px solid rgba(97, 218, 251, 0.1);
         }
@@ -601,7 +602,6 @@ const Blogs = () => {
           }
 
           .container {
-            padding: 1.5rem;
           }
         }
 
@@ -618,11 +618,9 @@ const Blogs = () => {
           }
 
           .blogWrapper {
-            padding: 40px 15px;
           }
 
           .container {
-            padding: 1rem;
             gap: 2rem;
           }
         }

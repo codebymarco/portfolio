@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;600;700&display=swap');
+
+
 .contact {
   background-image: radial-gradient(circle at 50% 30%, #111111 0%, #000000 70%);
   background-color: black;
@@ -6,6 +9,8 @@
   gap: 20px;
   padding: 20px;
   align-items: center;
+  font-family: 'Orbitron', monospace;
+
 }
 
 .contact-top {

@@ -28,6 +28,8 @@ const NavigationSection = () => {
   return (
     <>
       <style jsx>{`
+        @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;600;700&display=swap");
+
         .navigationSection {
           background-image: radial-gradient(
             circle at 50% 30%,
@@ -41,6 +43,7 @@ const NavigationSection = () => {
           justify-content: center;
           gap: 20px;
           padding: 20px;
+          font-family: "Orbitron", monospace;
         }
 
         .navigationSectionTop {
