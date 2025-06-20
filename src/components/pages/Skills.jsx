@@ -16,6 +16,8 @@ import {
   SiKubernetes,
   SiMongodb,
   SiPostgresql,
+  SiVisualstudiocode,
+  SiXaml,
 } from "react-icons/si";
 import { TbBrandCSharp } from "react-icons/tb";
 
@@ -23,8 +25,16 @@ import { TbBrandCSharp } from "react-icons/tb";
 import { motion } from "framer-motion";
 import useTranslationStore from "../../store/store";
 import { Helmet } from "react-helmet";
-import '../../styles/skillsPage.css'
+import "../../styles/skillsPage.css";
 import my_image from "../../assets/blog_images/452a6885-7483-423c-86c0-a96a4a76e831.jpg";
+import n8n from "../../assets/n8n.png";
+import ai from "../../assets/ai.png";
+import gpt from "../../assets/gpt.png";
+import zabix from "../../assets/zabix.png";
+import xml from "../../assets/xml.png";
+import claude from "../../assets/claude.png";
+import rest from "../../assets/rest.png";
+import api from "../../assets/api.png";
 
 const skillIcons = {
   html: { icon: FaHtml5, color: "#E34F26" },
@@ -43,15 +53,15 @@ const skillIcons = {
   aws: { icon: FaAws, color: "#FF9900" },
   gcp: { icon: FaGoogle, color: "#4285F4" },
   // New skills using image
-  n8n: { icon: my_image, color: "#EA4B71", isImage: true },
-  zabbix: { icon: my_image, color: "#CC0000", isImage: true },
-  ai: { icon: my_image, color: "#FF6B6B", isImage: true },
-  chatgpt: { icon: my_image, color: "#10A37F", isImage: true },
-  claude: { icon: my_image, color: "#CC785C", isImage: true },
-  vscode: { icon: my_image, color: "#007ACC", isImage: true },
-  apis: { icon: my_image, color: "#4A90E2", isImage: true },
-  rest: { icon: my_image, color: "#61DAFB", isImage: true },
-  xml: { icon: my_image, color: "#FF6600", isImage: true },
+  n8n: { icon: n8n, color: "#EA4B71", isImage: true },
+  zabbix: { icon: zabix, color: "#CC0000", isImage: true },
+  ai: { icon: ai, color: "#FF6B6B", isImage: true },
+  chatgpt: { icon: gpt, color: "#10A37F", isImage: true },
+  claude: { icon: claude, color: "#CC785C", isImage: true },
+  vscode: { icon: SiVisualstudiocode, color: "#007ACC" },
+  apis: { icon: api, color: "#4A90E2", isImage: true },
+  rest: { icon: rest, color: "#61DAFB", isImage: true },
+  xml: { icon: xml, color: "#FF6600", isImage: true },
 };
 
 const Skills = () => {
@@ -69,8 +79,8 @@ const Skills = () => {
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
       transition: {
         type: "spring",
@@ -83,30 +93,56 @@ const Skills = () => {
   return (
     <div className="skillsPageMobile">
       <Helmet>
-        <title>Technical Skills & Expertise | Miguelmarco Ramcharan - Fullstack Developer</title>
-        <meta name="description" content="Explore the technical skills of Miguelmarco Ramcharan of CodeByMarco: a Fullstack Developer proficient in React, Node.js, JavaScript, Python & more. See my expertise." />
+        <title>
+          Technical Skills & Expertise | Miguelmarco Ramcharan - Fullstack
+          Developer
+        </title>
+        <meta
+          name="description"
+          content="Explore the technical skills of Miguelmarco Ramcharan of CodeByMarco: a Fullstack Developer proficient in React, Node.js, JavaScript, Python & more. See my expertise."
+        />
         <link rel="canonical" href="https://www.codebymarco.com/skills" />
-        <meta property="og:title" content="Technical Skills & Expertise | Miguelmarco Ramcharan - Fullstack Developer" />
-        <meta property="og:description" content="Explore the technical skills of Miguelmarco Ramcharan of CodeByMarco: a Fullstack Developer proficient in React, Node.js, JavaScript, Python & more. See my expertise." />
+        <meta
+          property="og:title"
+          content="Technical Skills & Expertise | Miguelmarco Ramcharan - Fullstack Developer"
+        />
+        <meta
+          property="og:description"
+          content="Explore the technical skills of Miguelmarco Ramcharan of CodeByMarco: a Fullstack Developer proficient in React, Node.js, JavaScript, Python & more. See my expertise."
+        />
         <meta property="og:type" content="profile" />
         <meta property="og:url" content="https://www.codebymarco.com/skills" />
-        <meta property="og:image" content="https://www.codebymarco.com/images/codebymarco-skills-og-image.jpg" />
+        <meta
+          property="og:image"
+          content="https://www.codebymarco.com/images/codebymarco-skills-og-image.jpg"
+        />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:site_name" content="CodeByMarco" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@your_twitter_handle" />
         <meta name="twitter:creator" content="@your_twitter_handle" />
-        <meta name="twitter:title" content="Technical Skills & Expertise | Miguelmarco Ramcharan - Fullstack Developer" />
-        <meta name="twitter:description" content="Explore the technical skills of Miguelmarco Ramcharan of CodeByMarco: a Fullstack Developer proficient in React, Node.js, JavaScript, Python & more. See my expertise." />
-        <meta name="twitter:image" content="https://www.codebymarco.com/images/codebymarco-skills-og-image.jpg" />
+        <meta
+          name="twitter:title"
+          content="Technical Skills & Expertise | Miguelmarco Ramcharan - Fullstack Developer"
+        />
+        <meta
+          name="twitter:description"
+          content="Explore the technical skills of Miguelmarco Ramcharan of CodeByMarco: a Fullstack Developer proficient in React, Node.js, JavaScript, Python & more. See my expertise."
+        />
+        <meta
+          name="twitter:image"
+          content="https://www.codebymarco.com/images/codebymarco-skills-og-image.jpg"
+        />
       </Helmet>
 
       <div className="skillsHeaderMobile">
         <h1 className="skillsTitleMobile">{t("skills_heading") || "SKILLS"}</h1>
-        <div className="skillsSubtitleMobile">Technical expertise and proficiencies</div>
+        <div className="skillsSubtitleMobile">
+          Technical expertise and proficiencies
+        </div>
       </div>
-      
+
       <motion.div
         className="skillsGridMobile"
         initial="hidden"
@@ -115,7 +151,7 @@ const Skills = () => {
       >
         {[
           "html",
-          "css", 
+          "css",
           "typescript",
           "react",
           "node",
@@ -141,28 +177,28 @@ const Skills = () => {
         ].map((skill) => {
           const skillData = skillIcons[skill];
           const IconComponent = skillData.icon;
-          
+
           return (
-            <motion.div 
-              className="skillBoxMobile" 
-              variants={itemVariants} 
+            <motion.div
+              className="skillBoxMobile"
+              variants={itemVariants}
               key={skill}
-              whileHover={{ 
+              whileHover={{
                 scale: 1.05,
-                boxShadow: `0 8px 25px rgba(0, 0, 0, 0.5), 0 0 20px ${skillData.color}30`
+                boxShadow: `0 8px 25px rgba(0, 0, 0, 0.5), 0 0 20px ${skillData.color}30`,
               }}
             >
               <div className="skillIconMobile">
                 {skillData.isImage ? (
-                  <img 
-                    src={IconComponent} 
+                  <img
+                    src={IconComponent}
                     alt={skill}
-                    style={{ 
-                      width: '60px', 
-                      height: '60px', 
-                      objectFit: 'cover',
-                      borderRadius: '4px'
-                    }} 
+                    style={{
+                      width: "60px",
+                      height: "60px",
+                      objectFit: "cover",
+                      borderRadius: "4px",
+                    }}
                   />
                 ) : (
                   <IconComponent color={skillData.color} />

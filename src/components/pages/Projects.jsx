@@ -5,6 +5,7 @@ import indeed from "../../../public/indeed.png";
 import ai_translator from "../../../public/ai_translator.png";
 import nft_shop from "../../../public/nft_shop.png";
 import portfoliobio from "../../../public/portfoliobio.png";
+import '../../styles/projects.css'
 
 const Projects = () => {
   const projects = [
@@ -120,12 +121,6 @@ const Projects = () => {
         @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;600;700&display=swap");
 
         .projects {
-          background: linear-gradient(
-            to bottom,
-            #000000 0%,
-            rgba(0, 0, 0, 0.95) 70%,
-            rgba(13, 21, 28, 0.9) 100%
-          );
           min-height: 100vh;
           position: relative;
           overflow: hidden;

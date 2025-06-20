@@ -461,12 +461,6 @@ const Contact = () => {
 
       <style jsx>{`
         .contact {
-          background-image: radial-gradient(
-            circle at 50% 30%,
-            #111111 0%,
-            #000000 70%
-          );
-          background-color: black;
           display: flex;
           flex-direction: column;
           gap: 30px;

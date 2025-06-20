@@ -3,7 +3,7 @@
 .aboutSection {
   background-color: black;
   /* Gradient that fades to #111111 at the bottom to match the Skills component top */
-  background-image: linear-gradient(to bottom, black 80%, #111111 100%);
+  background-image: url('../assets/bg-image.png');
   color: white;
   padding: 40px 20px 60px; /* Extra padding at bottom for fade effect */
   display: flex;

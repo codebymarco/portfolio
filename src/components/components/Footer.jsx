@@ -1,12 +1,12 @@
 import React from "react";
-import { FaGithub, FaLinkedinIn } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { FaXTwitter } from "react-icons/fa6";
 import { HiOutlineGlobeAlt } from "react-icons/hi";
 import { IoIosArrowDown } from "react-icons/io";
-import { motion } from "framer-motion";
 import useTranslationStore from "../../store/store";
 import { Link } from "react-router-dom";
+import '../../styles/footer.css'
 
 const Footer = () => {
   const { t } = useTranslationStore();
@@ -81,19 +81,19 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="container">
-        <motion.div
+        <div
           className="footer-top"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
           variants={containerVariants}
         >
-          <motion.div className="footer-brand" variants={itemVariants}>
+          <div className="footer-brand" variants={itemVariants}>
             <h3 className="brand-name">Miguelmarco Ramcharan</h3>
             <p className="brand-desc">{t("footer_occupation")}</p>
-          </motion.div>
+          </div>
 
-          <motion.div className="footer-links" variants={itemVariants}>
+          <div className="footer-links" variants={itemVariants}>
             <h4 className="footer-heading">{t("footer_quick_links")}</h4>
             <ul className="footer-list">
               {["home", "projects", "about", "contact", "career", "blog"].map(
@@ -106,10 +106,10 @@ const Footer = () => {
                 )
               )}
             </ul>
-          </motion.div>
+          </div>
 
           {/* Contact Info */}
-          <motion.div className="footer-contact" variants={itemVariants}>
+          <div className="footer-contact" variants={itemVariants}>
             <h4 className="footer-heading">{t("footer_contact")}</h4>
             <p className="contact-info">
               <span className="contact-label">{t("footer_email")}:</span>{" "}
@@ -123,10 +123,10 @@ const Footer = () => {
               <span className="contact-label">{t("footer_location")}:</span>{" "}
               Durban, South Africa
             </p>
-          </motion.div>
+          </div>
 
           {/* Language Selector */}
-          <motion.div className="footer-language" variants={itemVariants}>
+          <div className="footer-language" variants={itemVariants}>
             <h4 className="footer-heading">{t("footer_language")}</h4>
             <div className="footer-lang-selector" ref={languageMenuRef}>
               <div
@@ -158,11 +158,11 @@ const Footer = () => {
                 </div>
               )}
             </div>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
 
         {/* Social Media Icons */}
-        <motion.div
+        <div
           className="social-icons"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -191,10 +191,10 @@ const Footer = () => {
           >
             <FaXTwitter size={26} />
           </a>
-        </motion.div>
+        </div>
 
         {/* Copyright */}
-        <motion.div
+        <div
           className="footer-bottom"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -212,21 +212,19 @@ const Footer = () => {
               {t("footer_terms")}
             </a>
           </div>
-        </motion.div>
+        </div>
       </div>
 
       <style jsx>{`
-              @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;600;700&display=swap');
+        @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;600;700&display=swap");
 
         .footer {
-          background:black;
           color: #ffffff;
           width: 100%;
           box-sizing: border-box;
           position: relative;
           overflow: hidden;
-                      font-family: 'Orbitron', monospace;
-
+          font-family: "Orbitron", monospace;
         }
 
         .footer::before {
@@ -261,7 +259,6 @@ const Footer = () => {
           gap: 3rem;
           position: relative;
           z-index: 1;
-          background: rgba(0, 0, 0, 0.3);
           backdrop-filter: blur(10px);
           padding: 2.5rem;
         }

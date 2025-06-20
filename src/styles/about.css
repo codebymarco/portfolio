@@ -1,8 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;600;700&display=swap");
 
 .about {
-  background-image: radial-gradient(circle at 50% 30%, #111111 0%, #000000 70%);
-  background-color: black;
   color: white;
   position: relative;
   padding: 20px;
@@ -12,6 +10,8 @@
   padding-left: 200px;
   padding-right: 200px;
   font-family: "Orbitron", monospace;
+  background-image: url('../assets/bg-image-2.png');
+
 }
 
 .fixed-menu {

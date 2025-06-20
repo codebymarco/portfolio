@@ -6,6 +6,7 @@ import { GrInfo } from "react-icons/gr";
 import { HiOutlineBriefcase } from "react-icons/hi";
 import { Helmet } from "react-helmet";
 import useTranslationStore from "../../store/store";
+import '../../styles/career.css'
 
 const Career = () => {
   const { t } = useTranslationStore();
@@ -266,13 +267,6 @@ const Career = () => {
         /* General career page styling */
         .career {
           font-family: "Orbitron", monospace;
-
-          background-image: radial-gradient(
-            circle at 50% 30%,
-            #111111 0%,
-            #000000 70%
-          );
-          background-color: black;
           min-height: 100vh;
           color: #fff;
           padding: 40px 20px 80px;

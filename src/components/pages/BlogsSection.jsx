@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import apps from "../../../public/apps.png";
 import games from "../../../public/games.png";
 import blogs from "../../../public/blogs.png";
+import '../../styles/blogsSection.css'
 
 const NavigationSection = () => {
   const navData = [
@@ -31,11 +32,6 @@ const NavigationSection = () => {
         @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;600;700&display=swap");
 
         .navigationSection {
-          background-image: radial-gradient(
-            circle at 50% 30%,
-            #111111 0%,
-            #000000 70%
-          );
           min-height: 90vh;
           display: flex;
           flex-direction: column;

@@ -3,11 +3,13 @@ import linkbio from "../../../public/linkbio.png";
 import fartup from "../../../public/fartup.png";
 import blog from "../../assets/blog_images/36ec38b6-82a6-4ab8-82f7-ffdf7e0514b4.jpg";
 import blog2 from "../../assets/blog_images/452a6885-7483-423c-86c0-a96a4a76e831.jpg";
+import '../../styles/showcase.css'
 
 const Showcase = () => {
   return (
-    <div
-      style={{ padding: "50px 20px", backgroundColor: "#000", color: "white" }}
+    <div 
+    className="showcase"
+      style={{ padding: "50px 20px",color: "white" }}
     >
       <style jsx>{`
         @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;600;700&display=swap");
@@ -187,7 +189,7 @@ const Showcase = () => {
                 fontSize: "0.9rem",
               }}
             >
-              Unity
+              Flash
             </span>
             <span
               style={{
@@ -199,7 +201,7 @@ const Showcase = () => {
                 fontSize: "0.9rem",
               }}
             >
-              C#
+              HTML
             </span>
           </div>
           <div style={{ display: "flex", gap: "10px" }}>
