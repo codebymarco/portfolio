@@ -216,20 +216,17 @@ const Footer = () => {
       </div>
 
       <style jsx>{`
+              @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;600;700&display=swap');
+
         .footer {
-          background: linear-gradient(
-            to bottom,
-            #000000 0%,
-            rgba(0, 0, 0, 0.95) 70%,
-            rgba(13, 21, 28, 0.9) 100%
-          );
+          background:black;
           color: #ffffff;
-          padding: 4rem 2rem 2rem;
           width: 100%;
           box-sizing: border-box;
           position: relative;
           overflow: hidden;
-          box-shadow: inset 0 20px 20px -20px rgba(0, 0, 0, 0.8);
+                      font-family: 'Orbitron', monospace;
+
         }
 
         .footer::before {
@@ -239,7 +236,6 @@ const Footer = () => {
           right: -150px;
           width: 300px;
           height: 300px;
-          border-radius: 50%;
           background: rgba(97, 218, 251, 0.1);
           filter: blur(120px);
           z-index: 0;
@@ -252,14 +248,13 @@ const Footer = () => {
           left: -50px;
           width: 250px;
           height: 250px;
-          border-radius: 50%;
           background: rgba(97, 218, 251, 0.08);
           filter: blur(100px);
           z-index: 0;
         }
 
         .container {
-          max-width: 1200px;
+          max-width: 100%;
           margin: 0 auto;
           display: flex;
           flex-direction: column;
@@ -268,10 +263,7 @@ const Footer = () => {
           z-index: 1;
           background: rgba(0, 0, 0, 0.3);
           backdrop-filter: blur(10px);
-          border-radius: 20px;
           padding: 2.5rem;
-          box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-          border: 1px solid rgba(97, 218, 251, 0.1);
         }
 
         .footer-top {
@@ -312,7 +304,6 @@ const Footer = () => {
             #61dafb,
             rgba(97, 218, 251, 0.3)
           );
-          border-radius: 3px;
           box-shadow: 0 0 15px rgba(97, 218, 251, 0.6);
         }
 
@@ -351,7 +342,6 @@ const Footer = () => {
             #61dafb,
             rgba(97, 218, 251, 0.3)
           );
-          border-radius: 2px;
           box-shadow: 0 0 10px rgba(97, 218, 251, 0.5);
         }
 
@@ -425,7 +415,6 @@ const Footer = () => {
           display: flex;
           align-items: center;
           background-color: rgba(97, 218, 251, 0.1);
-          border-radius: 8px;
           padding: 8px 12px;
           border: 1px solid rgba(97, 218, 251, 0.3);
           cursor: pointer;
@@ -459,7 +448,6 @@ const Footer = () => {
           top: calc(100% + 8px);
           left: 0;
           background-color: rgba(13, 13, 13, 0.95);
-          border-radius: 8px;
           overflow: hidden;
           min-width: 160px;
           z-index: 100;
@@ -530,7 +518,6 @@ const Footer = () => {
           background: rgba(10, 10, 10, 0.6);
           width: 50px;
           height: 50px;
-          border-radius: 50%;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -694,7 +681,6 @@ const Footer = () => {
         /* Responsive styling */
         @media (max-width: 992px) {
           .footer {
-            padding: 3rem 1.5rem 1.5rem;
           }
 
           .container {
@@ -730,7 +716,6 @@ const Footer = () => {
 
         @media (max-width: 576px) {
           .footer {
-            padding: 2.5rem 1rem 1.5rem;
           }
 
           .brand-name {
