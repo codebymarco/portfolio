@@ -1,5 +1,5 @@
 import React from "react";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaYoutube } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { FaXTwitter } from "react-icons/fa6";
 import { HiOutlineGlobeAlt } from "react-icons/hi";
@@ -7,6 +7,7 @@ import { IoIosArrowDown } from "react-icons/io";
 import useTranslationStore from "../../store/store";
 import { Link } from "react-router-dom";
 import '../../styles/footer.css'
+import logo from '../../assets/logo.png'
 
 const Footer = () => {
   const { t } = useTranslationStore();
@@ -89,7 +90,9 @@ const Footer = () => {
           variants={containerVariants}
         >
           <div className="footer-brand" variants={itemVariants}>
-            <h3 className="brand-name">Miguelmarco Ramcharan</h3>
+            <h3 className="brand-name">
+              <img src={logo} height="50px" width="100px" alt="" />
+            </h3>
             <p className="brand-desc">{t("footer_occupation")}</p>
           </div>
 
@@ -177,6 +180,15 @@ const Footer = () => {
             aria-label="GitHub Profile"
           >
             <FaGithub size={24} />
+          </a>
+          <a
+            href="https://www.youtube.com/@codebymarco"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="social-icon github"
+            aria-label="GitHub Profile"
+          >
+            <FaYoutube size={24} />
           </a>
           <a
             href="mailto:miguelmarcoramcharan@gmail.com"
