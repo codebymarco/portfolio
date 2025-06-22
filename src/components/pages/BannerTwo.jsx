@@ -1,7 +1,7 @@
 import React from "react";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-import { FaXTwitter } from "react-icons/fa6";
+import { FaLink, FaXTwitter } from "react-icons/fa6";
 import { FaInstagram, FaTiktok, FaYoutube } from "react-icons/fa";
 
 const BannerTwo = () => {
@@ -342,6 +342,15 @@ const BannerTwo = () => {
               aria-label="GitHub Profile"
             >
               <FaYoutube size={24} />
+            </a>
+            <a
+              href="https://linktr.ee/codebymarco"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-icon github"
+              aria-label="GitHub Profile"
+            >
+              <FaLink size={24} />
             </a>
             <a
               href="https://github.com/codebymarco"
