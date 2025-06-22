@@ -207,7 +207,7 @@ const Footer = () => {
             <MdEmail size={26} />
           </a>
           <a
-            href="https://twitter.com/@Miguelmarc32625"
+            href="https://x.com/code_by_marco"
             className="social-icon"
           >
             <FaXTwitter size={26} />

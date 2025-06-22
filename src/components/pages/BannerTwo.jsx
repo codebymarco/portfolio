@@ -378,7 +378,7 @@ const BannerTwo = () => {
               <MdEmail size={26} />
             </a>
             <a
-              href="https://twitter.com/@Miguelmarc32625"
+              href="https://x.com/code_by_marco"
               target="_blank"
               rel="noopener noreferrer"
               className="social-icon twitter"
