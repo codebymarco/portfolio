@@ -386,15 +386,15 @@ const BannerTwo = () => {
             >
               <FaXTwitter size={24} />
             </a>
-            {/*             <a
-              href="https://instagram.com/your-handle"
+                      <a
+              href="https://www.instagram.com/codebymarco"
               target="_blank"
               rel="noopener noreferrer"
               className="social-icon instagram"
               aria-label="Instagram Profile"
             >
               <FaInstagram size={24} />
-            </a> */}
+            </a>
           </div>
 
           {/* Buttons */}
