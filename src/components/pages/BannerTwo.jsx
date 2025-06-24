@@ -309,6 +309,81 @@ const BannerTwo = () => {
             height: 40px;
           }
         }
+
+        @media (max-width: 768px) {
+          .banner-name {
+            font-size: 2.2rem;
+          }
+
+          .job-title {
+            font-size: 1.3rem;
+          }
+
+          .tagline {
+            font-size: 1rem;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .banner-name {
+            font-size: 1.8rem;
+          }
+
+          .job-title {
+            font-size: 1.1rem;
+          }
+
+          .tagline {
+            font-size: 0.9rem;
+          }
+        }
+
+        @media (max-width: 768px) {
+  .banner-content {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-content {
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner-name {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-name {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .social-icon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .social-icons {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .social-icon {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .social-icons {
+    gap: 15px;
+  }
+}
+
       `}</style>
 
       <div className="banner">
