@@ -217,19 +217,19 @@ const Footer = () => {
           >
             <FaYoutube size={24} />
           </a>
-          <a
+{/*           <a
             href="mailto:miguelmarcoramcharan@gmail.com"
             className="social-icon email"
             aria-label="Send Email"
           >
             <MdEmail size={26} />
-          </a>
-          <a
+          </a> */}
+{/*           <a
             href="https://x.com/code_by_marco"
             className="social-icon"
           >
             <FaXTwitter size={26} />
-          </a>
+          </a> */}
         </div>
 
         {/* Copyright */}

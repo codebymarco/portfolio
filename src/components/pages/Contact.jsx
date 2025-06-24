@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { SiGmail, SiOnlyfans } from "react-icons/si";
 import { IoPhonePortraitOutline } from "react-icons/io5";
-import { FaFilePdf, FaGithub, FaWhatsapp } from "react-icons/fa";
+import { FaFilePdf, FaGithub, FaTwitter, FaWhatsapp } from "react-icons/fa";
 import { CiLinkedin } from "react-icons/ci";
 import "../../styles/contact.css";
 import OnlyFans from "../components/OnlyFans";
@@ -144,6 +144,14 @@ const Contact = () => {
       label: "download resume",
       color: "#FF5733",
       action: handleDownloadResume,
+      number: "05",
+    },
+    {
+      id: "resume",
+      icon: <FaTwitter />,
+      label: "Twitter",
+      color: "#FF5733",
+      action: () => handleDivClick("https://x.com/code_by_marco"),
       number: "05",
     },
   ];
