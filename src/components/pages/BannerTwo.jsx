@@ -361,15 +361,15 @@ const BannerTwo = () => {
             >
               <FaGithub size={24} />
             </a>
-            {/*             <a
-              href="https://linkedin.com/in/your-profile"
+            <a
+              href="https://www.linkedin.com/in/marco-ramcharan/"
               target="_blank"
               rel="noopener noreferrer"
               className="social-icon linkedin"
               aria-label="LinkedIn Profile"
             >
               <FaLinkedinIn size={24} />
-            </a> */}
+            </a>
             <a
               href="mailto:miguelmarcoramcharan@gmail.com"
               className="social-icon email"
@@ -386,7 +386,7 @@ const BannerTwo = () => {
             >
               <FaXTwitter size={24} />
             </a>
-                      <a
+            <a
               href="https://www.instagram.com/codebymarco"
               target="_blank"
               rel="noopener noreferrer"

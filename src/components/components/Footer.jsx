@@ -1,5 +1,5 @@
 import React from "react";
-import { FaGithub, FaInstagram, FaLink, FaYoutube } from "react-icons/fa";
+import { FaGithub, FaInstagram, FaLink, FaLinkedin, FaYoutube } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { FaXTwitter } from "react-icons/fa6";
 import { HiOutlineGlobeAlt } from "react-icons/hi";
@@ -180,6 +180,15 @@ const Footer = () => {
             aria-label="GitHub Profile"
           >
             <FaGithub size={24} />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/marco-ramcharan/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="social-icon github"
+            aria-label="GitHub Profile"
+          >
+            <FaLinkedin size={24} />
           </a>
           <a
             href="https://www.instagram.com/codebymarco"
