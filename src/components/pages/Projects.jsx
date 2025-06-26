@@ -6,13 +6,15 @@ import ai_translator from "../../../public/ai_translator.png";
 import nft_shop from "../../../public/nft_shop.png";
 import portfoliobio from "../../../public/portfoliobio.png";
 import "../../styles/projects.css";
+import useTranslationStore from "../../store/store";
 
 const Projects = () => {
+  const { t } = useTranslationStore();
+
   const projects = [
     {
-      name: "LINKBIO",
-      description:
-        "Personal linkbio website showcasing all links with analytics and custom themes",
+      name: t("projects_one_title"),
+      description: t("projects_one_decsription"),
       liveUrl: "https://linkbio.codebymarco.com",
       info: "/apps/linkbio",
       image: linkbio,
@@ -28,9 +30,8 @@ const Projects = () => {
       size: "small",
     },
     {
-      name: "INDEED",
-      description:
-        "Job search platform clone with custom filtering and real-time search",
+      name: t("projects_four_title"),
+      description: t("projects_four_decsription"),
       liveUrl: "https://indeed.codebymarco.com",
       info: "/apps/indeed",
       image: indeed,
@@ -46,9 +47,8 @@ const Projects = () => {
       size: "small",
     },
     {
-      name: "FORMIO",
-      description:
-        "Dynamic form builder with drag-and-drop interface and validation",
+      name: t("projects_two_title"),
+      description: t("projects_two_decsription"),
       liveUrl: "https://formio.codebymarco.com",
       info: "/apps/formio",
       image: formio,
@@ -64,9 +64,8 @@ const Projects = () => {
       size: "small",
     },
     {
-      name: "AI TRANSLATOR",
-      description:
-        "Intelligent chatbot with natural language processing and machine learning",
+      name: t("projects_five_title"),
+      description: t("projects_five_decsription"),
       liveUrl: "https://translato.codebymarco.com",
       info: "/apps/aitranslator",
       image: ai_translator,
@@ -83,9 +82,8 @@ const Projects = () => {
       size: "small",
     },
     {
-      name: "PORTFOLIOBIO",
-      description:
-        "Real-time weather app with beautiful animations and forecasts",
+      name: t("projects_three_title"),
+      description: t("projects_three_decsription"),
       liveUrl: "https://portfoliobio.codebymarco.com",
       info: "/apps/portfoliobio",
       image: portfoliobio,
@@ -102,9 +100,8 @@ const Projects = () => {
       size: "small",
     },
     {
-      name: "NFT SHOP",
-      description:
-        "Full-stack e-commerce platform with payment integration, inventory management, and admin dashboard",
+      name: t("projects_six_title"),
+      description: t("projects_six_decsription"),
       liveUrl: "https://nftcentral.codebymarco.com/",
       image: nft_shop,
       info: "/apps/nftshop",
@@ -120,9 +117,9 @@ const Projects = () => {
       <div className="projects">
         <div className="container">
           <div className="projects-header">
-            <h1 className="projects-title">My Projects</h1>
+            <h1 className="projects-title">{t("projects_heading")}</h1>
             <p className="projects-subtitle">
-              Crafted with passion and precision
+            {t("projects_description")}
             </p>
           </div>
 
@@ -181,14 +178,14 @@ const Projects = () => {
                         className="project-link"
                         onClick={(e) => e.stopPropagation()}
                       >
-                        View Project →
+                        {t("projects_view")} →
                       </a>
                       <a
                         href={item.info}
                         className="project-link"
                         onClick={(e) => e.stopPropagation()}
                       >
-                        Project Details →
+                        {t("projects_details")} →
                       </a>
                     </div>
                   </div>
