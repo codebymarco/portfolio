@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;600;700&display=swap");
 
 nav {
-  background-image: url('../assets/bg-image-3.png');
+  background-color: black;
   height: 10svh;
   display: flex;
   justify-content: space-between;
