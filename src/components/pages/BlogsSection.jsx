@@ -2,9 +2,12 @@ import React, { useState } from "react";
 import apps from "../../../public/apps.png";
 import games from "../../../public/games.png";
 import blogs from "../../../public/blogs.png";
-import '../../styles/blogsSection.css'
+import "../../styles/blogsSection.css";
+import useTranslationStore from "../../store/store";
 
 const NavigationSection = () => {
+  const { t } = useTranslationStore();
+
   const navData = [
     {
       id: 1,
@@ -206,7 +209,7 @@ const NavigationSection = () => {
                 />
               </div>
               <div className="nav-card-content">
-                <h3 className="nav-card-title">{item.title}</h3>
+                <h3 className="nav-card-title">{t(`${item.title}`)}</h3>
                 <div className="nav-card-tags">
                   {item.tags.slice(0, 4).map((tag) => (
                     <span key={tag} className="nav-card-tag">

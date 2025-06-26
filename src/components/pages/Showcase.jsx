@@ -3,14 +3,14 @@ import linkbio from "../../../public/linkbio.png";
 import fartup from "../../../public/fartup.png";
 import blog from "../../assets/blog_images/36ec38b6-82a6-4ab8-82f7-ffdf7e0514b4.jpg";
 import blog2 from "../../assets/blog_images/452a6885-7483-423c-86c0-a96a4a76e831.jpg";
-import '../../styles/showcase.css'
+import "../../styles/showcase.css";
+import useTranslationStore from "../../store/store";
 
 const Showcase = () => {
+  const { t } = useTranslationStore();
+
   return (
-    <div 
-    className="showcase"
-      style={{ padding: "50px 20px",color: "white" }}
-    >
+    <div className="showcase" style={{ padding: "50px 20px", color: "white" }}>
       <style jsx>{`
         @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;600;700&display=swap");
 
@@ -72,7 +72,9 @@ const Showcase = () => {
               className="project-image"
             />
           </div>
-          <h3 style={{ fontSize: "2rem", marginBottom: "15px" }}>LinkBio</h3>
+          <h3 style={{ fontSize: "2rem", marginBottom: "15px" }}>
+            {t("showcase_project_one_title")}
+          </h3>
           <p
             style={{
               color: "#a0a0a0",
@@ -80,9 +82,7 @@ const Showcase = () => {
               lineHeight: "1.5",
             }}
           >
-            A modern, customizable bio link platform that helps creators
-            showcase their work, social media, and important links in one
-            beautiful page.
+            {t("showcase_project_one_description")}
           </p>
           <div style={{ marginBottom: "20px" }}>
             <span
@@ -123,7 +123,7 @@ const Showcase = () => {
                 fontWeight: "600",
               }}
             >
-              Live
+            {t("showcase_live")}
             </a>
             <a
               href="/apps/linkbio"
@@ -137,7 +137,7 @@ const Showcase = () => {
                 fontWeight: "600",
               }}
             >
-              Project Details
+            {t("showcase_project_details")}
             </a>
           </div>
         </div>
@@ -167,7 +167,10 @@ const Showcase = () => {
           >
             <img src={fartup} alt="Fartup Game" className="project-image" />
           </div>
-          <h3 style={{ fontSize: "1.8rem", marginBottom: "15px" }}>Fartup</h3>
+          <h3 style={{ fontSize: "1.8rem", marginBottom: "15px" }}>
+            {" "}
+            {t("showcase_project_two_title")}
+          </h3>
           <p
             style={{
               color: "#a0a0a0",
@@ -175,8 +178,7 @@ const Showcase = () => {
               lineHeight: "1.5",
             }}
           >
-            A hilarious mobile game where timing is everything! Navigate through
-            challenges with perfect timing.
+            {t("showcase_project_two_description")}
           </p>
           <div style={{ marginBottom: "20px" }}>
             <span
@@ -217,7 +219,7 @@ const Showcase = () => {
                 fontWeight: "600",
               }}
             >
-              Live
+            {t("showcase_live")}
             </a>
             <a
               href="/apps/fartup"
@@ -231,7 +233,7 @@ const Showcase = () => {
                 fontWeight: "600",
               }}
             >
-              Project Details
+            {t("showcase_project_details")}
             </a>
           </div>
         </div>
@@ -271,7 +273,7 @@ const Showcase = () => {
             Dec 15, 2024
           </div>
           <h3 style={{ fontSize: "1.5rem", marginBottom: "15px" }}>
-            Building Scalable React Apps
+            {t("showcase_blog_one_title")}
           </h3>
           <p
             style={{
@@ -280,7 +282,7 @@ const Showcase = () => {
               lineHeight: "1.5",
             }}
           >
-            Learn best practices for structuring large React applications.
+            {t("showcase_blog_one_description")}
           </p>
           <a
             href="/blog/4"
@@ -294,8 +296,8 @@ const Showcase = () => {
               fontWeight: "600",
             }}
           >
-            Read More
-          </a>
+            {t("showcase_read_more")}
+            </a>
         </div>
 
         {/* Blog 2 */}
@@ -333,7 +335,7 @@ const Showcase = () => {
             Dec 10, 2024
           </div>
           <h3 style={{ fontSize: "1.5rem", marginBottom: "15px" }}>
-            Future of Web Development
+            {t("showcase_blog_two_title")}
           </h3>
           <p
             style={{
@@ -342,7 +344,7 @@ const Showcase = () => {
               lineHeight: "1.5",
             }}
           >
-            Exploring emerging technologies that will shape web development.
+            {t("showcase_blog_two_description")}
           </p>
           <a
             href="blog/5"
@@ -356,8 +358,8 @@ const Showcase = () => {
               fontWeight: "600",
             }}
           >
-            Read More
-          </a>
+            {t("showcase_read_more")}
+            </a>
         </div>
       </div>
     </div>

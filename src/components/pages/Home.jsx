@@ -61,17 +61,10 @@ const Home = () => {
       <BannerTwo />
       <Showcase />
       <AboutSection />
-        <Skills />
+      <Skills />
       {/*       <Certs />
-       */}{" "}
+       */}
       <BlogsSection />
-      <style>
-        {`      .skills-wrapper {
-        }
-
-
-        }`}
-      </style>
     </div>
   );
 };

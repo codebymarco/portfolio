@@ -139,7 +139,7 @@ const Skills = () => {
       <div className="skillsHeaderMobile">
         <h1 className="skillsTitleMobile">{t("skills_heading") || "SKILLS"}</h1>
         <div className="skillsSubtitleMobile">
-          Technical expertise and proficiencies
+        {t("skills_description")}
         </div>
       </div>
 

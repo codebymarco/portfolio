@@ -141,7 +141,7 @@ const Contact = () => {
     {
       id: "resume",
       icon: <FaFilePdf />,
-      label: "download resume",
+      label: t("download_resume"),
       color: "#FF5733",
       action: handleDownloadResume,
       number: "05",
