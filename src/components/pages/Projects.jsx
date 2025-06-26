@@ -25,7 +25,7 @@ const Projects = () => {
     },
     {
       type: "filler",
-      content: "💡 Currently obsessed with building seamless user experiences",
+      content: `💡 ${t("projects_filler_three")}`,
       gradient: "linear-gradient(135deg, #ff6b6b 0%, #feca57 100%)",
       size: "small",
     },
@@ -42,7 +42,7 @@ const Projects = () => {
     },
     {
       type: "filler",
-      content: "🚀 50+ Projects Completed\n3+ Years of Coding",
+      content: `🚀 ${t("projects_filler_one")}`,
       gradient: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
       size: "small",
     },
@@ -59,7 +59,7 @@ const Projects = () => {
     },
     {
       type: "filler",
-      content: '"Code is poetry written in logic" ✨',
+      content: `"${t("projects_filler_five")}" ✨`,
       gradient: "linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)",
       size: "small",
     },
@@ -76,8 +76,7 @@ const Projects = () => {
     },
     {
       type: "filler",
-      content:
-        "💻 Pro Tip:\nAlways comment your code - your future self will thank you!",
+      content: `💻 ${t("projects_filler_two")}`,
       gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
       size: "small",
     },
@@ -94,8 +93,7 @@ const Projects = () => {
     },
     {
       type: "filler",
-      content:
-        "🎯 Let's build something amazing together!\nAlways open to new opportunities",
+      content: `🎯 ${t("projects_filler_four")} `,
       gradient: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
       size: "small",
     },
@@ -118,9 +116,7 @@ const Projects = () => {
         <div className="container">
           <div className="projects-header">
             <h1 className="projects-title">{t("projects_heading")}</h1>
-            <p className="projects-subtitle">
-            {t("projects_description")}
-            </p>
+            <p className="projects-subtitle">{t("projects_description")}</p>
           </div>
 
           <div className="projects-masonry">
