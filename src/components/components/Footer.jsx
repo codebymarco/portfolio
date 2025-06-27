@@ -208,15 +208,6 @@ const Footer = () => {
           >
             <FaLink size={24} />
           </a>
-          <a
-            href="https://www.youtube.com/@codebymarco"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="social-icon github"
-            aria-label="GitHub Profile"
-          >
-            <FaYoutube size={24} />
-          </a>
 {/*           <a
             href="mailto:miguelmarcoramcharan@gmail.com"
             className="social-icon email"

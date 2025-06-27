@@ -348,15 +348,6 @@ const BannerTwo = () => {
           {/* Social Media Icons */}
           <div className="social-icons">
             <a
-              href="https://www.youtube.com/@codebymarco"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="social-icon github"
-              aria-label="GitHub Profile"
-            >
-              <FaYoutube size={24} />
-            </a>
-            <a
               href="https://linktr.ee/codebymarco"
               target="_blank"
               rel="noopener noreferrer"
