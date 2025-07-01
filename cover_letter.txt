@@ -1,0 +1,20 @@
+arco Ramcharan
+Durban, KwaZulu-Natal
+📞 +27 61 149 8474 | ✉️ miguelmarcoramcharan@gmail.com
+🌐 codebymarco.com | GitHub
+
+Cover Letter
+Dear Hiring Manager,
+
+I'm writing to express my interest in any available Software Developer roles within your organization. As a self-taught full-stack developer with over two years of professional experience, I bring a unique combination of hands-on technical ability, a passion for learning, and a background in craftsmanship that informs my attention to detail and dedication to quality.
+
+Currently, I work at Decidio, where I contribute to the TRUENDO product, building and maintaining privacy dashboards, backend systems, and cookie consent tools. My work spans across the entire stack — from frontend user experiences built in React to backend services in Node.js and Golang, with DevOps support via Docker, Kubernetes, and Jenkins. I’ve also had the privilege of earning performance-based raises, reflecting my dedication and impact.
+
+Before entering tech, I spent several years as a carpenter in my family’s interior business. That chapter of my life taught me the importance of precision, discipline, and user-centered problem solving — values I now carry into every line of code I write.
+
+What sets me apart is my self-driven attitude. From transitioning out of a support role into development in under a month, to diving deep into both frontend aesthetics and backend architecture, I thrive on challenges and continuous growth. I believe that good software comes from empathy, curiosity, and the willingness to understand both user needs and system design.
+
+I’d welcome the opportunity to bring my full-stack expertise and grounded work ethic to your team. Thank you for considering my application. I’d be happy to discuss how I can contribute to your projects and goals.
+
+Warm regards,
+Marco Ramcharan
