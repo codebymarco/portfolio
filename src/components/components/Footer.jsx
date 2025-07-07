@@ -1,13 +1,19 @@
 import React from "react";
-import { FaGithub, FaInstagram, FaLink, FaLinkedin, FaYoutube } from "react-icons/fa";
+import {
+  FaGithub,
+  FaInstagram,
+  FaLink,
+  FaLinkedin,
+  FaYoutube,
+} from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { FaXTwitter } from "react-icons/fa6";
 import { HiOutlineGlobeAlt } from "react-icons/hi";
 import { IoIosArrowDown } from "react-icons/io";
 import useTranslationStore from "../../store/store";
 import { Link } from "react-router-dom";
-import '../../styles/footer.css'
-import logo from '../../assets/logo.png'
+import "../../styles/footer.css";
+import logo from "../../assets/logo.png";
 
 const Footer = () => {
   const { t } = useTranslationStore();
@@ -41,6 +47,8 @@ const Footer = () => {
     { code: "zu", label: "Zulu" },
     { code: "af", label: "Afrikaans" },
     { code: "es", label: "Español" },
+    { code: "pt", label: "Portuguese" },
+    { code: "de", label: "German" },
   ];
 
   // Get current language display
@@ -208,14 +216,14 @@ const Footer = () => {
           >
             <FaLink size={24} />
           </a>
-{/*           <a
+          {/*           <a
             href="mailto:miguelmarcoramcharan@gmail.com"
             className="social-icon email"
             aria-label="Send Email"
           >
             <MdEmail size={26} />
           </a> */}
-{/*           <a
+          {/*           <a
             href="https://x.com/code_by_marco"
             className="social-icon"
           >

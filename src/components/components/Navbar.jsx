@@ -99,6 +99,8 @@ const Navbar = () => {
     { code: "zu", label: "Zulu" },
     { code: "af", label: "Afrikaans" },
     { code: "es", label: "Español" },
+    { code: "pt", label: "Portuguese" },
+    { code: "de", label: "German" }
   ];
 
   return (
