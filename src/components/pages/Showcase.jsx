@@ -11,36 +11,7 @@ const Showcase = () => {
 
   return (
     <div className="showcase" style={{ padding: "50px 20px", color: "white" }}>
-      <style jsx>{`
-        @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;600;700&display=swap");
 
-        .masonry {
-          columns: 3;
-          column-gap: 20px;
-          max-width: 1200px;
-          margin: 0 auto;
-          font-family: "Orbitron", monospace;
-        }
-
-        @media (max-width: 768px) {
-          .masonry {
-            columns: 1;
-          }
-        }
-
-        @media (min-width: 769px) and (max-width: 1024px) {
-          .masonry {
-            columns: 2;
-          }
-        }
-
-        .project-image {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          border-radius: 10px;
-        }
-      `}</style>
 
       <div className="masonry">
         {/* LinkBio */}
@@ -48,7 +19,6 @@ const Showcase = () => {
           style={{
             backgroundColor: "#1a1a1a",
             padding: "25px",
-            borderRadius: "15px",
             marginBottom: "20px",
             breakInside: "avoid",
           }}
@@ -58,7 +28,6 @@ const Showcase = () => {
               width: "100%",
               height: "300px",
               background: "linear-gradient(135deg, dodgerblue, #6a11cb)",
-              borderRadius: "10px",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
@@ -90,7 +59,6 @@ const Showcase = () => {
                 background: "rgba(30, 144, 255, 0.2)",
                 color: "dodgerblue",
                 padding: "5px 10px",
-                borderRadius: "12px",
                 marginRight: "8px",
                 fontSize: "0.9rem",
               }}
@@ -102,7 +70,6 @@ const Showcase = () => {
                 background: "rgba(30, 144, 255, 0.2)",
                 color: "dodgerblue",
                 padding: "5px 10px",
-                borderRadius: "12px",
                 marginRight: "8px",
                 fontSize: "0.9rem",
               }}
@@ -118,7 +85,6 @@ const Showcase = () => {
                 backgroundColor: "dodgerblue",
                 color: "white",
                 padding: "12px 24px",
-                borderRadius: "20px",
                 textDecoration: "none",
                 fontWeight: "600",
               }}
@@ -132,7 +98,6 @@ const Showcase = () => {
                 backgroundColor: "dodgerblue",
                 color: "white",
                 padding: "12px 24px",
-                borderRadius: "20px",
                 textDecoration: "none",
                 fontWeight: "600",
               }}
@@ -147,7 +112,6 @@ const Showcase = () => {
           style={{
             backgroundColor: "#1a1a1a",
             padding: "25px",
-            borderRadius: "15px",
             marginBottom: "20px",
             breakInside: "avoid",
           }}
@@ -157,7 +121,6 @@ const Showcase = () => {
               width: "100%",
               height: "200px",
               background: "linear-gradient(135deg, #ff6b6b, #feca57)",
-              borderRadius: "10px",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
@@ -186,7 +149,6 @@ const Showcase = () => {
                 background: "rgba(30, 144, 255, 0.2)",
                 color: "dodgerblue",
                 padding: "5px 10px",
-                borderRadius: "12px",
                 marginRight: "8px",
                 fontSize: "0.9rem",
               }}
@@ -198,7 +160,6 @@ const Showcase = () => {
                 background: "rgba(30, 144, 255, 0.2)",
                 color: "dodgerblue",
                 padding: "5px 10px",
-                borderRadius: "12px",
                 marginRight: "8px",
                 fontSize: "0.9rem",
               }}
@@ -214,7 +175,6 @@ const Showcase = () => {
                 backgroundColor: "dodgerblue",
                 color: "white",
                 padding: "12px 24px",
-                borderRadius: "20px",
                 textDecoration: "none",
                 fontWeight: "600",
               }}
@@ -228,7 +188,6 @@ const Showcase = () => {
                 backgroundColor: "dodgerblue",
                 color: "white",
                 padding: "12px 24px",
-                borderRadius: "20px",
                 textDecoration: "none",
                 fontWeight: "600",
               }}
@@ -243,7 +202,6 @@ const Showcase = () => {
           style={{
             backgroundColor: "#1a1a1a",
             padding: "25px",
-            borderRadius: "15px",
             marginBottom: "20px",
             breakInside: "avoid",
           }}
@@ -253,7 +211,6 @@ const Showcase = () => {
               width: "100%",
               height: "150px",
               background: "linear-gradient(135deg, #48cae4, #0077b6)",
-              borderRadius: "10px",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
@@ -291,7 +248,6 @@ const Showcase = () => {
               backgroundColor: "dodgerblue",
               color: "white",
               padding: "10px 20px",
-              borderRadius: "20px",
               textDecoration: "none",
               fontWeight: "600",
             }}
@@ -305,7 +261,6 @@ const Showcase = () => {
           style={{
             backgroundColor: "#1a1a1a",
             padding: "25px",
-            borderRadius: "15px",
             marginBottom: "20px",
             breakInside: "avoid",
           }}
@@ -315,7 +270,6 @@ const Showcase = () => {
               width: "100%",
               height: "150px",
               background: "linear-gradient(135deg, #f72585, #b5179e)",
-              borderRadius: "10px",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
@@ -353,7 +307,6 @@ const Showcase = () => {
               backgroundColor: "dodgerblue",
               color: "white",
               padding: "10px 20px",
-              borderRadius: "20px",
               textDecoration: "none",
               fontWeight: "600",
             }}

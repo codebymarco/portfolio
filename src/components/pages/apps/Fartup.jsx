@@ -187,7 +187,6 @@ const Fartup = () => {
           right: -150px;
           width: 300px;
           height: 300px;
-          border-radius: 50%;
           background: rgba(97, 218, 251, 0.1);
           filter: blur(120px);
           z-index: 0;
@@ -200,7 +199,6 @@ const Fartup = () => {
           left: -50px;
           width: 250px;
           height: 250px;
-          border-radius: 50%;
           background: rgba(97, 218, 251, 0.08);
           filter: blur(100px);
           z-index: 0;
@@ -217,7 +215,6 @@ const Fartup = () => {
           z-index: 1;
           background: rgba(0, 0, 0, 0.3);
           backdrop-filter: blur(10px);
-          border-radius: 20px;
           padding: 2.5rem;
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
           border: 1px solid rgba(97, 218, 251, 0.1);
@@ -275,7 +272,6 @@ const Fartup = () => {
             #61dafb,
             rgba(97, 218, 251, 0.3)
           );
-          border-radius: 3px;
           box-shadow: 0 0 15px rgba(97, 218, 251, 0.6);
         }
 
@@ -293,7 +289,6 @@ const Fartup = () => {
           color: #61dafb;
           text-decoration: none;
           padding: 0.7rem 1.2rem;
-          border-radius: 30px;
           font-size: 0.9rem;
           letter-spacing: 1px;
           font-weight: 500;
@@ -322,7 +317,6 @@ const Fartup = () => {
 
         .app-photo {
           width: 100%;
-          border-radius: 15px;
           overflow: hidden;
           box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5),
             0 0 15px rgba(97, 218, 251, 0.1);
@@ -364,7 +358,6 @@ const Fartup = () => {
           width: 40px;
           height: 2px;
           background: #61dafb;
-          border-radius: 2px;
         }
 
         .description-text {
@@ -400,7 +393,6 @@ const Fartup = () => {
         .tech-box {
           background-color: rgba(10, 10, 10, 0.6);
           border: 1px solid rgba(97, 218, 251, 0.15);
-          border-radius: 10px;
           padding: 12px 10px;
           display: flex;
           align-items: center;
@@ -432,7 +424,6 @@ const Fartup = () => {
         .link-box {
           background-color: rgba(10, 10, 10, 0.6);
           border: 1px solid rgba(97, 218, 251, 0.2);
-          border-radius: 10px;
           padding: 12px 15px;
           display: flex;
           align-items: center;

@@ -42,18 +42,6 @@ const BannerTwo = () => {
           background-repeat: no-repeat;
         }
 
-        .bg-image-1 {
-          background-image: url("/image.webp");
-        }
-
-        .bg-image-2 {
-          background-image: url("/image3.webp");
-        }
-
-        .bg-image-3 {
-          background-image: url("/image2.webp");
-        }
-
         .banner-overlay {
           position: absolute;
           top: 0;
@@ -113,7 +101,6 @@ const BannerTwo = () => {
           background: rgba(255, 255, 255, 0.1);
           width: 50px;
           height: 50px;
-          border-radius: 50%;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -220,7 +207,6 @@ const BannerTwo = () => {
 
         .banner-btn {
           padding: 12px 30px;
-          border-radius: 25px;
           text-decoration: none;
           font-weight: 600;
           transition: all 0.3s ease;

@@ -5,7 +5,6 @@
 .skillsPageMobile {
   min-height: 90vh;
   display: flex;
-  background-image: url('../assets/bg-image-2.png');
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -16,6 +15,7 @@
   width: 100%;
   overflow-x: hidden;
   font-family: "Orbitron", monospace;
+  background-color: black;
 }
 
 .skillsHeaderMobile {

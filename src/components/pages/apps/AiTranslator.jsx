@@ -237,7 +237,6 @@ const AiTranslator = () => {
           right: -150px;
           width: 300px;
           height: 300px;
-          border-radius: 50%;
           background: rgba(97, 218, 251, 0.1);
           filter: blur(120px);
           z-index: 0;

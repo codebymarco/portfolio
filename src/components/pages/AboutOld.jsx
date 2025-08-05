@@ -497,7 +497,6 @@ const About = () => {
           border: 1px solid rgba(97, 218, 251, 0.3);
           color: white;
           padding: 5px 10px;
-          border-radius: 15px;
           cursor: pointer;
           transition: all 0.3s ease;
         }
@@ -569,14 +568,12 @@ const About = () => {
           width: 100%;
           height: 8px;
           background-color: rgba(255, 255, 255, 0.1);
-          border-radius: 4px;
           overflow: hidden;
         }
 
         .skill-bar-fill {
           height: 100%;
           background: linear-gradient(90deg, #61dafb, #3490dc);
-          border-radius: 4px;
           transition: width 1s ease-in-out;
         }
 
@@ -607,7 +604,6 @@ const About = () => {
           top: 0;
           width: 12px;
           height: 12px;
-          border-radius: 50%;
           background-color: #61dafb;
           border: 2px solid #1a1a1a;
         }
@@ -649,7 +645,6 @@ const About = () => {
           background-color: rgba(97, 218, 251, 0.1);
           width: 40px;
           height: 40px;
-          border-radius: 50%;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -681,7 +676,6 @@ const About = () => {
 
         .project-card {
           background-color: rgba(255, 255, 255, 0.05);
-          border-radius: 8px;
           padding: 20px;
           transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
@@ -708,7 +702,6 @@ const About = () => {
           background-color: rgba(97, 218, 251, 0.2);
           color: #61dafb;
           padding: 3px 8px;
-          border-radius: 12px;
           font-size: 0.8rem;
         }
 
@@ -726,7 +719,6 @@ const About = () => {
         .project-tech span {
           background-color: rgba(255, 255, 255, 0.1);
           padding: 4px 10px;
-          border-radius: 15px;
           font-size: 0.85rem;
         }
 

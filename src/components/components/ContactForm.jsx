@@ -236,7 +236,7 @@ const ContactForm = () => {
           background-color: rgba(13, 13, 13, 0.9);
           backdrop-filter: blur(10px);
           padding: 40px;
-          border-radius: 15px;
+
           max-width: 600px;
           width: 100%;
           position: relative;
@@ -265,7 +265,6 @@ const ContactForm = () => {
           width: 60px;
           height: 3px;
           background: #61DAFB;
-          border-radius: 2px;
           box-shadow: 0 0 10px rgba(97, 218, 251, 0.5);
         }
         
@@ -305,7 +304,6 @@ const ContactForm = () => {
         .form-input {
           width: 100%;
           padding: 14px 16px;
-          border-radius: 10px;
           border: 2px solid rgba(97, 218, 251, 0.1);
           background-color: rgba(20, 20, 20, 0.7);
           color: #fff;
@@ -354,7 +352,6 @@ const ContactForm = () => {
           padding: 15px;
           font-size: 1rem;
           font-weight: 600;
-          border-radius: 10px;
           color: #fff;
           cursor: pointer;
           transition: all 0.3s ease;
@@ -412,7 +409,6 @@ const ContactForm = () => {
           width: 20px;
           height: 20px;
           border: 2px solid rgba(255, 255, 255, 0.3);
-          border-radius: 50%;
           border-top-color: #fff;
           animation: spin 0.8s linear infinite;
         }
@@ -427,7 +423,6 @@ const ContactForm = () => {
           left: 50%;
           transform: translateX(-50%);
           padding: 0;
-          border-radius: 10px;
           display: flex;
           justify-content: space-between;
           align-items: center;
@@ -452,7 +447,6 @@ const ContactForm = () => {
           justify-content: center;
           width: 24px;
           height: 24px;
-          border-radius: 50%;
           background: rgba(255, 255, 255, 0.2);
           font-size: 14px;
         }
@@ -499,7 +493,6 @@ const ContactForm = () => {
           right: -150px;
           width: 300px;
           height: 300px;
-          border-radius: 50%;
           background: rgba(97, 218, 251, 0.03);
           filter: blur(80px);
           z-index: -1;
@@ -512,7 +505,6 @@ const ContactForm = () => {
           left: -150px;
           width: 300px;
           height: 300px;
-          border-radius: 50%;
           background: rgba(97, 218, 251, 0.03);
           filter: blur(80px);
           z-index: -1;
@@ -521,7 +513,6 @@ const ContactForm = () => {
         @media (max-width: 600px) {
           .contact-form-wrapper {
             padding: 30px 20px;
-            border-radius: 12px;
           }
           
           .contact-form-title {

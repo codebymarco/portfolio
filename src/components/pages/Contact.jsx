@@ -529,7 +529,6 @@ const Contact = () => {
           align-items: center;
           font-size: 1.2rem;
           padding: 20px 30px;
-          border-radius: 15px;
           color: white;
           cursor: pointer;
           background-color: rgba(13, 13, 13, 0.9);
@@ -549,7 +548,6 @@ const Contact = () => {
         .icon-wrapper {
           width: 50px;
           height: 50px;
-          border-radius: 50%;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -599,7 +597,6 @@ const Contact = () => {
           background-color: rgba(13, 13, 13, 0.9);
           backdrop-filter: blur(10px);
           padding: 40px;
-          border-radius: 15px;
           width: 100%;
           position: relative;
           overflow: hidden;
@@ -628,7 +625,6 @@ const Contact = () => {
           width: 60px;
           height: 3px;
           background: #61dafb;
-          border-radius: 2px;
           box-shadow: 0 0 10px rgba(97, 218, 251, 0.5);
         }
 
@@ -668,7 +664,6 @@ const Contact = () => {
         .form-input {
           width: 100%;
           padding: 14px 16px;
-          border-radius: 10px;
           border: 2px solid rgba(97, 218, 251, 0.1);
           background-color: rgba(20, 20, 20, 0.7);
           color: #fff;
@@ -727,7 +722,6 @@ const Contact = () => {
           padding: 15px;
           font-size: 1rem;
           font-weight: 600;
-          border-radius: 10px;
           color: #fff;
           cursor: pointer;
           transition: all 0.3s ease;
@@ -794,7 +788,6 @@ const Contact = () => {
           width: 20px;
           height: 20px;
           border: 2px solid rgba(255, 255, 255, 0.3);
-          border-radius: 50%;
           border-top-color: #fff;
           animation: spin 0.8s linear infinite;
         }
@@ -812,7 +805,6 @@ const Contact = () => {
           left: 50%;
           transform: translateX(-50%);
           padding: 0;
-          border-radius: 10px;
           display: flex;
           justify-content: space-between;
           align-items: center;
@@ -837,7 +829,6 @@ const Contact = () => {
           justify-content: center;
           width: 24px;
           height: 24px;
-          border-radius: 50%;
           background: rgba(255, 255, 255, 0.2);
           font-size: 14px;
         }
@@ -890,7 +881,6 @@ const Contact = () => {
           right: -150px;
           width: 300px;
           height: 300px;
-          border-radius: 50%;
           background: rgba(97, 218, 251, 0.03);
           filter: blur(80px);
           z-index: -1;
@@ -903,7 +893,6 @@ const Contact = () => {
           left: -150px;
           width: 300px;
           height: 300px;
-          border-radius: 50%;
           background: rgba(97, 218, 251, 0.03);
           filter: blur(80px);
           z-index: -1;

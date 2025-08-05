@@ -10,8 +10,7 @@
   padding-left: 200px;
   padding-right: 200px;
   font-family: "Orbitron", monospace;
-  background-image: url('../assets/bg-image-2.png');
-
+  background-color: black;
 }
 
 .fixed-menu {

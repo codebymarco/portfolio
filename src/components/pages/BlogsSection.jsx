@@ -83,7 +83,6 @@ const NavigationSection = () => {
 
         .nav-card {
           background-color: #111;
-          border-radius: 12px;
           overflow: hidden;
           transition: transform 0.3s ease, box-shadow 0.3s ease;
           height: 100%;
@@ -140,7 +139,6 @@ const NavigationSection = () => {
         .nav-card-tag {
           font-size: 0.8rem;
           padding: 4px 8px;
-          border-radius: 4px;
           background-color: #222;
           color: #aaa;
         }

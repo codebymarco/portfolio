@@ -26,7 +26,6 @@
   right: -150px;
   width: 300px;
   height: 300px;
-  border-radius: 50%;
   background: rgba(97, 218, 251, 0.1);
   filter: blur(120px);
   z-index: 0;
@@ -39,7 +38,6 @@
   left: -50px;
   width: 250px;
   height: 250px;
-  border-radius: 50%;
   background: rgba(97, 218, 251, 0.08);
   filter: blur(100px);
   z-index: 0;
@@ -54,7 +52,6 @@
   z-index: 1;
   background: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(10px);
-  border-radius: 20px;
   padding: 2.5rem;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
   border: 1px solid rgba(97, 218, 251, 0.1);
@@ -118,7 +115,6 @@
     #61dafb,
     rgba(97, 218, 251, 0.3)
   );
-  border-radius: 3px;
   box-shadow: 0 0 15px rgba(97, 218, 251, 0.6);
 }
 
@@ -144,7 +140,6 @@
 .blog-reading-time {
   background: rgba(97, 218, 251, 0.1);
   padding: 4px 12px;
-  border-radius: 20px;
   color: #61dafb;
   border: 1px solid rgba(97, 218, 251, 0.2);
 }
@@ -153,7 +148,6 @@
 .blog-featured-image-container {
   width: 100%;
   margin: 2rem 0;
-  border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(97, 218, 251, 0.1);
   border: 1px solid rgba(97, 218, 251, 0.15);
@@ -202,7 +196,6 @@
   width: 40px;
   height: 2px;
   background: #61dafb;
-  border-radius: 2px;
 }
 
 .section-subtitle {
@@ -242,7 +235,6 @@
 /* Code Blocks */
 .code-block {
   background-color: rgba(10, 10, 10, 0.8);
-  border-radius: 10px;
   padding: 20px;
   margin: 1.5rem 0;
   overflow-x: auto;
@@ -269,7 +261,6 @@
   margin: 2rem 0;
   background: rgba(97, 218, 251, 0.05);
   color: #ddd;
-  border-radius: 0 8px 8px 0;
   font-style: italic;
 }
 
@@ -293,7 +284,6 @@
   margin: 3rem auto 2rem;
   padding: 20px;
   background-color: rgba(10, 10, 10, 0.6);
-  border-radius: 15px;
   border: 1px solid rgba(97, 218, 251, 0.15);
   max-width: 800px;
 }
@@ -301,7 +291,6 @@
 .blog-author-image img {
   width: 60px;
   height: 60px;
-  border-radius: 50%;
   object-fit: cover;
   border: 2px solid rgba(97, 218, 251, 0.2);
 }
@@ -341,7 +330,6 @@
   background: rgba(97, 218, 251, 0.1);
   color: #61dafb;
   padding: 6px 14px;
-  border-radius: 20px;
   font-size: 0.8rem;
   border: 1px solid rgba(97, 218, 251, 0.2);
   transition: all 0.3s ease;
@@ -366,7 +354,6 @@
   color: #61dafb;
   border: 1px solid rgba(97, 218, 251, 0.2);
   padding: 8px 16px;
-  border-radius: 20px;
   font-weight: 500;
   font-size: 0.9rem;
   cursor: pointer;
@@ -384,7 +371,6 @@
 .phase-card {
   background-color: rgba(10, 10, 10, 0.6);
   border: 1px solid rgba(97, 218, 251, 0.15);
-  border-radius: 15px;
   padding: 1.5rem;
   margin: 1.5rem 0;
   transition: all 0.3s ease;
@@ -422,7 +408,6 @@
 .tip-card {
   background-color: rgba(10, 10, 10, 0.6);
   border: 1px solid rgba(97, 218, 251, 0.15);
-  border-radius: 10px;
   padding: 1.2rem;
   transition: all 0.3s ease;
 }
@@ -465,7 +450,6 @@
 .tech-category {
   background-color: rgba(10, 10, 10, 0.6);
   border: 1px solid rgba(97, 218, 251, 0.15);
-  border-radius: 10px;
   padding: 1rem;
 }
 
@@ -551,7 +535,6 @@
 
   .blog-container {
     padding: 1rem;
-    border-radius: 15px;
   }
 
   .blog-title {
@@ -595,7 +578,6 @@
   .code-block {
     padding: 12px;
     margin: 20px 0;
-    border-radius: 8px;
   }
 
   .code-block code {
@@ -637,7 +619,6 @@
 
   .blog-featured-image-container {
     margin: 20px 0;
-    border-radius: 10px;
   }
 
   .section-title {

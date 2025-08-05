@@ -335,7 +335,6 @@ const Blogs = () => {
           right: -150px;
           width: 300px;
           height: 300px;
-          border-radius: 50%;
           background: rgba(97, 218, 251, 0.1);
           filter: blur(120px);
           z-index: 0;
@@ -348,7 +347,6 @@ const Blogs = () => {
           left: -50px;
           width: 250px;
           height: 250px;
-          border-radius: 50%;
           background: rgba(97, 218, 251, 0.08);
           filter: blur(100px);
           z-index: 0;
@@ -365,7 +363,6 @@ const Blogs = () => {
           z-index: 1;
           background: rgba(0, 0, 0, 0.3);
           backdrop-filter: blur(10px);
-          border-radius: 20px;
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
           border: 1px solid rgba(97, 218, 251, 0.1);
         }
@@ -406,7 +403,6 @@ const Blogs = () => {
             #61dafb,
             rgba(97, 218, 251, 0.3)
           );
-          border-radius: 3px;
           box-shadow: 0 0 15px rgba(97, 218, 251, 0.6);
         }
 
@@ -430,7 +426,6 @@ const Blogs = () => {
         .blog-card {
           background-color: rgba(10, 10, 10, 0.6);
           border: 1px solid rgba(97, 218, 251, 0.15);
-          border-radius: 15px;
           overflow: hidden;
           box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35),
             0 0 15px rgba(97, 218, 251, 0.1);
@@ -462,7 +457,6 @@ const Blogs = () => {
             rgba(97, 218, 251, 0.05),
             transparent
           );
-          border-radius: 15px;
           opacity: 0;
           transition: opacity 0.3s ease;
         }
@@ -520,7 +514,6 @@ const Blogs = () => {
           background: rgba(97, 218, 251, 0.1);
           color: #61dafb;
           padding: 4px 10px;
-          border-radius: 20px;
           font-size: 0.8rem;
           font-weight: 500;
           border: 1px solid rgba(97, 218, 251, 0.2);
@@ -536,7 +529,6 @@ const Blogs = () => {
           background: rgba(161, 57, 255, 0.1);
           color: #a139ff;
           padding: 4px 10px;
-          border-radius: 20px;
           font-size: 0.8rem;
           font-weight: 500;
           border: 1px solid rgba(161, 57, 255, 0.2);
@@ -556,7 +548,6 @@ const Blogs = () => {
           text-align: center;
           padding: 60px 20px;
           background-color: rgba(10, 10, 10, 0.6);
-          border-radius: 15px;
           border: 1px solid rgba(97, 218, 251, 0.15);
           box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
         }
@@ -577,7 +568,6 @@ const Blogs = () => {
           background: rgba(97, 218, 251, 0.1);
           color: #61dafb;
           border: 1px solid rgba(97, 218, 251, 0.3);
-          border-radius: 30px;
           font-size: 1rem;
           cursor: pointer;
           transition: all 0.3s ease;

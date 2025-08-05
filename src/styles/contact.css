@@ -8,7 +8,7 @@
   padding: 20px;
   align-items: center;
   font-family: 'Orbitron', monospace;
-  background-image: url('../assets/bg-image-2.png');
+  background-color: black;
 }
 
 .contact-top {
@@ -33,7 +33,6 @@
   align-items: center;
   font-size: 2rem;
   padding: 20px 10px;
-  border-radius: 20px;
   color: white;
   cursor: pointer;
   background-color: #0d0d0d;

@@ -362,7 +362,6 @@ const Career = () => {
           left: 16px;
           width: 30px;
           height: 30px;
-          border-radius: 50%;
           background-color: rgba(13, 13, 13, 0.9);
           border: 3px solid rgba(97, 218, 251, 0.3);
           display: flex;
@@ -389,7 +388,6 @@ const Career = () => {
         /* Job card styling */
         .job-card {
           background-color: rgba(13, 13, 13, 0.9);
-          border-radius: 10px;
           padding: 30px;
           box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
           transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -488,7 +486,6 @@ const Career = () => {
           gap: 12px;
           background-color: rgba(255, 255, 255, 0.05);
           padding: 12px 15px;
-          border-radius: 8px;
           transition: all 0.3s ease;
           border: 1px solid transparent;
         }
@@ -502,7 +499,6 @@ const Career = () => {
         .responsibility-number {
           min-width: 25px;
           height: 25px;
-          border-radius: 50%;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -571,7 +567,6 @@ const Career = () => {
         .skills-wrapper .skillsPageNewcontainer {
           margin: 0 auto;
           background-color: rgba(13, 13, 13, 0.9);
-          border-radius: 10px;
           padding: 30px;
           box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
           border: 1px solid rgba(97, 218, 251, 0.1);

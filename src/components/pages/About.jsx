@@ -571,7 +571,6 @@ const About = () => {
           border: 1px solid rgba(97, 218, 251, 0.3);
           color: white;
           padding: 5px 10px;
-          border-radius: 15px;
           cursor: pointer;
           transition: all 0.3s ease;
         }
@@ -624,7 +623,6 @@ const About = () => {
         .skill-chip {
           background-color: rgba(97, 218, 251, 0.1);
           border: 1px solid rgba(97, 218, 251, 0.3);
-          border-radius: 15px;
           padding: 5px 12px;
           font-size: 0.9rem;
         }
@@ -656,7 +654,6 @@ const About = () => {
           top: 0;
           width: 12px;
           height: 12px;
-          border-radius: 50%;
           background-color: #61dafb;
           border: 2px solid #1a1a1a;
         }
@@ -698,7 +695,6 @@ const About = () => {
           background-color: rgba(97, 218, 251, 0.1);
           width: 40px;
           height: 40px;
-          border-radius: 50%;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -730,7 +726,6 @@ const About = () => {
 
         .project-card {
           background-color: rgba(255, 255, 255, 0.05);
-          border-radius: 8px;
           padding: 20px;
           transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
@@ -757,7 +752,6 @@ const About = () => {
           background-color: rgba(97, 218, 251, 0.2);
           color: #61dafb;
           padding: 3px 8px;
-          border-radius: 12px;
           font-size: 0.8rem;
         }
 
@@ -775,7 +769,6 @@ const About = () => {
         .project-tech span {
           background-color: rgba(255, 255, 255, 0.1);
           padding: 4px 10px;
-          border-radius: 15px;
           font-size: 0.85rem;
         }
 
@@ -807,7 +800,6 @@ const About = () => {
           color: white;
           background: rgba(0, 0, 0, 0.5);
           padding: 10px;
-          border-radius: 20px;
           margin: 0 auto;
           width: 200px;
           animation: fadeOut 3s forwards;

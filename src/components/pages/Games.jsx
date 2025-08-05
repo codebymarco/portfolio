@@ -57,7 +57,6 @@ const GamesPage = () => {
           right: -150px;
           width: 300px;
           height: 300px;
-          border-radius: 50%;
           background: rgba(255, 107, 107, 0.1);
           filter: blur(120px);
           z-index: 0;
@@ -70,7 +69,6 @@ const GamesPage = () => {
           left: -50px;
           width: 250px;
           height: 250px;
-          border-radius: 50%;
           background: rgba(97, 218, 251, 0.08);
           filter: blur(100px);
           z-index: 0;
@@ -109,7 +107,6 @@ const GamesPage = () => {
             #61dafb,
             rgba(97, 218, 251, 0.3)
           );
-          border-radius: 3px;
           box-shadow: 0 0 15px rgba(97, 218, 251, 0.6);
         }
 
@@ -140,7 +137,6 @@ const GamesPage = () => {
         .game-card {
           background: rgba(10, 10, 10, 0.8);
           border: 2px solid rgba(97, 218, 251, 0.3);
-          border-radius: 20px;
           overflow: hidden;
           transition: all 0.3s ease;
           cursor: pointer;
@@ -228,7 +224,6 @@ const GamesPage = () => {
         .game-stat {
           background: rgba(0, 0, 0, 0.5);
           padding: 5px 10px;
-          border-radius: 10px;
           border: 1px solid rgba(97, 218, 251, 0.3);
         }
 
@@ -261,7 +256,6 @@ const GamesPage = () => {
           background: linear-gradient(135deg, #61dafb 0%, #3a7bd5 100%);
           border: none;
           padding: 15px;
-          border-radius: 25px;
           font-size: 1.1rem;
           font-weight: 600;
           color: white;
