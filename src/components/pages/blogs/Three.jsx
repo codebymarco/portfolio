@@ -691,7 +691,6 @@ req.on('error', (e) => {
         .blog-reading-time {
           background-color: #222;
           padding: 4px 12px;
-          border-radius: 20px;
         }
 
         .blog-featured-image-container {

@@ -47,15 +47,11 @@
 }
 
 .projects-title {
-  color: #61dafb;
+  color: white;
   font-size: 3rem;
   letter-spacing: 2px;
   font-weight: 600;
   margin: 0;
-  background: linear-gradient(to right, #61dafb, #ffffff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-shadow: 0 0 15px rgba(97, 218, 251, 0.4);
 }
 
 .projects-title::after {

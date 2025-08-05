@@ -117,7 +117,6 @@ const ProjectsSection = () => {
           right: -150px;
           width: 300px;
           height: 300px;
-          border-radius: 50%;
           background: rgba(97, 218, 251, 0.1);
           filter: blur(120px);
           z-index: 0;
@@ -130,7 +129,6 @@ const ProjectsSection = () => {
           left: -50px;
           width: 250px;
           height: 250px;
-          border-radius: 50%;
           background: rgba(97, 218, 251, 0.08);
           filter: blur(100px);
           z-index: 0;
@@ -146,7 +144,6 @@ const ProjectsSection = () => {
           z-index: 1;
           background: rgba(0, 0, 0, 0.3);
           backdrop-filter: blur(10px);
-          border-radius: 20px;
           padding: 2.5rem;
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
           border: 1px solid rgba(97, 218, 251, 0.1);
@@ -188,7 +185,6 @@ const ProjectsSection = () => {
             #61dafb,
             rgba(97, 218, 251, 0.3)
           );
-          border-radius: 3px;
           box-shadow: 0 0 15px rgba(97, 218, 251, 0.6);
         }
 
@@ -215,7 +211,6 @@ const ProjectsSection = () => {
           height: 120px;
           background-color: rgba(10, 10, 10, 0.6);
           border: 1px solid rgba(97, 218, 251, 0.15);
-          border-radius: 15px;
           box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35),
             0 0 15px rgba(97, 218, 251, 0.1);
           padding: 0;
@@ -248,7 +243,6 @@ const ProjectsSection = () => {
             rgba(97, 218, 251, 0.05),
             transparent
           );
-          border-radius: 15px;
           opacity: 0;
           transition: opacity 0.3s ease;
         }
@@ -285,7 +279,6 @@ const ProjectsSection = () => {
           font-weight: 500;
           padding: 12px 30px;
           border: 1px solid rgba(97, 218, 251, 0.3);
-          border-radius: 30px;
           background: rgba(10, 10, 10, 0.6);
           backdrop-filter: blur(5px);
           box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3), 0 0 15px rgba(97, 218, 251, 0.15);

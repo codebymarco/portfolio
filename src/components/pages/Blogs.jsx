@@ -2,8 +2,6 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
-  FaSearch,
-  FaCalendarAlt,
   FaReact,
   FaJs,
   FaHtml5,
@@ -13,10 +11,8 @@ import {
   FaCloud,
 } from "react-icons/fa";
 import { Helmet } from "react-helmet";
-import bunnyImage from "../../assets/blog/bunny.png";
 import ScrollToTop from "../components/ScrollToTop";
 import useTranslationStore from "../../store/store";
-import react from "../../assets/blog/react.png";
 import image1 from "../../assets/blog_images/a688925c-06da-4a71-885d-5a8dea807770.png";
 import image2 from "../../assets/blog_images/e3fb4e0b-6a37-410a-9cf0-5ba199c315a5.png";
 import image3 from "../../assets/blog_images/5e7ecde6-2be8-445f-a791-e46721ee5b35.png";
@@ -312,44 +308,13 @@ const Blogs = () => {
         @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;600;700&display=swap");
 
         .blogWrapper {
-          background: linear-gradient(
-            to bottom,
-            #000000 0%,
-            rgba(0, 0, 0, 0.95) 70%,
-            rgba(13, 21, 28, 0.9) 100%
-          );
           min-height: 100vh;
           display: flex;
           flex-direction: column;
           align-items: center;
           position: relative;
           overflow: hidden;
-          box-shadow: inset 0 20px 20px -20px rgba(0, 0, 0, 0.8);
           font-family: "Orbitron", monospace;
-        }
-
-        .blogWrapper::before {
-          content: "";
-          position: absolute;
-          top: -150px;
-          right: -150px;
-          width: 300px;
-          height: 300px;
-          background: rgba(97, 218, 251, 0.1);
-          filter: blur(120px);
-          z-index: 0;
-        }
-
-        .blogWrapper::after {
-          content: "";
-          position: absolute;
-          bottom: -50px;
-          left: -50px;
-          width: 250px;
-          height: 250px;
-          background: rgba(97, 218, 251, 0.08);
-          filter: blur(100px);
-          z-index: 0;
         }
 
         .container {
@@ -361,10 +326,6 @@ const Blogs = () => {
           gap: 3rem;
           position: relative;
           z-index: 1;
-          background: rgba(0, 0, 0, 0.3);
-          backdrop-filter: blur(10px);
-          box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-          border: 1px solid rgba(97, 218, 251, 0.1);
         }
 
         .blog-top {
@@ -376,34 +337,13 @@ const Blogs = () => {
         }
 
         .blog-heading {
-          color: #61dafb;
+          color: white;
           font-size: 2.5rem;
           letter-spacing: 2px;
           position: relative;
           display: inline-block;
-          text-shadow: 0 0 15px rgba(97, 218, 251, 0.4);
           font-weight: 600;
           margin: 0;
-          background: linear-gradient(to right, #61dafb, #ffffff);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-        }
-
-        .blog-heading::after {
-          content: "";
-          position: absolute;
-          bottom: -8px;
-          left: 50%;
-          transform: translateX(-50%);
-          width: 100px;
-          height: 3px;
-          background: linear-gradient(
-            to right,
-            rgba(97, 218, 251, 0.3),
-            #61dafb,
-            rgba(97, 218, 251, 0.3)
-          );
-          box-shadow: 0 0 15px rgba(97, 218, 251, 0.6);
         }
 
         .blog-intro {
@@ -443,22 +383,6 @@ const Blogs = () => {
           box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4),
             0 0 20px rgba(97, 218, 251, 0.2);
           transform: translateY(-5px);
-        }
-
-        .blog-card::before {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background: linear-gradient(
-            45deg,
-            rgba(97, 218, 251, 0.05),
-            transparent
-          );
-          opacity: 0;
-          transition: opacity 0.3s ease;
         }
 
         .blog-card:hover::before {

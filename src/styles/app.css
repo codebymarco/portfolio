@@ -20,7 +20,6 @@
   text-decoration: none;
   background-color: #0d0d0d;
   padding: 10px;
-  border-radius: 20px;
 }
 
 .app-top {
@@ -42,7 +41,6 @@
 .app-links a {
   color: white;
   border: 1px solid dodgerblue;
-  border-radius: 20px;
   padding: 10px 20px;
   text-decoration: none;
   display: flex;
@@ -88,7 +86,6 @@
 .app-detials-box-technologies .box {
   padding: 5px 10px;
   font-size: 0.8rem;
-  border-radius: 20px;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -135,7 +132,6 @@
     text-decoration: none;
     background-color: #0d0d0d;
     padding: 10px;
-    border-radius: 20px;
   }
 
   .app-top {
@@ -157,7 +153,6 @@
   .app-links a {
     color: white;
     border: 1px solid dodgerblue;
-    border-radius: 20px;
     padding: 10px 20px;
     text-decoration: none;
     display: flex;
@@ -203,7 +198,6 @@
   .app-detials-box-technologies .box {
     padding: 10px 20px;
     font-size: 2rem;
-    border-radius: 20px;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -250,7 +244,6 @@
   right: -150px;
   width: 300px;
   height: 300px;
-  border-radius: 50%;
   background: rgba(97, 218, 251, 0.1);
   filter: blur(120px);
   z-index: 0;
@@ -263,7 +256,6 @@
   left: -50px;
   width: 250px;
   height: 250px;
-  border-radius: 50%;
   background: rgba(97, 218, 251, 0.08);
   filter: blur(100px);
   z-index: 0;
@@ -280,7 +272,6 @@
   z-index: 1;
   background: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(10px);
-  border-radius: 20px;
   padding: 2.5rem;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
   border: 1px solid rgba(97, 218, 251, 0.1);
@@ -338,7 +329,6 @@
     #61dafb,
     rgba(97, 218, 251, 0.3)
   );
-  border-radius: 3px;
   box-shadow: 0 0 15px rgba(97, 218, 251, 0.6);
 }
 
@@ -356,7 +346,6 @@
   color: #61dafb;
   text-decoration: none;
   padding: 0.7rem 1.2rem;
-  border-radius: 30px;
   font-size: 0.9rem;
   letter-spacing: 1px;
   font-weight: 500;
@@ -384,7 +373,6 @@
 
 .app-photo {
   width: 100%;
-  border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(97, 218, 251, 0.1);
   border: 1px solid rgba(97, 218, 251, 0.15);
@@ -425,7 +413,6 @@
   width: 40px;
   height: 2px;
   background: #61dafb;
-  border-radius: 2px;
 }
 
 .description-text {
@@ -461,7 +448,6 @@
 .tech-box {
   background-color: rgba(10, 10, 10, 0.6);
   border: 1px solid rgba(97, 218, 251, 0.15);
-  border-radius: 10px;
   padding: 12px 10px;
   display: flex;
   align-items: center;
@@ -492,7 +478,6 @@
 .link-box {
   background-color: rgba(10, 10, 10, 0.6);
   border: 1px solid rgba(97, 218, 251, 0.2);
-  border-radius: 10px;
   padding: 12px 15px;
   display: flex;
   align-items: center;
