@@ -23,7 +23,6 @@ import Anthems from "../components/Anthems";
 import { AiFillThunderbolt } from "react-icons/ai";
 import { HiAdjustmentsHorizontal, HiOutlineAcademicCap } from "react-icons/hi2";
 import { RxCross2 } from "react-icons/rx";
-import pic from "../../assets/my_pics/nudes.png";
 import img from "../../assets/my_pics/image.webp";
 import img2 from "../../assets/my_pics/image2.png";
 import img3 from "../../assets/my_pics/image3.png";
@@ -57,7 +56,7 @@ const About = () => {
   const { t: trans } = useTranslationStore();
 
   // Array of images (using the same image URL for demonstration)
-  const images = [img, img2, img3, img4, img5, pic];
+  const images = [img, img2, img3, img4, img5];
 
   // Selected language for the interface
   const [language, setLanguage] = useState("english");
