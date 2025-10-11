@@ -172,65 +172,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Social Media Icons */}
-        <div
-          className="social-icons"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          viewport={{ once: true }}
-        >
-          <a
-            href="https://github.com/codebymarco"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="social-icon github"
-            aria-label="GitHub Profile"
-          >
-            <FaGithub size={24} />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/marco-ramcharan/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="social-icon github"
-            aria-label="GitHub Profile"
-          >
-            <FaLinkedin size={24} />
-          </a>
-          <a
-            href="https://www.instagram.com/codebymarco"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="social-icon github"
-            aria-label="GitHub Profile"
-          >
-            <FaInstagram size={24} />
-          </a>
-          <a
-            href="https://linktr.ee/codebymarco"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="social-icon github"
-            aria-label="GitHub Profile"
-          >
-            <FaLink size={24} />
-          </a>
-          {/*           <a
-            href="mailto:miguelmarcoramcharan@gmail.com"
-            className="social-icon email"
-            aria-label="Send Email"
-          >
-            <MdEmail size={26} />
-          </a> */}
-          {/*           <a
-            href="https://x.com/code_by_marco"
-            className="social-icon"
-          >
-            <FaXTwitter size={26} />
-          </a> */}
-        </div>
-
         {/* Copyright */}
         <div
           className="footer-bottom"

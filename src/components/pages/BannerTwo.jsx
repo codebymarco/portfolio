@@ -331,62 +331,6 @@ const BannerTwo = () => {
 
           <p className="tagline">{t("banner_description")} </p>
 
-          {/* Social Media Icons */}
-          <div className="social-icons">
-            <a
-              href="https://linktr.ee/codebymarco"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="social-icon github"
-              aria-label="GitHub Profile"
-            >
-              <FaLink size={24} />
-            </a>
-            <a
-              href="https://github.com/codebymarco"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="social-icon github"
-              aria-label="GitHub Profile"
-            >
-              <FaGithub size={24} />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/marco-ramcharan/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="social-icon linkedin"
-              aria-label="LinkedIn Profile"
-            >
-              <FaLinkedinIn size={24} />
-            </a>
-            {/*             <a
-              href="mailto:miguelmarcoramcharan@gmail.com"
-              className="social-icon email"
-              aria-label="Send Email"
-            >
-              <MdEmail size={26} />
-            </a> */}
-            {/*             <a
-              href="https://x.com/code_by_marco"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="social-icon twitter"
-              aria-label="Twitter Profile"
-            >
-              <FaXTwitter size={24} />
-            </a> */}
-            <a
-              href="https://www.instagram.com/codebymarco"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="social-icon instagram"
-              aria-label="Instagram Profile"
-            >
-              <FaInstagram size={24} />
-            </a>
-          </div>
-
           {/* Buttons */}
           <div className="banner-buttons">
             <a href="/contact" className="banner-btn contact-btn">
