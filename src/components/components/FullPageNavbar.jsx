@@ -55,7 +55,6 @@ const FullPageNavbar = ({ close }) => {
     { label: "home", path: "/" },
     { label: "about", path: "/about" },
     { label: "contact", path: "/contact" },
-    { label: "blog", path: "/blog" },
     { label: "career", path: "/career" },
     { label: "projects", path: "/apps" }
   ];
@@ -95,7 +94,7 @@ const FullPageNavbar = ({ close }) => {
       
       <div className="navbar-footer">
         <div className="footer-line"></div>
-        <p>© 2025 CodeByMarco</p>
+        <p>© 2025 Marco Ramcharan</p>
       </div>
     </motion.div>
   );
