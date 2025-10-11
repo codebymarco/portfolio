@@ -115,14 +115,6 @@ const Contact = () => {
       number: "01",
     },
     {
-      id: "email",
-      icon: <SiGmail />,
-      label: "marco@codebymarco.com",
-      color: "#EA4335",
-      action: handleClick2,
-      number: "01",
-    },
-    {
       id: "github",
       icon: <FaGithub />,
       label: "github",

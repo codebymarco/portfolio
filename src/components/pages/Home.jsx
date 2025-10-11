@@ -64,8 +64,8 @@ const Home = () => {
       <Skills />
       {/*       <Certs />
        */}
-      <BlogsSection />
-    </div>
+{/*       <BlogsSection />
+ */}    </div>
   );
 };
 

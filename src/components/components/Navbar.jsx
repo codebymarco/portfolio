@@ -183,18 +183,6 @@ const Navbar = () => {
             </Link>
           </motion.div>
 
-          <motion.div variants={itemVariants} className="nav-item">
-            <Link
-              className={`desktop-links-link ${
-                activeLink === "/blog" ? "active" : ""
-              }`}
-              to="/blog"
-              onClick={() => setActiveLink("/blog")}
-            >
-              {t("nav_link_blog")}
-            </Link>
-          </motion.div>
-
           {/* Language selector */}
           <motion.div
             variants={itemVariants}

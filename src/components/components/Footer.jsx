@@ -107,7 +107,7 @@ const Footer = () => {
           <div className="footer-links" variants={itemVariants}>
             <h4 className="footer-heading">{t("footer_quick_links")}</h4>
             <ul className="footer-list">
-              {["home", "projects", "about", "contact", "career", "blog"].map(
+              {["home", "projects", "about", "contact", "career"].map(
                 (item) => (
                   <li key={item} className="footer-list-item">
                     <Link to={`${item.toLowerCase()}`} className="footer-link">

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import formio from "../../../public/formio.png";
 import linkbio from "../../../public/linkbio.png";
 import indeed from "../../../public/indeed.png";
@@ -10,6 +10,13 @@ import useTranslationStore from "../../store/store";
 
 const Projects = () => {
   const { t } = useTranslationStore();
+
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    // Or for smooth scrolling:
+    // window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
 
   const projects = [
     {
