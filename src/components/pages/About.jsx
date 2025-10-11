@@ -23,11 +23,9 @@ import Anthems from "../components/Anthems";
 import { AiFillThunderbolt } from "react-icons/ai";
 import { HiAdjustmentsHorizontal, HiOutlineAcademicCap } from "react-icons/hi2";
 import { RxCross2 } from "react-icons/rx";
-import img from "../../assets/my_pics/image.webp";
-import img2 from "../../assets/my_pics/image2.png";
-import img3 from "../../assets/my_pics/image3.png";
-import img4 from "../../assets/my_pics/four.webp";
-import img5 from "../../assets/my_pics/image4.png";
+import img from "../../assets/my_pics/five.jpg";
+import img2 from "../../assets/my_pics/four.jpg";
+import img3 from "../../assets/my_pics/six.jpg";
 import { BiCodeAlt } from "react-icons/bi";
 import useTranslationStore from "../../store/store";
 
@@ -56,7 +54,7 @@ const About = () => {
   const { t: trans } = useTranslationStore();
 
   // Array of images (using the same image URL for demonstration)
-  const images = [img, img2, img3, img4, img5];
+  const images = [img, img2, img3];
 
   // Selected language for the interface
   const [language, setLanguage] = useState("english");
@@ -206,25 +204,27 @@ const About = () => {
       <Helmet>
         {/* Basic SEO Tags */}
         <title>
-          About Miguelmarco Ramcharan | CodeByMarco's Unique Fullstack Developer
-          Profile
+          About Miguelmarco Ramcharan Unique Fullstack Developer Profile
         </title>
         <meta
           name="description"
           content="Swipe right on Miguelmarco Ramcharan, a Fullstack Software Developer in Durban, KZN. Discover my coding journey, skills & unique personality on this 'Tinder' style profile."
         />
-        <link rel="canonical" href="https://www.codebymarco.com/about" />
+        <link rel="canonical" href="https://www.marcoramcharan.com/about" />
         {/* Open Graph Tags (for Facebook, LinkedIn, WhatsApp etc.) */}
         <meta
           property="og:title"
-          content="CodeByMarco | Miguelmarco Ramcharan: Fullstack Developer Profile"
+          content="Miguelmarco Ramcharan: Fullstack Developer Profile"
         />
         <meta
           property="og:description"
           content="Swipe right on Miguelmarco Ramcharan, a Fullstack Software Developer in Durban, KZN. Discover my coding journey, skills & unique personality on this 'Tinder' style profile."
         />
         <meta property="og:type" content="profile" />
-        <meta property="og:url" content="https://www.codebymarco.com/about" />
+        <meta
+          property="og:url"
+          content="https://www.marcoramcharan.com/about"
+        />
         <meta
           property="og:image"
           content="https://www.codebymarco.com/images/codebymarco-about-og-image.jpg"
@@ -232,7 +232,7 @@ const About = () => {
         {/* IMPORTANT: Create this image! */}
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta property="og:site_name" content="CodeByMarco" />
+        <meta property="og:site_name" content="Marco Ramcharan" />
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@your_twitter_handle" />{" "}
@@ -241,7 +241,7 @@ const About = () => {
         {/* IMPORTANT: Replace with your actual Twitter handle */}
         <meta
           name="twitter:title"
-          content="CodeByMarco | Miguelmarco Ramcharan: Fullstack Developer Profile"
+          content="Miguelmarco Ramcharan: Fullstack Developer Profile"
         />
         <meta
           name="twitter:description"

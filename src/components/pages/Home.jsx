@@ -17,16 +17,16 @@ const Home = () => {
   return (
     <div className="home">
       <Helmet>
-        <title>CodeByMarco | Fullstack Software Developer - Durban, KZN</title>
+        <title>Marco Ramcharan | Fullstack Software Developer - Durban, KZN</title>
         <meta
           name="description"
           content="Miguelmarco Ramcharan of CodeByMarco: Expert Fullstack Software Developer in Durban, KZN. Building robust web & mobile apps with React, Node.js & more."
         />
-        <link rel="canonical" href="https://www.codebymarco.com/" />
+        <link rel="canonical" href="https://www.marcoramcharan.com/" />
 
         <meta
           property="og:title"
-          content="CodeByMarco | Fullstack Software Developer - Durban, KZN"
+          content="Marco Ramcharan | Fullstack Software Developer - Durban, KZN"
         />
         <meta
           property="og:description"
@@ -36,21 +36,21 @@ const Home = () => {
         <meta property="og:url" content="https://www.codebymarco.com/" />
         <meta
           property="og:image"
-          content="https://www.codebymarco.com/images/codebymarco-og-image.jpg"
+          content="https://www.marcoramcharan.com/images/codebymarco-og-image.jpg"
         />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta property="og:site_name" content="CodeByMarco" />
+        <meta property="og:site_name" content="Marco Ramcharan" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@your_twitter_handle" />
         <meta name="twitter:creator" content="@your_twitter_handle" />
         <meta
           name="twitter:title"
-          content="CodeByMarco | Fullstack Software Developer - Durban, KZN"
+          content="Marco Ramcharan | Fullstack Software Developer - Durban, KZN"
         />
         <meta
           name="twitter:description"
-          content="Miguelmarco Ramcharan of CodeByMarco: Expert Fullstack Software Developer in Durban, KZN. Building robust web & mobile apps with React, Node.js & more."
+          content="Miguelmarco Ramcharan: Expert Fullstack Software Developer in Durban, KZN. Building robust web & mobile apps with React, Node.js & more."
         />
         <meta
           name="twitter:image"

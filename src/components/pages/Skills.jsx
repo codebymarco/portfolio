@@ -52,16 +52,13 @@ const skillIcons = {
   nosql: { icon: SiMongodb, color: "#47A248" },
   aws: { icon: FaAws, color: "#FF9900" },
   gcp: { icon: FaGoogle, color: "#4285F4" },
-  // New skills using image
   n8n: { icon: n8n, color: "#EA4B71", isImage: true },
-  zabbix: { icon: zabix, color: "#CC0000", isImage: true },
   ai: { icon: ai, color: "#FF6B6B", isImage: true },
   chatgpt: { icon: gpt, color: "#10A37F", isImage: true },
   claude: { icon: claude, color: "#CC785C", isImage: true },
   vscode: { icon: SiVisualstudiocode, color: "#007ACC" },
   apis: { icon: api, color: "#4A90E2", isImage: true },
-  rest: { icon: rest, color: "#61DAFB", isImage: true },
-  xml: { icon: xml, color: "#FF6600", isImage: true },
+  rest: { icon: rest, color: "#61DAFB", isImage: true }
 };
 
 const Skills = () => {
@@ -138,9 +135,7 @@ const Skills = () => {
 
       <div className="skillsHeaderMobile">
         <h1 className="skillsTitleMobile">{t("skills_heading") || "SKILLS"}</h1>
-        <div className="skillsSubtitleMobile">
-        {t("skills_description")}
-        </div>
+        <div className="skillsSubtitleMobile">{t("skills_description")}</div>
       </div>
 
       <motion.div
@@ -166,14 +161,11 @@ const Skills = () => {
           "aws",
           "gcp",
           "n8n",
-          "zabbix",
           "ai",
           "chatgpt",
           "claude",
           "vscode",
           "apis",
-          "rest",
-          "xml",
         ].map((skill) => {
           const skillData = skillIcons[skill];
           const IconComponent = skillData.icon;
