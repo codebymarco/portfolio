@@ -6,7 +6,7 @@ import { FaFilePdf, FaGithub, FaTwitter, FaWhatsapp } from "react-icons/fa";
 import { CiLinkedin } from "react-icons/ci";
 import "../../styles/contact.css";
 import OnlyFans from "../components/OnlyFans";
-import resumePDF from "../../../public/resume.pdf";
+import resumePDF from "../../../public/my_resume.pdf";
 import { Helmet } from "react-helmet";
 import useTranslationStore from "../../store/store";
 
