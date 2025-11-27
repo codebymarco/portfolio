@@ -6,7 +6,6 @@ import { FaFilePdf, FaGithub, FaTwitter, FaWhatsapp } from "react-icons/fa";
 import { CiLinkedin } from "react-icons/ci";
 import "../../styles/contact.css";
 import OnlyFans from "../components/OnlyFans";
-import resumePDF from "../../../public/my_resume.pdf";
 import { Helmet } from "react-helmet";
 import useTranslationStore from "../../store/store";
 
@@ -17,13 +16,6 @@ const Contact = () => {
     // Scroll to the top of the page on component mount
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []); // Empty dependency array ensures this runs once on mount
-
-  const handleDownloadResume = () => {
-    const downloadLink = document.createElement("a");
-    downloadLink.href = resumePDF;
-    downloadLink.download = "resume.pdf";
-    downloadLink.click();
-  };
 
   const [show, setShow] = useState(false);
   const [formValues, setFormValues] = useState({
@@ -129,23 +121,7 @@ const Contact = () => {
       color: "#61DAFB",
       action: showComp,
       number: "03",
-    },
-    {
-      id: "resume",
-      icon: <FaFilePdf />,
-      label: t("download_resume"),
-      color: "#FF5733",
-      action: handleDownloadResume,
-      number: "05",
-    },
-    {
-      id: "resume",
-      icon: <FaTwitter />,
-      label: "Twitter",
-      color: "#FF5733",
-      action: () => handleDivClick("https://x.com/code_by_marco"),
-      number: "05",
-    },
+    }
   ];
 
   // Form handling
