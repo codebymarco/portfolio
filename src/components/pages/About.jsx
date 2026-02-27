@@ -188,7 +188,7 @@ const About = () => {
     {
       company: "Decido (Truendo)",
       position: "about_we_one_occupation",
-      period: "present",
+      period: "past",
       description: "about_we_one_description",
     },
     {

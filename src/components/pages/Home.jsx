@@ -59,9 +59,9 @@ const Home = () => {
       </Helmet>
       <ScrollToTop />
       <BannerTwo />
-      <Showcase />
       <AboutSection />
       <Skills />
+      <Showcase />
       {/*       <Certs />
        */}
 {/*       <BlogsSection />

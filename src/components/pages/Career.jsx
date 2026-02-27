@@ -97,7 +97,7 @@ const Career = () => {
                       </div>
                       <div className="job-date">
                         <BsCalendarDate />
-                        <span>Jan 2023 - Present</span>
+                        <span>Jan 2023 - Dec 2025</span>
                       </div>
                     </div>
                   </div>
