@@ -1,546 +1,378 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Marco Ramcharan — Projects</title>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root{--bg:#0a0a0a;--bg-2:#121212;--line:#2a2a2a;--txt:#f5f3ee;--txt-dim:#9a968d;--accent:#d8ff3e;--orange:#ff6b35;--green:#00ffa3;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{background:var(--bg);color:var(--txt);font-family:'Space Grotesk',sans-serif;overflow-x:hidden;}
+  .display{font-family:'Bebas Neue',sans-serif;letter-spacing:0.04em;}
+  a{text-decoration:none;color:inherit;}
 
-  :root {
-    --bg: #080a0c;
-    --bg2: #0d1117;
-    --surface: #111820;
-    --surface2: #141c24;
-    --border: #1e2d3d;
-    --border2: #243547;
-    --cyan: #00d4ff;
-    --cyan-dim: rgba(0,212,255,0.08);
-    --cyan-glow: rgba(0,212,255,0.35);
-    --white: #f0f4f8;
-    --muted: #5a6e7e;
-    --text: #a8bccc;
-    --orange: #ff6b35;
-    --green: #00ffa3;
-  }
+  nav{position:fixed;top:0;left:0;right:0;z-index:60;display:flex;justify-content:space-between;align-items:center;padding:28px 6vw;background:linear-gradient(to bottom,rgba(10,10,10,0.92) 0%,transparent 100%);backdrop-filter:blur(10px);border-bottom:1px solid rgba(42,42,42,0.5);}
+  .logo{font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:0.08em;color:var(--txt);}
+  nav ul{display:flex;gap:36px;list-style:none;}
+  nav a{color:var(--txt-dim);font-size:13px;letter-spacing:0.1em;text-transform:uppercase;transition:color 0.2s;}
+  nav a:hover,nav a.active{color:var(--accent);}
+  .nav-cta{font-family:'Space Grotesk',sans-serif;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;font-weight:700;border:1px solid var(--accent);color:var(--accent);padding:9px 22px;transition:background 0.2s,color 0.2s;}
+  .nav-cta:hover{background:var(--accent);color:var(--bg);}
+  .burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;z-index:70;}
+  .burger span{width:26px;height:2px;background:var(--txt);display:block;transition:transform 0.3s,opacity 0.3s;}
+  .burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+  .burger.open span:nth-child(2){opacity:0;}
+  .burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+  .mobile-menu{position:fixed;inset:0;background:var(--bg);z-index:55;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:6vw;gap:20px;transform:translateY(-100%);transition:transform 0.4s ease,visibility 0.4s;visibility:hidden;}
+  .mobile-menu.open{transform:translateY(0);visibility:visible;}
+  .mobile-menu a{color:var(--txt);font-family:'Bebas Neue',sans-serif;font-size:13vw;text-transform:uppercase;line-height:1;}
+  .mobile-menu a:hover{color:var(--accent);}
+  .mobile-menu .mm-sub{margin-top:36px;display:flex;gap:20px;}
+  .mobile-menu .mm-sub a{font-family:'Space Grotesk',sans-serif;font-size:13px;letter-spacing:0.14em;}
+  @media(max-width:800px){nav ul,.nav-cta{display:none;}.burger{display:flex;}}
 
-  html { scroll-behavior: smooth; }
-  body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: 'DM Mono', monospace;
-    font-weight: 300;
-    overflow-x: hidden;
-    cursor: none;
-  }
-  body.menu-open { overflow: hidden; }
-
-  body::before {
-    content: '';
-    position: fixed; inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
-    pointer-events: none; z-index: 1000; opacity: 0.35;
-  }
-
-  /* CURSOR */
-  .cursor { position: fixed; width: 10px; height: 10px; background: var(--cyan); border-radius: 50%; pointer-events: none; z-index: 9999; transform: translate(-50%,-50%); mix-blend-mode: screen; transition: width .2s, height .2s; }
-  .cursor-ring { position: fixed; width: 36px; height: 36px; border: 1px solid rgba(0,212,255,0.4); border-radius: 50%; pointer-events: none; z-index: 9998; transform: translate(-50%,-50%); transition: width .3s, height .3s, border-color .2s; }
-  .cursor.hover { width: 14px; height: 14px; }
-  .cursor-ring.hover { width: 48px; height: 48px; border-color: var(--cyan); }
-
-  /* ─── NAV ─── */
-  nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 500;
-    padding: 1.25rem 4rem;
-    display: flex; align-items: center; justify-content: space-between;
-    background: rgba(8,10,12,0.92); backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(30,45,61,0.5);
-  }
-  .nav-logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1rem; color: var(--white); letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; }
-  .nav-logo span { color: var(--cyan); }
-  .nav-links { display: flex; gap: 2.5rem; list-style: none; }
-  .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; transition: color .2s; position: relative; }
-  .nav-links a.active, .nav-links a:hover { color: var(--cyan); }
-  .nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 1px; background: var(--cyan); transition: width .25s; }
-  .nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
-  .nav-cta { background: var(--cyan); border: none; color: var(--bg); font-family: 'DM Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.5rem 1.25rem; cursor: none; transition: box-shadow .2s, transform .2s; text-decoration: none; font-weight: 400; display: inline-block; }
-  .nav-cta:hover { box-shadow: 0 0 24px var(--cyan-glow); transform: translateY(-1px); }
-
-  /* ─── HAMBURGER BUTTON ─── */
-  .nav-hamburger {
-    display: none;
-    flex-direction: column; justify-content: center; align-items: center;
-    width: 44px; height: 44px;
-    background: transparent; border: 1px solid var(--border);
-    cursor: pointer; gap: 5px;
-    position: relative; z-index: 600;
-    transition: border-color 0.2s; flex-shrink: 0; padding: 0;
-  }
-  .nav-hamburger:hover { border-color: var(--cyan); }
-  .nav-hamburger span {
-    display: block; width: 20px; height: 1px; background: var(--white);
-    transition: transform 0.35s cubic-bezier(0.4,0,0.2,1), opacity 0.2s, background 0.2s;
-    transform-origin: center;
-  }
-  .nav-hamburger.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); background: var(--cyan); }
-  .nav-hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
-  .nav-hamburger.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); background: var(--cyan); }
-
-  /* ─── FULLSCREEN MOBILE MENU ─── */
-  .mobile-menu {
-    position: fixed; inset: 0; z-index: 490;
-    background: var(--bg);
-    display: flex; flex-direction: column;
-    justify-content: center; align-items: flex-start;
-    padding: 6rem 2.5rem 3rem;
-    pointer-events: none;
-    opacity: 0; transform: translateY(-20px);
-    transition: opacity 0.35s ease, transform 0.4s cubic-bezier(0.4,0,0.2,1);
-  }
-  .mobile-menu::after {
-    content: ''; position: absolute; inset: 0;
-    background-image:
-      linear-gradient(rgba(0,212,255,0.025) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(0,212,255,0.025) 1px, transparent 1px);
-    background-size: 40px 40px; pointer-events: none;
-  }
-  .mobile-menu.open { opacity: 1; transform: translateY(0); pointer-events: all; }
-
-  .mobile-menu-nav {
-    list-style: none; display: flex; flex-direction: column;
-    width: 100%; margin-bottom: 3rem; position: relative; z-index: 1;
-  }
-  .mobile-menu-nav li { border-bottom: 1px solid var(--border); overflow: hidden; }
-  .mobile-menu-nav li:first-child { border-top: 1px solid var(--border); }
-  .mobile-menu-nav a {
-    display: flex; align-items: center; justify-content: space-between;
-    text-decoration: none; padding: 1.2rem 0;
-    color: var(--white);
-    font-family: 'Syne', sans-serif; font-weight: 800;
-    font-size: clamp(1.7rem, 8vw, 2.4rem); letter-spacing: -0.01em;
-    opacity: 0; transform: translateX(-24px);
-    transition: opacity 0.3s ease, transform 0.3s ease, color 0.2s, padding-left 0.25s;
-  }
-  .mobile-menu.open .mobile-menu-nav a { opacity: 1; transform: translateX(0); }
-  .mobile-menu.open .mobile-menu-nav li:nth-child(1) a { transition-delay: 0.06s; }
-  .mobile-menu.open .mobile-menu-nav li:nth-child(2) a { transition-delay: 0.11s; }
-  .mobile-menu.open .mobile-menu-nav li:nth-child(3) a { transition-delay: 0.16s; }
-  .mobile-menu.open .mobile-menu-nav li:nth-child(4) a { transition-delay: 0.21s; }
-  .mobile-menu-nav a:hover { color: var(--cyan); padding-left: 0.5rem; }
-  .mobile-link-num { font-family: 'DM Mono', monospace; font-size: 0.6rem; font-weight: 300; color: var(--muted); letter-spacing: 0.15em; align-self: flex-end; margin-bottom: 0.4rem; transition: color 0.2s; }
-  .mobile-menu-nav a:hover .mobile-link-num { color: var(--cyan); }
-
-  .mobile-menu-footer {
-    position: relative; z-index: 1;
-    opacity: 0; transform: translateY(10px);
-    transition: opacity 0.3s ease 0.3s, transform 0.3s ease 0.3s;
-  }
-  .mobile-menu.open .mobile-menu-footer { opacity: 1; transform: translateY(0); }
-  .mobile-menu-footer .hire-btn {
-    display: inline-block; background: var(--cyan); color: var(--bg);
-    font-family: 'DM Mono', monospace; font-size: 0.72rem; letter-spacing: 0.1em;
-    text-transform: uppercase; padding: 0.65rem 1.5rem; text-decoration: none;
-    margin-bottom: 1.25rem; transition: box-shadow 0.2s;
-  }
-  .mobile-menu-footer .hire-btn:hover { box-shadow: 0 0 20px var(--cyan-glow); }
-  .mobile-menu-contact { font-size: 0.62rem; letter-spacing: 0.12em; color: var(--muted); text-transform: uppercase; }
-  .mobile-menu-contact a { color: var(--cyan); text-decoration: none; }
-
-  /* PAGE */
-  .page { max-width: 1200px; margin: 0 auto; padding: 8rem 2rem 6rem; }
-
-  /* HERO */
-  .page-hero { margin-bottom: 5rem; opacity: 0; animation: fadeUp .6s .1s forwards; }
-  .hero-top { display: flex; align-items: flex-end; justify-content: space-between; flex-wrap: wrap; gap: 2rem; margin-bottom: 2.5rem; }
-  .hero-left .label { font-size: 0.62rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--cyan); margin-bottom: 0.75rem; }
-  .hero-left .label::before { content: '// '; opacity: .5; }
-  .hero-left h1 { font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(2.8rem, 6vw, 5rem); color: var(--white); letter-spacing: -0.03em; line-height: 1; }
-  .hero-left h1 span { color: var(--cyan); }
-  .hero-right { text-align: right; }
-  .hero-right p { font-family: 'Instrument Serif', serif; font-style: italic; font-size: 1rem; color: var(--muted); max-width: 300px; line-height: 1.6; }
+  /* PAGE HEADER — exact Wallstudio gallery style */
+  .page-header{padding:160px 6vw 80px;border-bottom:1px solid var(--line);}
+  .eyebrow{font-size:13px;letter-spacing:0.25em;text-transform:uppercase;color:var(--accent);margin-bottom:24px;}
+  .page-header h1{font-size:clamp(56px,12vw,180px);line-height:0.9;text-transform:uppercase;margin-bottom:40px;}
+  .page-header-sub{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;flex-wrap:wrap;}
+  .page-header-sub p{max-width:480px;font-size:17px;color:var(--txt-dim);line-height:1.6;}
+  .item-count{font-family:'Bebas Neue',sans-serif;font-size:clamp(48px,6vw,80px);color:var(--txt-dim);line-height:1;white-space:nowrap;}
+  .item-count span{display:block;font-family:'Space Grotesk',sans-serif;font-size:13px;letter-spacing:0.2em;text-transform:uppercase;color:var(--txt-dim);}
 
   /* FILTER BAR */
-  .filter-bar { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; padding-bottom: 2rem; border-bottom: 1px solid var(--border); margin-bottom: 3rem; opacity: 0; animation: fadeUp .6s .25s forwards; }
-  .filter-label { font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); margin-right: 0.5rem; }
-  .filter-btn { font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.4rem 1rem; background: var(--bg2); border: 1px solid var(--border); color: var(--muted); cursor: none; transition: all .2s; }
-  .filter-btn:hover { border-color: var(--border2); color: var(--text); }
-  .filter-btn.active { border-color: var(--cyan); color: var(--cyan); background: var(--cyan-dim); }
+  .filter-bar{padding:40px 6vw;display:flex;gap:12px;flex-wrap:wrap;border-bottom:1px solid var(--line);}
+  .filter-btn{background:transparent;border:1px solid var(--line);color:var(--txt-dim);font-family:'Space Grotesk',sans-serif;font-size:12px;letter-spacing:0.15em;text-transform:uppercase;padding:10px 24px;border-radius:100px;cursor:pointer;transition:all 0.2s ease;}
+  .filter-btn:hover{border-color:var(--txt);color:var(--txt);}
+  .filter-btn.active{background:var(--accent);border-color:var(--accent);color:#0a0a0a;font-weight:700;}
 
-  /* PROJECTS GRID */
-  .projects-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 1px; }
+  /* MASONRY — same as Wallstudio gallery */
+  .gallery-section{padding:80px 6vw 120px;}
+  .masonry{columns:3;column-gap:3px;}
+  @media(max-width:900px){.masonry{columns:2;}}
+  @media(max-width:560px){.masonry{columns:1;}}
 
-  /* PROJECT CARD */
-  .proj-card { background: var(--bg); padding: 2rem; position: relative; overflow: hidden; display: flex; flex-direction: column; transition: background .25s, opacity .5s, transform .5s; opacity: 0; transform: translateY(20px); }
-  .proj-card.visible { opacity: 1; transform: translateY(0); }
-  .proj-card:hover { background: var(--surface); }
-  .proj-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--cyan); transform: scaleX(0); transform-origin: left; transition: transform .3s; }
-  .proj-card:hover::before { transform: scaleX(1); }
+  .gallery-card{break-inside:avoid;margin-bottom:3px;position:relative;overflow:hidden;cursor:pointer;background:var(--bg-2);display:block;}
+  .card-mock{
+    width:100%;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;
+    transition:transform 0.6s cubic-bezier(.2,.8,.2,1);
+  }
+  .gallery-card.tall .card-mock{aspect-ratio:3/4;}
+  .gallery-card:hover .card-mock{transform:scale(1.06);}
+  .gallery-card img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.6s cubic-bezier(.2,.8,.2,1);}
+  .gallery-card:hover img{transform:scale(1.06);}
+  .mock-text{font-family:'Bebas Neue',sans-serif;font-size:clamp(28px,5vw,56px);letter-spacing:0.06em;opacity:0.2;}
 
-  .proj-card.span-5  { grid-column: span 5; }
-  .proj-card.span-4  { grid-column: span 4; }
-  .proj-card.span-3  { grid-column: span 3; }
-  .proj-card.span-7  { grid-column: span 7; }
-  .proj-card.span-6  { grid-column: span 6; }
-  .proj-card.span-12 { grid-column: span 12; }
+  .card-overlay{
+    position:absolute;inset:0;
+    background:linear-gradient(to top,rgba(10,10,10,0.92) 0%,rgba(10,10,10,0.1) 50%,transparent 100%);
+    opacity:0;transition:opacity 0.35s ease;
+    display:flex;flex-direction:column;justify-content:flex-end;padding:28px;
+  }
+  .gallery-card:hover .card-overlay{opacity:1;}
+  .card-cat{font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin-bottom:8px;}
+  .card-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(20px,2.5vw,28px);text-transform:uppercase;line-height:1.1;margin-bottom:6px;}
+  .card-stack{font-size:12px;color:var(--txt-dim);letter-spacing:0.1em;}
+  .card-arrow{
+    position:absolute;top:20px;right:20px;width:36px;height:36px;
+    border:1px solid rgba(255,255,255,0.15);background:rgba(0,0,0,0.4);
+    display:flex;align-items:center;justify-content:center;font-size:14px;color:rgba(255,255,255,0.4);
+    transition:all 0.3s;
+  }
+  .gallery-card:hover .card-arrow{color:var(--accent);border-color:var(--accent);transform:translate(3px,-3px);}
+  .card-badge{
+    position:absolute;top:20px;left:20px;
+    font-size:10px;letter-spacing:0.15em;text-transform:uppercase;
+    color:var(--bg);background:var(--accent);padding:4px 10px;font-weight:700;
+  }
 
-  .proj-banner { width: 100%; height: 140px; display: flex; align-items: center; justify-content: center; font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(1.4rem, 3vw, 2.2rem); letter-spacing: -0.02em; margin-bottom: 1.5rem; border: 1px solid var(--border); position: relative; overflow: hidden; transition: border-color .25s; flex-shrink: 0; }
-  .proj-card:hover .proj-banner { border-color: var(--border2); }
-  .proj-banner .banner-bg { position: absolute; inset: 0; transition: transform .4s; }
-  .proj-card:hover .banner-bg { transform: scale(1.05); }
-  .proj-banner .banner-text { position: relative; z-index: 1; color: var(--white); text-shadow: 0 2px 20px rgba(0,0,0,0.5); }
+  /* LIGHTBOX */
+  .lightbox{position:fixed;inset:0;z-index:100;background:rgba(10,10,10,0.97);display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:all 0.3s ease;padding:40px;flex-direction:column;gap:24px;}
+  .lightbox.open{opacity:1;visibility:visible;}
+  .lightbox-close{position:absolute;top:28px;right:28px;background:none;border:1px solid var(--line);color:var(--txt);width:48px;height:48px;border-radius:50%;cursor:pointer;font-size:20px;display:flex;align-items:center;justify-content:center;transition:all 0.2s;}
+  .lightbox-close:hover{background:var(--accent);border-color:var(--accent);color:#0a0a0a;}
+  .lightbox-content{max-width:640px;width:100%;text-align:center;}
+  .lightbox-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(32px,5vw,56px);text-transform:uppercase;margin-bottom:12px;}
+  .lightbox-desc{font-size:15px;color:var(--txt-dim);line-height:1.65;margin-bottom:24px;}
+  .lightbox-tags{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:28px;}
+  .lightbox-tag{font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);border:1px solid rgba(216,255,62,0.35);padding:4px 12px;background:rgba(216,255,62,0.06);}
+  .lightbox-btn{display:inline-flex;align-items:center;gap:10px;background:var(--accent);color:#0a0a0a;padding:14px 32px;border-radius:100px;font-size:13px;letter-spacing:0.15em;text-transform:uppercase;font-weight:700;transition:transform 0.2s;}
+  .lightbox-btn:hover{transform:scale(1.04);}
 
-  .b-blue   { background: linear-gradient(135deg, #1a3a6e 0%, #2563eb 100%); }
-  .b-gold   { background: linear-gradient(135deg, #5a3a00 0%, #d97706 100%); }
-  .b-dark   { background: linear-gradient(135deg, #0d1117 0%, #1e2d3d 100%); }
-  .b-green  { background: linear-gradient(135deg, #003a1e 0%, #059669 100%); }
-  .b-purple { background: linear-gradient(135deg, #2d1a4e 0%, #7c3aed 100%); }
-  .b-red    { background: linear-gradient(135deg, #3a0a0a 0%, #dc2626 100%); }
-  .b-teal   { background: linear-gradient(135deg, #003a3a 0%, #0891b2 100%); }
-  .b-cyan   { background: linear-gradient(135deg, #001a2e 0%, #00d4ff 40%, #0891b2 100%); }
-
-  .proj-number { font-size: 0.58rem; letter-spacing: 0.2em; color: var(--muted); margin-bottom: 0.75rem; }
-  .proj-name { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1.15rem; color: var(--white); margin-bottom: 0.5rem; transition: color .2s; }
-  .proj-card:hover .proj-name { color: var(--cyan); }
-  .proj-desc { font-size: 0.73rem; line-height: 1.65; color: var(--muted); margin-bottom: 1.25rem; flex: 1; }
-  .proj-tags { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-bottom: 1.5rem; }
-  .tag { font-size: 0.58rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--cyan); border: 1px solid rgba(0,212,255,0.2); padding: 0.2rem 0.5rem; background: var(--cyan-dim); }
-  .tag.alt { color: var(--muted); border-color: var(--border); background: transparent; }
-
-  .proj-badges { display: flex; gap: 0.4rem; margin-bottom: 0.75rem; }
-  .badge { font-size: 0.55rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.2rem 0.6rem; border-radius: 2px; }
-  .badge-live { background: rgba(0,255,163,0.1); color: var(--green); border: 1px solid rgba(0,255,163,0.2); }
-  .badge-work { background: rgba(0,212,255,0.1); color: var(--cyan); border: 1px solid rgba(0,212,255,0.2); }
-  .badge-personal { background: rgba(255,107,53,0.1); color: var(--orange); border: 1px solid rgba(255,107,53,0.2); }
-
-  .proj-actions { display: flex; gap: 0.5rem; margin-top: auto; }
-  .proj-btn { font-family: 'DM Mono', monospace; font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.55rem 1rem; text-decoration: none; cursor: none; transition: all .2s; flex: 1; text-align: center; display: block; }
-  .proj-btn-primary { background: var(--cyan); color: var(--bg); border: 1px solid var(--cyan); }
-  .proj-btn-primary:hover { box-shadow: 0 0 20px var(--cyan-glow); transform: translateY(-1px); }
-  .proj-btn-secondary { background: transparent; color: var(--text); border: 1px solid var(--border); }
-  .proj-btn-secondary:hover { border-color: var(--cyan); color: var(--cyan); }
-
-  .proj-card.featured-wide { flex-direction: row; gap: 2.5rem; align-items: center; padding: 2.5rem 3rem; }
-  .proj-card.featured-wide .proj-banner { width: 280px; height: 180px; flex-shrink: 0; margin-bottom: 0; }
-  .proj-card.featured-wide .proj-content { flex: 1; }
-  .proj-card.featured-wide .proj-name { font-size: 1.5rem; }
-  .proj-card.featured-wide .proj-desc { font-size: 0.78rem; }
-
-  .proj-card.quote-card { background: var(--cyan-dim); border-left: 3px solid var(--cyan); justify-content: center; align-items: flex-start; padding: 2rem; }
-  .proj-card.quote-card::before { display: none; }
-  .quote-text { font-family: 'Instrument Serif', serif; font-style: italic; font-size: 1.05rem; color: var(--white); line-height: 1.6; margin-bottom: 0.5rem; }
-  .quote-author { font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--cyan); }
-
-  .proj-card.stat-card { justify-content: center; align-items: center; text-align: center; background: var(--bg2); }
-  .proj-card.stat-card::before { display: none; }
-  .stat-big { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 3rem; color: var(--white); line-height: 1; }
-  .stat-big span { color: var(--cyan); }
-  .stat-sub { font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); margin-top: 0.5rem; }
-
-  .proj-card.hidden { display: none; }
-
-  /* BOTTOM CTA */
-  .bottom-cta { margin-top: 4rem; padding: 3rem; border: 1px solid var(--border); background: var(--bg2); display: flex; align-items: center; justify-content: space-between; gap: 2rem; opacity: 0; animation: fadeUp .6s .6s forwards; }
-  .cta-text h3 { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.4rem; color: var(--white); margin-bottom: 0.4rem; }
-  .cta-text p { font-size: 0.75rem; color: var(--muted); }
-  .cta-actions { display: flex; gap: 1rem; flex-shrink: 0; }
-
-  .btn-primary { background: var(--cyan); color: var(--bg); font-family: 'DM Mono', monospace; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.85rem 2rem; border: none; cursor: none; text-decoration: none; transition: box-shadow .2s, transform .2s; display: inline-block; }
-  .btn-primary:hover { box-shadow: 0 0 28px var(--cyan-glow); transform: translateY(-2px); }
-  .btn-secondary { background: transparent; color: var(--white); font-family: 'DM Mono', monospace; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.85rem 2rem; border: 1px solid var(--border); cursor: none; text-decoration: none; transition: border-color .2s, color .2s; display: inline-block; }
-  .btn-secondary:hover { border-color: var(--cyan); color: var(--cyan); }
+  /* CTA STRIP */
+  .cta-strip{border-top:1px solid var(--line);padding:120px 6vw;text-align:center;}
+  .cta-strip h2{font-size:clamp(40px,9vw,140px);text-transform:uppercase;line-height:0.95;margin-bottom:40px;}
+  .btn{display:inline-flex;align-items:center;gap:12px;background:var(--accent);color:#0a0a0a;padding:18px 40px;border-radius:100px;font-size:14px;letter-spacing:0.15em;text-transform:uppercase;font-weight:700;transition:transform 0.25s ease;}
+  .btn:hover{transform:scale(1.05);}
+  .cta-sub{color:var(--txt-dim);font-size:15px;margin-top:24px;}
 
   /* FOOTER */
-  footer { padding: 2rem 4rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; background: var(--bg2); }
-  .footer-copy { font-size: 0.65rem; color: var(--muted); }
-  .footer-copy span { color: var(--cyan); }
-  .footer-links { display: flex; gap: 2rem; }
-  .footer-links a { font-size: 0.65rem; color: var(--muted); text-decoration: none; letter-spacing: 0.1em; text-transform: uppercase; transition: color .2s; }
-  .footer-links a:hover { color: var(--cyan); }
-
-  @keyframes fadeUp { from { opacity:0; transform:translateY(24px); } to { opacity:1; transform:translateY(0); } }
-
-  /* RESPONSIVE */
-  @media (max-width: 900px) {
-    nav { padding: 1rem 1.25rem; }
-    .nav-links { display: none; }
-    .nav-cta { display: none; }
-    .nav-hamburger { display: flex; }
-    .page { padding: 6rem 1rem 4rem; }
-    .projects-grid { grid-template-columns: 1fr; }
-    .proj-card.span-5, .proj-card.span-4, .proj-card.span-3,
-    .proj-card.span-7, .proj-card.span-6, .proj-card.span-12 { grid-column: span 1; }
-    .proj-card.featured-wide { flex-direction: column; }
-    .proj-card.featured-wide .proj-banner { width: 100%; }
-    .bottom-cta { flex-direction: column; text-align: center; }
-    footer { flex-direction: column; gap: 1rem; padding: 1.5rem; }
-    .mobile-menu { padding: 5rem 1.5rem 3rem; }
-  }
+  footer{border-top:1px solid var(--line);padding:80px 6vw 36px;background:var(--bg-2);}
+  .footer-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:48px;padding-bottom:56px;border-bottom:1px solid var(--line);margin-bottom:32px;}
+  .footer-logo{font-family:'Bebas Neue',sans-serif;font-size:26px;letter-spacing:0.08em;display:block;margin-bottom:16px;color:var(--txt);}
+  .footer-tagline{font-size:14px;color:var(--txt-dim);line-height:1.7;max-width:280px;margin-bottom:20px;}
+  .footer-socials{display:flex;gap:10px;}
+  .footer-social{width:38px;height:38px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--txt-dim);transition:border-color 0.2s,color 0.2s;}
+  .footer-social:hover{border-color:var(--accent);color:var(--accent);}
+  .footer-col h4{font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:var(--accent);margin-bottom:18px;font-weight:500;}
+  .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:10px;}
+  .footer-col a{color:var(--txt-dim);font-size:13px;transition:color 0.2s;}
+  .footer-col a:hover{color:var(--accent);}
+  .footer-col p{color:var(--txt-dim);font-size:13px;line-height:1.7;}
+  .hire-btn{display:inline-block;border:1px solid var(--accent);color:var(--accent);font-size:11px;letter-spacing:0.12em;text-transform:uppercase;font-weight:700;padding:9px 20px;transition:background 0.2s,color 0.2s;margin-top:4px;}
+  .hire-btn:hover{background:var(--accent);color:var(--bg);}
+  .footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
+  .footer-copy{font-size:12px;color:var(--txt-dim);}
+  .footer-copy span{color:var(--accent);}
+  .footer-bottom-links{display:flex;gap:20px;}
+  .footer-bottom-links a{font-size:11px;color:var(--txt-dim);letter-spacing:0.1em;text-transform:uppercase;transition:color 0.2s;}
+  .footer-bottom-links a:hover{color:var(--accent);}
+  @media(max-width:900px){.footer-top{grid-template-columns:1fr 1fr;gap:36px;}.footer-brand{grid-column:1/-1;}}
+  @media(max-width:560px){.footer-top{grid-template-columns:1fr;}}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
 </style>
 </head>
 <body>
 
-<div class="cursor" id="cursor"></div>
-<div class="cursor-ring" id="cursorRing"></div>
-
-<!-- FULLSCREEN MOBILE MENU -->
-<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
-  <ul class="mobile-menu-nav">
-    <li><a href="/" class="mobile-nav-link"><span>Home</span><span class="mobile-link-num">01</span></a></li>
-    <li><a href="/about" class="mobile-nav-link"><span>About</span><span class="mobile-link-num">02</span></a></li>
-    <li><a href="/projects" class="mobile-nav-link"><span>Projects</span><span class="mobile-link-num">03</span></a></li>
-    <li><a href="/career" class="mobile-nav-link"><span>Career</span><span class="mobile-link-num">04</span></a></li>
-    <li><a href="/contact" class="mobile-nav-link"><span>Contact</span><span class="mobile-link-num">05</span></a></li>
-  </ul>
-  <div class="mobile-menu-footer">
-    <a href="mailto:miguelmarcoramcharan@gmail.com" class="hire-btn">Hire Me</a>
-    <div class="mobile-menu-contact" style="margin-top: 0.5rem;">
-      <a href="mailto:miguelmarcoramcharan@gmail.com">miguelmarcoramcharan@gmail.com</a>
-    </div>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="projects.html">Projects</a>
+  <a href="contact.html">Contact</a>
+  <div class="mm-sub">
+    <a href="https://github.com/marcoramcharan" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://www.linkedin.com/in/miguelmarcoramcharan" target="_blank" rel="noopener">LinkedIn</a>
   </div>
 </div>
 
-<!-- NAV -->
 <nav>
-  <a href="/" class="nav-logo">Marco <span>R.</span></a>
-  <ul class="nav-links">
-    <li><a href="/about">About</a></li>
-    <li><a href="/projects">Projects</a></li>
-    <li><a href="/career">Career</a></li>
-    <li><a href="/contact">Contact</a></li>
+  <div class="logo display">MARCO</div>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/about/">About</a></li>
+    <li><a href="/contact/">Contact</a></li>
+    <li><a href="/projects/">Projects</a></li>
   </ul>
-  <a href="mailto:miguelmarcoramcharan@gmail.com" class="nav-cta">Hire Me</a>
-  <button class="nav-hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
-    <span></span>
-    <span></span>
-    <span></span>
+  <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
   </button>
 </nav>
 
-
-<div class="page">
-
-  <!-- HERO -->
-  <div class="page-hero">
-    <div class="hero-top">
-      <div class="hero-left">
-        <div class="label">Projects</div>
-        <h1>Things I've <span>shipped.</span></h1>
-      </div>
-      <div class="hero-right">
-        <p>Real projects. Real code. Most of them live and running right now.</p>
-      </div>
-    </div>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="/">Home</a>
+  <a href="/about/">About</a>
+  <a href="/contact/">Contact</a>
+  <a href="/projects/">Projects</a>
+  <div class="mm-sub">
+    <a href="https://github.com/marcoramcharan" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://www.linkedin.com/in/miguelmarcoramcharan" target="_blank" rel="noopener">LinkedIn</a>
   </div>
-
-  <!-- FILTER BAR -->
-  <div class="filter-bar">
-    <span class="filter-label">// Filter:</span>
-    <button class="filter-btn active" data-filter="all">All</button>
-    <button class="filter-btn" data-filter="live">Live</button>
-    <button class="filter-btn" data-filter="work">Work</button>
-    <button class="filter-btn" data-filter="personal">Personal</button>
-    <button class="filter-btn" data-filter="react">React</button>
-    <button class="filter-btn" data-filter="fullstack">Full Stack</button>
-  </div>
-
-  <!-- PROJECTS GRID -->
-  <div class="projects-grid" id="projectsGrid">
-
-    <div class="proj-card span-12 featured-wide reveal" data-tags="live personal react">
-      <div class="proj-banner b-blue">
-        <div class="banner-bg"></div>
-        <div class="banner-text">LINKBIO</div>
-      </div>
-      <div class="proj-content">
-        <div class="proj-badges"><span class="badge badge-live">● Live</span><span class="badge badge-personal">Personal</span></div>
-        <div class="proj-number">01 — Featured</div>
-        <div class="proj-name">LinkBio</div>
-        <div class="proj-desc">Personal linkbio website showcasing all links with analytics and custom themes. A modern, customizable bio link platform where creators can showcase their work, social media, and important links in one beautiful, shareable page.</div>
-        <div class="proj-tags"><span class="tag">React</span><span class="tag">Express.js</span><span class="tag">MongoDB</span><span class="tag alt">Full Stack</span><span class="tag alt">Analytics</span></div>
-        <div class="proj-actions">
-          <a href="#" class="proj-btn proj-btn-primary">View Live →</a>
-          <a href="#" class="proj-btn proj-btn-secondary">Project Details</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="proj-card span-5 reveal" data-tags="personal react fullstack">
-      <div class="proj-banner b-gold"><div class="banner-bg"></div><div class="banner-text">FORMIO</div></div>
-      <div class="proj-number">02</div>
-      <div class="proj-name">Formio</div>
-      <div class="proj-desc">Dynamic form builder with drag-and-drop interface and real-time validation. Designed to showcase skills and portfolio projects in a clean, structured format.</div>
-      <div class="proj-tags"><span class="tag">React</span><span class="tag">Express.js</span><span class="tag">MongoDB</span></div>
-      <div class="proj-actions"><a href="#" class="proj-btn proj-btn-primary">View →</a><a href="#" class="proj-btn proj-btn-secondary">Details</a></div>
-    </div>
-
-    <div class="proj-card span-4 reveal" data-tags="personal react">
-      <div class="proj-banner b-dark"><div class="banner-bg"></div><div class="banner-text" style="font-size:1.1rem">PORTFOLIOBIO</div></div>
-      <div class="proj-badges"><span class="badge badge-live">● Live</span></div>
-      <div class="proj-number">03</div>
-      <div class="proj-name">PortfolioBio</div>
-      <div class="proj-desc">Allows the average person to create their own online portfolio in minutes — no code required.</div>
-      <div class="proj-tags"><span class="tag">React</span><span class="tag">Express.js</span><span class="tag">MongoDB</span></div>
-      <div class="proj-actions"><a href="#" class="proj-btn proj-btn-primary">View →</a><a href="#" class="proj-btn proj-btn-secondary">Details</a></div>
-    </div>
-
-    <div class="proj-card span-3 quote-card reveal">
-      <div class="quote-text">"Code is poetry written in logic."</div>
-      <div class="quote-author">— Marco Ramcharan</div>
-    </div>
-
-    <div class="proj-card span-3 stat-card reveal">
-      <div class="stat-big">6<span>+</span></div>
-      <div class="stat-sub">Projects Shipped</div>
-    </div>
-
-    <div class="proj-card span-4 reveal" data-tags="personal react fullstack">
-      <div class="proj-banner b-green"><div class="banner-bg"></div><div class="banner-text">INDEED</div></div>
-      <div class="proj-number">04</div>
-      <div class="proj-name">Indeed Clone</div>
-      <div class="proj-desc">Job search platform clone with custom filtering and real-time search. Built to explore complex search and filtering patterns at scale.</div>
-      <div class="proj-tags"><span class="tag">React</span><span class="tag">Express.js</span><span class="tag">MongoDB</span></div>
-      <div class="proj-actions"><a href="#" class="proj-btn proj-btn-primary">View →</a><a href="#" class="proj-btn proj-btn-secondary">Details</a></div>
-    </div>
-
-    <div class="proj-card span-5 reveal" data-tags="personal fullstack">
-      <div class="proj-banner b-purple"><div class="banner-bg"></div><div class="banner-text">AI TRANSLATOR</div></div>
-      <div class="proj-badges"><span class="badge badge-personal">Personal</span></div>
-      <div class="proj-number">05</div>
-      <div class="proj-name">AI Translator</div>
-      <div class="proj-desc">Intelligent chatbot with natural language processing and machine learning integration. Translates between languages using OpenAI's API with a clean, fast interface.</div>
-      <div class="proj-tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JS</span><span class="tag">OpenAI</span></div>
-      <div class="proj-actions"><a href="#" class="proj-btn proj-btn-primary">View →</a><a href="#" class="proj-btn proj-btn-secondary">Details</a></div>
-    </div>
-
-    <div class="proj-card span-6 reveal" data-tags="personal fullstack">
-      <div class="proj-banner b-red" style="height:160px"><div class="banner-bg"></div><div class="banner-text">NFT CENTRAL</div></div>
-      <div class="proj-number">06</div>
-      <div class="proj-name">NFT Shop</div>
-      <div class="proj-desc">Full-stack e-commerce platform with payment integration, inventory management, and a complete admin dashboard. Built to handle real transactions with a clean, fast front-end and robust back-end architecture.</div>
-      <div class="proj-tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JS</span><span class="tag alt">E-Commerce</span><span class="tag alt">Payments</span></div>
-      <div class="proj-actions"><a href="#" class="proj-btn proj-btn-primary">View →</a><a href="#" class="proj-btn proj-btn-secondary">Details</a></div>
-    </div>
-
-    <div class="proj-card span-6 reveal" data-tags="work live fullstack react">
-      <div class="proj-banner b-cyan" style="height:160px"><div class="banner-bg"></div><div class="banner-text">TRUENDO</div></div>
-      <div class="proj-badges"><span class="badge badge-work">Work</span><span class="badge badge-live">● Production</span></div>
-      <div class="proj-number">07 — Production</div>
-      <div class="proj-name">Truendo</div>
-      <div class="proj-desc">Enterprise consent management platform built at Decidio. Full-stack development on a live product serving enterprise clients — handling complex privacy compliance flows, real-time data management, and high-availability infrastructure.</div>
-      <div class="proj-tags"><span class="tag">TypeScript</span><span class="tag">React</span><span class="tag">Go</span><span class="tag">Kubernetes</span><span class="tag">Docker</span></div>
-      <div class="proj-actions"><a href="https://truendo.com" target="_blank" class="proj-btn proj-btn-primary">View Live →</a><a href="#" class="proj-btn proj-btn-secondary">Details</a></div>
-    </div>
-
-    <div class="proj-card span-3 stat-card reveal"><div class="stat-big" style="color:var(--green)">3<span style="color:var(--green)">+</span></div><div class="stat-sub">Years of Coding</div></div>
-    <div class="proj-card span-3 stat-card reveal"><div class="stat-big">50<span>+</span></div><div class="stat-sub">Commits This Month</div></div>
-    <div class="proj-card span-3 stat-card reveal"><div class="stat-big" style="color:var(--orange)">2</div><div class="stat-sub">Live Products</div></div>
-    <div class="proj-card span-3 stat-card reveal" style="background:var(--cyan-dim); border-color:rgba(0,212,255,0.2);"><div class="stat-big" style="color:var(--cyan)">∞</div><div class="stat-sub">Coffee Consumed</div></div>
-
-    <div class="proj-card span-12 reveal" style="background: var(--bg2); border-left: 3px solid var(--orange); flex-direction: row; align-items: center; justify-content: space-between; gap: 2rem; padding: 2.5rem 3rem; flex-wrap: wrap;">
-      <div style="flex:1; min-width:260px;">
-        <div style="font-size:0.6rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--orange); margin-bottom:0.6rem;">// Currently</div>
-        <div style="font-family:'Syne',sans-serif; font-weight:800; font-size:1.4rem; color:var(--white); line-height:1.2; margin-bottom:0.75rem;">Obsessed with building <span style="color:var(--orange)">seamless user experiences.</span></div>
-        <div style="font-size:0.75rem; color:var(--muted); line-height:1.6;">Always open to new opportunities and interesting problems to solve.</div>
-      </div>
-      <div style="flex-shrink:0;">
-        <a href="contact.html" class="proj-btn proj-btn-primary" style="display:inline-block; width:auto; padding:0.85rem 2rem; font-size:0.72rem; white-space:nowrap;">Let's Build Together →</a>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- BOTTOM CTA -->
-  <div class="bottom-cta">
-    <div class="cta-text">
-      <h3>Want to see more?</h3>
-      <p>Check out my GitHub for more projects, experiments, and work in progress.</p>
-    </div>
-    <div class="cta-actions">
-      <a href="https://github.com/" target="_blank" class="btn-primary">GitHub →</a>
-      <a href="contact.html" class="btn-secondary">Hire Me</a>
-    </div>
-  </div>
-
 </div>
 
-<!-- FOOTER -->
+<header class="page-header">
+  <div class="eyebrow">Portfolio — Durban, South Africa</div>
+  <h1 class="display">My<br>Work.</h1>
+  <div class="page-header-sub">
+    <p>Everything I've shipped — production systems, live apps, and side projects. Built with real stacks, deployed to real users.</p>
+    <div class="item-count display">4<span>Projects shown</span></div>
+  </div>
+</header>
+
+<div class="filter-bar">
+  <button class="filter-btn active" data-filter="all">All work</button>
+  <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+  <button class="filter-btn" data-filter="frontend">Frontend</button>
+  <button class="filter-btn" data-filter="production">Production</button>
+</div>
+
+<section class="gallery-section">
+  <div class="masonry" id="masonry">
+
+    <!-- TRUENDO -->
+    <div class="gallery-card tall" data-category="fullstack production" data-title="Truendo" data-desc="A production-grade consent management platform built at Decidio. Full-stack on a live product serving real enterprise clients — handling complex privacy compliance flows, real-time data, and high-availability infrastructure." data-stack="TypeScript · React · Node.js · Go · Docker · Kubernetes" data-url="https://truendo.com">
+      <div class="card-mock" style="background:linear-gradient(135deg,#0d1117 0%,#1a2332 60%,#0d1117 100%);">
+        <span class="mock-text" style="color:#00d4ff;">TRUENDO</span>
+      </div>
+      <div class="card-badge">Production</div>
+      <div class="card-arrow">↗</div>
+      <div class="card-overlay">
+        <div class="card-cat">Full Stack · Production</div>
+        <div class="card-title display">Truendo</div>
+        <div class="card-stack">TypeScript · React · Go · Kubernetes</div>
+      </div>
+    </div>
+
+    <!-- CASINO -->
+    <div class="gallery-card" data-category="fullstack frontend" data-title="Casino" data-desc="A modern casino suite platform with full game logic, real-time interactions, and a sleek dark interface. Built to be fast and fun." data-stack="React · Node.js" data-url="https://casino-alpha-two.vercel.app/">
+      <div class="card-mock" style="background:linear-gradient(135deg,#1a0800 0%,#2d1200 60%,#1a0800 100%);">
+        <span class="mock-text" style="color:#ff6b35;">CASINO</span>
+      </div>
+      <div class="card-arrow">↗</div>
+      <div class="card-overlay">
+        <div class="card-cat">Full Stack</div>
+        <div class="card-title display">Casino</div>
+        <div class="card-stack">React · Node.js</div>
+      </div>
+    </div>
+
+    <!-- HIREWAVE -->
+    <div class="gallery-card" data-category="fullstack frontend" data-title="Hirewave" data-desc="A modern, simplistic job platform connecting candidates and employers. Clean UI, straightforward UX, and a full backend." data-stack="React · Node.js" data-url="https://hirewave-frontend.vercel.app/">
+      <div class="card-mock" style="background:linear-gradient(135deg,#020a04 0%,#081408 60%,#020a04 100%);">
+        <span class="mock-text" style="color:#00ffa3;">HIREWAVE</span>
+      </div>
+      <div class="card-arrow">↗</div>
+      <div class="card-overlay">
+        <div class="card-cat">Full Stack</div>
+        <div class="card-title display">Hirewave</div>
+        <div class="card-stack">React · Node.js</div>
+      </div>
+    </div>
+
+    <!-- NEXUS -->
+    <div class="gallery-card" data-category="frontend" data-title="Nexus" data-desc="A sleek NFT shop with a modern dark aesthetic, smooth browsing experience, and clean product layout." data-stack="React · HTML · CSS" data-url="https://nexus-theta-ivory.vercel.app">
+      <div class="card-mock" style="background:linear-gradient(135deg,#06000f 0%,#14002a 60%,#06000f 100%);">
+        <span class="mock-text" style="color:#a855f7;">NEXUS</span>
+      </div>
+      <div class="card-arrow">↗</div>
+      <div class="card-overlay">
+        <div class="card-cat">Frontend</div>
+        <div class="card-title display">Nexus</div>
+        <div class="card-stack">React · HTML · CSS</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+  <button class="lightbox-close" id="lbClose" aria-label="Close">✕</button>
+  <div class="lightbox-content">
+    <div class="card-cat" id="lbCat"></div>
+    <div class="lightbox-title display" id="lbTitle"></div>
+    <div class="lightbox-desc" id="lbDesc"></div>
+    <div class="lightbox-tags" id="lbTags"></div>
+    <a class="lightbox-btn" id="lbBtn" href="#" target="_blank" rel="noopener">View live project →</a>
+  </div>
+</div>
+
+<section class="cta-strip">
+  <h2 class="display">Like what<br>you see?</h2>
+  <a class="btn" href="contact.html">Get in touch →</a>
+  <p class="cta-sub">miguelmarcoramcharan@gmail.com — replies within 1 business day</p>
+</section>
+
 <footer>
-  <div class="footer-copy">© 2025 <span>Marco Ramcharan</span> · Full Stack Engineer</div>
-  <div class="footer-links">
-    <a href="/">Home</a>
-    <a href="/projects">Projects</a>
-    <a href="/contact">Contact</a>
-    <a href="/about/">About</a>
-    <a href="/career/">Career</a>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="display footer-logo">MARCO</div>
+      <p class="footer-tagline">Carpenter turned engineer. Building things that last — in wood and in code.</p>
+      <div class="footer-socials">
+        <a href="https://github.com/marcoramcharan" target="_blank" rel="noopener" class="footer-social">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/miguelmarcoramcharan" target="_blank" rel="noopener" class="footer-social">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Navigate</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Projects</h4>
+      <ul>
+        <li><a href="https://truendo.com" target="_blank" rel="noopener">Truendo</a></li>
+        <li><a href="https://casino-alpha-two.vercel.app/" target="_blank" rel="noopener">Casino</a></li>
+        <li><a href="https://hirewave-frontend.vercel.app/" target="_blank" rel="noopener">Hirewave</a></li>
+        <li><a href="https://nexus-theta-ivory.vercel.app" target="_blank" rel="noopener">Nexus</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Get in touch</h4>
+      <p>miguelmarcoramcharan@gmail.com<br>Durban, KwaZulu-Natal<br>Open to opportunities</p><br>
+      <a href="mailto:miguelmarcoramcharan@gmail.com" class="hire-btn">Hire Me ↗</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2025 <span>Marco Ramcharan</span> · Full Stack Developer & Ethical Hacker</div>
+    <div class="footer-bottom-links">
+      <a href="projects.html">Projects</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
   </div>
 </footer>
 
 <script>
-  // CURSOR
-  const cursor = document.getElementById('cursor');
-  const ring = document.getElementById('cursorRing');
-  let mx=0,my=0,rx=0,ry=0;
-  document.addEventListener('mousemove',e=>{ mx=e.clientX; my=e.clientY; cursor.style.left=mx+'px'; cursor.style.top=my+'px'; });
-  (function animRing(){ rx+=(mx-rx)*0.12; ry+=(my-ry)*0.12; ring.style.left=rx+'px'; ring.style.top=ry+'px'; requestAnimationFrame(animRing); })();
-  document.querySelectorAll('a,button,.proj-btn,.filter-btn').forEach(el=>{
-    el.addEventListener('mouseenter',()=>{ cursor.classList.add('hover'); ring.classList.add('hover'); });
-    el.addEventListener('mouseleave',()=>{ cursor.classList.remove('hover'); ring.classList.remove('hover'); });
-  });
-
-  // HAMBURGER / MOBILE MENU
-  const hamburger = document.getElementById('hamburger');
+  // MOBILE MENU
+  const burger = document.getElementById('burger');
   const mobileMenu = document.getElementById('mobileMenu');
-
-  function toggleMenu(forceClose = false) {
-    const isOpen = mobileMenu.classList.contains('open') || forceClose;
-    if (isOpen) {
-      hamburger.classList.remove('open');
-      mobileMenu.classList.remove('open');
-      mobileMenu.setAttribute('aria-hidden', 'true');
-      hamburger.setAttribute('aria-expanded', 'false');
-      document.body.classList.remove('menu-open');
-    } else {
-      hamburger.classList.add('open');
-      mobileMenu.classList.add('open');
-      mobileMenu.setAttribute('aria-hidden', 'false');
-      hamburger.setAttribute('aria-expanded', 'true');
-      document.body.classList.add('menu-open');
-    }
-  }
-
-  hamburger.addEventListener('click', () => toggleMenu());
-  document.querySelectorAll('.mobile-nav-link').forEach(link => {
-    link.addEventListener('click', () => toggleMenu(true));
+  burger.addEventListener('click', () => {
+    const open = mobileMenu.classList.toggle('open');
+    burger.classList.toggle('open');
+    burger.setAttribute('aria-expanded', open);
+    document.body.style.overflow = open ? 'hidden' : '';
   });
-  document.addEventListener('keydown', e => {
-    if (e.key === 'Escape' && mobileMenu.classList.contains('open')) toggleMenu(true);
-  });
-
-  // SCROLL REVEAL
-  const observer = new IntersectionObserver(entries=>{
-    entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('visible'); });
-  },{threshold:0.06});
-  document.querySelectorAll('.reveal').forEach((el,i)=>{
-    el.style.transitionDelay = (i * 0.05) + 's';
-    observer.observe(el);
-  });
+  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    mobileMenu.classList.remove('open'); burger.classList.remove('open');
+    burger.setAttribute('aria-expanded','false'); document.body.style.overflow = '';
+  }));
 
   // FILTER
-  document.querySelectorAll('.filter-btn').forEach(btn=>{
-    btn.addEventListener('click',()=>{
-      document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const cards = document.querySelectorAll('.gallery-card');
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
-      const filter = btn.dataset.filter;
-      document.querySelectorAll('.proj-card[data-tags]').forEach(card=>{
-        if(filter === 'all' || (card.dataset.tags && card.dataset.tags.includes(filter))) {
-          card.classList.remove('hidden');
-        } else {
-          card.classList.add('hidden');
-        }
+      const f = btn.dataset.filter;
+      cards.forEach(card => {
+        const cats = card.dataset.category || '';
+        card.style.display = (f === 'all' || cats.includes(f)) ? '' : 'none';
       });
     });
   });
+
+  // LIGHTBOX
+  const lightbox = document.getElementById('lightbox');
+  const lbTitle = document.getElementById('lbTitle');
+  const lbDesc = document.getElementById('lbDesc');
+  const lbTags = document.getElementById('lbTags');
+  const lbBtn = document.getElementById('lbBtn');
+  const lbCat = document.getElementById('lbCat');
+
+  cards.forEach(card => {
+    card.addEventListener('click', () => {
+      lbTitle.textContent = card.dataset.title;
+      lbDesc.textContent = card.dataset.desc;
+      lbCat.textContent = card.querySelector('.card-cat').textContent;
+      lbBtn.href = card.dataset.url;
+      lbTags.innerHTML = '';
+      card.dataset.stack.split(' · ').forEach(t => {
+        const span = document.createElement('span');
+        span.className = 'lightbox-tag';
+        span.textContent = t;
+        lbTags.appendChild(span);
+      });
+      lightbox.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  document.getElementById('lbClose').addEventListener('click', () => { lightbox.classList.remove('open'); document.body.style.overflow = ''; });
+  lightbox.addEventListener('click', e => { if(e.target === lightbox){ lightbox.classList.remove('open'); document.body.style.overflow = ''; } });
+  document.addEventListener('keydown', e => { if(e.key === 'Escape'){ lightbox.classList.remove('open'); document.body.style.overflow = ''; } });
 </script>
 </body>
 </html>

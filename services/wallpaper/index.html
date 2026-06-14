@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Wallpaper — Wallstudio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0a0a0a;
+    --bg-2:#121212;
+    --line:#2a2a2a;
+    --txt:#f5f3ee;
+    --txt-dim:#9a968d;
+    --accent:#d8ff3e;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    background:var(--bg);
+    color:var(--txt);
+    font-family:'Space Grotesk',sans-serif;
+  }
+  .display{font-family:'Bebas Neue',sans-serif; letter-spacing:0.04em;}
+
+  /* NAV */
+  nav{
+    position:fixed; top:0; left:0; right:0; z-index:60;
+    display:flex; justify-content:space-between; align-items:center;
+    padding:28px 6vw;
+    background:linear-gradient(to bottom, rgba(10,10,10,0.9), transparent);
+  }
+  .logo{font-family:'Bebas Neue',sans-serif; font-size:28px; letter-spacing:0.08em; text-decoration:none; color:var(--txt);}
+  nav ul{display:flex; gap:36px; list-style:none;}
+  nav a{color:var(--txt); text-decoration:none; font-size:13px; letter-spacing:0.1em; text-transform:uppercase;}
+  nav a:hover{color:var(--accent);}
+  @media (max-width:800px){ nav ul{display:none;} }
+
+  /* HERO */
+  .hero{
+    min-height:90vh;
+    display:flex; flex-direction:column; justify-content:flex-end;
+    padding:140px 6vw 80px;
+    position:relative;
+    border-bottom:1px solid var(--line);
+  }
+  .hero-bg-text{
+    position:absolute; top:50%; left:50%;
+    transform:translate(-50%,-58%);
+    font-family:'Bebas Neue',sans-serif;
+    font-size:min(30vw, 380px);
+    line-height:0.85;
+    color:transparent;
+    -webkit-text-stroke:1px #2a2a2a;
+    white-space:nowrap;
+    pointer-events:none;
+    z-index:0;
+  }
+  .hero-content{position:relative; z-index:1;}
+  .breadcrumb{
+    font-size:12px; letter-spacing:0.2em; text-transform:uppercase; color:var(--txt-dim);
+    margin-bottom:24px;
+  }
+  .breadcrumb a{color:var(--txt-dim); text-decoration:none;}
+  .breadcrumb a:hover{color:var(--accent);}
+  .eyebrow{
+    font-size:13px; letter-spacing:0.25em; text-transform:uppercase;
+    color:var(--accent); margin-bottom:24px;
+  }
+  .hero h1{
+    font-size:clamp(48px, 11vw, 150px);
+    line-height:0.95;
+    text-transform:uppercase;
+  }
+  .hero-sub{
+    display:flex; justify-content:space-between; align-items:flex-end;
+    margin-top:40px; gap:40px; flex-wrap:wrap;
+  }
+  .hero-sub p{
+    max-width:460px; font-size:17px; color:var(--txt-dim); line-height:1.6;
+  }
+  .hero-cta{display:flex; gap:16px; margin-top:36px; flex-wrap:wrap;}
+
+  /* BUTTONS */
+  .btn{
+    display:inline-flex; align-items:center; gap:12px;
+    background:var(--accent); color:#0a0a0a;
+    padding:18px 40px; border:none; border-radius:100px;
+    font-size:14px; letter-spacing:0.15em; text-transform:uppercase;
+    text-decoration:none; font-weight:700; cursor:pointer;
+    transition:transform 0.25s ease;
+  }
+  .btn:hover{transform:scale(1.05);}
+  .btn-ghost{background:transparent; color:var(--txt); border:1px solid var(--line);}
+  .btn-ghost:hover{border-color:var(--accent); color:var(--accent);}
+
+  /* SECTION SHARED */
+  section{padding:100px 6vw;}
+  .section-head{
+    display:flex; justify-content:space-between; align-items:flex-end;
+    margin-bottom:56px; gap:24px; flex-wrap:wrap;
+    border-bottom:1px solid var(--line);
+    padding-bottom:32px;
+  }
+  .section-head h2{
+    font-size:clamp(36px, 6vw, 72px);
+    text-transform:uppercase;
+    line-height:1;
+  }
+  .section-head .tag{
+    font-size:13px; letter-spacing:0.2em; text-transform:uppercase; color:var(--txt-dim);
+    max-width:280px; text-align:right;
+  }
+
+  /* STYLES GRID */
+  .styles{border-bottom:1px solid var(--line);}
+  .styles-grid{
+    display:grid; grid-template-columns:repeat(4,1fr); gap:2px;
+  }
+  .style-card{
+    aspect-ratio:1/1.2; background:var(--bg-2); border:1px solid var(--line);
+    position:relative; overflow:hidden;
+    display:flex; align-items:flex-end; padding:20px;
+  }
+  .style-fill{
+    position:absolute; inset:0;
+    background:repeating-linear-gradient(135deg, #1a1a1a 0 2px, #0a0a0a 2px 28px);
+    transition:transform 0.5s ease;
+  }
+  .style-card:hover .style-fill{transform:scale(1.08);}
+  .style-card::after{
+    content:''; position:absolute; inset:0;
+    background:linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 50%);
+  }
+  .style-label{position:relative; z-index:1; font-size:13px; letter-spacing:0.15em; text-transform:uppercase;}
+  .style-label span{display:block; color:var(--txt-dim); font-size:11px; margin-top:4px; font-family:'Space Grotesk',sans-serif; letter-spacing:0.05em; text-transform:none;}
+  @media (max-width:900px){.styles-grid{grid-template-columns:repeat(2,1fr);}}
+
+  /* FABRICS */
+  .fabrics{border-bottom:1px solid var(--line);}
+  .fabric-grid{display:grid; grid-template-columns:repeat(5,1fr); gap:24px;}
+  .fabric-swatch{
+    display:flex; flex-direction:column; gap:12px; align-items:center; text-align:center;
+  }
+  .swatch-color{
+    width:100%; aspect-ratio:1/1; border-radius:50%;
+    border:1px solid var(--line);
+  }
+  .fabric-swatch h4{font-family:'Bebas Neue',sans-serif; font-size:18px; text-transform:uppercase;}
+  .fabric-swatch p{font-size:12px; color:var(--txt-dim); line-height:1.5;}
+  @media (max-width:900px){.fabric-grid{grid-template-columns:repeat(3,1fr); gap:32px 16px;}}
+  @media (max-width:560px){.fabric-grid{grid-template-columns:repeat(2,1fr);}}
+
+  /* SIZES TABLE */
+  .sizes{border-bottom:1px solid var(--line);}
+  .size-table{width:100%; border-collapse:collapse;}
+  .size-table th, .size-table td{
+    text-align:left; padding:20px 16px; border-bottom:1px solid var(--line); font-size:14px;
+  }
+  .size-table th{
+    font-size:11px; letter-spacing:0.15em; text-transform:uppercase; color:var(--txt-dim); font-weight:500;
+  }
+  .size-table td:first-child, .size-table th:first-child{
+    font-family:'Bebas Neue',sans-serif; font-size:18px; letter-spacing:0.04em; color:var(--txt); text-transform:uppercase;
+  }
+  .size-table td.price{color:var(--accent); font-family:'Bebas Neue',sans-serif; font-size:18px;}
+  .size-table-wrap{overflow-x:auto;}
+  @media (max-width:700px){.size-table{min-width:560px; font-size:13px;}}
+
+  /* PROCESS */
+  .process{border-bottom:1px solid var(--line);}
+  .process-grid{
+    display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--line);
+  }
+  .process-step{
+    background:var(--bg); padding:48px 32px; min-height:240px;
+    display:flex; flex-direction:column; justify-content:space-between;
+  }
+  .process-step .step-num{font-family:'Bebas Neue',sans-serif; font-size:56px; color:var(--accent); line-height:1;}
+  .process-step h3{font-family:'Bebas Neue',sans-serif; font-size:22px; text-transform:uppercase; margin:20px 0 10px;}
+  .process-step p{font-size:14px; color:var(--txt-dim); line-height:1.6;}
+  @media (max-width:900px){.process-grid{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:560px){.process-grid{grid-template-columns:1fr;}}
+
+  /* FAQ */
+  .faq-list{display:flex; flex-direction:column;}
+  .faq-item{border-bottom:1px solid var(--line);}
+  .faq-question{
+    width:100%; background:none; border:none; color:var(--txt);
+    text-align:left; padding:28px 0; cursor:pointer;
+    display:flex; justify-content:space-between; align-items:center; gap:24px;
+    font-family:'Space Grotesk',sans-serif; font-size:18px; font-weight:500;
+  }
+  .faq-question:hover{color:var(--accent);}
+  .faq-icon{
+    font-family:'Bebas Neue',sans-serif; font-size:28px; color:var(--txt-dim);
+    transition:transform 0.3s ease; flex-shrink:0;
+  }
+  .faq-item.open .faq-icon{transform:rotate(45deg); color:var(--accent);}
+  .faq-answer{max-height:0; overflow:hidden; transition:max-height 0.35s ease;}
+  .faq-answer-inner{padding-bottom:28px; color:var(--txt-dim); font-size:15px; line-height:1.7; max-width:640px;}
+
+  /* CTA */
+  .cta{text-align:center;}
+  .cta h2{
+    font-size:clamp(40px,9vw,140px); text-transform:uppercase; line-height:0.95;
+    margin-bottom:40px;
+  }
+  .cta-sub{color:var(--txt-dim); font-size:15px; margin-top:24px;}
+
+  /* FOOTER */
+  footer{
+    border-top:1px solid var(--line);
+    padding:100px 6vw 40px;
+    background:var(--bg-2);
+  }
+  .footer-top{
+    display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:48px;
+    padding-bottom:64px; border-bottom:1px solid var(--line);
+  }
+  .footer-brand .logo{font-size:32px; margin-bottom:20px; display:inline-block;}
+  .footer-brand p{color:var(--txt-dim); font-size:14px; line-height:1.7; max-width:320px; margin-bottom:24px;}
+  .footer-col h4{
+    font-size:12px; letter-spacing:0.2em; text-transform:uppercase; color:var(--accent);
+    margin-bottom:20px; font-weight:500;
+  }
+  .footer-col ul{list-style:none; display:flex; flex-direction:column; gap:12px;}
+  .footer-col a{color:var(--txt-dim); text-decoration:none; font-size:14px; transition:color 0.2s ease;}
+  .footer-col a:hover{color:var(--accent);}
+  .footer-col p{color:var(--txt-dim); font-size:14px; line-height:1.7;}
+
+  .social-row{display:flex; gap:14px; margin-top:8px;}
+  .social-icon{
+    width:44px; height:44px; border-radius:50%;
+    border:1px solid var(--line);
+    display:flex; align-items:center; justify-content:center;
+    color:var(--txt); text-decoration:none;
+    transition:background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+  }
+  .social-icon svg{width:20px; height:20px; fill:currentColor;}
+  .social-icon.facebook:hover{background:#1877F2; border-color:#1877F2; color:#fff;}
+  .social-icon.instagram:hover{background:#E1306C; border-color:#E1306C; color:#fff;}
+
+  .footer-bottom{
+    display:flex; justify-content:space-between; align-items:center;
+    flex-wrap:wrap; gap:16px; padding-top:32px;
+  }
+  .footer-bottom .logo{font-size:18px;}
+  .footer-legal{display:flex; gap:24px; font-size:12px; color:var(--txt-dim); letter-spacing:0.1em; text-transform:uppercase;}
+  .footer-legal a{color:var(--txt-dim); text-decoration:none;}
+  .footer-legal a:hover{color:var(--accent);}
+  .copyright{font-size:12px; color:var(--txt-dim); letter-spacing:0.1em;}
+
+  @media (max-width:900px){
+    .footer-top{grid-template-columns:1fr 1fr; gap:40px;}
+    .footer-brand{grid-column:1 / -1;}
+  }
+  @media (max-width:560px){
+    .footer-top{grid-template-columns:1fr; gap:40px;}
+  }
+
+  /* WHATSAPP FAB */
+  .wa-fab{
+    position:fixed; bottom:28px; right:28px; z-index:70;
+    width:60px; height:60px; border-radius:50%;
+    background:#25D366; display:flex; align-items:center; justify-content:center;
+    text-decoration:none; box-shadow:0 4px 18px rgba(0,0,0,0.4);
+    transition:transform 0.25s ease;
+  }
+  .wa-fab:hover{transform:scale(1.08);}
+  .wa-fab svg{width:30px; height:30px;}
+  .wa-fab .wa-ping{
+    position:absolute; inset:0; border-radius:50%; background:#25D366;
+    animation:wa-pulse 2.2s ease-out infinite;
+  }
+  @keyframes wa-pulse{
+    0%{transform:scale(1); opacity:0.6;}
+    100%{transform:scale(1.8); opacity:0;}
+  }
+  @media (prefers-reduced-motion: reduce){.wa-fab .wa-ping{animation:none;}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="index.html">WALLSTUDIO™</a>
+  <ul>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<a class="wa-fab" href="https://wa.me/27000000000" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <span class="wa-ping" aria-hidden="true"></span>
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#0a0a0a" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.94.56 3.75 1.53 5.27L2 22l4.96-1.6a9.86 9.86 0 0 0 5.08 1.39c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.78 13.93c-.24.68-1.4 1.3-1.93 1.38-.49.08-1.12.11-1.81-.11-.42-.13-.95-.31-1.64-.6-2.88-1.24-4.76-4.13-4.9-4.32-.14-.19-1.18-1.57-1.18-3 0-1.42.75-2.12 1.01-2.41.27-.29.58-.36.78-.36.19 0 .39 0 .56.01.18.01.42-.07.65.5.24.58.81 2 .88 2.15.07.15.12.32.02.51-.1.19-.15.31-.3.48-.15.17-.31.38-.45.51-.15.14-.3.29-.13.58.17.29.78 1.29 1.68 2.09 1.16 1.04 2.13 1.36 2.43 1.51.3.15.47.13.65-.05.18-.18.74-.86.94-1.16.2-.3.4-.25.66-.15.27.1 1.69.8 1.98.94.29.15.48.22.55.34.07.13.07.7-.17 1.38z"/></svg>
+</a>
+
+<section class="hero">
+  <div class="hero-bg-text" aria-hidden="true">ROLL</div>
+  <div class="hero-content">
+    <div class="breadcrumb"><a href="services.html">Services</a> / Wallpaper</div>
+    <div class="eyebrow">Printed & textured</div>
+    <h1 class="display">Wall-<br>paper</h1>
+    <div class="hero-sub">
+      <p>Printed and textured wallcoverings, designed in-house or custom to your brief. Murals, repeats, and textured panels for rooms that need a centrepiece.</p>
+    </div>
+    <div class="hero-cta">
+      <a class="btn" href="contact.html">Get a quote →</a>
+      <a class="btn btn-ghost" href="gallery.html">See examples</a>
+    </div>
+  </div>
+</section>
+
+<!-- TYPES -->
+<section class="styles">
+  <div class="section-head">
+    <h2 class="display">Types</h2>
+    <div class="tag">A starting point — every design can be scaled and recoloured for your wall.</div>
+  </div>
+  <div class="styles-grid">
+    <div class="style-card">
+      <div class="style-fill"></div>
+      <div class="style-label">Custom mural<span>Full-wall artwork printed to your exact dimensions</span></div>
+    </div>
+    <div class="style-card">
+      <div class="style-fill"></div>
+      <div class="style-label">Repeat pattern<span>Geometric, botanical, or abstract repeats</span></div>
+    </div>
+    <div class="style-card">
+      <div class="style-fill"></div>
+      <div class="style-label">Textured panel<span>Grasscloth, linen-look, and 3D textured finishes</span></div>
+    </div>
+    <div class="style-card">
+      <div class="style-fill"></div>
+      <div class="style-label">Photographic<span>Your own photography, printed large-format</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- FINISHES -->
+<section class="fabrics">
+  <div class="section-head">
+    <h2 class="display">Finishes</h2>
+    <div class="tag">Material options for every wallpaper project — full sample book on request.</div>
+  </div>
+  <div class="fabric-grid">
+    <div class="fabric-swatch">
+      <div class="swatch-color" style="background:#3a3530;"></div>
+      <h4 class="display">Matte print</h4>
+      <p>Smooth, non-reflective, true colour reproduction</p>
+    </div>
+    <div class="fabric-swatch">
+      <div class="swatch-color" style="background:#6b6258;"></div>
+      <h4 class="display">Grasscloth</h4>
+      <p>Natural woven texture, subtle depth and warmth</p>
+    </div>
+    <div class="fabric-swatch">
+      <div class="swatch-color" style="background:#cfc8ba;"></div>
+      <h4 class="display">Linen-look</h4>
+      <p>Soft fabric texture without the upkeep</p>
+    </div>
+    <div class="fabric-swatch">
+      <div class="swatch-color" style="background:#2b2b2b;"></div>
+      <h4 class="display">Removable</h4>
+      <p>Peel-and-stick, ideal for rentals and offices</p>
+    </div>
+    <div class="fabric-swatch">
+      <div class="swatch-color" style="background:#9aa28c;"></div>
+      <h4 class="display">Custom</h4>
+      <p>Bring your own design — we'll prep it for print</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="sizes">
+  <div class="section-head">
+    <h2 class="display">Pricing</h2>
+    <div class="tag">Priced per square metre — we measure your wall and quote the exact total.</div>
+  </div>
+  <div class="size-table-wrap">
+    <table class="size-table">
+      <thead>
+        <tr>
+          <th>Finish</th>
+          <th>Best for</th>
+          <th>Lead time</th>
+          <th>From (per m²)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Matte print</td>
+          <td>Murals, photographic walls</td>
+          <td>2–3 weeks</td>
+          <td class="price">R 850</td>
+        </tr>
+        <tr>
+          <td>Repeat pattern</td>
+          <td>Geometric & botanical designs</td>
+          <td>2–3 weeks</td>
+          <td class="price">R 750</td>
+        </tr>
+        <tr>
+          <td>Grasscloth</td>
+          <td>Textured feature walls</td>
+          <td>2–4 weeks</td>
+          <td class="price">R 1,150</td>
+        </tr>
+        <tr>
+          <td>Linen-look</td>
+          <td>Bedrooms, soft interiors</td>
+          <td>2–3 weeks</td>
+          <td class="price">R 980</td>
+        </tr>
+        <tr>
+          <td>Removable</td>
+          <td>Rentals, offices, pop-ups</td>
+          <td>1–2 weeks</td>
+          <td class="price">R 900</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process">
+  <div class="section-head" style="border-bottom:none; margin-bottom:0;">
+    <h2 class="display">How it works</h2>
+    <div class="tag">From measurements to installed wallpaper — usually 2 to 4 weeks.</div>
+  </div>
+  <div class="process-grid">
+    <div class="process-step">
+      <div class="step-num display">01</div>
+      <div>
+        <h3 class="display">Measure</h3>
+        <p>Send us your wall dimensions and photos, or we'll measure on-site for an exact fit.</p>
+      </div>
+    </div>
+    <div class="process-step">
+      <div class="step-num display">02</div>
+      <div>
+        <h3 class="display">Design</h3>
+        <p>Choose from our designs, send your own artwork, or brief us on something custom.</p>
+      </div>
+    </div>
+    <div class="process-step">
+      <div class="step-num display">03</div>
+      <div>
+        <h3 class="display">Print</h3>
+        <p>Your wallpaper is printed to size on your chosen finish in our workshop.</p>
+      </div>
+    </div>
+    <div class="process-step">
+      <div class="step-num display">04</div>
+      <div>
+        <h3 class="display">Install</h3>
+        <p>Professionally hung by our team, or shipped with hanging instructions for DIY.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="section-head">
+    <h2 class="display">FAQ</h2>
+    <div class="tag">Wallpaper-specific questions.</div>
+  </div>
+  <div class="faq-list">
+    <div class="faq-item">
+      <button class="faq-question">
+        Can you print my own design or photo?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">Yes — send us your artwork or photography at the highest resolution you have, and we'll check it's suitable for large-format printing before quoting. We can also help clean up or upscale lower-res images.</div>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">
+        How do you handle walls with windows, doors, or odd angles?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">We measure the full wall including any obstructions and plan the panel layout so patterns and murals line up correctly around them. This is part of our standard measuring process.</div>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">
+        Is removable wallpaper as durable as permanent?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">Removable wallpaper is great for rentals and rooms that change often, but permanent finishes generally offer better durability and a slightly more premium texture. We'll recommend based on your space and how long you plan to keep it.</div>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">
+        Do you install, or just supply the wallpaper?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">Both — we offer full installation across KwaZulu-Natal, or we can ship printed panels with hanging instructions if you'd rather install yourself or use your own decorator.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <h2 class="display">Got a<br>blank<br>wall?</h2>
+  <a class="btn" href="contact.html">Get a quote →</a>
+  <p class="cta-sub">hello@wallstudio.co — replies within 1 business day</p>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a class="logo display" href="index.html">WALLSTUDIO™</a>
+      <p>We design and build custom headboards, wallpaper, wall art, cladding, and carved framing for homes, hotels, and studios that don't want to look like everywhere else.</p>
+      <div class="social-row">
+        <a class="social-icon facebook" href="https://facebook.com" target="_blank" rel="noopener" aria-label="Wallstudio on Facebook">
+          <svg viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.99 3.66 9.13 8.44 9.88v-6.99H8.08v-2.89h2.36V9.41c0-2.34 1.39-3.63 3.52-3.63 1.02 0 2.09.18 2.09.18v2.3h-1.18c-1.16 0-1.52.72-1.52 1.46v1.75h2.6l-.42 2.89h-2.18v6.99C18.34 21.13 22 16.99 22 12z"/></svg>
+        </a>
+        <a class="social-icon instagram" href="https://instagram.com" target="_blank" rel="noopener" aria-label="Wallstudio on Instagram">
+          <svg viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.21-1.48.34-1.82.18-.46.39-.78.74-1.13.35-.35.67-.56 1.13-.74.34-.13.86-.3 1.82-.34C8.42 2.17 8.8 2.16 12 2.16zm0 1.8c-3.15 0-3.5.01-4.74.07-.96.04-1.48.21-1.82.34-.46.18-.78.39-1.13.74-.35.35-.56.67-.74 1.13-.13.34-.3.86-.34 1.82-.06 1.24-.07 1.59-.07 4.74s.01 3.5.07 4.74c.04.96.21 1.48.34 1.82.18.46.39.78.74 1.13.35.35.67.56 1.13.74.34.13.86.3 1.82.34 1.24.06 1.59.07 4.74.07s3.5-.01 4.74-.07c.96-.04 1.48-.21 1.82-.34.46-.18.78-.39 1.13-.74.35-.35.56-.67.74-1.13.13-.34.3-.86.34-1.82.06-1.24.07-1.59.07-4.74s-.01-3.5-.07-4.74c-.04-.96-.21-1.48-.34-1.82-.18-.46-.39-.78-.74-1.13-.35-.35-.67-.56-1.13-.74-.34-.13-.86-.3-1.82-.34-1.24-.06-1.59-.07-4.74-.07zm0 4.05a5.99 5.99 0 1 1 0 11.98 5.99 5.99 0 0 1 0-11.98zm0 1.8a4.19 4.19 0 1 0 0 8.38 4.19 4.19 0 0 0 0-8.38zm6.41-3.65a1.44 1.44 0 1 1 0 2.88 1.44 1.44 0 0 1 0-2.88z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Studio</h4>
+      <ul>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Our work</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="headboards.html">Headboards</a></li>
+        <li><a href="wallpaper.html">Wallpaper</a></li>
+        <li><a href="services.html#wall-art">Wall art & cladding</a></li>
+        <li><a href="services.html#carved-frames">Carved frames</a></li>
+        <li><a href="services.html#full-rooms">Full room design</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Get in touch</h4>
+      <p>
+        hello@wallstudio.co<br>
+        +27 00 000 0000<br>
+        Pietermaritzburg, KwaZulu-Natal<br>
+        Mon – Fri, 9am – 5pm
+      </p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <a class="logo display" href="index.html">WALLSTUDIO™</a>
+    <div class="footer-legal">
+      <a href="#">Privacy policy</a>
+      <a href="#">Terms</a>
+    </div>
+    <div class="copyright">© 2026 Wallstudio. Headboards & wallpaper, made to measure.<br><a href="https://aurion.co.za" target="_blank" rel="noopener" style="color:var(--txt-dim); text-decoration:none;">Powered by Aurion.co.za</a></div>
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll('.faq-item').forEach(item => {
+    const question = item.querySelector('.faq-question');
+    const answer = item.querySelector('.faq-answer');
+    question.addEventListener('click', () => {
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(other => {
+        other.classList.remove('open');
+        other.querySelector('.faq-answer').style.maxHeight = null;
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
