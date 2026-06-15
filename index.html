@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Marco Ramcharan — Full Stack Developer & Ethical Hacker</title>
+  <title>Marco Ramcharan — Full Stack Developer</title>
+      <link rel="icon" type="image/png" href="/images/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@400;500;700&display=swap"
@@ -844,12 +845,6 @@
       background: rgba(216, 255, 62, 0.05);
     }
 
-    .pill.sec {
-      border-color: rgba(255, 107, 53, 0.3);
-      color: #ff6b35;
-      background: rgba(255, 107, 53, 0.05);
-    }
-
     /* TIMELINE */
     .timeline {
       display: flex;
@@ -916,159 +911,6 @@
       color: var(--txt-dim);
     }
 
-    /* SECURITY TOOLKIT */
-    .tools-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1px;
-      background: var(--line);
-      border: 1px solid var(--line);
-    }
-
-    .tool-card {
-      background: var(--bg);
-      padding: 40px 32px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      text-decoration: none;
-      border: 1px solid transparent;
-      transition: border-color 0.2s, background 0.2s;
-    }
-
-    .tool-card:hover {
-      border-color: var(--accent);
-      background: var(--bg-2);
-    }
-
-    .tool-num {
-      font-size: 11px;
-      letter-spacing: 0.22em;
-      color: var(--txt-dim);
-      text-transform: uppercase;
-    }
-
-    .tool-name {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 44px;
-      color: var(--txt);
-      letter-spacing: 0.04em;
-      line-height: 1;
-    }
-
-    .tool-desc {
-      font-size: 14px;
-      line-height: 1.6;
-      color: var(--txt-dim);
-    }
-
-    .tool-link {
-      margin-top: auto;
-      font-size: 12px;
-      color: var(--accent);
-      letter-spacing: 0.1em;
-    }
-
-    @media(max-width:900px) {
-      .tools-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-
-    @media(max-width:560px) {
-      .tools-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    /* DARK WEB */
-    .dw-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1px;
-      background: var(--line);
-      border: 1px solid var(--line);
-      margin-bottom: 20px;
-    }
-
-    .dw-step {
-      background: var(--bg-2);
-      padding: 36px 28px;
-      display: flex;
-      gap: 24px;
-      transition: background 0.2s;
-    }
-
-    .dw-step:hover {
-      background: #1a1a1a;
-    }
-
-    .dw-num {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 48px;
-      color: var(--line);
-      line-height: 1;
-      flex-shrink: 0;
-      width: 40px;
-      transition: color 0.2s;
-    }
-
-    .dw-step:hover .dw-num {
-      color: var(--accent);
-    }
-
-    .dw-step-title {
-      font-size: 12px;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--txt);
-      margin-bottom: 8px;
-      font-weight: 700;
-    }
-
-    .dw-step-desc {
-      font-size: 14px;
-      line-height: 1.65;
-      color: var(--txt-dim);
-    }
-
-    .dw-warning {
-      display: flex;
-      gap: 20px;
-      align-items: flex-start;
-      padding: 24px 28px;
-      border: 1px solid rgba(255, 107, 53, 0.3);
-      background: rgba(255, 107, 53, 0.04);
-    }
-
-    .dw-warn-icon {
-      color: #ff6b35;
-      font-size: 16px;
-      flex-shrink: 0;
-      margin-top: 2px;
-    }
-
-    .dw-warn-title {
-      font-size: 10px;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: #ff6b35;
-      margin-bottom: 6px;
-      font-weight: 700;
-    }
-
-    .dw-warn-text {
-      font-size: 13px;
-      line-height: 1.6;
-      color: var(--txt-dim);
-    }
-
-    @media(max-width:600px) {
-      .dw-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
     @media (prefers-reduced-motion: reduce) {
       .marquee {
         animation: none;
@@ -1112,15 +954,14 @@
     </div>
   </div>
 
-  <!-- HERO — same structure, same hero.png, just different words -->
+  <!-- HERO -->
   <section class="hero">
     <div class="hero-bg-text" aria-hidden="true">CODE</div>
     <div class="hero-content">
-      <div class="eyebrow">Full Stack Developer · Ethical Hacker · Durban, ZA</div>
+      <div class="eyebrow">Full Stack Developer · Durban, ZA</div>
       <h1 class="display">Code<br>built to<br>last.</h1>
       <div class="hero-sub">
-        <p>Marco Ramcharan designs and ships full-stack applications, DevOps pipelines, and security-hardened systems
-          for products that can't afford to break.</p>
+        <p>Marco Ramcharan designs and ships full-stack applications and scalable systems for products that can't afford to break.</p>
         <div class="scroll-cue">Scroll ↓</div>
       </div>
       <div class="hero-cta">
@@ -1130,52 +971,41 @@
     </div>
   </section>
 
-  <!-- SKILLS — same service-list layout -->
+  <!-- SKILLS -->
   <section class="services" id="skills">
     <div class="section-head">
       <h2 class="display">What I build</h2>
-      <div class="tag">Full-stack, DevOps, security — one obsession with shipping things that work.</div>
+      <div class="tag">Full-stack, DevOps, infrastructure — one obsession with shipping things that work.</div>
     </div>
     <div class="service-list">
       <div class="service-row">
         <div class="service-num">01</div>
         <div class="service-name display">Full Stack Apps</div>
-        <div class="service-desc">TypeScript, React, Node.js, and Go — from pixel-perfect frontends to hardened APIs.
-          Built on real production systems, not side-project tutorials.</div>
+        <div class="service-desc">TypeScript, React, Node.js, and Go — from pixel-perfect frontends to hardened APIs. Built on real production systems, not side-project tutorials.</div>
         <div class="service-arrow">→</div>
       </div>
       <div class="service-row">
         <div class="service-num">02</div>
         <div class="service-name display">DevOps & Infra</div>
-        <div class="service-desc">Docker, Kubernetes, AWS, GCP, Jenkins CI/CD, RabbitMQ, Zabbix. I build and maintain
-          the pipelines that keep production alive.</div>
+        <div class="service-desc">Docker, Kubernetes, AWS, GCP, Jenkins CI/CD, RabbitMQ, Zabbix. I build and maintain the pipelines that keep production alive.</div>
         <div class="service-arrow">→</div>
       </div>
       <div class="service-row">
         <div class="service-num">03</div>
-        <div class="service-name display">Security & Pentesting</div>
-        <div class="service-desc">Nmap, Burp Suite, OWASP ZAP, vulnerability assessment, and penetration testing. I find
-          the holes before someone else does.</div>
+        <div class="service-name display">Systems & APIs</div>
+        <div class="service-desc">Custom client APIs, CRM systems, geo-based CDN architecture, and enterprise integrations. Complex problems, clean solutions.</div>
         <div class="service-arrow">→</div>
       </div>
       <div class="service-row">
         <div class="service-num">04</div>
-        <div class="service-name display">Systems & APIs</div>
-        <div class="service-desc">Custom client APIs, CRM systems, geo-based CDN architecture, and enterprise
-          integrations. Complex problems, clean solutions.</div>
-        <div class="service-arrow">→</div>
-      </div>
-      <div class="service-row">
-        <div class="service-num">05</div>
         <div class="service-name display">AI Integration</div>
-        <div class="service-desc">Claude API, ChatGPT, Power Automate, and workflow automation — wiring AI into real
-          products that people actually use.</div>
+        <div class="service-desc">Claude API, ChatGPT, Power Automate, and workflow automation — wiring AI into real products that people actually use.</div>
         <div class="service-arrow">→</div>
       </div>
     </div>
   </section>
 
-  <!-- PROJECTS — same gallery-grid layout -->
+  <!-- PROJECTS -->
   <section id="projects">
     <div class="section-head">
       <h2 class="display">Recent work</h2>
@@ -1189,8 +1019,7 @@
           <div class="proj-placeholder-text" style="color:#00d4ff;">TRUENDO</div>
         </div>
         <div class="gallery-overlay"></div>
-        <div class="gallery-label">Truendo — Consent Management<span>Production · Decidio · TypeScript / React / Go /
-            K8s</span></div>
+        <div class="gallery-label">Truendo — Consent Management<span>Production · Decidio · TypeScript / React / Go / K8s</span></div>
       </a>
       <a class="gallery-item" href="https://casino-alpha-two.vercel.app/" target="_blank" rel="noopener">
         <div class="proj-placeholder" style="background:linear-gradient(135deg,#1a0800,#2d1200);">
@@ -1241,7 +1070,7 @@
     </div>
   </section>
 
-  <!-- PROCESS — same 4-step grid, Marco's dev process -->
+  <!-- PROCESS -->
   <section class="process" id="process">
     <div class="section-head" style="border-bottom:none; margin-bottom:0;">
       <h2 class="display">How I work</h2>
@@ -1252,16 +1081,14 @@
         <div class="step-num display">01</div>
         <div>
           <h3 class="display">Scope</h3>
-          <p>Tell me the problem, the stack, and the deadline. I ask the right questions upfront so nothing breaks
-            later.</p>
+          <p>Tell me the problem, the stack, and the deadline. I ask the right questions upfront so nothing breaks later.</p>
         </div>
       </div>
       <div class="process-step">
         <div class="step-num display">02</div>
         <div>
           <h3 class="display">Design</h3>
-          <p>Architecture first, code second. I plan the system, the data flow, and the edge cases before writing a
-            single line.</p>
+          <p>Architecture first, code second. I plan the system, the data flow, and the edge cases before writing a single line.</p>
         </div>
       </div>
       <div class="process-step">
@@ -1275,22 +1102,17 @@
         <div class="step-num display">04</div>
         <div>
           <h3 class="display">Ship</h3>
-          <p>Deployed, monitored, and handed over properly. CI/CD, containerised, production-ready — not just "works on
-            my machine."</p>
+          <p>Deployed, monitored, and handed over properly. CI/CD, containerised, production-ready — not just "works on my machine."</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- MARQUEE — Marco's stack -->
+  <!-- MARQUEE -->
   <div class="materials">
     <div class="marquee" aria-hidden="true">
-      <span class="fill">TypeScript</span><span>React</span><span class="fill">Node.js</span><span>Go</span><span
-        class="fill">Docker</span><span>Kubernetes</span><span class="fill">PostgreSQL</span><span>AWS</span><span
-        class="fill">Burp Suite</span><span>Nmap</span>
-      <span class="fill">TypeScript</span><span>React</span><span class="fill">Node.js</span><span>Go</span><span
-        class="fill">Docker</span><span>Kubernetes</span><span class="fill">PostgreSQL</span><span>AWS</span><span
-        class="fill">Burp Suite</span><span>Nmap</span>
+      <span class="fill">TypeScript</span><span>React</span><span class="fill">Node.js</span><span>Go</span><span class="fill">Docker</span><span>Kubernetes</span><span class="fill">PostgreSQL</span><span>AWS</span><span class="fill">GCP</span><span>DevOps</span>
+      <span class="fill">TypeScript</span><span>React</span><span class="fill">Node.js</span><span>Go</span><span class="fill">Docker</span><span>Kubernetes</span><span class="fill">PostgreSQL</span><span>AWS</span><span class="fill">GCP</span><span>DevOps</span>
     </div>
   </div>
 
@@ -1301,7 +1123,7 @@
     <p class="cta-sub">miguelmarcoramcharan@gmail.com — replies within 1 business day</p>
   </section>
 
-  <!-- ABOUT — repurposed map section -->
+  <!-- ABOUT -->
   <section id="about" style="border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
     <div class="section-head">
       <h2 class="display">About me</h2>
@@ -1309,50 +1131,33 @@
     </div>
     <div style="display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:start;">
       <div style="font-size:17px; color:var(--txt-dim); line-height:1.7;">
-        <p style="margin-bottom:20px;">I'm Marco — a South African developer who started life as a carpenter. I built
-          furniture before I built software, and that background gave me something most developers don't have: an
-          obsession with <span style="color:var(--txt);">things that actually work.</span></p>
-        <p style="margin-bottom:20px;">Self-taught from the ground up, I transitioned into software development and
-          worked at <span style="color:var(--accent);">Decidio</span>, doing full-stack development on the <span
-            style="color:var(--txt);">Truendo</span> product — a real, live, production system used by real enterprise
-          clients.</p>
-        <p>I write code the same way I used to cut timber — <span style="color:var(--txt);">measure twice, ship
-            once.</span></p>
+        <p style="margin-bottom:20px;">I'm Marco — a South African developer who started life as a carpenter. I built furniture before I built software, and that background gave me something most developers don't have: an obsession with <span style="color:var(--txt);">things that actually work.</span></p>
+        <p style="margin-bottom:20px;">Self-taught from the ground up, I transitioned into software development and worked at <span style="color:var(--accent);">Decidio</span>, doing full-stack development on the <span style="color:var(--txt);">Truendo</span> product — a real, live, production system used by real enterprise clients.</p>
+        <p>I write code the same way I used to cut timber — <span style="color:var(--txt);">measure twice, ship once.</span></p>
       </div>
       <div style="display:flex; flex-direction:column; border-top:1px solid var(--line);">
-        <div
-          style="display:flex; justify-content:space-between; padding:16px 0; border-bottom:1px solid var(--line); font-size:14px;">
-          <span
-            style="color:var(--txt-dim); letter-spacing:0.1em; text-transform:uppercase; font-size:12px;">Role</span>
-          <span>Full Stack Developer And Carpenter</span>
+        <div style="display:flex; justify-content:space-between; padding:16px 0; border-bottom:1px solid var(--line); font-size:14px;">
+          <span style="color:var(--txt-dim); letter-spacing:0.1em; text-transform:uppercase; font-size:12px;">Role</span>
+          <span>Full Stack Developer And Carpenter</div>span>
         </div>
-        <div
-          style="display:flex; justify-content:space-between; padding:16px 0; border-bottom:1px solid var(--line); font-size:14px;">
-          <span
-            style="color:var(--txt-dim); letter-spacing:0.1em; text-transform:uppercase; font-size:12px;">Company</span>
+        <div style="display:flex; justify-content:space-between; padding:16px 0; border-bottom:1px solid var(--line); font-size:14px;">
+          <span style="color:var(--txt-dim); letter-spacing:0.1em; text-transform:uppercase; font-size:12px;">Company</span>
           <span>El-Shaddai Interiors</span>
         </div>
-        <div
-          style="display:flex; justify-content:space-between; padding:16px 0; border-bottom:1px solid var(--line); font-size:14px;">
-          <span
-            style="color:var(--txt-dim); letter-spacing:0.1em; text-transform:uppercase; font-size:12px;">Location</span>
+        <div style="display:flex; justify-content:space-between; padding:16px 0; border-bottom:1px solid var(--line); font-size:14px;">
+          <span style="color:var(--txt-dim); letter-spacing:0.1em; text-transform:uppercase; font-size:12px;">Location</span>
           <span>Durban, South Africa</span>
         </div>
-        <div
-          style="display:flex; justify-content:space-between; padding:16px 0; border-bottom:1px solid var(--line); font-size:14px;">
-          <span
-            style="color:var(--txt-dim); letter-spacing:0.1em; text-transform:uppercase; font-size:12px;">Experience</span>
+        <div style="display:flex; justify-content:space-between; padding:16px 0; border-bottom:1px solid var(--line); font-size:14px;">
+          <span style="color:var(--txt-dim); letter-spacing:0.1em; text-transform:uppercase; font-size:12px;">Experience</span>
           <span>5+ Years</span>
         </div>
-        <div
-          style="display:flex; justify-content:space-between; padding:16px 0; border-bottom:1px solid var(--line); font-size:14px;">
-          <span
-            style="color:var(--txt-dim); letter-spacing:0.1em; text-transform:uppercase; font-size:12px;">Background</span>
+        <div style="display:flex; justify-content:space-between; padding:16px 0; border-bottom:1px solid var(--line); font-size:14px;">
+          <span style="color:var(--txt-dim); letter-spacing:0.1em; text-transform:uppercase; font-size:12px;">Background</span>
           <span>Carpenter → Self-taught Dev</span>
         </div>
         <div style="display:flex; justify-content:space-between; padding:16px 0; font-size:14px;">
-          <span
-            style="color:var(--txt-dim); letter-spacing:0.1em; text-transform:uppercase; font-size:12px;">Status</span>
+          <span style="color:var(--txt-dim); letter-spacing:0.1em; text-transform:uppercase; font-size:12px;">Status</span>
           <span style="color:#00ffa3;">Open to opportunities</span>
         </div>
       </div>
@@ -1439,26 +1244,6 @@
         <span class="pill">HTML / CSS</span>
       </div>
     </div>
-    <div class="skill-group">
-      <div class="skill-group-title">Security & Ethical Hacking</div>
-      <div class="pills">
-        <span class="pill sec">Nmap</span>
-        <span class="pill sec">Burp Suite</span>
-        <span class="pill sec">OWASP ZAP</span>
-        <span class="pill sec">OWASP Top 10</span>
-        <span class="pill">Penetration Testing</span>
-        <span class="pill">Vulnerability Assessment</span>
-      </div>
-    </div>
-    <div class="skill-group">
-      <div class="skill-group-title">Enterprise & Client Solutions</div>
-      <div class="pills">
-        <span class="pill">Custom Client APIs</span>
-        <span class="pill">CRM Development</span>
-        <span class="pill">Stakeholder Systems</span>
-        <span class="pill">Enterprise Integrations</span>
-      </div>
-    </div>
   </section>
 
   <!-- EXPERIENCE TIMELINE -->
@@ -1473,135 +1258,21 @@
         <div class="tl-date">2023 — 2025</div>
         <div class="tl-role display">Full Stack Developer</div>
         <div class="tl-company">Decidio · Durban, ZA</div>
-        <div class="tl-desc">Building and maintaining Truendo — a production consent management platform. Handling
-          full-stack features, infrastructure, DevOps pipelines, and integration with enterprise clients. Daily exposure
-          to Docker, Kubernetes, TypeScript, and Go in a live production environment.</div>
+        <div class="tl-desc">Building and maintaining Truendo — a production consent management platform. Handling full-stack features, infrastructure, DevOps pipelines. Daily exposure to Docker, Kubernetes, TypeScript, and Go in a live production environment.</div>
       </div>
       <div class="tl-item">
         <div class="tl-dot"></div>
         <div class="tl-date">2021 — 2022</div>
         <div class="tl-role display">Self-Taught Developer</div>
         <div class="tl-company">Independent · Durban, ZA</div>
-        <div class="tl-desc">Transitioned from carpentry into software development through self-study. Built personal
-          projects, learned the fundamentals of web development, and eventually landed a production role. No bootcamp —
-          just relentless building.</div>
+        <div class="tl-desc">Transitioned from carpentry into software development through self-study. Built personal projects, learned the fundamentals of web development, and eventually landed a production role. No bootcamp — just relentless building.</div>
       </div>
       <div class="tl-item">
         <div class="tl-dot"></div>
         <div class="tl-date">Pre-2023</div>
         <div class="tl-role display">Carpenter</div>
         <div class="tl-company">El-Shaddai Interiors, Durban, ZA</div>
-        <div class="tl-desc">Built things with wood. Precision, patience, and problem-solving — skills that translate
-          surprisingly well to software engineering. Sometimes I still think in joints and grain when I'm debugging.
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECURITY TOOLKIT -->
-  <section style="background:var(--bg-2); border-bottom:1px solid var(--line);" id="security">
-    <div class="section-head">
-      <h2 class="display">Security toolkit</h2>
-      <div class="tag">The tools I actually use — not just names on a CV.</div>
-    </div>
-    <div class="tools-grid">
-      <a class="tool-card" href="https://shodan.io" target="_blank" rel="noopener">
-        <div class="tool-num">01</div>
-        <div class="tool-name display">Shodan</div>
-        <div class="tool-desc">Search engine for internet-connected devices. Find exposed servers, cameras, routers and
-          more across the entire internet.</div>
-        <div class="tool-link">shodan.io ↗</div>
-      </a>
-      <a class="tool-card" href="https://virustotal.com" target="_blank" rel="noopener">
-        <div class="tool-num">02</div>
-        <div class="tool-name display">VirusTotal</div>
-        <div class="tool-desc">Analyse suspicious files, URLs and IPs. Aggregates 70+ antivirus scanners and threat
-          intel feeds in one place.</div>
-        <div class="tool-link">virustotal.com ↗</div>
-      </a>
-      <a class="tool-card" href="https://cve.org" target="_blank" rel="noopener">
-        <div class="tool-num">03</div>
-        <div class="tool-name display">CVE.org</div>
-        <div class="tool-desc">The official database of publicly known cybersecurity vulnerabilities. Essential for
-          staying on top of known exploits.</div>
-        <div class="tool-link">cve.org ↗</div>
-      </a>
-      <a class="tool-card" href="https://censys.io" target="_blank" rel="noopener">
-        <div class="tool-num">04</div>
-        <div class="tool-name display">Censys</div>
-        <div class="tool-desc">Attack surface management and internet scanning. Deeper certificate and host analysis
-          than most alternatives.</div>
-        <div class="tool-link">censys.io ↗</div>
-      </a>
-      <a class="tool-card" href="https://tryhackme.com" target="_blank" rel="noopener">
-        <div class="tool-num">05</div>
-        <div class="tool-name display">AttackBox</div>
-        <div class="tool-desc">TryHackMe's browser-based attack machine. Practice real pentesting in live lab
-          environments without any local setup.</div>
-        <div class="tool-link">tryhackme.com ↗</div>
-      </a>
-      <a class="tool-card" href="https://tryhackme.com" target="_blank" rel="noopener">
-        <div class="tool-num">06</div>
-        <div class="tool-name display">TryHackMe</div>
-        <div class="tool-desc">Learn ethical hacking through hands-on labs and challenges. Real-world scenarios in a
-          safe, legal environment.</div>
-        <div class="tool-link">tryhackme.com ↗</div>
-      </a>
-    </div>
-  </section>
-
-  <!-- DARK WEB 101 -->
-  <section style="border-bottom:1px solid var(--line);" id="darkweb">
-    <div class="section-head">
-      <h2 class="display">Dark Web 101</h2>
-      <div class="tag">Understanding it is essential for any serious security practitioner.</div>
-    </div>
-    <p
-      style="font-size:17px; color:var(--txt-dim); line-height:1.7; max-width:620px; margin-bottom:48px; border-left:2px solid var(--accent); padding-left:20px;">
-      The dark web is a small part of the internet requiring specialised software to access — used for anonymity,
-      privacy research, and cybersecurity. Not inherently illegal, but requires discipline.
-    </p>
-    <div class="dw-grid">
-      <div class="dw-step">
-        <div class="dw-num">01</div>
-        <div>
-          <div class="dw-step-title">Get the right browser</div>
-          <div class="dw-step-desc">Download the Tor Browser from the official torproject.org website only. Never use
-            unofficial mirrors or modified builds — they may be compromised.</div>
-        </div>
-      </div>
-      <div class="dw-step">
-        <div class="dw-num">02</div>
-        <div>
-          <div class="dw-step-title">Understand how it works</div>
-          <div class="dw-step-desc">Traffic is routed through multiple encrypted relays worldwide, masking your origin
-            IP. No single node knows both the sender and the destination.</div>
-        </div>
-      </div>
-      <div class="dw-step">
-        <div class="dw-num">03</div>
-        <div>
-          <div class="dw-step-title">Use privacy search engines</div>
-          <div class="dw-step-desc">DuckDuckGo's onion service, Ahmia, and Haystak are safer starting points than
-            navigating blind to unknown .onion addresses.</div>
-        </div>
-      </div>
-      <div class="dw-step">
-        <div class="dw-num">04</div>
-        <div>
-          <div class="dw-step-title">Practice strict hygiene</div>
-          <div class="dw-step-desc">Never download unknown files, share personal data, or enable JavaScript unless
-            necessary. Assume all links are hostile until proven otherwise.</div>
-        </div>
-      </div>
-    </div>
-    <div class="dw-warning">
-      <div class="dw-warn-icon">⚠</div>
-      <div>
-        <div class="dw-warn-title">Educational use only</div>
-        <div class="dw-warn-text">The dark web contains unregulated and potentially illegal content. This section exists
-          for cybersecurity awareness and research purposes only. Always operate within the bounds of your local law.
-        </div>
+        <div class="tl-desc">Built things with wood. Precision, patience, and problem-solving — skills that translate surprisingly well to software engineering.</div>
       </div>
     </div>
   </section>
@@ -1610,8 +1281,7 @@
     <div class="footer-top">
       <div class="footer-brand">
         <div class="logo display">MARCO</div>
-        <p>Carpenter turned engineer. Building full-stack applications, DevOps pipelines, and security-hardened systems
-          for products that can't afford to break.</p>
+        <p>Carpenter turned engineer. Building full-stack applications, scalable systems, and DevOps pipelines for products that can't afford to break.</p>
         <div class="social-row">
           <a class="social-icon github" href="https://github.com/marcoramcharan" target="_blank" rel="noopener"
             aria-label="Marco on GitHub">
@@ -1657,7 +1327,7 @@
       <div class="footer-legal">
         <a href="https://github.com/marcoramcharan" target="_blank" rel="noopener">GitHub</a>
       </div>
-      <div class="copyright">© 2025 Marco Ramcharan. Full Stack Developer & Ethical Hacker.</div>
+      <div class="copyright">© 2025 Marco Ramcharan. Full Stack Developer.</div>
     </div>
   </footer>
 
