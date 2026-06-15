@@ -197,7 +197,8 @@
     </div>
 
     <!-- CASINO -->
-    <div class="gallery-card" data-category="fullstack frontend" data-title="Casino" data-desc="A modern casino suite platform with full game logic, real-time interactions, and a sleek dark interface. Built to be fast and fun." data-stack="React · Node.js" data-url="https://casino-alpha-two.vercel.app/">
+    <div class="gallery-card" data-category="fullstack frontend" data-title="Casino" data-desc="A modern casino suite platform with full game logic, real-time interactions, and a sleek dark interface. Built to be fast and fun." data-stack="React · Node.js" data-url="https://casino-alpha-two.vercel.app/"
+>
       <div class="card-mock" style="background:linear-gradient(135deg,#1a0800 0%,#2d1200 60%,#1a0800 100%);">
         <span class="mock-text" style="color:#ff6b35;">CASINO</span>
       </div>
@@ -223,7 +224,7 @@
     </div>
 
     <!-- NEXUS -->
-    <div class="gallery-card" data-category="frontend" data-title="Nexus" data-desc="A sleek NFT shop with a modern dark aesthetic, smooth browsing experience, and clean product layout." data-stack="React · HTML · CSS" data-url="https://nexus-theta-ivory.vercel.app">
+    <div class="gallery-card" data-category="frontend" data-title="Nexus" data-desc="A sleek NFT shop with a modern dark aesthetic, smooth browsing experience, and clean product layout." data-stack="React · HTML · CSS" data-url="https://nexus-v2ra.vercel.app/">
       <div class="card-mock" style="background:linear-gradient(135deg,#06000f 0%,#14002a 60%,#06000f 100%);">
         <span class="mock-text" style="color:#a855f7;">NEXUS</span>
       </div>
@@ -236,7 +237,7 @@
     </div>
 
     <!-- CLOUDLINK -->
-    <div class="gallery-card" data-category="fullstack" data-title="CloudLink" data-desc="A modern file sharing platform built for speed and simplicity. Upload, share, and manage files with clean link generation, access controls, and a minimal dark UI." data-stack="React · Node.js · Cloud Storage" data-url="#">
+    <div class="gallery-card" data-category="fullstack" data-title="CloudLink" data-desc="A modern file sharing platform built for speed and simplicity. Upload, share, and manage files with clean link generation, access controls, and a minimal dark UI." data-stack="React · Node.js · Cloud Storage" data-url="https://cloudlink-flame.vercel.app/">
       <div class="card-mock" style="background:linear-gradient(135deg,#001a2a 0%,#003347 60%,#001a2a 100%);">
         <span class="mock-text" style="color:#00d4ff;">CLOUDLINK</span>
       </div>
@@ -249,7 +250,7 @@
     </div>
 
     <!-- SITESTATIC -->
-    <div class="gallery-card" data-category="fullstack" data-title="SiteStatic" data-desc="A static website hosting service with drag-and-drop deployment, instant CDN delivery, and a clean dashboard for managing sites. Built for developers who want fast, no-nonsense hosting." data-stack="React · Node.js · CDN · DevOps" data-url="#">
+    <div class="gallery-card" data-category="fullstack" data-title="SiteStatic" data-desc="A static website hosting service with drag-and-drop deployment, instant CDN delivery, and a clean dashboard for managing sites. Built for developers who want fast, no-nonsense hosting." data-stack="React · Node.js · CDN · DevOps" data-url="https://sitestatic-two.vercel.app/">
       <div class="card-mock" style="background:linear-gradient(135deg,#0a1a0a 0%,#162816 60%,#0a1a0a 100%);">
         <span class="mock-text" style="color:#d8ff3e;">SITESTATIC</span>
       </div>
@@ -383,6 +384,10 @@
       });
       lightbox.classList.add('open');
       document.body.style.overflow = 'hidden';
+      // Update button text based on whether URL is real
+      lbBtn.textContent = card.dataset.url && card.dataset.url !== '#' ? 'View live project →' : 'Coming soon';
+      lbBtn.style.opacity = card.dataset.url && card.dataset.url !== '#' ? '1' : '0.5';
+      lbBtn.style.pointerEvents = card.dataset.url && card.dataset.url !== '#' ? 'all' : 'none';
     });
   });
 
